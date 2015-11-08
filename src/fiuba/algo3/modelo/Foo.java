@@ -14,7 +14,11 @@ public class Foo {
 	}
 
 	public String doBar() {
-		return "Bar";
+		return "Bar";}
+
+
+	public String doB() {
+		return "B";
 	}
 
 	public int doLoop() {

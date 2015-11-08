@@ -9,6 +9,5 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="analysis" level="project" />
     <orderEntry type="library" name="libs" level="project" />
-    <orderEntry type="module" module-name="TP2-Grupal-Truco" scope="TEST" />
   </component>
 </module>
