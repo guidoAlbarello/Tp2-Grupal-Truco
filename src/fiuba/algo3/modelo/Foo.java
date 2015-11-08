@@ -1,4 +1,4 @@
-package fiuba.algo3.ejemplo1;
+package fiuba.algo3.modelo;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,7 +18,8 @@ public class Foo {
 	}
 
 	public int doLoop() {
-				int x = 1;
+		int j = 50;
+		int x = 1;
 		for (int i=1; i< 3; i++) {
 			x++;
 		}

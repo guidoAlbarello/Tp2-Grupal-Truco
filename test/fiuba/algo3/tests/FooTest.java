@@ -1,4 +1,4 @@
-package fiuba.algo3.ejemplo1;
+package fiuba.algo3.modelo;
 
 import junit.framework.Assert;
 import org.junit.Test;
@@ -12,13 +12,13 @@ public class FooTest {
         Assert.assertEquals("Foo", result);
 	}
 	
-	/*
+
 	@Test
 	public void doBarShouldReturnBar(){
         Foo foo = new Foo();
         String result = foo.doBar();
         Assert.assertEquals("Bar", result);
 	}
-	*/
+
 
 }
