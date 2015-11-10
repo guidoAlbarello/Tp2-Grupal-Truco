@@ -8,12 +8,13 @@ public class Jugador {
     private String nombre;
     private Mano mano;
     private int puntaje;
-   // private Cantos cantos;
+    //private Cantos cantos;
 
 
     public Jugador(String nombre) {
         this.nombre = nombre;
     }
+
 
 
     public void recibirCarta(Carta unaCarta){
@@ -40,4 +41,7 @@ public class Jugador {
     }
 
 
+    public void setCantos(Cantos cantos) {
+        this.cantos = cantos;
+    }
 }
