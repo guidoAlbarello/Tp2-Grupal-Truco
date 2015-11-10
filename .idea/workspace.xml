@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6c13414-5540-42f7-a7b1-26a7bde905f1" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Krion\Desktop\TP2-Grupal-Truco\src\fiuba\algo3\modelo\Foo.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Krion\Desktop\TP2-Grupal-Truco\test\fiuba\algo3\tests\FooTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TP2-Grupal-Truco.iws" />
@@ -531,7 +528,13 @@
       <option name="project" value="LOCAL" />
       <updated>1446944564231</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="&quot;Creacion de la logica del calculo del envido entre dos cartas &quot;">
+      <created>1447193134201</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1447193134201</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -576,7 +579,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;Checkeo final&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Checkeo final&quot;" />
+    <MESSAGE value="&quot;Creacion de la logica del calculo del envido entre dos cartas &quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Creacion de la logica del calculo del envido entre dos cartas &quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
