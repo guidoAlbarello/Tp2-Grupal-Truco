@@ -16,7 +16,7 @@ public class Carta {
 
 
     public void setPaloDeCarta(Palo unPalo) {
-        this.paloDeCarta = paloDeCarta;
+        this.paloDeCarta = unPalo;
     }
 
     public void setValorDeCarta(int unValor) {
@@ -33,5 +33,16 @@ public class Carta {
 
     public Palo getPaloDeCarta(){
         return this.paloDeCarta;
+    }
+
+    public Envido calcularEnvidoCon(Carta unaCarta){
+        boolean sonDelMismoPalo = this.getPaloDeCarta().esDelMismoPaloQue(unaCarta.getPaloDeCarta());
+        Envido envidoACalcular;
+        if(sonDelMismoPalo)
+            envidoACalcular = new EnvidoCartasIgualPalo();
+        else
+            envidoACalcular = new EnvidoCartasDiferentePalo();
+
+        return envidoACalcular.calcularEnvido(this.getValorDeCarta(), unaCarta.getValorDeCarta());
     }
 }
