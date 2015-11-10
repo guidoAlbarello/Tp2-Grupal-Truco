@@ -558,7 +558,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447197552146</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Merge branch 'master' of https://github.com/guidoAlbarello/Tp2-Grupal-Truco&#10;&#10;# Conflicts:&#10;#&#9;.idea/.name&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/modules.xml&#10;#&#9;.idea/vcs.xml&#10;#&#9;.idea/workspace.xml&#10;#&#9;test/fiuba/algo3/algo3.iml&#10;">
+      <created>1447197606290</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1447197606290</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
