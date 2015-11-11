@@ -6,12 +6,9 @@ package fiuba.algo3.modelo;
 public class JugadorEnJuego {
 
     private Jugador jugador;
-    private String nombre;
-    private int puntaje;
     private int manosGanadas;
-    public JugadorEnJuego(String nombre){
-        nombre = "";
-        puntaje = 0;
+
+    public JugadorEnJuego(Jugador jugador){
         manosGanadas = 0;
         this.jugador = jugador;
     }
@@ -43,7 +40,7 @@ public class JugadorEnJuego {
     }
 
     public void sumaPuntaje(int puntaje) {
-        this.puntaje += puntaje;
+        this.jugador.sumarPuntos(puntaje);
     }
 
     public Jugada responderRealEnvido() {
@@ -52,18 +49,16 @@ public class JugadorEnJuego {
     }
 
     public Jugada jugar() {
-        return new EnvidoCantado(this);
+        return jugador.hacerJugada(this);
     }
 
     public CartaJugada responderCarta(CartaJugada cartaJugada) {
         return new CartaJugada(this,cartaJugada.valor + 1);
     }
 
-    public String nombre() {
-        return this.nombre;
-    }
+    public String nombre() {return this.jugador.getNombre();}
 
-    public CartaJugada jugarCarta(int valor){
+    public CartaJugada cantarCarta(int valor){
         return new CartaJugada(this,valor);
     }
 }

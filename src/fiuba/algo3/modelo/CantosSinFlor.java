@@ -5,19 +5,24 @@ package fiuba.algo3.modelo;
  */
 public class CantosSinFlor extends Cantos {
 
-    public Jugada cantarEnvido(Mano unaMano){
+    @Override
+    public Jugada cantarEnvido(JugadorEnJuego jugador) {
+        return new EnvidoCantado(jugador);
+    }
+
+    @Override
+    public Jugada cantarRealEnvido(JugadorEnJuego jugador) {
+        return new RealEnvido(jugador);
+    }
+
+    @Override
+    public Jugada cantarFaltaEnvio(JugadorEnJuego jugador) {
+        return new FaltaEnvido(jugador);
+    }
+
+    @Override
+    public Jugada cantarFlor(JugadorEnJuego jugador) throws Exception {
         return null;
     }
 
-    public Jugada cantarRealEnvido(Mano unaMano){
-        return null;
-    }
-
-    public Jugada cantarFaltaEnvio(Mano unMano){
-        return null;
-    }
-
-    public void cantarFlor(Mano unaMano) throws Exception {
-        throw new Exception("Se esta jugando SIN Flor!!");
-    }
 }

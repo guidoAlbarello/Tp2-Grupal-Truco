@@ -4,19 +4,26 @@ package fiuba.algo3.modelo;
  * Created by Fechee on 10/11/2015.
  */
 public class CantosConFlor extends Cantos {
-    public Jugada cantarEnvido(Mano unaMano){
+
+
+    @Override
+    public Jugada cantarEnvido(JugadorEnJuego jugador) {
         return null;
     }
 
-    public Jugada cantarRealEnvido(Mano unaMano){
+    @Override
+    public Jugada cantarRealEnvido(JugadorEnJuego jugador) {
         return null;
     }
 
-    public Jugada cantarFaltaEnvio(Mano unMano){
+    @Override
+    public Jugada cantarFaltaEnvio(JugadorEnJuego jugador) {
         return null;
     }
 
-    public void cantarFlor(Mano unaMano)throws Exception {
+    @Override
+    public Jugada cantarFlor(JugadorEnJuego jugador) throws Exception {
+        return null;
     }
 }
 

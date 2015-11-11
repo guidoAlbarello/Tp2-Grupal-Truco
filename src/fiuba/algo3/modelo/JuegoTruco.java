@@ -20,7 +20,7 @@ public class JuegoTruco {
 
     private Jugador jugadorMano;
     private Jugador turnoActual;
-
+    private ManejadorDeTurnos manejadorDeTurnos;
     private Cantos cantosDelJuego;
 
   //  private Mazo mazoDeCartas;
@@ -31,10 +31,12 @@ public class JuegoTruco {
     public JuegoTruco(boolean conFlor){
         if (conFlor){
             this.cantosDelJuego = new CantosConFlor();
+
         }
         else{
             this.cantosDelJuego = new CantosSinFlor();
         }
+
     }
 
 

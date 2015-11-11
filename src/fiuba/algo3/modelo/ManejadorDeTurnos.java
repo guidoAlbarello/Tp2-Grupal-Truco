@@ -1,5 +1,7 @@
 package fiuba.algo3.modelo;
 
+import java.util.LinkedList;
+
 /**
  * Created by anthony on 10/11/2015.
  */
@@ -9,9 +11,7 @@ public class ManejadorDeTurnos {
     private JugadorEnJuego jugador2;
     private JugadorEnJuego turnoActual;
 
-    public ManejadorDeTurnos(JugadorEnJuego jugador1, JugadorEnJuego jugador2) {
-        this.jugador1 = jugador1;
-        this.jugador2 = jugador2;
+    public ManejadorDeTurnos() {
         this.turnoActual = jugador1;
     }
 

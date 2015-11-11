@@ -10,11 +10,10 @@ public class Mesa {
 
     private ManejadorDeTurnos manejadorDeTurnos;
 
-    public Mesa(){
-        jugador1 = new JugadorEnJuego("jugador1");
-        jugador2 = new JugadorEnJuego("jugador2");
-
-        manejadorDeTurnos = new ManejadorDeTurnos(jugador1,jugador2);
+    public Mesa(Jugador jugador1,Jugador jugador2){
+        this.jugador1 = new JugadorEnJuego(jugador1);
+        this.jugador2 = new JugadorEnJuego(jugador2);
+        manejadorDeTurnos = new ManejadorDeTurnos();
     }
     public JugadorEnJuego getJugador1() {
         return jugador1;
@@ -22,7 +21,8 @@ public class Mesa {
     public JugadorEnJuego getJugador2() {
         return jugador2;
     }
-//ptueba
+
+
     public void comenzarJuego(){
         while (jugador1.puntaje()< puntajeMaximo || jugador2.puntaje()<puntajeMaximo){
             this.comenzarRonda();

@@ -6,6 +6,10 @@ package fiuba.algo3.modelo;
 public class RealEnvido extends Jugada {
     private JugadorEnJuego jugadorQueLoCanto;
 
+    public RealEnvido(JugadorEnJuego jugador){
+        this.jugadorQueLoCanto = jugador;
+    }
+
     public JugadorEnJuego jugadorQueCanto() {
         return this.jugadorQueLoCanto;
     }

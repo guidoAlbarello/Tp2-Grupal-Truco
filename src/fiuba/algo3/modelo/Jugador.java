@@ -12,8 +12,9 @@ public class Jugador {
     //private Cantos cantos;
 
 
-    public Jugador(String nombre) {
+    public Jugador(String nombre,Cantos cantosDeJuego) {
         this.nombre = nombre;
+        this.cantos = cantosDeJuego;
         this.mano = new Mano();
     }
 
@@ -38,6 +39,11 @@ public class Jugador {
 
     public int puntaje() {//agregue este metodo "Anthony"
         return puntaje;
+    }
+
+    public Jugada hacerJugada(JugadorEnJuego jugadorEnJuego) {
+        //en lagun lado hay q darle la opcion par aelejir
+        return cantos.cantarEnvido(jugadorEnJuego);
     }
 
     /*public void jugarCarta(Carta unaCarta){
