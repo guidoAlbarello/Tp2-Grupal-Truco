@@ -1,5 +1,6 @@
 package fiuba.algo3.modelo;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
 
@@ -15,26 +16,38 @@ public class Mazo {
     private LinkedList<Integer> numeros;
 
     public Mazo(){
+        //PALO
+        palos = new LinkedList<Palo>();
         palos.add ( new PaloEspada() );
         palos.add ( new PaloBasto() );
         palos.add ( new PaloCopa() );
         palos.add ( new PaloOro() );
+        //NUMEROS
+        numeros = new LinkedList<Integer>();
+        numeros.addAll(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 10, 11, 12));
 
         numeroDeCartas= cartasTotales;
         mazoDelJuego = new LinkedList<>();
 
         for (Palo unPalo : palos) {
-            for (int  numero : numeros) {
+            for (Integer  numero : numeros) {
                 Carta unaCarta = new Carta(numero,unPalo);
                 mazoDelJuego.add(unaCarta);
             }
         }
     }
 
+    //ESTE METODO SACA LA CARTA DEL MAZO!!!
+    public Carta repartirUltimaCarta(){
+        return this.mazoDelJuego.removeLast();
+    }
+
+
+    //ENTREGA 3 CARTAS AL JUGADOR
     public void repartirCartasAJugador(Jugador jugador) {
-        jugador.recibirCarta(mazoDelJuego.removeLast());
-        jugador.recibirCarta(mazoDelJuego.removeLast());
-        jugador.recibirCarta(mazoDelJuego.removeLast());
+        jugador.recibirCarta(repartirUltimaCarta());
+        jugador.recibirCarta(repartirUltimaCarta());
+        jugador.recibirCarta(repartirUltimaCarta());
 
     }
 
@@ -45,5 +58,9 @@ public class Mazo {
 
     public void mezclarMazo(){
         Collections.shuffle(mazoDelJuego);
+    }
+
+    public LinkedList<Carta> getMazoDelJuego(){
+        return this.mazoDelJuego;
     }
 }

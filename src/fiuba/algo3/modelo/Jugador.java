@@ -14,6 +14,7 @@ public class Jugador {
 
     public Jugador(String nombre) {
         this.nombre = nombre;
+        this.mano = new Mano();
     }
 
 
@@ -31,7 +32,9 @@ public class Jugador {
         return this.nombre;
     }
 
-
+    public Mano getMano(){
+        return this.mano;
+    }
 
     /*public void jugarCarta(Carta unaCarta){
         this.mano.jugarCarta(unaCarta);
