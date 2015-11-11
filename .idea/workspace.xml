@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b347dec5-6bee-46a5-8d2f-c98001e451c2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/Mano.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/Mano.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/algo3/ManoTest.class" afterPath="$PROJECT_DIR$/out/test/algo3/ManoTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/Mano.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/Mano.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/tests/ManoTest.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/tests/ManoTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/excepciones/NoHayFlorEnLaManoError.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/excepciones/NoHayFlorEnLaManoError.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TP2-Grupal-Truco.iws" />
@@ -22,29 +20,6 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="DockManager">
-    <window id="2">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="Mano.java" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/Mano.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.597973">
-                    <caret line="64" column="55" selection-start-line="64" selection-start-column="55" selection-end-line="64" selection-end-column="55" />
-                    <folding>
-                      <element signature="imports" expanded="true" />
-                      <element signature="e#541#549#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="TP2-Grupal-Truco" />
@@ -54,7 +29,7 @@
       <file leaf-file-name="ManoTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/tests/ManoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0236088">
+            <state vertical-scroll-proportion="0.9376054">
               <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -603,7 +578,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447206919306</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="&quot;Agregado el metodo para calcular la flor y cambio en la forma de calcular el envido. No se devuelve mas una lista de envidos, sino que un objeto envido&quot;">
+      <created>1447207261064</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1447207261064</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -628,9 +609,9 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756758" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32792208" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32792208" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -652,7 +633,8 @@
     <MESSAGE value="Merge branch 'master' of https://github.com/guidoAlbarello/Tp2-Grupal-Truco&#10;&#10;# Conflicts:&#10;#&#9;.idea/.name&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/modules.xml&#10;#&#9;.idea/vcs.xml&#10;#&#9;.idea/workspace.xml&#10;#&#9;test/fiuba/algo3/algo3.iml&#10;" />
     <MESSAGE value="&quot;Agregado de la clase envido y modificacion de la clase carta en el calculo del envido&quot;&#10;" />
     <MESSAGE value="&quot;Agregado del metodo para calcular el envido de una mano de cartas&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Agregado del metodo para calcular el envido de una mano de cartas&quot;" />
+    <MESSAGE value="&quot;Agregado el metodo para calcular la flor y cambio en la forma de calcular el envido. No se devuelve mas una lista de envidos, sino que un objeto envido&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Agregado el metodo para calcular la flor y cambio en la forma de calcular el envido. No se devuelve mas una lista de envidos, sino que un objeto envido&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -988,17 +970,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/Mano.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.597973">
-          <caret line="64" column="55" selection-start-line="64" selection-start-column="55" selection-end-line="64" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#541#549#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/tests/CartaTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1011,10 +982,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/tests/ManoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0236088">
+        <state vertical-scroll-proportion="0.9376054">
           <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/Mano.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.597973">
+          <caret line="64" column="55" selection-start-line="64" selection-start-column="55" selection-end-line="64" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#541#549#0" expanded="true" />
           </folding>
         </state>
       </provider>
