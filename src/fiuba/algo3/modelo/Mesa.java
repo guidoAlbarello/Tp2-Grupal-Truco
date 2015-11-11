@@ -22,7 +22,7 @@ public class Mesa {
     public JugadorJugando getJugador2() {
         return jugador2;
     }
-
+//ptueba
     public void comenzarJuego(){
         while (jugador1.puntaje()< puntajeMaximo || jugador2.puntaje()<puntajeMaximo){
             this.comenzarRonda();
