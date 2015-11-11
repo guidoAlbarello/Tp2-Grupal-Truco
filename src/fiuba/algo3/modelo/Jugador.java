@@ -41,7 +41,4 @@ public class Jugador {
     }
 
 
-    public void setCantos(Cantos cantos) {
-        this.cantos = cantos;
-    }
 }

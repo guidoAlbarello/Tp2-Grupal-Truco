@@ -7,7 +7,7 @@ import org.junit.Test;
  */
 public class TestsJuegoTruco {
 
-
+/*
     @Test
     public void testIntegral(){
         JuegoTruco juego = new JuegoTruco(false);
@@ -15,5 +15,5 @@ public class TestsJuegoTruco {
         juego.agregarJugador("Juan");
         juego.repartir();
         juego.
-    }
+    }*/
 }

@@ -20,7 +20,7 @@ public class Carta {
     }
 
     public void setValorDeCarta(int unValor) {
-        if(unValor <= 12 && unValor >= 1){
+        if(unValor <= 12 && unValor >= 1 && unValor != 8 && unValor != 9){
             this.valorDeCarta = unValor;
         } else{
             throw new ValorDeCartaInvalidoError();

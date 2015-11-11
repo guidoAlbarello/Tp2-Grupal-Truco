@@ -33,12 +33,6 @@ public class Mano {
         this.cartas.addLast(unaCarta);
     }
 
-    private String getPaloEnComun(LinkedList<Carta> cartas) {
-        if ( cartas.get(0).getPalo() == cartas.get(1).getPalo() );
+
     }
 
-    public int calcularEnvido() {
-        this.cartas
-        }
-    }
-}
