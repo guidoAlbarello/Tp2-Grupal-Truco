@@ -32,13 +32,13 @@ public class Jugador {
 
 
 
-    public void jugarCarta(Carta unaCarta){
+    /*public void jugarCarta(Carta unaCarta){
         this.mano.jugarCarta(unaCarta);
     }
 
     public void borrarMano(){
         this.mano.borrar();
     }
-
+*/
 
 }
