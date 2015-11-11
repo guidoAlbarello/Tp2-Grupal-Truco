@@ -23,10 +23,8 @@ public class ManoTest {
         manoNueva.agregarCarta(carta2);
         manoNueva.agregarCarta(carta3);
 
-        List<Envido> envidosPosibles = manoNueva.obtenerEnvido();
+        Envido envidoMaximo= manoNueva.obtenerEnvido();
 
-        Assert.assertEquals(29, envidosPosibles.get(0).getValorEnvido());
-        Assert.assertEquals(5, envidosPosibles.get(1).getValorEnvido());
-        Assert.assertEquals(6, envidosPosibles.get(2).getValorEnvido());
+        Assert.assertEquals(29, envidoMaximo.getValorEnvido());
     }
 }

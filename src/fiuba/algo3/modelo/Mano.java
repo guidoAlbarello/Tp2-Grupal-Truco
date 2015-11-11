@@ -1,5 +1,7 @@
 package fiuba.algo3.modelo;
 
+import fiuba.algo3.modelo.excepciones.NoHayFlorEnLaManoError;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -19,13 +21,31 @@ public class Mano {
         this.cartasEnLaMano.add(unaCarta);
     }
 
-    public List<Envido> obtenerEnvido(){
+    public Envido obtenerEnvido(){
         List<Envido> envidosPosibles = new ArrayList<Envido>();
         for(int i = 0;i<3; i++){
             Carta unaCartaTmp = this.cartasEnLaMano.get(i);
-            calcularEnvidoConCartasRestantes(unaCartaTmp, i, envidosPosibles);
+            this.calcularEnvidoConCartasRestantes(unaCartaTmp, i, envidosPosibles);
         }
-        return envidosPosibles;
+
+        Envido envidoMaximo = this.calcularEnvidoMaximo(envidosPosibles);
+        return envidoMaximo;
+    }
+
+    private Envido calcularEnvidoMaximo(List<Envido> envidosPosibles){
+        Iterator<Envido> iteradorEnvidosPosibles = envidosPosibles.iterator();
+        int valorEnvidoMaximo = 0;
+        Envido envidoMaximo = null;
+
+        while(iteradorEnvidosPosibles.hasNext()){
+            Envido envidoTmp = iteradorEnvidosPosibles.next();
+            if(envidoTmp.getValorEnvido() > valorEnvidoMaximo){
+                envidoMaximo = envidoTmp;
+                valorEnvidoMaximo = envidoTmp.getValorEnvido();
+            }
+        }
+
+        return envidoMaximo;
     }
 
     private void calcularEnvidoConCartasRestantes(Carta unaCarta, int i, List<Envido> envidosPosibles){
@@ -36,6 +56,21 @@ public class Mano {
                 envidosPosibles.add(EnvidoTmp);
             }
         }
+    }
+
+    public int calcularFlor(){
+        Iterator<Carta> iteradorCartasEnLaMano = this.cartasEnLaMano.iterator();
+        Palo unPalo = iteradorCartasEnLaMano.next().getPaloDeCarta();
+        int valorDeFlor = 0;
+        while(iteradorCartasEnLaMano.hasNext()){
+            Carta cartaTmp = iteradorCartasEnLaMano.next();
+            if(cartaTmp.getPaloDeCarta().esDelMismoPaloQue(unPalo)){
+                valorDeFlor += cartaTmp.getValorDeCarta();
+            }else{
+                throw new NoHayFlorEnLaManoError();
+            }
+        }
+        return valorDeFlor;
     }
 }
 

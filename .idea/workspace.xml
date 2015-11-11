@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b347dec5-6bee-46a5-8d2f-c98001e451c2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/Mano.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/Mano.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/tests/ManoTest.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/tests/ManoTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TP2-Grupal-Truco.iws" />
@@ -24,83 +26,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Envido.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/Envido.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14358108">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JuegoTruco.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/JuegoTruco.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestsJuegoTruco.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/tests/TestsJuegoTruco.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CantosSinFlor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/CantosSinFlor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CartaTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/tests/CartaTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Mano.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/Mano.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+              <caret line="43" column="63" selection-start-line="43" selection-start-column="63" selection-end-line="43" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#231#232#0" expanded="true" />
-                <element signature="e#291#292#0" expanded="true" />
-                <element signature="e#339#340#0" expanded="true" />
-                <element signature="e#388#389#0" expanded="true" />
-                <element signature="e#484#492#0" expanded="true" />
+                <element signature="e#541#549#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ManoTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ManoTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/tests/ManoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.7753378">
+              <caret line="27" column="63" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NoHayFlorEnLaManoError.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/excepciones/NoHayFlorEnLaManoError.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -115,21 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EnvidoCartasIgualPalo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/EnvidoCartasIgualPalo.java">
+      <file leaf-file-name="TestsJuegoTruco.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/tests/TestsJuegoTruco.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="18" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EnvidoCartasDiferentePalo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/EnvidoCartasDiferentePalo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -171,9 +117,10 @@
         <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/EnvidoCartasDiferentePalo.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/JuegoTruco.java" />
         <option value="$PROJECT_DIR$/test/fiuba/algo3/tests/TestsJuegoTruco.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/Mano.java" />
-        <option value="$PROJECT_DIR$/test/fiuba/algo3/tests/ManoTest.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/Jugador.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/excepciones/NoHayFlorEnLaManoError.java" />
+        <option value="$PROJECT_DIR$/test/fiuba/algo3/tests/ManoTest.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/Mano.java" />
       </list>
     </option>
   </component>
@@ -322,6 +269,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="modelo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TP2-Grupal-Truco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TP2-Grupal-Truco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algo3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modelo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="excepciones" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -593,22 +566,32 @@
     <option name="localTasksCounter" value="8" />
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756758" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -619,7 +602,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -918,57 +900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/tests/TestsJuegoTruco.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/Mano.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#231#232#0" expanded="true" />
-            <element signature="e#291#292#0" expanded="true" />
-            <element signature="e#339#340#0" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#484#492#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/tests/CartaTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/tests/ManoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/Jugador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/EnvidoCartasIgualPalo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -985,11 +916,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/tests/CartaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5699831">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/Envido.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14358108">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.25801012">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/Jugador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/tests/TestsJuegoTruco.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/excepciones/NoHayFlorEnLaManoError.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/Mano.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="63" selection-start-line="43" selection-start-column="63" selection-end-line="43" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#541#549#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/tests/ManoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7753378">
+          <caret line="27" column="63" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
