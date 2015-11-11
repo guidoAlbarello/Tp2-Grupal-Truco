@@ -60,8 +60,9 @@ public class Mano {
 
     public int calcularFlor(){
         Iterator<Carta> iteradorCartasEnLaMano = this.cartasEnLaMano.iterator();
-        Palo unPalo = iteradorCartasEnLaMano.next().getPaloDeCarta();
-        int valorDeFlor = 0;
+        Carta primerCarta = iteradorCartasEnLaMano.next();
+        Palo unPalo = primerCarta.getPaloDeCarta();
+        int valorDeFlor = primerCarta.getValorDeCarta();
         while(iteradorCartasEnLaMano.hasNext()){
             Carta cartaTmp = iteradorCartasEnLaMano.next();
             if(cartaTmp.getPaloDeCarta().esDelMismoPaloQue(unPalo)){
@@ -70,6 +71,8 @@ public class Mano {
                 throw new NoHayFlorEnLaManoError();
             }
         }
+
+        valorDeFlor += 20;
         return valorDeFlor;
     }
 }
