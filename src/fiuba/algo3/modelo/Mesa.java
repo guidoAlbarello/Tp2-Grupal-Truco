@@ -4,58 +4,60 @@ package fiuba.algo3.modelo;
  * Created by anthony on 10/11/2015.
  */
 public class Mesa {
-    private final int puntajeMaximo = 30;
-    private JugadorEnJuego jugador2;
-    private JugadorEnJuego jugador1;
+    private final int PUNTAJE_MAXIMO = 30;
+    private Jugador jugador2;
+    private Jugador jugador1;
+    private ManejadorDePuntaje manejadorDePuntaje;
 
     private ManejadorDeTurnos manejadorDeTurnos;
 
     public Mesa(Jugador jugador1,Jugador jugador2){
-        this.jugador1 = new JugadorEnJuego(jugador1);
-        this.jugador2 = new JugadorEnJuego(jugador2);
+        this.jugador1 = jugador1;
+        this.jugador2 = jugador2;
         manejadorDeTurnos = new ManejadorDeTurnos();
     }
-    public JugadorEnJuego getJugador1() {
+    public Jugador getJugador1() {
         return jugador1;
     }
-    public JugadorEnJuego getJugador2() {
+    public Jugador getJugador2() {
         return jugador2;
     }
 
 
     public void comenzarJuego(){
-        while (jugador1.puntaje()< puntajeMaximo || jugador2.puntaje()<puntajeMaximo){
+        while (manejadorDePuntaje.getPuntaje(jugador1.getNombre()) < PUNTAJE_MAXIMO || manejadorDePuntaje.getPuntaje(jugador2.getNombre()) < PUNTAJE_MAXIMO){
             this.comenzarRonda();
         }
     }
     public void comenzarRonda() {
-        this.jugador1.setManosGanadas(0);
-        this.jugador2.setManosGanadas(0);
-        while (jugador1.puntaje()== 0 && jugador2.puntaje()==0){
+        this.manejadorDePuntaje.setManosGanadas(jugador1.getNombre(),0);
+        this.manejadorDePuntaje.setManosGanadas(jugador2.getNombre(),0);
+        while (manejadorDePuntaje.getPuntaje(jugador1.getNombre())== 0 && manejadorDePuntaje.getPuntaje(jugador2.getNombre())==0){
             comenzarMano();
         }
     }
 
     public  void comenzarMano() {
-        JugadorEnJuego jugador = manejadorDeTurnos.darJugadorQueInicia();
-        Jugada respuesta = jugador.jugar();
+        Jugador jugador = manejadorDeTurnos.darJugadorQueInicia();
+        Jugada respuesta = jugador.hacerJugada();
         this.resolverJugada(respuesta);
     }
+
     public void resolverCartaJugada(CartaJugada cartaJugada){
-        JugadorEnJuego jugador = manejadorDeTurnos.jugadorContrario(cartaJugada.jugadorQueLaJugo);
+        Jugador jugador = manejadorDeTurnos.jugadorContrario(cartaJugada.jugadorQueLaJugo);
         CartaJugada cartaRespuesta = jugador.responderCarta(cartaJugada);
-        JugadorEnJuego jugadorGanador = this.compararCartas(cartaJugada,cartaRespuesta);
+        Jugador jugadorGanador = this.compararCartas(cartaJugada,cartaRespuesta);
         jugadorGanador.incrementarManosGanadas();//suma 1 por q gano la manosGanadas  solo con cartas
 
     }
 
-    private JugadorEnJuego compararCartas(CartaJugada cartaJugada, CartaJugada cartaRespuesta) {
+    private Jugador compararCartas(CartaJugada cartaJugada, CartaJugada cartaRespuesta) {
         return jugador1;
     }
 
     public void resolverEnvido(EnvidoCantado envido) {
-        JugadorEnJuego jugador = manejadorDeTurnos.jugadorContrario(envido.jugadorQueCanto());
-        Jugada respuesta = jugador.responderEnvio();
+        Jugador jugador = manejadorDeTurnos.jugadorContrario(envido.jugadorQueCanto());
+        Jugada jugadaDelJugador = jugador.responderEnvio();
         this.resolverJugada(respuesta);
 
     }
@@ -65,26 +67,26 @@ public class Mesa {
     }
 
     public void resolverAceptaEnvido(AceptaEnvido aceptaEnvido) {
-        JugadorEnJuego jugadorQueCantoEnvido = manejadorDeTurnos.jugadorContrario(aceptaEnvido.jugadorQueCanto());
-        JugadorEnJuego jugadorGanador = this.compararTantos(jugador1,jugador2);
-        jugadorGanador.sumaPuntaje(2);// se suman 2 puntos por acepto envido
+        Jugador jugadorQueCantoEnvido = manejadorDeTurnos.jugadorContrario(aceptaEnvido.jugadorQueCanto());
+        Jugador jugadorGanador = this.compararTantos(jugador1,jugador2);
+        manejadorDePuntaje.sumaPuntaje(jugadorGanador.getNombre(), 2);// se suman 2 puntos por acepto envido
 
     }
 
     public void resolverRealEnvido(RealEnvido realEnvido){
-        JugadorEnJuego jugador = manejadorDeTurnos.jugadorContrario(realEnvido.jugadorQueCanto());
+        Jugador jugador = manejadorDeTurnos.jugadorContrario(realEnvido.jugadorQueCanto());
         Jugada respuesta = jugador.responderRealEnvido();
         this.resolverJugada(respuesta);
     }
 
     public void resolverAceptaRealEnvido(AceptaRealEnvido aceptaRealEnvido) {
-        JugadorEnJuego jugador = manejadorDeTurnos.jugadorContrario(aceptaRealEnvido.jugadorQueCanto());
+        Jugador jugador = manejadorDeTurnos.jugadorContrario(aceptaRealEnvido.jugadorQueCanto());
         int tantos1 = jugador.calcularEnvido();
         int tantos2 = aceptaRealEnvido.jugadorQueCanto().calcularEnvido();
-        JugadorEnJuego jugadorGanador = this.compararTantos(jugador,aceptaRealEnvido.jugadorQueCanto());
+        Jugador jugadorGanador = this.compararTantos(jugador,aceptaRealEnvido.jugadorQueCanto());
         jugadorGanador.sumaPuntaje(4);// se suman 4 puntos por acepto real envido
     }
-    private JugadorEnJuego compararTantos(JugadorEnJuego jugador1, JugadorEnJuego jugador2) {
+    private Jugador compararTantos(Jugador jugador1, Jugador jugador2) {
         if (jugador1.calcularEnvido()>= jugador2.calcularEnvido())
             return jugador1;
         else

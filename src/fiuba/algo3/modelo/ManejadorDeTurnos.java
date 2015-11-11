@@ -7,31 +7,31 @@ import java.util.LinkedList;
  */
 public class ManejadorDeTurnos {
 
-    private JugadorEnJuego jugador1;
-    private JugadorEnJuego jugador2;
-    private JugadorEnJuego turnoActual;
+    private Jugador jugador1;
+    private Jugador jugador2;
+    private Jugador turnoActual;
 
     public ManejadorDeTurnos() {
         this.turnoActual = jugador1;
     }
 
-    public JugadorEnJuego getJugador1() {
+    public Jugador getJugador1() {
         return jugador1;
     }
 
-    public JugadorEnJuego getJugador2() {
+    public Jugador getJugador2() {
         return jugador2;
     }
 
     // aca me falta a logica para manejar los turnos
-    public JugadorEnJuego jugadorContrario(JugadorEnJuego jugador) {
-        if (jugador1.nombre() == "jugador1")
-            return jugador2;
+    public Jugador jugadorContrario(Jugador jugador) {
+        if (jugador1.getNombre() == "jugador1")
+            return jugador;
         else
             return jugador1;
     }
 
-    public JugadorEnJuego darJugadorQueInicia() {
+    public Jugador darJugadorQueInicia() {
         return jugador1;
     }
 }

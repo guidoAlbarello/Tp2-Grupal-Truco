@@ -63,6 +63,7 @@ public class Mano {
         Carta primerCarta = iteradorCartasEnLaMano.next();
         Palo unPalo = primerCarta.getPaloDeCarta();
         int valorDeFlor = primerCarta.getValorDeCarta();
+
         while(iteradorCartasEnLaMano.hasNext()){
             Carta cartaTmp = iteradorCartasEnLaMano.next();
             if(cartaTmp.getPaloDeCarta().esDelMismoPaloQue(unPalo)){

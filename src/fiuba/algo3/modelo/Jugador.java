@@ -5,45 +5,43 @@ package fiuba.algo3.modelo;
  */
 public class Jugador {
 
-    private String nombre;
-    private Mano mano;
-    private int puntaje;
-    private Cantos cantos;
+    private String nombreJugador;
+    private Mano manoDelJugador;
+    private Cantos cantosPosibles;
     //private Cantos cantos;
 
 
     public Jugador(String nombre,Cantos cantosDeJuego) {
-        this.nombre = nombre;
-        this.cantos = cantosDeJuego;
-        this.mano = new Mano();
+        this.nombreJugador = nombre;
+        this.cantosPosibles = cantosDeJuego;
+        this.manoDelJugador = new Mano();
     }
 
 
 
     public void recibirCarta(Carta unaCarta){
-        this.mano.agregarCarta(unaCarta);
+        this.manoDelJugador.agregarCarta(unaCarta);
     }
-
-    public void sumarPuntos(int unPuntaje){
-        this.puntaje+=unPuntaje;
-    }
-
 
     public String getNombre() {
-        return this.nombre;
+        return this.nombreJugador;
     }
 
     public Mano getMano(){
-        return this.mano;
+        return this.manoDelJugador;
     }
 
-    public int puntaje() {//agregue este metodo "Anthony"
-        return puntaje;
-    }
-
-    public Jugada hacerJugada(JugadorEnJuego jugadorEnJuego) {
+    public Jugada hacerJugada(){
         //en lagun lado hay q darle la opcion par aelejir
-        return cantos.cantarEnvido(jugadorEnJuego);
+        //return cantosPosibles.cantarEnvido() ;
+    }
+
+    public CartaJugada responderCarta(CartaJugada unaCrtaJugada) {
+        return null;
+    }
+
+    public void incrementarManosGanadas() {
+
     }
 
     /*public void jugarCarta(Carta unaCarta){

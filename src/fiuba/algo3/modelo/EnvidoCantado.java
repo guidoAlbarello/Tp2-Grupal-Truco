@@ -4,8 +4,8 @@ package fiuba.algo3.modelo;
  * Created by anthony on 10/11/2015.
  */
 public class EnvidoCantado extends Jugada {
-    private JugadorEnJuego jugadorQueLoCanto;
-    public EnvidoCantado(JugadorEnJuego jugador) {
+    private Jugador jugadorQueLoCanto;
+    public EnvidoCantado(Jugador jugador) {
         jugadorQueLoCanto = jugador;
     }
 
@@ -13,7 +13,7 @@ public class EnvidoCantado extends Jugada {
         mesa.resolverEnvido(this);
     }
 
-    public JugadorEnJuego jugadorQueCanto() {
+        public Jugador jugadorQueCanto() {
         return this.jugadorQueLoCanto;
     }
 }
