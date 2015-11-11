@@ -4,10 +4,10 @@ package fiuba.algo3.modelo;
  * Created by anthony on 10/11/2015.
  */
 public class CartaJugada extends Jugada {
-    public JugadorJugando jugadorQueLaJugo;
+    public JugadorEnJuego jugadorQueLaJugo;
     public int valor;
 
-    public CartaJugada(JugadorJugando jugador, int valor) {
+    public CartaJugada(JugadorEnJuego jugador, int valor) {
         jugadorQueLaJugo = jugador;
         this.valor = valor;
     }
@@ -17,7 +17,7 @@ public class CartaJugada extends Jugada {
     }
 
     @Override
-    public JugadorJugando jugadorQueCanto() {
+    public JugadorEnJuego jugadorQueCanto() {
         return jugadorQueLaJugo;
     }
 

@@ -3,13 +3,13 @@ package fiuba.algo3.modelo;
 /**
  * Created by anthony on 10/11/2015.
  */
-public class JugadorJugando {
+public class JugadorEnJuego {
 
     private Jugador jugador;
     private String nombre;
     private int puntaje;
     private int manosGanadas;
-    public JugadorJugando(String nombre){
+    public JugadorEnJuego(String nombre){
         nombre = "";
         puntaje = 0;
         manosGanadas = 0;

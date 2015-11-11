@@ -5,33 +5,33 @@ package fiuba.algo3.modelo;
  */
 public class ManejadorDeTurnos {
 
-    private JugadorJugando jugador1;
-    private JugadorJugando jugador2;
-    private JugadorJugando turnoActual;
+    private JugadorEnJuego jugador1;
+    private JugadorEnJuego jugador2;
+    private JugadorEnJuego turnoActual;
 
-    public ManejadorDeTurnos(JugadorJugando jugador1, JugadorJugando jugador2) {
+    public ManejadorDeTurnos(JugadorEnJuego jugador1, JugadorEnJuego jugador2) {
         this.jugador1 = jugador1;
         this.jugador2 = jugador2;
         this.turnoActual = jugador1;
     }
 
-    public JugadorJugando getJugador1() {
+    public JugadorEnJuego getJugador1() {
         return jugador1;
     }
 
-    public JugadorJugando getJugador2() {
+    public JugadorEnJuego getJugador2() {
         return jugador2;
     }
 
     // aca me falta a logica para manejar los turnos
-    public JugadorJugando jugadorContrario(JugadorJugando jugador) {
+    public JugadorEnJuego jugadorContrario(JugadorEnJuego jugador) {
         if (jugador1.nombre() == "jugador1")
             return jugador2;
         else
             return jugador1;
     }
 
-    public JugadorJugando darJugadorQueInicia() {
+    public JugadorEnJuego darJugadorQueInicia() {
         return jugador1;
     }
 }

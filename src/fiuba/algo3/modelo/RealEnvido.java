@@ -4,9 +4,9 @@ package fiuba.algo3.modelo;
  * Created by anthony on 10/11/2015.
  */
 public class RealEnvido extends Jugada {
-    private JugadorJugando jugadorQueLoCanto;
+    private JugadorEnJuego jugadorQueLoCanto;
 
-    public JugadorJugando jugadorQueCanto() {
+    public JugadorEnJuego jugadorQueCanto() {
         return this.jugadorQueLoCanto;
     }
     public void resolverEnMesa(Mesa mesa){
