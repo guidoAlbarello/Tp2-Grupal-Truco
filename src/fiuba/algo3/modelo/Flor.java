@@ -12,4 +12,9 @@ public class Flor extends Jugada {
     public JugadorEnJuego jugadorQueCanto() {
         return null;
     }
+
+    @Override
+    public void resolverEnMesa(Mesa mesa) {
+
+    }
 }

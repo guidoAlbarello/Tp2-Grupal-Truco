@@ -41,7 +41,7 @@ public class JuegoTruco {
 
 
     public void agregarJugador(String nombre){
-        this.jugadores.addLast(new Jugador(nombre));
+        this.jugadores.addLast(new Jugador(nombre,cantosDelJuego));
 
     }
 
