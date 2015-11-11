@@ -8,6 +8,7 @@ public class Jugador {
     private String nombre;
     private Mano mano;
     private int puntaje;
+    private Cantos cantos;
     //private Cantos cantos;
 
 
