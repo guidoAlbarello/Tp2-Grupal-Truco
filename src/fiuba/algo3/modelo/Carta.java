@@ -43,6 +43,6 @@ public class Carta {
         else
             envidoACalcular = new EnvidoCartasDiferentePalo();
 
-        return envidoACalcular.calcularEnvido(this.getValorDeCarta(), unaCarta.getValorDeCarta());
+        return envidoACalcular.calcularEnvido(this, unaCarta);
     }
 }
