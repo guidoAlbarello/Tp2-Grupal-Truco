@@ -3,7 +3,7 @@ package fiuba.algo3.modelo;
 /**
  * Created by anthony on 10/11/2015.
  */
-public class CartaJugada extends Respuesta {
+public class CartaJugada extends Jugada {
     public JugadorJugando jugadorQueLaJugo;
     public int valor;
 

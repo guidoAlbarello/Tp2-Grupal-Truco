@@ -4,29 +4,25 @@ package fiuba.algo3.modelo;
  * Created by anthony on 10/11/2015.
  */
 public class JugadorJugando {
+
+    private Jugador jugador;
     private String nombre;
     private int puntaje;
     private int manosGanadas;
-    public JugadorJugando(){
+    public JugadorJugando(String nombre){
         nombre = "";
         puntaje = 0;
         manosGanadas = 0;
-    }
-    public JugadorJugando(String nombre){
-        this.nombre = nombre;
-        puntaje = 0;
-        manosGanadas = 0;
+        this.jugador = jugador;
     }
 
-
-    public int mano(){
+    public int manosGanadas(){
         return this.manosGanadas;
     }
-    public void setMano(int numero){
+    public void setManosGanadas(int numero){
         this.manosGanadas = numero;
     }
-
-    public void incrementarMano(){
+    public void incrementarManosGanadas(){
         this.manosGanadas += 1;
     }
 
@@ -36,9 +32,9 @@ public class JugadorJugando {
         mesa.resolverJugada(envido);
 
     }*/
-    public int puntaje(){return puntaje;}
+    public int puntaje(){return jugador.puntaje();}
 
-    public Respuesta responderEnvio() {
+    public Jugada responderEnvio() {
         return new AceptaEnvido(this);
     }
 
@@ -50,12 +46,12 @@ public class JugadorJugando {
         this.puntaje += puntaje;
     }
 
-    public Respuesta responderRealEnvido() {
+    public Jugada responderRealEnvido() {
         AceptaRealEnvido aceptaRealEnvido = new AceptaRealEnvido(this);
         return aceptaRealEnvido;
     }
 
-    public Respuesta jugar() {
+    public Jugada jugar() {
         return new EnvidoCantado(this);
     }
 

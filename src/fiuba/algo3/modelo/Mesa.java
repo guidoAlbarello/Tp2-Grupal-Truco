@@ -4,6 +4,7 @@ package fiuba.algo3.modelo;
  * Created by anthony on 10/11/2015.
  */
 public class Mesa {
+    private final int puntajeMaximo = 30;
     private JugadorJugando jugador2;
     private JugadorJugando jugador1;
 
@@ -18,23 +19,33 @@ public class Mesa {
     public JugadorJugando getJugador1() {
         return jugador1;
     }
-
     public JugadorJugando getJugador2() {
         return jugador2;
     }
 
+    public void comenzarJuego(){
+        while (jugador1.puntaje()< puntajeMaximo || jugador2.puntaje()<puntajeMaximo){
+            this.comenzarRonda();
+        }
+    }
+    public void comenzarRonda() {
+        this.jugador1.setManosGanadas(0);
+        this.jugador2.setManosGanadas(0);
+        while (jugador1.puntaje()== 0 && jugador2.puntaje()==0){
+            comenzarMano();
+        }
+    }
 
-
-    public  void comenzarMano(){
+    public  void comenzarMano() {
         JugadorJugando jugador = manejadorDeTurnos.darJugadorQueInicia();
-        Respuesta respuesta = jugador.jugar();
+        Jugada respuesta = jugador.jugar();
         this.resolverJugada(respuesta);
     }
     public void resolverCartaJugada(CartaJugada cartaJugada){
         JugadorJugando jugador = manejadorDeTurnos.jugadorContrario(cartaJugada.jugadorQueLaJugo);
         CartaJugada cartaRespuesta = jugador.responderCarta(cartaJugada);
         JugadorJugando jugadorGanador = this.compararCartas(cartaJugada,cartaRespuesta);
-        jugadorGanador.incrementarMano();//suma 1 por q gano la mano  solo con cartas
+        jugadorGanador.incrementarManosGanadas();//suma 1 por q gano la manosGanadas  solo con cartas
 
     }
 
@@ -44,12 +55,12 @@ public class Mesa {
 
     public void resolverEnvido(EnvidoCantado envido) {
         JugadorJugando jugador = manejadorDeTurnos.jugadorContrario(envido.jugadorQueCanto());
-        Respuesta respuesta = jugador.responderEnvio();
+        Jugada respuesta = jugador.responderEnvio();
         this.resolverJugada(respuesta);
 
     }
 
-    public void resolverJugada(Respuesta respuesta) {
+    public void resolverJugada(Jugada respuesta) {
         respuesta.resolverEnMesa(this);
     }
 
@@ -62,7 +73,7 @@ public class Mesa {
 
     public void resolverRealEnvido(RealEnvido realEnvido){
         JugadorJugando jugador = manejadorDeTurnos.jugadorContrario(realEnvido.jugadorQueCanto());
-        Respuesta respuesta = jugador.responderRealEnvido();
+        Jugada respuesta = jugador.responderRealEnvido();
         this.resolverJugada(respuesta);
     }
 
@@ -80,12 +91,6 @@ public class Mesa {
             return jugador2;
     }
 
-    public void comenzarRonda() {
-        this.jugador1.setMano(0);
-        this.jugador2.setMano(0);
-        while (jugador1.puntaje()== 0 && jugador2.puntaje()==0){
-            comenzarMano();
-        }
-    }
+
 }
 

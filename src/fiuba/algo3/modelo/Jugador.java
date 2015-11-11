@@ -36,12 +36,16 @@ public class Jugador {
         return this.mano;
     }
 
+    public int puntaje() {//agregue este metodo "Anthony"
+        return puntaje;
+    }
+
     /*public void jugarCarta(Carta unaCarta){
-        this.mano.jugarCarta(unaCarta);
+        this.manosGanadas.jugarCarta(unaCarta);
     }
 
     public void borrarMano(){
-        this.mano.borrar();
+        this.manosGanadas.borrar();
     }
 */
 

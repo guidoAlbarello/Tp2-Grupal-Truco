@@ -5,7 +5,16 @@ package fiuba.algo3.modelo;
  */
 public class CantosSinFlor extends Cantos {
 
-    public void cantarEnvido(Mano unaMano){
+    public Jugada cantarEnvido(Mano unaMano){
+        return null;
+    }
+
+    public Jugada cantarRealEnvido(Mano unaMano){
+        return null;
+    }
+
+    public Jugada cantarFaltaEnvio(Mano unMano){
+        return null;
     }
 
     public void cantarFlor(Mano unaMano) throws Exception {
