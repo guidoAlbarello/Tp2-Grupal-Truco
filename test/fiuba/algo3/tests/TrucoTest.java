@@ -35,13 +35,13 @@ public class TrucoTest {
         Carta carta1basto = new Carta(1,basto);
         Carta carta1copa = new Carta(1,copa);
 
-        jugador1.getMano().agregarCarta(carta7espada);
-        jugador1.getMano().agregarCarta(carta6espada);
-        jugador1.getMano().agregarCarta(carta4oro);
+        jugador1.recibirCarta(carta7espada);
+        jugador1.recibirCarta(carta6espada);
+        jugador1.recibirCarta(carta4oro);
 
-        jugador2.getMano().agregarCarta(carta5oro);
-        jugador2.getMano().agregarCarta(carta1basto);
-        jugador2.getMano().agregarCarta(carta1copa);
+        jugador2.recibirCarta(carta5oro);
+        jugador2.recibirCarta(carta1basto);
+        jugador2.recibirCarta(carta1copa);
 
         Mesa mesa = new Mesa(jugador1,jugador2);
         mesa.resolverJugada(jugador1.getCantosPosibles().cantarEnvido(jugador1));
@@ -57,13 +57,13 @@ public class TrucoTest {
         Carta carta1basto = new Carta(1,basto);
         Carta carta1copa = new Carta(1,copa);
 
-        jugador1.getMano().agregarCarta(carta6espada);
-        jugador1.getMano().agregarCarta(carta1basto);
-        jugador1.getMano().agregarCarta(carta4oro);
+        jugador1.recibirCarta(carta6espada);
+        jugador1.recibirCarta(carta1basto);
+        jugador1.recibirCarta(carta4oro);
 
-        jugador2.getMano().agregarCarta(carta5oro);
-        jugador2.getMano().agregarCarta(carta7espada);
-        jugador2.getMano().agregarCarta(carta1copa);
+        jugador2.recibirCarta(carta5oro);
+        jugador2.recibirCarta(carta7espada);
+        jugador2.recibirCarta(carta1copa);
 
         Mesa mesa = new Mesa(jugador1,jugador2);
         mesa.resolverJugada(jugador1.getCantosPosibles().cantarEnvido(jugador1));
@@ -78,13 +78,13 @@ public class TrucoTest {
         Carta carta1basto = new Carta(1,basto);
         Carta carta1copa = new Carta(1,copa);
 
-        jugador1.getMano().agregarCarta(carta6espada);
-        jugador1.getMano().agregarCarta(carta1basto);
-        jugador1.getMano().agregarCarta(carta4oro);
+        jugador1.recibirCarta(carta6espada);
+        jugador1.recibirCarta(carta1basto);
+        jugador1.recibirCarta(carta4oro);
 
-        jugador2.getMano().agregarCarta(carta5oro);
-        jugador2.getMano().agregarCarta(carta6basto);
-        jugador2.getMano().agregarCarta(carta1copa);
+        jugador2.recibirCarta(carta5oro);
+        jugador2.recibirCarta(carta6basto);
+        jugador2.recibirCarta(carta1copa);
 
         Mesa mesa = new Mesa(jugador1,jugador2);
         mesa.resolverJugada(jugador1.getCantosPosibles().cantarEnvido(jugador1));//jugador 1 es mano por q es el que inicia la jugada
@@ -100,13 +100,13 @@ public class TrucoTest {
         Carta carta1basto = new Carta(1,basto);
         Carta carta1copa = new Carta(1,copa);
 
-        jugador1.getMano().agregarCarta(carta7espada);
-        jugador1.getMano().agregarCarta(carta6espada);
-        jugador1.getMano().agregarCarta(carta4oro);
+        jugador1.recibirCarta(carta7espada);
+        jugador1.recibirCarta(carta6espada);
+        jugador1.recibirCarta(carta4oro);
 
-        jugador2.getMano().agregarCarta(carta5oro);
-        jugador2.getMano().agregarCarta(carta1basto);
-        jugador2.getMano().agregarCarta(carta1copa);
+        jugador2.recibirCarta(carta5oro);
+        jugador2.recibirCarta(carta1basto);
+        jugador2.recibirCarta(carta1copa);
 
         Mesa mesa = new Mesa(jugador1,jugador2);
         mesa.resolverJugada(jugador1.noAceptarEnvio());
@@ -122,13 +122,13 @@ public class TrucoTest {
         Carta carta1basto = new Carta(1,basto);
         Carta carta1copa = new Carta(1,copa);
 
-        jugador1.getMano().agregarCarta(carta7espada);
-        jugador1.getMano().agregarCarta(carta6espada);
-        jugador1.getMano().agregarCarta(carta4oro);
+        jugador1.recibirCarta(carta7espada);
+        jugador1.recibirCarta(carta6espada);
+        jugador1.recibirCarta(carta4oro);
 
-        jugador2.getMano().agregarCarta(carta5oro);
-        jugador2.getMano().agregarCarta(carta1basto);
-        jugador2.getMano().agregarCarta(carta1copa);
+        jugador2.recibirCarta(carta5oro);
+        jugador2.recibirCarta(carta1basto);
+        jugador2.recibirCarta(carta1copa);
 
         Mesa mesa = new Mesa(jugador1,jugador2);
         mesa.resolverJugada(jugador1.getCantosPosibles().cantarRealEnvido(jugador1));
