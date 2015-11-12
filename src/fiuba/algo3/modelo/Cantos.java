@@ -6,13 +6,13 @@ package fiuba.algo3.modelo;
 public abstract class Cantos {
 
 
-    public abstract Jugada cantarEnvido(JugadorEnJuego jugador);
+    public abstract Jugada cantarEnvido(Jugador jugador);
 
-    public abstract Jugada cantarRealEnvido(JugadorEnJuego jugador);
+    public abstract Jugada cantarRealEnvido(Jugador jugador);
 
-    public abstract Jugada cantarFaltaEnvio(JugadorEnJuego jugador);
+    public abstract Jugada cantarFaltaEnvio(Jugador jugador);
 
-    public abstract Jugada cantarFlor(JugadorEnJuego jugador)throws Exception ;
+    public abstract Jugada cantarFlor(Jugador jugador)throws Exception ;
 }
 
 

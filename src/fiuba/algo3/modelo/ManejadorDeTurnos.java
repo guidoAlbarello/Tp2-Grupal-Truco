@@ -9,10 +9,15 @@ public class ManejadorDeTurnos {
 
     private Jugador jugador1;
     private Jugador jugador2;
-    private Jugador turnoActual;
+    private Jugador jugadorMano;
+    private Jugador jugadorTurnoEnMano;
 
-    public ManejadorDeTurnos() {
-        this.turnoActual = jugador1;
+    public ManejadorDeTurnos(Jugador jugador1,Jugador jugador2) {
+        this.jugador1 = jugador1;
+        this.jugador2 = jugador2;
+        this.jugadorMano = jugador1;
+        this.jugadorTurnoEnMano = this.jugadorMano;
+
     }
 
     public Jugador getJugador1() {
@@ -24,14 +29,22 @@ public class ManejadorDeTurnos {
     }
 
     // aca me falta a logica para manejar los turnos
-    public Jugador jugadorContrario(Jugador jugador) {
-        if (jugador1.getNombre() == "jugador1")
-            return jugador;
-        else
-            return jugador1;
+    public Jugador jugadorTurnoEnMano() {
+        return this.jugadorTurnoEnMano;
     }
-
-    public Jugador darJugadorQueInicia() {
-        return jugador1;
+    public void pasarTurnoEnMano(){
+        if (jugadorTurnoEnMano.getNombre().equals("jugador1"))
+            jugadorTurnoEnMano = jugador2;
+        else
+            jugadorTurnoEnMano = jugador1;
+    }
+    public void pasarJugadorMano(){
+        if (jugadorMano.getNombre().equals("jugador1"))
+            jugadorMano = jugador2;
+        else
+            jugadorMano = jugador1;
+    }
+    public Jugador jugadorMano() {
+        return this.jugadorMano;
     }
 }

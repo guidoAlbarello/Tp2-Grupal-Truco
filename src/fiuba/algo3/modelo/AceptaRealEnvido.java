@@ -4,14 +4,14 @@ package fiuba.algo3.modelo;
  * Created by anthony on 10/11/2015.
  */
 public class AceptaRealEnvido extends Jugada {
-    private JugadorEnJuego jugadorQueCanta;
+    private Jugador jugadorQueCanta;
 
-    public AceptaRealEnvido(JugadorEnJuego jugador) {
+    public AceptaRealEnvido(Jugador jugador) {
         this.jugadorQueCanta = jugador;
     }
 
     @Override
-    public JugadorEnJuego jugadorQueCanto() {
+    public Jugador jugadorQueCanto() {
         return this.jugadorQueCanta;
     }
     public void resolverEnMesa(Mesa mesa){

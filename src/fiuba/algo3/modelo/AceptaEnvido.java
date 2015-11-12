@@ -4,9 +4,9 @@ package fiuba.algo3.modelo;
  * Created by anthony on 10/11/2015.
  */
 public class AceptaEnvido extends Jugada {
-    private JugadorEnJuego jugadorQueLoCanto;
+    private Jugador jugadorQueLoCanto;
 
-    public AceptaEnvido(JugadorEnJuego jugador) {
+    public AceptaEnvido(Jugador jugador) {
         this.jugadorQueLoCanto = jugador;
 
     }
@@ -16,7 +16,7 @@ public class AceptaEnvido extends Jugada {
     }
 
     @Override
-    public JugadorEnJuego jugadorQueCanto() {
+    public Jugador jugadorQueCanto() {
         return this.jugadorQueLoCanto;
     }
 }
