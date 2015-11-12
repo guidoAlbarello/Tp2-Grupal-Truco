@@ -16,7 +16,7 @@ public class CantosSinFlor extends Cantos {
     }
 
     @Override
-    public Jugada cantarFaltaEnvio(Jugador jugador) {
+    public Jugada cantarFaltaEnvido(Jugador jugador) {
         return new FaltaEnvido(jugador);
     }
 
