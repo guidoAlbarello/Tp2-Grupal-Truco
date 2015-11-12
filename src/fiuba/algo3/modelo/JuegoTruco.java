@@ -47,14 +47,14 @@ public class JuegoTruco {
 
     //public void agregarJugador(String nombre){ this.jugadores.addLast(new Jugador(nombre,cantosDelJuego));  }
 
-    public void agregarJugadores(String nombreJugador1,String nombreJugador2){
+   /* public void agregarJugadores(String nombreJugador1,String nombreJugador2){
         this.mesa = new Mesa(new Jugador(nombreJugador1,cantosDelJuego),new Jugador(nombreJugador2,cantosDelJuego));
     }
 
     public void repartirCartas(){
         this.mazoDeCartas.repartirCartasAJugador(this.mesa.getJugador1());
         this.mazoDeCartas.repartirCartasAJugador(this.mesa.getJugador2());
-    }
+    }*/
 
 
 }

@@ -7,12 +7,12 @@ import java.util.LinkedList;
  */
 public class ManejadorDeTurnos {
 
-    private Jugador jugador1;
-    private Jugador jugador2;
-    private Jugador jugadorMano;
-    private Jugador jugadorTurnoEnMano;
+    private JugadorEnRonda jugador1;
+    private JugadorEnRonda jugador2;
+    private JugadorEnRonda jugadorMano;
+    private JugadorEnRonda jugadorTurnoEnMano;
 
-    public ManejadorDeTurnos(Jugador jugador1,Jugador jugador2) {
+    public ManejadorDeTurnos(JugadorEnRonda jugador1, JugadorEnRonda jugador2) {
         this.jugador1 = jugador1;
         this.jugador2 = jugador2;
         this.jugadorMano = jugador1;
@@ -20,31 +20,29 @@ public class ManejadorDeTurnos {
 
     }
 
-    public Jugador getJugador1() {
-        return jugador1;
-    }
-
-    public Jugador getJugador2() {
-        return jugador2;
-    }
 
     // aca me falta a logica para manejar los turnos
-    public Jugador jugadorTurnoEnMano() {
+    public JugadorEnRonda getJugadorTurnoEnMano() {
         return this.jugadorTurnoEnMano;
     }
     public void pasarTurnoEnMano(){
-        if (jugadorTurnoEnMano.getNombre().equals("jugador1"))
+        if (jugadorTurnoEnMano.getJugador().getNombre().equals("jugador1"))
             jugadorTurnoEnMano = jugador2;
         else
             jugadorTurnoEnMano = jugador1;
     }
     public void pasarJugadorMano(){
-        if (jugadorMano.getNombre().equals("jugador1"))
+        if (jugadorMano.getJugador().getNombre().equals("jugador1"))
             jugadorMano = jugador2;
         else
             jugadorMano = jugador1;
     }
-    public Jugador jugadorMano() {
+    public JugadorEnRonda getJugadorMano() {
         return this.jugadorMano;
     }
+
+
+    public void setJugadorMano(JugadorEnRonda jugadorMano) {
+    }
+
 }

@@ -75,17 +75,9 @@ public class Jugador {
         this.puntaje += puntaje;
     }
 
-
-    //agregue yo fede
-
-    public void jugarCarta(Integer indiceDeCarta) {
-        this.manoDelJugador.jugarCarta(indiceDeCarta);
+    public int getPuntaje() {
+        return puntaje;
     }
-
-    public Carta getCartaJugada(){
-        return this.manoDelJugador.getCartaJugada();
-    }
-
 
 
     /*public void jugarCarta(Carta unaCarta){

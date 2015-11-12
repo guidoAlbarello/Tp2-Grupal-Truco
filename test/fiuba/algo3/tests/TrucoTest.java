@@ -10,6 +10,9 @@ public class TrucoTest {
     private Cantos cantos;
     private Jugador jugador1;
     private Jugador jugador2;
+    private JugadorEnRonda jugadorEnRonda1;
+    private JugadorEnRonda jugadorEnRonda2;
+    private ManejadorDeTurnos manejadorDeTurnos;
     private Palo basto;
     private Palo espada;
     private Palo copa;
@@ -20,6 +23,9 @@ public class TrucoTest {
         cantos = new CantosConFlor();
         jugador1 = new Jugador("jugador1",cantos);
         jugador2 = new Jugador("jugador2",cantos);
+        jugadorEnRonda1 = new JugadorEnRonda(jugador1);
+        jugadorEnRonda2 = new JugadorEnRonda(jugador2);
+        manejadorDeTurnos = new ManejadorDeTurnos(jugadorEnRonda1,jugadorEnRonda2);
         basto = new PaloBasto();
         espada = new PaloEspada();
         copa = new PaloCopa();
@@ -35,17 +41,17 @@ public class TrucoTest {
         Carta carta1basto = new Carta(1,basto);
         Carta carta1copa = new Carta(1,copa);
 
-        jugador1.recibirCarta(carta7espada);
-        jugador1.recibirCarta(carta6espada);
-        jugador1.recibirCarta(carta4oro);
+        jugadorEnRonda1.getJugador().getMano().agregarCarta(carta7espada);
+        jugadorEnRonda1.getJugador().getMano().agregarCarta(carta6espada);
+        jugadorEnRonda1.getJugador().getMano().agregarCarta(carta4oro);
 
-        jugador2.recibirCarta(carta5oro);
-        jugador2.recibirCarta(carta1basto);
-        jugador2.recibirCarta(carta1copa);
+        jugadorEnRonda2.getJugador().getMano().agregarCarta(carta5oro);
+        jugadorEnRonda2.getJugador().getMano().agregarCarta(carta1basto);
+        jugadorEnRonda2.getJugador().getMano().agregarCarta(carta1copa);
 
-        Mesa mesa = new Mesa(jugador1,jugador2);
-        mesa.resolverJugada(jugador1.getCantosPosibles().cantarEnvido(jugador1));
-        Assert.assertTrue(jugador1.puntaje() == 2);
+        Mesa mesa = new Mesa(jugadorEnRonda1,jugadorEnRonda2,manejadorDeTurnos);
+        mesa.resolverJugada(jugadorEnRonda1.getJugador().getCantosPosibles().cantarEnvido(jugador1));
+        Assert.assertTrue(jugadorEnRonda1.getPuntosGanadosEnRonda() == 2);
     }
 
     @Test
@@ -57,17 +63,17 @@ public class TrucoTest {
         Carta carta1basto = new Carta(1,basto);
         Carta carta1copa = new Carta(1,copa);
 
-        jugador1.recibirCarta(carta6espada);
-        jugador1.recibirCarta(carta1basto);
-        jugador1.recibirCarta(carta4oro);
+        jugadorEnRonda1.getJugador().getMano().agregarCarta(carta1copa);
+        jugadorEnRonda1.getJugador().getMano().agregarCarta(carta6espada);
+        jugadorEnRonda1.getJugador().getMano().agregarCarta(carta4oro);
 
-        jugador2.recibirCarta(carta5oro);
-        jugador2.recibirCarta(carta7espada);
-        jugador2.recibirCarta(carta1copa);
+        jugadorEnRonda2.getJugador().getMano().agregarCarta(carta5oro);
+        jugadorEnRonda2.getJugador().getMano().agregarCarta(carta1basto);
+        jugadorEnRonda2.getJugador().getMano().agregarCarta(carta7espada);
 
-        Mesa mesa = new Mesa(jugador1,jugador2);
-        mesa.resolverJugada(jugador1.getCantosPosibles().cantarEnvido(jugador1));
-        Assert.assertTrue(jugador2.puntaje() == 2);
+        Mesa mesa = new Mesa(jugadorEnRonda1,jugadorEnRonda2,manejadorDeTurnos);
+        mesa.resolverJugada(jugadorEnRonda1.getJugador().getCantosPosibles().cantarEnvido(jugador1));
+        Assert.assertTrue(jugadorEnRonda2.getPuntosGanadosEnRonda() == 2);
     }
     @Test
     public void siSeCantaEnvidoYSonIgualesGanaJugadorMano(){
@@ -78,17 +84,17 @@ public class TrucoTest {
         Carta carta1basto = new Carta(1,basto);
         Carta carta1copa = new Carta(1,copa);
 
-        jugador1.recibirCarta(carta6espada);
-        jugador1.recibirCarta(carta1basto);
-        jugador1.recibirCarta(carta4oro);
+        jugador1.getMano().agregarCarta(carta6espada);
+        jugador1.getMano().agregarCarta(carta1basto);
+        jugador1.getMano().agregarCarta(carta4oro);
 
-        jugador2.recibirCarta(carta5oro);
-        jugador2.recibirCarta(carta6basto);
-        jugador2.recibirCarta(carta1copa);
+        jugador2.getMano().agregarCarta(carta5oro);
+        jugador2.getMano().agregarCarta(carta6basto);
+        jugador2.getMano().agregarCarta(carta1copa);
 
-        Mesa mesa = new Mesa(jugador1,jugador2);
-        mesa.resolverJugada(jugador1.getCantosPosibles().cantarEnvido(jugador1));//jugador 1 es mano por q es el que inicia la jugada
-        Assert.assertTrue(jugador1.puntaje() == 2);
+        Mesa mesa = new Mesa(jugadorEnRonda1,jugadorEnRonda2,manejadorDeTurnos);
+        mesa.resolverJugada(jugadorEnRonda1.getJugador().getCantosPosibles().cantarEnvido(jugador1));//jugador 1 es mano por q es el que inicia la jugada
+        Assert.assertTrue(jugadorEnRonda1.getPuntosGanadosEnRonda() == 2);
     }
 
     @Test
@@ -100,17 +106,17 @@ public class TrucoTest {
         Carta carta1basto = new Carta(1,basto);
         Carta carta1copa = new Carta(1,copa);
 
-        jugador1.recibirCarta(carta7espada);
-        jugador1.recibirCarta(carta6espada);
-        jugador1.recibirCarta(carta4oro);
+        jugador1.getMano().agregarCarta(carta7espada);
+        jugador1.getMano().agregarCarta(carta6espada);
+        jugador1.getMano().agregarCarta(carta4oro);
 
-        jugador2.recibirCarta(carta5oro);
-        jugador2.recibirCarta(carta1basto);
-        jugador2.recibirCarta(carta1copa);
+        jugador2.getMano().agregarCarta(carta5oro);
+        jugador2.getMano().agregarCarta(carta1basto);
+        jugador2.getMano().agregarCarta(carta1copa);
 
-        Mesa mesa = new Mesa(jugador1,jugador2);
-        mesa.resolverJugada(jugador1.noAceptarEnvio());
-        Assert.assertTrue(jugador2.puntaje() == 1);
+        Mesa mesa = new Mesa(jugadorEnRonda1,jugadorEnRonda2,manejadorDeTurnos);
+        mesa.resolverJugada(jugadorEnRonda1.getJugador().noAceptarEnvio());
+        Assert.assertTrue(jugadorEnRonda2.getPuntosGanadosEnRonda() == 1);
     }
 
     @Test
@@ -122,16 +128,17 @@ public class TrucoTest {
         Carta carta1basto = new Carta(1,basto);
         Carta carta1copa = new Carta(1,copa);
 
-        jugador1.recibirCarta(carta7espada);
-        jugador1.recibirCarta(carta6espada);
-        jugador1.recibirCarta(carta4oro);
+        jugador1.getMano().agregarCarta(carta7espada);
+        jugador1.getMano().agregarCarta(carta6espada);
+        jugador1.getMano().agregarCarta(carta4oro);
 
-        jugador2.recibirCarta(carta5oro);
-        jugador2.recibirCarta(carta1basto);
-        jugador2.recibirCarta(carta1copa);
+        jugador2.getMano().agregarCarta(carta5oro);
+        jugador2.getMano().agregarCarta(carta1basto);
+        jugador2.getMano().agregarCarta(carta1copa);
 
-        Mesa mesa = new Mesa(jugador1,jugador2);
-        mesa.resolverJugada(jugador1.getCantosPosibles().cantarRealEnvido(jugador1));
-        Assert.assertTrue(jugador1.puntaje() == 4);
+        Mesa mesa = new Mesa(jugadorEnRonda1,jugadorEnRonda2,manejadorDeTurnos);
+        mesa.resolverJugada(jugadorEnRonda1.getJugador().getCantosPosibles().cantarRealEnvido(jugador1));
+        Assert.assertTrue(jugadorEnRonda1.getPuntosGanadosEnRonda() == 4);
     }
 }
+
