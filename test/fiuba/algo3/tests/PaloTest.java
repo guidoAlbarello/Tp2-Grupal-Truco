@@ -24,4 +24,3 @@ public class PaloTest {
         Assert.assertFalse(paloOro.esDelMismoPaloQue(paloCopa));
     }
 }
-git

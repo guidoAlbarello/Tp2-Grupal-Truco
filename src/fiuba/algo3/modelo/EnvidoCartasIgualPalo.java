@@ -5,7 +5,7 @@ package fiuba.algo3.modelo;
  */
 public class EnvidoCartasIgualPalo implements Envido {
     private int valorEnvido;
-    private final int VALOR_EXTRA_ENVIDO = 20;
+    private static final int VALOR_EXTRA_ENVIDO = 20;
 
     @Override
     public Envido calcularEnvido(int valorUnaCarta, int valorOtraCarta) {
