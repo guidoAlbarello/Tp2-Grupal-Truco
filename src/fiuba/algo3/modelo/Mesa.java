@@ -15,6 +15,7 @@ public class Mesa {
         this.jugador1 = jugador1;
         this.jugador2 = jugador2;
         manejadorDeTurnos = new ManejadorDeTurnos(jugador1,jugador2);
+
     }
     public Jugador getJugador1() {
         return jugador1;
@@ -30,8 +31,8 @@ public class Mesa {
         }
     }
     public void comenzarRonda() {
-        this.manejadorDePuntaje.setManosGanadas(jugador1.getNombre(),0);
-        this.manejadorDePuntaje.setManosGanadas(jugador2.getNombre(),0);
+       // this.manejadorDePuntaje.setManosGanadas(jugador1.getNombre(),0);
+        //this.manejadorDePuntaje.setManosGanadas(jugador2.getNombre(),0);
         while (manejadorDePuntaje.getPuntaje(jugador1.getNombre())== 0 && manejadorDePuntaje.getPuntaje(jugador2.getNombre())==0){
             comenzarMano(jugador1, jugador2);
         }
