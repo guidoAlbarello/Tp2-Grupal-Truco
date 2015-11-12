@@ -4,6 +4,7 @@ import fiuba.algo3.modelo.excepciones.NoHayFlorEnLaManoError;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -12,9 +13,10 @@ import java.util.List;
 public class Mano {
 
     private List<Carta> cartasEnLaMano;
-
+    private LinkedList<Integer> indiceDeCartasJugadas; //agregue yo fede
     public Mano(){
         this.cartasEnLaMano = new ArrayList<Carta>();
+        this.indiceDeCartasJugadas = new LinkedList<Integer>();
     }
 
     public void agregarCarta(Carta unaCarta) {
@@ -82,5 +84,19 @@ public class Mano {
         return this.cartasEnLaMano;
     }
 
+
+
+    //agregue yo fede
+
+    public void jugarCarta(Integer indiceDeCarta) {
+        if (!this.indiceDeCartasJugadas.contains(indiceDeCarta)) {
+            this.indiceDeCartasJugadas.addLast(indiceDeCarta);
+        }
+    }
+
+    public Carta getCartaJugada(){
+        int indiceDeUltimaCartaJugada = this.indiceDeCartasJugadas.getLast();
+        return this.cartasEnLaMano.get(indiceDeUltimaCartaJugada);
+    }
 }
 
