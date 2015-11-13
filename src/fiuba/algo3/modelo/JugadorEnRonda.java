@@ -12,6 +12,7 @@ public class JugadorEnRonda {
     public JugadorEnRonda(Jugador jugador) {
         this.jugadorEnRonda = jugador;
         this.puntosGanadosEnRonda = 0;
+        this.manosGanadas = 0;
     }
 
     public int getPuntosGanadosEnRonda(){return this.puntosGanadosEnRonda;}
@@ -21,7 +22,7 @@ public class JugadorEnRonda {
     }
 
     public int getManosGanadas() {
-        return manosGanadas;
+        return this.manosGanadas;
     }
 
     public void actualizarPuntajeDeJugador() {
@@ -38,6 +39,6 @@ public class JugadorEnRonda {
     }
 
     public void aumentarManosGanadas() {
-
+        this.manosGanadas+=1;           ///------- YO FEDE EDITE PARA TESTEAR MESA   nota: antes este metodo no hacia nada
     }
 }

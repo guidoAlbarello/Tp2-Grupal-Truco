@@ -69,7 +69,7 @@ public class Mesa {
     public void resolverCartaJugada(CartaJugada cartaJugada){
             cartasEnMesa.add(cartaJugada);
         if (cartasEnMesa.size() == 2){
-            JugadorEnRonda jugadorGanaMano = this.compararCartas(cartasEnMesa);
+            JugadorEnRonda jugadorGanaMano = this.compararCartas(); //---------ACA tambien cambie cartasEnMesa que recibe compararCartas
             jugadorGanaMano.aumentarManosGanadas();
             cartasEnMesa.clear();
         }
@@ -79,12 +79,32 @@ public class Mesa {
             this.resolverJugada(jugada);
     }
 
-    private JugadorEnRonda compararCartas(LinkedList<CartaJugada> cartasEnMesa) {
-        Carta carta0 = cartasEnMesa.get(0).carta;
-        Carta carta1 = cartasEnMesa.get(1).carta;
+    public JugadorEnRonda compararCartas() {    /////------SAQUE CARTASENMESA QUE RECIBIA, PORQUE ES UN ATRIBUTO DE LA CLASE!!!  LO HICE PUBLICO PARA PODER TESTEAR
+        Carta carta0 = this.cartasEnMesa.get(0).carta;
+        Carta carta1 = this.cartasEnMesa.get(1).carta;
         if (carta0.getValorDePoder() > carta1.getValorDePoder())
-            return cartasEnMesa.get(0).jugadorQueCanto();
+            return this.cartasEnMesa.get(0).jugadorQueCanto();
         else
-            return cartasEnMesa.get(1).jugadorQueCanto();
+            return this.cartasEnMesa.get(1).jugadorQueCanto();
     }
+
+
+
+
+
+
+    //Agrego metodos para probar tests
+
+    public boolean terminoLaMano(){
+        return (this.cartasEnMesa.size()==2); //2=cantidadDeJugadores
+    }
+
+
+    public void seJuegaUnaCarta(Integer indiceDeLaCarta){
+        JugadorEnRonda jugadorConTurnoActual = this.manejadorDeTurnos.getJugadorTurnoEnMano();
+        jugadorConTurnoActual.getJugador().getMano().jugarCarta(indiceDeLaCarta);
+        CartaJugada cartaQueSeJugo = new CartaJugada(jugadorConTurnoActual,jugadorConTurnoActual.getJugador().getMano().getCartaJugada());
+        this.cartasEnMesa.add(cartaQueSeJugo);
+    }
+
 }
