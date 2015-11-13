@@ -14,7 +14,7 @@ public abstract class Cantos {
 
     public abstract Jugada cantarFaltaEnvido(Jugador jugador);
 
-    public abstract Jugada cantarFlor(Jugador jugador)throws Exception ;
+    public abstract Jugada cantarFlor(Jugador jugador);
 }
 
 

@@ -8,10 +8,12 @@ public class ManejadorDeJuego {
     private Jugador jugador1;
     private Jugador jugador2;
     private ManejadorDeTurnos manejadorDeTurnos;
+    private ManejadorDePuntaje manejadorDePuntaje;
 
     public ManejadorDeJuego(Jugador jugador1,Jugador jugador2){
         this.jugador1 = jugador1;
         this.jugador2 = jugador2;
+
     }
 
     public void comenzarPartida() {
@@ -19,6 +21,7 @@ public class ManejadorDeJuego {
         JugadorEnRonda jugadorEnRonda2 = new JugadorEnRonda(this.jugador2);
         mesaDelJuego = new Mesa(jugadorEnRonda1,jugadorEnRonda2,manejadorDeTurnos);//se crea la mesa para
         manejadorDeTurnos = new ManejadorDeTurnos(jugadorEnRonda1,jugadorEnRonda2);
+        this.manejadorDePuntaje = new ManejadorDePuntaje(this.jugador1.getNombre(), this.jugador2.getNombre());
         this.elejirJugadorMano(jugadorEnRonda1, jugadorEnRonda1);
         while (jugadorEnRonda1.getJugador().getPuntaje() < 30 && jugadorEnRonda2.getJugador().getPuntaje() < 30)
             comenzarRonda(jugadorEnRonda1, jugadorEnRonda1);
@@ -45,6 +48,8 @@ public class ManejadorDeJuego {
             jugadorEnRonda1.getJugador().sumaPuntaje(1);
         else
             jugadorEnRonda2.getJugador().sumaPuntaje(1);
+        this.manejadorDePuntaje.sumaPuntaje(jugadorEnRonda1.getJugador().getNombre(), jugadorEnRonda1.getPuntosGanadosEnRonda());
+        this.manejadorDePuntaje.sumaPuntaje(jugadorEnRonda2.getJugador().getNombre(), jugadorEnRonda2.getPuntosGanadosEnRonda());
     }
 
 

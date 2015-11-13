@@ -1,5 +1,7 @@
 package fiuba.algo3.modelo;
 
+import fiuba.algo3.modelo.excepciones.NoSeEstaJugandoConFlorError;
+
 /**
  * Created by Fechee on 10/11/2015.
  */
@@ -21,8 +23,8 @@ public class CantosSinFlor extends Cantos {
     }
 
     @Override
-    public Jugada cantarFlor(Jugador jugador) throws Exception {
-        return null;
+    public Jugada cantarFlor(Jugador jugador){
+        throw new NoSeEstaJugandoConFlorError();
     }
 
 }

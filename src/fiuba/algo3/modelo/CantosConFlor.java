@@ -22,7 +22,7 @@ public class CantosConFlor extends Cantos {
     }
 
     @Override
-    public Jugada cantarFlor(Jugador jugador) throws Exception {
+    public Jugada cantarFlor(Jugador jugador){
         return null;
     }
     public Jugada jugarCarta(Carta carta,JugadorEnRonda jugador){
