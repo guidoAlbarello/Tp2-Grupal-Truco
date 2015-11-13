@@ -5,7 +5,9 @@ package fiuba.algo3.modelo;
  */
 public abstract class Cantos {
 
-
+    public Jugada jugarCarta(Carta carta,Jugador jugador){
+        return null;
+    }
     public abstract Jugada cantarEnvido(Jugador jugador);
 
     public abstract Jugada cantarRealEnvido(Jugador jugador);

@@ -25,6 +25,9 @@ public class CantosConFlor extends Cantos {
     public Jugada cantarFlor(Jugador jugador) throws Exception {
         return null;
     }
+    public Jugada jugarCarta(Carta carta,JugadorEnRonda jugador){
+        return new CartaJugada(jugador,carta);
+    }
 }
 
 

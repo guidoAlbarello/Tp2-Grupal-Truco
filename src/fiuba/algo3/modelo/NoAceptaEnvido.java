@@ -14,7 +14,7 @@ public class NoAceptaEnvido extends Jugada {
         mesa.resolverNoAceptaEnvido(this);
     }
 
-    @Override
+
     public Jugador jugadorQueCanto() {
         return jugadorQueLoCanto;
     }

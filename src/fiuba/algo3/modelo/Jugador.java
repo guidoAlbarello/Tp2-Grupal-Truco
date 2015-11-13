@@ -12,7 +12,7 @@ public class Jugador {
     //private Cantos cantos;
 
 
-    public Jugador(String nombre,Cantos cantosDeJuego) {
+    public Jugador(String nombre, Cantos cantosDeJuego) {
         this.nombreJugador = nombre;
         this.cantosPosibles = cantosDeJuego;
         this.manoDelJugador = new Mano();
@@ -20,8 +20,7 @@ public class Jugador {
     }
 
 
-
-    public void recibirCarta(Carta unaCarta){
+    public void recibirCarta(Carta unaCarta) {
         this.manoDelJugador.agregarCarta(unaCarta);
     }
 
@@ -29,23 +28,18 @@ public class Jugador {
         return this.nombreJugador;
     }
 
-    public Mano getMano(){
+    public Mano getMano() {
         return this.manoDelJugador;
     }
-    public Cantos getCantosPosibles(){return this.cantosPosibles;}
 
-    public Jugada hacerJugada(){
+    public Cantos getCantosPosibles() {
+        return this.cantosPosibles;
+    }
+
+    public Jugada hacerJugada() {
         //en lagun lado hay q darle la opcion par aelejir
         //return cantosPosibles.cantarEnvido() ;
         return null;
-    }
-
-    public CartaJugada responderCarta(CartaJugada unaCrtaJugada) {
-        return null;
-    }
-
-    public void incrementarManosGanadas() {
-
     }
 
     public int puntaje() {
@@ -55,6 +49,7 @@ public class Jugador {
     public Jugada responderEnvio() {
         return new AceptaEnvido(this);
     }
+
     public Jugada responderRealEnvio() {
         return new AceptaRealEnvido(this);
     }
@@ -80,6 +75,7 @@ public class Jugador {
     }
 
 
+}
     /*public void jugarCarta(Carta unaCarta){
         this.manosGanadas.jugarCarta(unaCarta);
     }
@@ -89,4 +85,4 @@ public class Jugador {
     }
 */
 
-}
+

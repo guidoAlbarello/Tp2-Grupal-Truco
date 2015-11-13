@@ -8,7 +8,7 @@ public class FaltaEnvido extends Jugada {
         super();
     }
 
-    @Override
+
     public Jugador jugadorQueCanto() {
         return null;
     }

@@ -8,7 +8,7 @@ public class Flor extends Jugada {
 
     }
 
-    @Override
+
     public Jugador jugadorQueCanto() {
         return null;
     }

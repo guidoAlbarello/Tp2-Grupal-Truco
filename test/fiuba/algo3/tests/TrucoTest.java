@@ -140,5 +140,7 @@ public class TrucoTest {
         mesa.resolverJugada(jugadorEnRonda1.getJugador().getCantosPosibles().cantarRealEnvido(jugador1));
         Assert.assertTrue(jugadorEnRonda1.getPuntosGanadosEnRonda() == 4);
     }
+
+
 }
 

@@ -5,7 +5,5 @@ package fiuba.algo3.modelo;
  */
 public abstract class Jugada {
     public abstract void resolverEnMesa(Mesa mesa);
-    public abstract Jugador jugadorQueCanto();
-
 }
 

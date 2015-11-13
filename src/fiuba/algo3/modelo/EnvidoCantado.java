@@ -13,7 +13,6 @@ public class EnvidoCantado extends Jugada {
         mesa.resolverEnvido(this);
     }
 
-        public Jugador jugadorQueCanto() {
-        return this.jugadorQueLoCanto;
-    }
+
+
 }

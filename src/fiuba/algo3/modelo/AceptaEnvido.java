@@ -15,7 +15,7 @@ public class AceptaEnvido extends Jugada {
         mesa.resolverAceptaEnvido(this);
     }
 
-    @Override
+
     public Jugador jugadorQueCanto() {
         return this.jugadorQueLoCanto;
     }

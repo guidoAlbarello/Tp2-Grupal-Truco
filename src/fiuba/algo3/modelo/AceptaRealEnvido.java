@@ -10,7 +10,7 @@ public class AceptaRealEnvido extends Jugada {
         this.jugadorQueCanta = jugador;
     }
 
-    @Override
+
     public Jugador jugadorQueCanto() {
         return this.jugadorQueCanta;
     }

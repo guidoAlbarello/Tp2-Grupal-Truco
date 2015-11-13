@@ -22,6 +22,7 @@ public class Mano {
     public void agregarCarta(Carta unaCarta) {
         this.cartasEnLaMano.add(unaCarta);
     }
+    public Carta obtenerUltimaCarta(){return cartasEnLaMano.get(2);}
 
     public Envido obtenerEnvido(){
         List<Envido> envidosPosibles = new ArrayList<Envido>();

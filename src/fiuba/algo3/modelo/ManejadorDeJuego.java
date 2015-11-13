@@ -31,6 +31,7 @@ public class ManejadorDeJuego {
     }
 
     public void comenzarRonda(JugadorEnRonda jugadorEnRonda1, JugadorEnRonda jugadorEnRonda2) {
+        manejadorDeTurnos.pasarJugadorMano();
         while (jugadorEnRonda1.getManosGanadas() < 2 && jugadorEnRonda2.getManosGanadas() < 2) {
             JugadorEnRonda jugadorMano = manejadorDeTurnos.getJugadorMano();
             Jugada jugada = jugadorMano.getJugador().hacerJugada();
@@ -39,8 +40,11 @@ public class ManejadorDeJuego {
             jugadorEnRonda1.inicializarParaNuevaRonda();
             jugadorEnRonda2.actualizarPuntajeDeJugador();
             jugadorEnRonda2.inicializarParaNuevaRonda();
-            manejadorDeTurnos.pasarJugadorMano();
         }
+        if (jugadorEnRonda1.getManosGanadas() == 2 )
+            jugadorEnRonda1.getJugador().sumaPuntaje(1);
+        else
+            jugadorEnRonda2.getJugador().sumaPuntaje(1);
     }
 
 

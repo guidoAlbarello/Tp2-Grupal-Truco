@@ -4,20 +4,22 @@ package fiuba.algo3.modelo;
  * Created by anthony on 10/11/2015.
  */
 public class CartaJugada extends Jugada {
-    public Jugador jugadorQueLaJugo;
-    public int valor;
+    public JugadorEnRonda jugadorQueLaJugo;
+    public Carta carta;
 
-    public CartaJugada(Jugador jugador, int valor) {
+    public CartaJugada(JugadorEnRonda jugador, Carta carta) {
         jugadorQueLaJugo = jugador;
-        this.valor = valor;
+        this.carta = carta;
     }
+
+
 
     public void resolverEnMesa(Mesa mesa){
         mesa.resolverCartaJugada(this);
     }
 
-    @Override
-    public Jugador jugadorQueCanto() {
+
+    public JugadorEnRonda jugadorQueCanto() {
         return jugadorQueLaJugo;
     }
 

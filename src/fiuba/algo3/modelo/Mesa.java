@@ -1,5 +1,7 @@
 package fiuba.algo3.modelo;
 
+import java.util.LinkedList;
+
 /**
  * Created by anthony on 10/11/2015.
  */
@@ -8,11 +10,13 @@ public class Mesa {
     private JugadorEnRonda jugadorEnRonda1;
     private JugadorEnRonda jugadorEnRonda2;
     private ManejadorDeTurnos manejadorDeTurnos;
+    private LinkedList<CartaJugada> cartasEnMesa;
 
     public Mesa(JugadorEnRonda jugadorEnRonda1, JugadorEnRonda jugadorEnRonda2, ManejadorDeTurnos manejadorDeTurnos) {
         this.jugadorEnRonda1 = jugadorEnRonda1;
         this.jugadorEnRonda2 = jugadorEnRonda2;
         this.manejadorDeTurnos = manejadorDeTurnos;
+        this.cartasEnMesa = new LinkedList<>();
     }
 
     public void resolverEnvido(EnvidoCantado envido) {
@@ -27,7 +31,7 @@ public class Mesa {
     }
 
     public void resolverAceptaEnvido(AceptaEnvido aceptaEnvido) {
-        JugadorEnRonda jugadorGanador = this.compararTantos(jugadorEnRonda1,jugadorEnRonda2);
+        JugadorEnRonda jugadorGanador = this.compararTantos(jugadorEnRonda1, jugadorEnRonda2);
         jugadorGanador.sumaPuntajeEnRonda(2);// se suman 2 puntos por acepto envido
     }
     
@@ -63,10 +67,24 @@ public class Mesa {
         jugador.sumaPuntajeEnRonda(1);//no se acepta envido entonces el otro jugador suma 1
     }
     public void resolverCartaJugada(CartaJugada cartaJugada){
-        Jugador jugador = manejadorDeTurnos.getJugadorTurnoEnMano().getJugador();
-        CartaJugada cartaRespuesta = jugador.responderCarta(cartaJugada);
-        Jugador jugadorGanador = this.compararCartas(cartaJugada,cartaRespuesta);
-        jugadorGanador.incrementarManosGanadas();//suma 1 por q gano la manosGanadas  solo con cartas
+            cartasEnMesa.add(cartaJugada);
+        if (cartasEnMesa.size() == 2){
+            JugadorEnRonda jugadorGanaMano = this.compararCartas(cartasEnMesa);
+            jugadorGanaMano.aumentarManosGanadas();
+            cartasEnMesa.clear();
+        }
+            manejadorDeTurnos.pasarTurnoEnMano();//paso al siguiente jugador por q entest caso coomo son 2
+            Jugador jugador = manejadorDeTurnos.getJugadorTurnoEnMano().getJugador();
+            Jugada jugada = jugador.hacerJugada();
+            this.resolverJugada(jugada);
+    }
 
+    private JugadorEnRonda compararCartas(LinkedList<CartaJugada> cartasEnMesa) {
+        Carta carta0 = cartasEnMesa.get(0).carta;
+        Carta carta1 = cartasEnMesa.get(1).carta;
+        if (carta0.getValorDePoder() > carta1.getValorDePoder())
+            return cartasEnMesa.get(0).jugadorQueCanto();
+        else
+            return cartasEnMesa.get(1).jugadorQueCanto();
     }
 }

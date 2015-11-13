@@ -36,4 +36,8 @@ public class JugadorEnRonda {
     public void sumaPuntajeEnRonda(int puntajeEnRonda) {
         this.puntosGanadosEnRonda += puntajeEnRonda;
     }
+
+    public void aumentarManosGanadas() {
+
+    }
 }
