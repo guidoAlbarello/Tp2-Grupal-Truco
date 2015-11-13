@@ -8,7 +8,7 @@ import org.junit.Test;
 public class MesaTest {
 
     @Test
-    public void determinarGanadorDeRonda(){
+    public void determinarGanadorDeMano(){
         Cantos cantos = new CantosSinFlor();
         JugadorEnRonda jugador1 = new JugadorEnRonda(new Jugador("jugador1",cantos));
         JugadorEnRonda jugador2 = new JugadorEnRonda(new Jugador("jugador2",cantos));
