@@ -99,5 +99,10 @@ public class Mano {
         int indiceDeUltimaCartaJugada = this.indiceDeCartasJugadas.getLast();
         return this.cartasEnLaMano.get(indiceDeUltimaCartaJugada);
     }
+
+
+    public int getCartasRestantesEnMano(){
+        return this.cartasEnLaMano.size() - this.indiceDeCartasJugadas.size();
+    }
 }
 

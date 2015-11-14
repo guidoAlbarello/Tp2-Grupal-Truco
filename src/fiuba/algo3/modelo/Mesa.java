@@ -11,8 +11,10 @@ public class Mesa {
     private JugadorEnRonda jugadorEnRonda2;
     private ManejadorDeTurnos manejadorDeTurnos;
     private LinkedList<CartaJugada> cartasEnMesa;
+    private int puntosEnJuegoDeLaRonda;
 
     public Mesa(JugadorEnRonda jugadorEnRonda1, JugadorEnRonda jugadorEnRonda2, ManejadorDeTurnos manejadorDeTurnos) {
+        this.puntosEnJuegoDeLaRonda = 1;
         this.jugadorEnRonda1 = jugadorEnRonda1;
         this.jugadorEnRonda2 = jugadorEnRonda2;
         this.manejadorDeTurnos = manejadorDeTurnos;
@@ -94,6 +96,53 @@ public class Mesa {
 
 
     //Agrego metodos para probar tests
+
+    public JugadorEnRonda getGanadorDeRonda(){
+        if (jugadorEnRonda1.getManosGanadas()>jugadorEnRonda2.getManosGanadas()){
+            return jugadorEnRonda1;
+        }else{return jugadorEnRonda2;}
+    }
+
+
+    public void seCantaTruco(){
+    }
+
+    public void seAceptaTruco(){
+        aumentarPuntosEnJuego(1);
+    }
+
+    public void seAceptaRetruco(){    // A estas aceptaciones hay que sumarle el punto que ya tendria el jugador que gana la ronda si su oponente va al mazo (GANAR POR CARTAS, NO POR TANTOS)
+        aumentarPuntosEnJuego(2);
+    }
+
+    public void seAceptaVale4(){
+        aumentarPuntosEnJuego(3);
+    }
+
+
+    public boolean terminoLaRonda(){   ///------    N O   C O N T E M P L A   3   E M P A R D E S!!   Y SOLO FUNCIONA PARA 2 JUGADORES
+        boolean termino;
+        this.manejadorDeTurnos.pasarTurnoEnMano();
+        termino = this.manejadorDeTurnos.getJugadorTurnoEnMano().getJugador().getMano().getCartasRestantesEnMano()==0;
+        if (!termino) {
+            this.manejadorDeTurnos.pasarTurnoEnMano(); //vuelvo al jugador que tenia el turno original
+            return false;
+        }
+        return true;
+    }
+
+
+    public void aumentarPuntosEnJuego(Integer puntosAgregare){
+        this.puntosEnJuegoDeLaRonda+=puntosAgregare;
+    }
+
+    public Integer getPuntosEnJuego(){
+        return this.puntosEnJuegoDeLaRonda;
+    }
+
+    public void resetearPuntosEnJuego(){
+        this.puntosEnJuegoDeLaRonda=0;
+    }
 
     public boolean terminoLaMano(){
         return (this.cartasEnMesa.size()==2); //2=cantidadDeJugadores
