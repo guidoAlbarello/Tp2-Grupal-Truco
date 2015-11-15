@@ -104,22 +104,6 @@ public class Mesa {
     }
 
 
-    public void seCantaTruco(){
-    }
-
-    public void seAceptaTruco(){
-        aumentarPuntosEnJuego(1);
-    }
-
-    public void seAceptaRetruco(){    // A estas aceptaciones hay que sumarle el punto que ya tendria el jugador que gana la ronda si su oponente va al mazo (GANAR POR CARTAS, NO POR TANTOS)
-        aumentarPuntosEnJuego(2);
-    }
-
-    public void seAceptaVale4(){
-        aumentarPuntosEnJuego(3);
-    }
-
-
     public boolean terminoLaRonda(){   ///------    N O   C O N T E M P L A   3   E M P A R D E S!!   Y SOLO FUNCIONA PARA 2 JUGADORES
         boolean termino;
         this.manejadorDeTurnos.pasarTurnoEnMano();
@@ -132,8 +116,8 @@ public class Mesa {
     }
 
 
-    public void aumentarPuntosEnJuego(Integer puntosAgregare){
-        this.puntosEnJuegoDeLaRonda+=puntosAgregare;
+    public void setPuntosEnJuego(Integer puntosAgregare){
+        this.puntosEnJuegoDeLaRonda=puntosAgregare;
     }
 
     public Integer getPuntosEnJuego(){
@@ -145,7 +129,7 @@ public class Mesa {
     }
 
     public boolean terminoLaMano(){
-        return (this.cartasEnMesa.size()==2); //2=cantidadDeJugadores
+        return (this.cartasEnMesa.size()%2==0);
     }
 
 
