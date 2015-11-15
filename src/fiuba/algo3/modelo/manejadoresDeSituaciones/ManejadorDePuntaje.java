@@ -1,4 +1,4 @@
-package fiuba.algo3.modelo;
+package fiuba.algo3.modelo.manejadoresDeSituaciones;
 
 import java.util.HashMap;
 import java.util.Map;

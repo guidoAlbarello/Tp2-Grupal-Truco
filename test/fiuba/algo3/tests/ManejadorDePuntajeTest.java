@@ -1,4 +1,4 @@
-import fiuba.algo3.modelo.ManejadorDePuntaje;
+import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDePuntaje;
 import org.junit.Assert;
 import org.junit.Test;
 

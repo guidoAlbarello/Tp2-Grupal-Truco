@@ -1,4 +1,5 @@
 import fiuba.algo3.modelo.*;
+import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeJuego;
 import fiuba.algo3.modelo.palosPosibles.Palo;
 import org.junit.Assert;
 import org.junit.Test;

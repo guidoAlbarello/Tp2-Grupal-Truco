@@ -1,5 +1,6 @@
-package fiuba.algo3.modelo;
+package fiuba.algo3.modelo.manejadoresDeSituaciones;
 
+import fiuba.algo3.modelo.*;
 import fiuba.algo3.modelo.jugadasPosibles.EnvidoCantado;
 import fiuba.algo3.modelo.jugadasPosibles.Jugada;
 import fiuba.algo3.modelo.jugadasPosibles.RealEnvido;

@@ -1,6 +1,6 @@
 import fiuba.algo3.modelo.JuegoTruco;
 import fiuba.algo3.modelo.JugadorEnRonda;
-import fiuba.algo3.modelo.ManejadorDeJuego;
+import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeJuego;
 import fiuba.algo3.modelo.Jugador;
 import fiuba.algo3.modelo.excepciones.NoSeEstaJugandoConFlorError;
 import org.junit.Assert;

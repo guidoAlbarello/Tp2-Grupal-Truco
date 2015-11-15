@@ -1,4 +1,6 @@
-package fiuba.algo3.modelo;
+package fiuba.algo3.modelo.manejadoresDeSituaciones;
+
+import fiuba.algo3.modelo.JugadorEnRonda;
 
 import java.util.LinkedList;
 

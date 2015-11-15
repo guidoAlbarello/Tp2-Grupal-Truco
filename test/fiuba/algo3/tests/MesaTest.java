@@ -2,6 +2,7 @@ import fiuba.algo3.modelo.*;
 import fiuba.algo3.modelo.jugadasPosibles.ReTrucoAceptado;
 import fiuba.algo3.modelo.jugadasPosibles.TrucoAceptado;
 import fiuba.algo3.modelo.jugadasPosibles.ValeCuatroAceptado;
+import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeTurnos;
 import org.junit.Assert;
 import org.junit.Test;
 

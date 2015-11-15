@@ -5,6 +5,8 @@ import fiuba.algo3.modelo.jugadasPosibles.EnvidoCantado;
 import fiuba.algo3.modelo.jugadasPosibles.FaltaEnvido;
 import fiuba.algo3.modelo.jugadasPosibles.Jugada;
 import fiuba.algo3.modelo.jugadasPosibles.RealEnvido;
+import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeJuego;
+import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeTurnos;
 
 import java.util.LinkedList;
 

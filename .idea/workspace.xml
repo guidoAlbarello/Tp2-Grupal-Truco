@@ -1,44 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c157b3c-45d8-421f-9223-23efab6967a6" name="Default" comment="&quot;Creacion de paquete &quot;">
-      <change type="DELETED" beforePath="C:\Users\Krion\Desktop\TP2-Grupal-Truco\src\fiuba\algo3\modelo\Cantos.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Krion\Desktop\TP2-Grupal-Truco\src\fiuba\algo3\modelo\CantosConFlor.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Krion\Desktop\TP2-Grupal-Truco\src\fiuba\algo3\modelo\CantosSinFlor.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\Krion\Desktop\TP2-Grupal-Truco\src\fiuba\algo3\modelo\AceptaEnvido.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/AceptaEnvido.java" />
-      <change type="MOVED" beforePath="C:\Users\Krion\Desktop\TP2-Grupal-Truco\src\fiuba\algo3\modelo\AceptaRealEnvido.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/AceptaRealEnvido.java" />
-      <change type="MOVED" beforePath="C:\Users\Krion\Desktop\TP2-Grupal-Truco\src\fiuba\algo3\modelo\EnvidoCantado.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/EnvidoCantado.java" />
-      <change type="MOVED" beforePath="C:\Users\Krion\Desktop\TP2-Grupal-Truco\src\fiuba\algo3\modelo\FaltaEnvido.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/FaltaEnvido.java" />
-      <change type="MOVED" beforePath="C:\Users\Krion\Desktop\TP2-Grupal-Truco\src\fiuba\algo3\modelo\Flor.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/Flor.java" />
-      <change type="MOVED" beforePath="C:\Users\Krion\Desktop\TP2-Grupal-Truco\src\fiuba\algo3\modelo\Jugada.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/Jugada.java" />
-      <change type="MOVED" beforePath="C:\Users\Krion\Desktop\TP2-Grupal-Truco\src\fiuba\algo3\modelo\NoAceptaEnvido.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/NoAceptaEnvido.java" />
-      <change type="MOVED" beforePath="C:\Users\Krion\Desktop\TP2-Grupal-Truco\src\fiuba\algo3\modelo\Palo.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/palosPosibles/Palo.java" />
-      <change type="MOVED" beforePath="C:\Users\Krion\Desktop\TP2-Grupal-Truco\src\fiuba\algo3\modelo\PaloBasto.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/palosPosibles/PaloBasto.java" />
-      <change type="MOVED" beforePath="C:\Users\Krion\Desktop\TP2-Grupal-Truco\src\fiuba\algo3\modelo\PaloCopa.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/palosPosibles/PaloCopa.java" />
-      <change type="MOVED" beforePath="C:\Users\Krion\Desktop\TP2-Grupal-Truco\src\fiuba\algo3\modelo\PaloEspada.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/palosPosibles/PaloEspada.java" />
-      <change type="MOVED" beforePath="C:\Users\Krion\Desktop\TP2-Grupal-Truco\src\fiuba\algo3\modelo\PaloOro.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/palosPosibles/PaloOro.java" />
-      <change type="MOVED" beforePath="C:\Users\Krion\Desktop\TP2-Grupal-Truco\src\fiuba\algo3\modelo\ReTrucoAceptado.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/ReTrucoAceptado.java" />
-      <change type="MOVED" beforePath="C:\Users\Krion\Desktop\TP2-Grupal-Truco\src\fiuba\algo3\modelo\RealEnvido.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/RealEnvido.java" />
-      <change type="MOVED" beforePath="C:\Users\Krion\Desktop\TP2-Grupal-Truco\src\fiuba\algo3\modelo\TrucoAceptado.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/TrucoAceptado.java" />
-      <change type="MOVED" beforePath="C:\Users\Krion\Desktop\TP2-Grupal-Truco\src\fiuba\algo3\modelo\ValeCuatroAceptado.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/ValeCuatroAceptado.java" />
+    <list default="true" id="3c157b3c-45d8-421f-9223-23efab6967a6" name="Default" comment="">
+      <change type="MOVED" beforePath="C:\Users\Krion\Desktop\TP2-Grupal-Truco\src\fiuba\algo3\modelo\ManejadorDeJuego.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDeJuego.java" />
+      <change type="MOVED" beforePath="C:\Users\Krion\Desktop\TP2-Grupal-Truco\src\fiuba\algo3\modelo\ManejadorDePuntaje.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDePuntaje.java" />
+      <change type="MOVED" beforePath="C:\Users\Krion\Desktop\TP2-Grupal-Truco\src\fiuba\algo3\modelo\ManejadorDeTurnos.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDeTurnos.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/tests/CantosTest.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/tests/CantosTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/Carta.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/Carta.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/CartaJugada.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/CartaJugada.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/tests/CartaTest.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/tests/CartaTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/JuegoTruco.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/JuegoTruco.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/Jugador.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/Jugador.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/JugadorEnRonda.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/JugadorEnRonda.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/ManejadorDeJuego.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/ManejadorDeJuego.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/Mano.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/Mano.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/tests/ManoTest.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/tests/ManoTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/Mazo.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/Mazo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/tests/ManejadorDePuntajeTest.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/tests/ManejadorDePuntajeTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/tests/MazoTest.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/tests/MazoTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/Mesa.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/Mesa.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/tests/MesaTest.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/tests/MesaTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/tests/PaloTest.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/tests/PaloTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tp2-Grupal-Truco.iml" afterPath="$PROJECT_DIR$/Tp2-Grupal-Truco.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/tests/TrucoTest.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/tests/TrucoTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Tp2-Grupal-Truco.iws" />
@@ -110,17 +83,17 @@
         <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/JuegoTruco.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
+              <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="ManejadorDeJuego.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/ManejadorDeJuego.java">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDeJuego.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45805368">
-              <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.82885903">
+              <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -160,7 +133,7 @@
         <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/tests/MazoTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -234,6 +207,7 @@
         <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/JugadorEnRonda.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/JuegoTruco.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/ManejadorDeJuego.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDeJuego.java" />
       </list>
     </option>
   </component>
@@ -384,6 +358,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="modelo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tp2-Grupal-Truco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TP2-Grupal-Truco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algo3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modelo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manejadoresDeSituaciones" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -778,7 +778,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447492870662</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="&quot;Agregado de paquetes palosPosibles y jugadasPosibles&quot;">
+      <created>1447622475010</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1447622475010</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -876,7 +882,8 @@
     <MESSAGE value="Se editaron varios metodos para testear mas funcionalidades de Mesa.&#10;" />
     <MESSAGE value="Puse mal el nombre del test, ahora lo corregi, y el nombre respeta lo que hace." />
     <MESSAGE value="Se agrego una inteligencia basica en MESA y MANO para determinar ganador de Truco y derivados.&#10;Acomáño con un test integral." />
-    <option name="LAST_COMMIT_MESSAGE" value="Se agrego una inteligencia basica en MESA y MANO para determinar ganador de Truco y derivados.&#10;Acomáño con un test integral." />
+    <MESSAGE value="&quot;Agregado de paquetes palosPosibles y jugadasPosibles&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Agregado de paquetes palosPosibles y jugadasPosibles&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -904,8 +911,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="107" column="24" selection-start-line="107" selection-start-column="24" selection-end-line="107" selection-end-column="24" />
           <folding>
-            <element signature="e#5196#5197#0" expanded="true" />
-            <element signature="e#5250#5251#0" expanded="true" />
+            <element signature="e#5266#5267#0" expanded="true" />
+            <element signature="e#5320#5321#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1012,7 +1019,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/ManejadorDePuntaje.java">
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDePuntaje.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
@@ -1134,12 +1141,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/ManejadorDeTurnos.java">
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDeTurnos.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <element signature="e#696#697#0" expanded="true" />
+            <element signature="e#764#765#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1174,8 +1181,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="107" column="24" selection-start-line="107" selection-start-column="24" selection-end-line="107" selection-end-column="24" />
           <folding>
-            <element signature="e#5196#5197#0" expanded="true" />
-            <element signature="e#5250#5251#0" expanded="true" />
+            <element signature="e#5266#5267#0" expanded="true" />
+            <element signature="e#5320#5321#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1219,7 +1226,7 @@
     <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/tests/MazoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1288,15 +1295,15 @@
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/JuegoTruco.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
+          <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/ManejadorDeJuego.java">
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDeJuego.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45805368">
-          <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.82885903">
+          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
           <folding />
         </state>
       </provider>
