@@ -10,7 +10,7 @@ import org.junit.Test;
  * Created by anthony on 11/11/2015.
  */
 public class TrucoTest {
-    private JugadorEnRonda.Cantos cantos;
+    private Cantos cantos;
     private Jugador jugador1;
     private Jugador jugador2;
     private JugadorEnRonda jugadorEnRonda1;
@@ -23,7 +23,7 @@ public class TrucoTest {
 
     @Before
     public void setup(){
-        cantos = new ManejadorDeJuego.CantosConFlor();
+        cantos = new CantosConFlor();
         jugador1 = new Jugador("jugador1",cantos);
         jugador2 = new Jugador("jugador2",cantos);
         jugadorEnRonda1 = new JugadorEnRonda(jugador1);

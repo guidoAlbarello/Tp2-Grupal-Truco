@@ -1,8 +1,9 @@
-import fiuba.algo3.modelo.JuegoTruco;
-import fiuba.algo3.modelo.JugadorEnRonda;
+import fiuba.algo3.modelo.*;
+import fiuba.algo3.modelo.jugadasPosibles.peticiones.FlorCantada;
 import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeJuego;
-import fiuba.algo3.modelo.Jugador;
 import fiuba.algo3.modelo.excepciones.NoSeEstaJugandoConFlorError;
+import fiuba.algo3.modelo.palosPosibles.Palo;
+import fiuba.algo3.modelo.palosPosibles.PaloEspada;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -12,15 +13,15 @@ import org.junit.Test;
 public class CantosTest {
     @Test(expected = NoSeEstaJugandoConFlorError.class)
     public void testChequeoDeErrorAlCantarFlorCuandoSeJuegaSinFlor(){
-        JugadorEnRonda.Cantos cantos = new JuegoTruco.CantosSinFlor();
-        Jugador unJugador = new Jugador("Juan", cantos);
+        Cantos cantoNuevo = new CantosSinFlor();
+        Jugador unJugador = new Jugador("Juan", cantoNuevo);
         unJugador.getCantosPosibles().cantarFlor(unJugador);
     }
 
     @Test
     public void testChequeoDeQueSePuedaCantarFlorCorrectamenteCuandoSeJuegaConFlor(){
-        JugadorEnRonda.Cantos cantos = new ManejadorDeJuego.CantosConFlor();
+        Cantos cantos = new CantosConFlor();
         Jugador unJugador = new Jugador("Juan", cantos);
-        Assert.assertEquals(null, unJugador.getCantosPosibles().cantarFlor(unJugador));
+        Assert.assertEquals(FlorCantada.class,unJugador.getCantosPosibles().cantarFlor(unJugador).getClass());
     }
 }

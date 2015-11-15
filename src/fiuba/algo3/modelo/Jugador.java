@@ -1,9 +1,9 @@
 package fiuba.algo3.modelo;
 
-import fiuba.algo3.modelo.jugadasPosibles.AceptaEnvido;
-import fiuba.algo3.modelo.jugadasPosibles.AceptaRealEnvido;
+import fiuba.algo3.modelo.jugadasPosibles.respuestasAPeticiones.AceptaEnvido;
+import fiuba.algo3.modelo.jugadasPosibles.respuestasAPeticiones.AceptaRealEnvido;
 import fiuba.algo3.modelo.jugadasPosibles.Jugada;
-import fiuba.algo3.modelo.jugadasPosibles.NoAceptaEnvido;
+import fiuba.algo3.modelo.jugadasPosibles.respuestasAPeticiones.NoAceptaEnvido;
 
 /**
  * Created by Fechee on 10/11/2015.
@@ -12,12 +12,12 @@ public class Jugador {
 
     private String nombreJugador;
     private Mano manoDelJugador;
-    private JugadorEnRonda.Cantos cantosPosibles;
+    private Cantos cantosPosibles;
     private int puntaje;
     //private Cantos cantos;
 
 
-    public Jugador(String nombre, JugadorEnRonda.Cantos cantosDeJuego) {
+    public Jugador(String nombre, Cantos cantosDeJuego) {
         this.nombreJugador = nombre;
         this.cantosPosibles = cantosDeJuego;
         this.manoDelJugador = new Mano();
@@ -37,7 +37,7 @@ public class Jugador {
         return this.manoDelJugador;
     }
 
-    public JugadorEnRonda.Cantos getCantosPosibles() {
+    public Cantos getCantosPosibles() {
         return this.cantosPosibles;
     }
 

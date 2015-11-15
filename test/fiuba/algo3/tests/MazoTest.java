@@ -35,7 +35,7 @@ public class MazoTest {
 
     @Test
     public void testMazoReparteCartasAlJugadorCorrectamente(){
-        JugadorEnRonda.Cantos cantos = new ManejadorDeJuego.CantosConFlor();
+        Cantos cantos = new CantosConFlor();
         Jugador pedro = new Jugador("pedro",cantos);
         Mazo unMazo = new Mazo();
         unMazo.mezclarMazo();

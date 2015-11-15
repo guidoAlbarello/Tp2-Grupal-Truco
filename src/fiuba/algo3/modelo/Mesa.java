@@ -1,6 +1,11 @@
 package fiuba.algo3.modelo;
 
 import fiuba.algo3.modelo.jugadasPosibles.*;
+import fiuba.algo3.modelo.jugadasPosibles.peticiones.EnvidoCantado;
+import fiuba.algo3.modelo.jugadasPosibles.peticiones.RealEnvidoCantado;
+import fiuba.algo3.modelo.jugadasPosibles.respuestasAPeticiones.AceptaEnvido;
+import fiuba.algo3.modelo.jugadasPosibles.respuestasAPeticiones.AceptaRealEnvido;
+import fiuba.algo3.modelo.jugadasPosibles.respuestasAPeticiones.NoAceptaEnvido;
 import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeTurnos;
 
 import java.util.LinkedList;
@@ -54,7 +59,7 @@ public class Mesa {
         return null;
     }
 
-    public void resolverRealEnvido(RealEnvido realEnvido){
+    public void resolverRealEnvido(RealEnvidoCantado realEnvido){
         manejadorDeTurnos.pasarTurnoEnMano();
         Jugador jugador = manejadorDeTurnos.getJugadorTurnoEnMano().getJugador();
         Jugada respuesta = jugador.responderRealEnvido();
