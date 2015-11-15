@@ -1,5 +1,7 @@
 package fiuba.algo3.modelo;
 
+import fiuba.algo3.modelo.jugadasPosibles.Jugada;
+
 /**
  * Created by anthony on 12/11/2015.
  */
@@ -40,5 +42,22 @@ public class JugadorEnRonda {
 
     public void aumentarManosGanadas() {
         this.manosGanadas+=1;           ///------- YO FEDE EDITE PARA TESTEAR MESA   nota: antes este metodo no hacia nada
+    }
+
+    /**
+     * Created by Fechee on 10/11/2015.
+     */
+    public abstract static class Cantos {
+
+        public Jugada jugarCarta(Carta carta,Jugador jugador){
+            return null;
+        }
+        public abstract Jugada cantarEnvido(Jugador jugador);
+
+        public abstract Jugada cantarRealEnvido(Jugador jugador);
+
+        public abstract Jugada cantarFaltaEnvido(Jugador jugador);
+
+        public abstract Jugada cantarFlor(Jugador jugador);
     }
 }

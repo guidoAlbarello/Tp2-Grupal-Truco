@@ -1,5 +1,9 @@
 package fiuba.algo3.modelo;
 
+import fiuba.algo3.modelo.jugadasPosibles.EnvidoCantado;
+import fiuba.algo3.modelo.jugadasPosibles.Jugada;
+import fiuba.algo3.modelo.jugadasPosibles.RealEnvido;
+
 /**
  * Created by anthony on 12/11/2015.
  */
@@ -53,6 +57,33 @@ public class ManejadorDeJuego {
     }
 
 
+    /**
+     * Created by Fechee on 10/11/2015.
+     */
+    public static class CantosConFlor extends JugadorEnRonda.Cantos {
 
 
+        @Override
+        public Jugada cantarEnvido(Jugador jugador) {
+            return new EnvidoCantado(jugador);
+        }
+
+        @Override
+        public Jugada cantarRealEnvido(Jugador jugador) {
+            return new RealEnvido(jugador);
+        }
+
+        @Override
+        public Jugada cantarFaltaEnvido(Jugador jugador) {
+            return null;
+        }
+
+        @Override
+        public Jugada cantarFlor(Jugador jugador){
+            return null;
+        }
+        public Jugada jugarCarta(Carta carta,JugadorEnRonda jugador){
+            return new CartaJugada(jugador,carta);
+        }
+    }
 }

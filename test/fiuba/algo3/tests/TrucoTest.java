@@ -1,4 +1,5 @@
 import fiuba.algo3.modelo.*;
+import fiuba.algo3.modelo.palosPosibles.*;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,7 +8,7 @@ import org.junit.Test;
  * Created by anthony on 11/11/2015.
  */
 public class TrucoTest {
-    private Cantos cantos;
+    private JugadorEnRonda.Cantos cantos;
     private Jugador jugador1;
     private Jugador jugador2;
     private JugadorEnRonda jugadorEnRonda1;
@@ -20,7 +21,7 @@ public class TrucoTest {
 
     @Before
     public void setup(){
-        cantos = new CantosConFlor();
+        cantos = new ManejadorDeJuego.CantosConFlor();
         jugador1 = new Jugador("jugador1",cantos);
         jugador2 = new Jugador("jugador2",cantos);
         jugadorEnRonda1 = new JugadorEnRonda(jugador1);

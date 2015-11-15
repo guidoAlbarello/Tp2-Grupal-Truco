@@ -1,9 +1,10 @@
 import fiuba.algo3.modelo.*;
 import fiuba.algo3.modelo.excepciones.NoHayFlorEnLaManoError;
+import fiuba.algo3.modelo.palosPosibles.Palo;
+import fiuba.algo3.modelo.palosPosibles.PaloBasto;
+import fiuba.algo3.modelo.palosPosibles.PaloEspada;
 import org.junit.Assert;
 import org.junit.Test;
-
-import java.util.List;
 
 /**
  * Created by Krion on 10/11/2015.

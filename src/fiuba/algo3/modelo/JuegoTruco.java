@@ -1,5 +1,11 @@
 package fiuba.algo3.modelo;
 
+import fiuba.algo3.modelo.excepciones.NoSeEstaJugandoConFlorError;
+import fiuba.algo3.modelo.jugadasPosibles.EnvidoCantado;
+import fiuba.algo3.modelo.jugadasPosibles.FaltaEnvido;
+import fiuba.algo3.modelo.jugadasPosibles.Jugada;
+import fiuba.algo3.modelo.jugadasPosibles.RealEnvido;
+
 import java.util.LinkedList;
 
 /**
@@ -21,7 +27,7 @@ public class JuegoTruco {
     private Jugador jugadorMano;
     private Jugador turnoActual;
     private ManejadorDeTurnos manejadorDeTurnos;
-    private Cantos cantosDelJuego;
+    private JugadorEnRonda.Cantos cantosDelJuego;
 
     private Mazo mazoDeCartas;
     private Mesa mesa;
@@ -31,7 +37,7 @@ public class JuegoTruco {
     public JuegoTruco(boolean conFlor){
         mezclarCartas();
         if (conFlor){
-            this.cantosDelJuego = new CantosConFlor();
+            this.cantosDelJuego = new ManejadorDeJuego.CantosConFlor();
 
         }
         else{
@@ -57,4 +63,30 @@ public class JuegoTruco {
     }*/
 
 
+    /**
+     * Created by Fechee on 10/11/2015.
+     */
+    public static class CantosSinFlor extends JugadorEnRonda.Cantos {
+
+        @Override
+        public Jugada cantarEnvido(Jugador jugador) {
+            return new EnvidoCantado(jugador);
+        }
+
+        @Override
+        public Jugada cantarRealEnvido(Jugador jugador) {
+            return new RealEnvido(jugador);
+        }
+
+        @Override
+        public Jugada cantarFaltaEnvido(Jugador jugador) {
+            return new FaltaEnvido(jugador);
+        }
+
+        @Override
+        public Jugada cantarFlor(Jugador jugador){
+            throw new NoSeEstaJugandoConFlorError();
+        }
+
+    }
 }

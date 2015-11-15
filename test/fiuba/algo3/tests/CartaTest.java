@@ -1,5 +1,6 @@
 import fiuba.algo3.modelo.*;
 import fiuba.algo3.modelo.excepciones.ValorDeCartaInvalidoError;
+import fiuba.algo3.modelo.palosPosibles.*;
 import org.junit.Assert;
 import org.junit.Test;
 

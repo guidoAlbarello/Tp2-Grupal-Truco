@@ -1,6 +1,7 @@
 package fiuba.algo3.modelo;
 
 import fiuba.algo3.modelo.excepciones.ValorDeCartaInvalidoError;
+import fiuba.algo3.modelo.palosPosibles.*;
 
 import java.util.*;
 

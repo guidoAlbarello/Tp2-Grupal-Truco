@@ -1,4 +1,7 @@
 import fiuba.algo3.modelo.*;
+import fiuba.algo3.modelo.jugadasPosibles.ReTrucoAceptado;
+import fiuba.algo3.modelo.jugadasPosibles.TrucoAceptado;
+import fiuba.algo3.modelo.jugadasPosibles.ValeCuatroAceptado;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -9,7 +12,7 @@ public class MesaTest {
 
     @Test
     public void determinarGanadorDeMano(){
-        Cantos cantos = new CantosSinFlor();
+        JugadorEnRonda.Cantos cantos = new JuegoTruco.CantosSinFlor();
         JugadorEnRonda jugador1 = new JugadorEnRonda(new Jugador("jugador1",cantos));
         JugadorEnRonda jugador2 = new JugadorEnRonda(new Jugador("jugador2",cantos));
         ManejadorDeTurnos turnos = new ManejadorDeTurnos(jugador1,jugador2);
@@ -35,7 +38,7 @@ public class MesaTest {
 
     @Test
     public void testDeTrucoCantadoYAceptado() {
-        Cantos cantos = new CantosSinFlor();
+        JugadorEnRonda.Cantos cantos = new JuegoTruco.CantosSinFlor();
         JugadorEnRonda jugador1 = new JugadorEnRonda(new Jugador("jugador1", cantos));
         JugadorEnRonda jugador2 = new JugadorEnRonda(new Jugador("jugador2", cantos));
         ManejadorDeTurnos turnos = new ManejadorDeTurnos(jugador1, jugador2);
@@ -84,7 +87,7 @@ public class MesaTest {
     @Test
     public void simulacionPartidaConTrucoRetrucoYVale4() {
         // SETUP
-        Cantos cantos = new CantosSinFlor();
+        JugadorEnRonda.Cantos cantos = new JuegoTruco.CantosSinFlor();
         JugadorEnRonda jugador1 = new JugadorEnRonda(new Jugador("jugador1", cantos));
         JugadorEnRonda jugador2 = new JugadorEnRonda(new Jugador("jugador2", cantos));
         ManejadorDeTurnos turnos = new ManejadorDeTurnos(jugador1, jugador2);

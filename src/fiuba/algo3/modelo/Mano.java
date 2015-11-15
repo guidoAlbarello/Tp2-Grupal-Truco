@@ -1,6 +1,7 @@
 package fiuba.algo3.modelo;
 
 import fiuba.algo3.modelo.excepciones.NoHayFlorEnLaManoError;
+import fiuba.algo3.modelo.palosPosibles.Palo;
 
 import java.util.ArrayList;
 import java.util.Iterator;

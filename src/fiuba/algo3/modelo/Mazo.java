@@ -1,5 +1,7 @@
 package fiuba.algo3.modelo;
 
+import fiuba.algo3.modelo.palosPosibles.*;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;

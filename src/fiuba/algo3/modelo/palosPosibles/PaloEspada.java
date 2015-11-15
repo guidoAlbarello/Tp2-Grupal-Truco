@@ -1,4 +1,4 @@
-package fiuba.algo3.modelo;
+package fiuba.algo3.modelo.palosPosibles;
 
 /**
  * Created by Krion on 10/11/2015.
