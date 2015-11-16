@@ -9,13 +9,15 @@ public class JugadorEnRonda {
     private Jugador jugadorEnRonda;
     private int puntosGanadosEnRonda;
     private int manosGanadas;
-    public int getManosGanadas;
+    private int equipo;
 
     public JugadorEnRonda(Jugador jugador) {
         this.jugadorEnRonda = jugador;
         this.puntosGanadosEnRonda = 0;
         this.manosGanadas = 0;
     }
+    public void setEquipo(int equipo){this.equipo = equipo;}
+    public int getEquipo (){ return this.equipo;}
 
     public int getPuntosGanadosEnRonda(){return this.puntosGanadosEnRonda;}
 
