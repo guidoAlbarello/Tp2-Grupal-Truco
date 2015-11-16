@@ -1,12 +1,6 @@
 package fiuba.algo3.modelo;
 
-import fiuba.algo3.modelo.jugadasPermitidas.Jugada;
 import fiuba.algo3.modelo.jugadasPermitidas.CartaJugada;
-import fiuba.algo3.modelo.jugadasPermitidas.peticiones.EnvidoCantado;
-import fiuba.algo3.modelo.jugadasPermitidas.peticiones.RealEnvidoCantado;
-import fiuba.algo3.modelo.jugadasPermitidas.respuestasAPeticiones.AceptaEnvido;
-import fiuba.algo3.modelo.jugadasPermitidas.respuestasAPeticiones.AceptaRealEnvido;
-import fiuba.algo3.modelo.jugadasPermitidas.respuestasAPeticiones.NoAceptaEnvido;
 import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeTurnos;
 
 import java.util.LinkedList;
@@ -30,23 +24,7 @@ public class Mesa {
         this.cartasEnMesa = new LinkedList<>();
     }
 
-    public void resolverEnvido(EnvidoCantado envido) {
-        manejadorDeTurnos.pasarTurnoEnMano();
-        Jugador jugadorQueLeTocaResponder = manejadorDeTurnos.getJugadorTurnoEnMano().getJugador();
-        Jugada jugadaDelJugador = jugadorQueLeTocaResponder.seleccionarRespuesta("AceptaEnvido");
-        this.resolverJugada(jugadaDelJugador);
-    }
-
-    public void resolverJugada(Jugada respuesta) {
-        respuesta.resolverEnMesa(this);
-    }
-
-    public void resolverAceptaEnvido(AceptaEnvido aceptaEnvido) {
-        JugadorEnRonda jugadorGanador = this.compararTantos(jugadorEnRonda1, jugadorEnRonda2);
-        jugadorGanador.sumaPuntajeEnRonda(2);// se suman 2 puntos por acepto envido
-    }
-    
-    private JugadorEnRonda compararTantos(JugadorEnRonda jugadorEnRonda1, JugadorEnRonda jugadorEnRonda2) {
+    public JugadorEnRonda compararTantos(JugadorEnRonda jugadorEnRonda1, JugadorEnRonda jugadorEnRonda2) {
         if (jugadorEnRonda1.getJugador().calcularEnvido() == jugadorEnRonda2.getJugador().calcularEnvido()){
             return manejadorDeTurnos.getJugadorMano();
         }
@@ -54,40 +32,6 @@ public class Mesa {
             return jugadorEnRonda1;
         else
             return jugadorEnRonda2;
-    }
-
-    public Jugador compararCartas(CartaJugada cartaJugada, CartaJugada cartaRespuesta) {
-        return null;
-    }
-
-    public void resolverRealEnvido(RealEnvidoCantado realEnvido){
-        manejadorDeTurnos.pasarTurnoEnMano();
-        Jugador jugador = manejadorDeTurnos.getJugadorTurnoEnMano().getJugador();
-        Jugada respuesta = jugador.seleccionarRespuesta("AceptaRealEnvido");
-        this.resolverJugada(respuesta);
-    }
-
-    public void resolverAceptaRealEnvido(AceptaRealEnvido aceptaRealEnvido) {
-        JugadorEnRonda jugadorGanador = this.compararTantos(jugadorEnRonda1,jugadorEnRonda2);
-        jugadorGanador.sumaPuntajeEnRonda(4);// se suman 4 puntos por acepto envido
-    }
-
-    public void resolverNoAceptaEnvido(NoAceptaEnvido noAceptaEnvido) {
-        manejadorDeTurnos.pasarTurnoEnMano();
-        JugadorEnRonda jugador = manejadorDeTurnos.getJugadorTurnoEnMano();
-        jugador.sumaPuntajeEnRonda(1);//no se acepta envido entonces el otro jugador suma 1
-    }
-    public void resolverCartaJugada(CartaJugada cartaJugada){
-            cartasEnMesa.add(cartaJugada);
-        if (cartasEnMesa.size() == 2){
-            JugadorEnRonda jugadorGanaMano = this.compararCartas(); //---------ACA tambien cambie cartasEnMesa que recibe compararCartas
-            jugadorGanaMano.aumentarManosGanadas();
-            cartasEnMesa.clear();
-        }
-            manejadorDeTurnos.pasarTurnoEnMano();//paso al siguiente jugador por q entest caso coomo son 2
-            Jugador jugador = manejadorDeTurnos.getJugadorTurnoEnMano().getJugador();
-            Jugada jugada = jugador.hacerJugada();
-            this.resolverJugada(jugada);
     }
 
     public JugadorEnRonda compararCartas() {    /////------SAQUE CARTASENMESA QUE RECIBIA, PORQUE ES UN ATRIBUTO DE LA CLASE!!!  LO HICE PUBLICO PARA PODER TESTEAR
@@ -98,11 +42,6 @@ public class Mesa {
         else
             return this.cartasEnMesa.get(1).jugadorQueCanto();
     }
-
-
-
-
-
 
     //Agrego metodos para probar tests
 
@@ -149,4 +88,15 @@ public class Mesa {
         this.cartasEnMesa.add(cartaQueSeJugo);
     }
 
+    public void agregarCartaEnMesa(CartaJugada unaCartaJugada) {
+        this.cartasEnMesa.add(unaCartaJugada);
+    }
+
+    public LinkedList<CartaJugada> getCartasEnMesa() {
+        return this.cartasEnMesa;
+    }
+
+    public void limpiarMesa() {
+        this.cartasEnMesa.clear();
+    }
 }

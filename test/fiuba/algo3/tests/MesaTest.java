@@ -4,6 +4,7 @@ import fiuba.algo3.modelo.jugadasPermitidas.respuestasAPeticiones.TrucoAceptado;
 import fiuba.algo3.modelo.jugadasPermitidas.respuestasAPeticiones.ValeCuatroAceptado;
 import fiuba.algo3.modelo.jugadasPosibles.SeJuegaConFlor;
 import fiuba.algo3.modelo.jugadasPosibles.SinFlor;
+import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeJugadas;
 import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeTurnos;
 import org.junit.Assert;
 import org.junit.Test;
@@ -46,6 +47,7 @@ public class MesaTest {
         JugadorEnRonda jugador2 = new JugadorEnRonda(new Jugador("jugador2", seJuegaConFlor));
         ManejadorDeTurnos turnos = new ManejadorDeTurnos(jugador1, jugador2);
         Mesa mesa = new Mesa(jugador1, jugador2, turnos);
+        ManejadorDeJugadas manejadorDeJugadas = new ManejadorDeJugadas(jugador1, jugador2, turnos, mesa);
         Mazo mazo = new Mazo();
         mazo.mezclarMazo();
         mazo.repartirCartasAJugador(jugador1.getJugador());
@@ -69,7 +71,7 @@ public class MesaTest {
         //mesa.seCantaTruco();       ****** YO ARME TODOESTO PENSANDO QUE EL TRUCO SE CANTA DESDE LA VISTA, LA CUAL ACTUALIZA LA PANTALLA Y DA 2 BOTONES POSIBLES:
                                                         // Quiero  o  NoQuiero  (significa que le pregunta al otro jugador)
                                                         // haciendo el llamado correspondiente a la jugada que actualiza el estado de mesa, dependiendo el boton que toque el cliente.
-        mesa.resolverJugada(new TrucoAceptado(jugador1.getJugador()));
+        manejadorDeJugadas.resolverJugada(new TrucoAceptado(jugador1.getJugador()));
         mesa.seJuegaUnaCarta(2);
         turnos.pasarTurnoEnMano();
         mesa.seJuegaUnaCarta(2);
@@ -95,6 +97,7 @@ public class MesaTest {
         JugadorEnRonda jugador2 = new JugadorEnRonda(new Jugador("jugador2", seJuegaConFlor));
         ManejadorDeTurnos turnos = new ManejadorDeTurnos(jugador1, jugador2);
         Mesa mesa = new Mesa(jugador1, jugador2, turnos);
+        ManejadorDeJugadas manejadorDeJugadas = new ManejadorDeJugadas(jugador1, jugador2, turnos, mesa);
         Mazo mazo = new Mazo();
         mazo.mezclarMazo();
         mazo.repartirCartasAJugador(jugador1.getJugador());
@@ -105,7 +108,7 @@ public class MesaTest {
         mesa.seJuegaUnaCarta(0);
         turnos.pasarTurnoEnMano();
         //SUPONGAMOS QUE ACA EL JUGADOR2, CANTA TRUCO.
-        mesa.resolverJugada(new TrucoAceptado(jugador2.getJugador()));  //esto significa que el jugador1 acepta y por ende, tiene que quiero.
+        manejadorDeJugadas.resolverJugada(new TrucoAceptado(jugador2.getJugador()));  //esto significa que el jugador1 acepta y por ende, tiene que quiero.
         mesa.seJuegaUnaCarta(0);
         turnos.pasarTurnoEnMano();
         verificarManoTerminada(mesa);
@@ -113,7 +116,7 @@ public class MesaTest {
 
         //mano2
         //sin importar quien gano la mano, el jugador1, que tenia el quiero, canta retruco
-        mesa.resolverJugada(new ReTrucoAceptado(jugador1.getJugador()));  // el jugador2 acepta y tiene el quiero.
+        manejadorDeJugadas.resolverJugada(new ReTrucoAceptado(jugador1.getJugador()));  // el jugador2 acepta y tiene el quiero.
         mesa.seJuegaUnaCarta(1);  //todavia es el turno del jugador1, quien en esta, tira una carta.
         turnos.pasarTurnoEnMano();
         mesa.seJuegaUnaCarta(1);
@@ -125,7 +128,7 @@ public class MesaTest {
         mesa.seJuegaUnaCarta(2);
         turnos.pasarTurnoEnMano();
         // el jugador2 canta Vale4
-        mesa.resolverJugada(new ValeCuatroAceptado(jugador2.getJugador())); // el jugador1 acepta
+        manejadorDeJugadas.resolverJugada(new ValeCuatroAceptado(jugador2.getJugador())); // el jugador1 acepta
         mesa.seJuegaUnaCarta(2);
         turnos.pasarTurnoEnMano();
         verificarManoTerminada(mesa);

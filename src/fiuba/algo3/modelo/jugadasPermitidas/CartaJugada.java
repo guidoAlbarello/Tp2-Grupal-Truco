@@ -4,6 +4,7 @@ import fiuba.algo3.modelo.Carta;
 import fiuba.algo3.modelo.JugadorEnRonda;
 import fiuba.algo3.modelo.Mesa;
 import fiuba.algo3.modelo.jugadasPermitidas.Jugada;
+import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeJugadas;
 
 /**
  * Created by anthony on 10/11/2015.
@@ -19,8 +20,8 @@ public class CartaJugada extends Jugada {
 
 
 
-    public void resolverEnMesa(Mesa mesa){
-        mesa.resolverCartaJugada(this);
+    public void resolverEnMesa(ManejadorDeJugadas unManejadorDeJugadas){
+        unManejadorDeJugadas.resolverCartaJugada(this);
     }
 
 

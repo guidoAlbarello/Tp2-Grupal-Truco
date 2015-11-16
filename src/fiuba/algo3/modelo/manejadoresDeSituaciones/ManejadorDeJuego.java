@@ -14,6 +14,7 @@ public class ManejadorDeJuego {
     private Jugador jugador2;
     private ManejadorDeTurnos manejadorDeTurnos;
     private ManejadorDePuntaje manejadorDePuntaje;
+    private ManejadorDeJugadas manejadorDeJugadas;
 
     public ManejadorDeJuego(Jugador jugador1,Jugador jugador2){
         this.jugador1 = jugador1;
@@ -24,13 +25,13 @@ public class ManejadorDeJuego {
     public void comenzarPartida() {
         JugadorEnRonda jugadorEnRonda1 = new JugadorEnRonda(this.jugador1);// estos jugadores alamz¡cenan los puntos ganados en cad aronda
         JugadorEnRonda jugadorEnRonda2 = new JugadorEnRonda(this.jugador2);
-        mesaDelJuego = new Mesa(jugadorEnRonda1,jugadorEnRonda2,manejadorDeTurnos);//se crea la mesa para
         manejadorDeTurnos = new ManejadorDeTurnos(jugadorEnRonda1,jugadorEnRonda2);
+        mesaDelJuego = new Mesa(jugadorEnRonda1,jugadorEnRonda2,manejadorDeTurnos);//se crea la mesa para
+        this.manejadorDeJugadas = new ManejadorDeJugadas(jugadorEnRonda1, jugadorEnRonda2, manejadorDeTurnos, mesaDelJuego);
         this.manejadorDePuntaje = new ManejadorDePuntaje(this.jugador1.getNombre(), this.jugador2.getNombre());
         this.elejirJugadorMano(jugadorEnRonda1, jugadorEnRonda1);
         while (jugadorEnRonda1.getJugador().getPuntaje() < 30 && jugadorEnRonda2.getJugador().getPuntaje() < 30)
             comenzarRonda(jugadorEnRonda1, jugadorEnRonda1);
-
     }
 
     private void elejirJugadorMano(JugadorEnRonda jugadorEnRonda1, JugadorEnRonda jugadorEnRonda11) {
@@ -43,7 +44,7 @@ public class ManejadorDeJuego {
         while (jugadorEnRonda1.getManosGanadas() < 2 && jugadorEnRonda2.getManosGanadas() < 2) {
             JugadorEnRonda jugadorMano = manejadorDeTurnos.getJugadorMano();
             Jugada jugada = jugadorMano.getJugador().hacerJugada();
-            mesaDelJuego.resolverJugada(jugada);
+            manejadorDeJugadas.resolverJugada(jugada);
             jugadorEnRonda1.actualizarPuntajeDeJugador();
             jugadorEnRonda1.inicializarParaNuevaRonda();
             jugadorEnRonda2.actualizarPuntajeDeJugador();

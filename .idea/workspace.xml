@@ -4,17 +4,48 @@
     <bookmark url="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/JuegoTruco.java" line="43" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61878472-93b5-427b-b35d-46ec0ce4a92f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPosibles/JugadaDePeticion.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPosibles/JugadaDePeticion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPosibles/JugadaDeRespuestaAPeticion.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPosibles/JugadaDeRespuestaAPeticion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/Jugador.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/Jugador.class" />
+    <list default="true" id="61878472-93b5-427b-b35d-46ec0ce4a92f" name="Default" comment="&quot;Refactorizacion agregando la clase ManejadorDeJugadas &quot;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDeJugadas.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDeJugadas.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fiuba/algo3/tests/ManejadorDeJugadasTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/AceptaEnvido.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/AceptaEnvido.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/AceptaRealEnvido.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/AceptaRealEnvido.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/CartaJugada.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/CartaJugada.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/peticiones/EnvidoCantado.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/peticiones/EnvidoCantado.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/peticiones/FaltaEnvidoCantado.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/peticiones/FaltaEnvidoCantado.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/peticiones/FlorCantada.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/peticiones/FlorCantada.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/Jugada.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/Jugada.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDeJuego.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDeJuego.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/Mesa.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/Mesa.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/algo3/MesaTest.class" afterPath="$PROJECT_DIR$/out/test/algo3/MesaTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/NoAceptaEnvido.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/NoAceptaEnvido.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/ReTrucoAceptado.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/ReTrucoAceptado.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/peticiones/ReTrucoCantado.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/peticiones/ReTrucoCantado.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/peticiones/RealEnvidoCantado.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/peticiones/RealEnvidoCantado.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/TrucoAceptado.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/TrucoAceptado.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/peticiones/TrucoCantado.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/peticiones/TrucoCantado.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/algo3/TrucoTest.class" afterPath="$PROJECT_DIR$/out/test/algo3/TrucoTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/JugadaDePeticion.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/JugadaDePeticion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/JugadaDeRespuestaAPeticion.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/JugadaDeRespuestaAPeticion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/Jugador.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/Jugador.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/ValeCuatroAceptado.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/ValeCuatroAceptado.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/peticiones/ValeCuatroCantado.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/modelo/jugadasPermitidas/peticiones/ValeCuatroCantado.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/AceptaEnvido.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/AceptaEnvido.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/AceptaRealEnvido.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/AceptaRealEnvido.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/CartaJugada.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/CartaJugada.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/EnvidoCantado.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/EnvidoCantado.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/FaltaEnvidoCantado.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/FaltaEnvidoCantado.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/FlorCantada.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/FlorCantada.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/Jugada.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/Jugada.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDeJuego.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDeJuego.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/Mesa.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/Mesa.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/tests/MesaTest.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/tests/MesaTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/NoAceptaEnvido.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/NoAceptaEnvido.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/ReTrucoAceptado.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/ReTrucoAceptado.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/ReTrucoCantado.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/ReTrucoCantado.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/RealEnvidoCantado.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/RealEnvidoCantado.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/TrucoAceptado.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/TrucoAceptado.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/TrucoCantado.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/TrucoCantado.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/tests/TrucoTest.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/tests/TrucoTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/ValeCuatroAceptado.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/ValeCuatroAceptado.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/ValeCuatroCantado.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/ValeCuatroCantado.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Tp2-Grupal-Truco.iws" />
@@ -36,10 +67,10 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="Jugador.java" pinned="false" current-in-tab="true">
+            <file leaf-file-name="Jugador.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/Jugador.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.33297873">
+                  <state vertical-scroll-proportion="0.0">
                     <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
                     <folding>
                       <element signature="imports" expanded="true" />
@@ -90,6 +121,56 @@
                 </provider>
               </entry>
             </file>
+            <file leaf-file-name="ManejadorDeTurnos.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDeTurnos.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.0">
+                    <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="Mesa.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/Mesa.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.0">
+                    <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+                    <folding>
+                      <element signature="imports" expanded="true" />
+                      <element signature="e#2680#2681#0" expanded="true" />
+                      <element signature="e#2738#2739#0" expanded="true" />
+                      <element signature="e#2778#2779#0" expanded="true" />
+                      <element signature="e#2828#2829#0" expanded="true" />
+                      <element signature="e#2870#2871#0" expanded="true" />
+                      <element signature="e#2915#2916#0" expanded="true" />
+                      <element signature="e#2952#2953#0" expanded="true" />
+                      <element signature="e#3006#3007#0" expanded="true" />
+                      <element signature="e#3501#3502#0" expanded="true" />
+                      <element signature="e#3554#3555#0" expanded="true" />
+                      <element signature="e#3610#3611#0" expanded="true" />
+                      <element signature="e#3650#3651#0" expanded="true" />
+                      <element signature="e#3683#3684#0" expanded="true" />
+                      <element signature="e#3724#3725#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="ManejadorDeJugadas.java" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDeJugadas.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.656383">
+                    <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
+                    <folding>
+                      <element signature="imports" expanded="true" />
+                      <element signature="e#1689#1690#0" expanded="true" />
+                      <element signature="e#1735#1736#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
           </leaf>
         </state>
       </content>
@@ -101,11 +182,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="JugadaPosible.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/JugadaPosible.java">
+      <file leaf-file-name="AceptaRealEnvido.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/AceptaRealEnvido.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6317568">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,78 +194,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JugadaDePeticion.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/JugadaDePeticion.java">
+      <file leaf-file-name="ManejadorDeJuego.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDeJuego.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="66" column="38" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
-              <folding />
+              <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JugadaDeRespuestaAPeticion.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/JugadaDeRespuestaAPeticion.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TrucoTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TrucoTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/tests/TrucoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20945945">
-              <caret line="103" column="4" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="148" column="26" selection-start-line="148" selection-start-column="26" selection-end-line="148" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParentRunner.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.11.jar!/org/junit/runners/ParentRunner.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.4814816">
-              <caret line="155" column="0" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Mesa.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/Mesa.java">
+      <file leaf-file-name="MesaTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/tests/MesaTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <caret line="130" column="26" selection-start-line="130" selection-start-column="26" selection-end-line="130" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1730#1731#0" expanded="true" />
-                <element signature="e#1776#1777#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EnvidoCantado.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/EnvidoCantado.java">
+      <file leaf-file-name="ManejadorDeJugadasTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/tests/ManejadorDeJugadasTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#476#477#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ManejadorDeTurnos.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDeTurnos.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -194,9 +242,43 @@
         <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/RealEnvidoCantado.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReTrucoCantado.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/ReTrucoCantado.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="70" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
               <folding>
-                <element signature="e#577#578#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TrucoCantado.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/TrucoCantado.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="67" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ValeCuatroCantado.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/ValeCuatroCantado.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="70" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -222,8 +304,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/ReTrucoCantado.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/CantosSinFlor.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/ValeCuatroCantado.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/ValeCuatroCantado.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/CantosConFlor.java" />
@@ -237,31 +317,14 @@
         <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/jugadasDePeticiones.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/AceptaFaltaEnvido.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/AceptaFlor.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/ReTrucoAceptado.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/Cantos.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/CartaJugada.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/AceptaEnvido.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/RealEnvidoCantado.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/AceptaRealEnvido.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/NoAceptaEnvido.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/FlorCantada.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/TrucoCantado.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/ValeCuatroCantado.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/CantosSinFlor.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/ValeCuatroAceptado.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/FaltaEnvidoCantado.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/TrucoAceptado.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/ReTrucoCantado.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDeJuego.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/Jugada.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/excepciones/NoExisteLaJugadaError.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/EnvidoCantado.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/JugadorEnRonda.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/CantosConFlor.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/SeJuegaConFlor.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/SinFlor.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/JuegoTruco.java" />
-        <option value="$PROJECT_DIR$/test/fiuba/algo3/tests/MesaTest.java" />
         <option value="$PROJECT_DIR$/test/fiuba/algo3/tests/MazoTest.java" />
         <option value="$PROJECT_DIR$/test/fiuba/algo3/tests/CantosTest.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/ConFlor.java" />
@@ -269,10 +332,29 @@
         <option value="$PROJECT_DIR$/test/fiuba/algo3/tests/SeJuegaConFlorTest.java" />
         <option value="$PROJECT_DIR$/test/fiuba/algo3/tests/JugadaPosibleTest.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/Jugador.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/Mesa.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/JugadaDeRespuestaAPeticion.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/JugadaDePeticion.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/AceptaEnvido.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/Jugada.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/CartaJugada.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/NoAceptaEnvido.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/ReTrucoAceptado.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/TrucoAceptado.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/ValeCuatroAceptado.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/EnvidoCantado.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/FaltaEnvidoCantado.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/FlorCantada.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/RealEnvidoCantado.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/ReTrucoCantado.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/TrucoCantado.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/ValeCuatroCantado.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDeJugadas.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDeJuego.java" />
         <option value="$PROJECT_DIR$/test/fiuba/algo3/tests/TrucoTest.java" />
+        <option value="$PROJECT_DIR$/test/fiuba/algo3/tests/MesaTest.java" />
+        <option value="$PROJECT_DIR$/test/fiuba/algo3/tests/ManejadorDeJugadasTest.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/Mesa.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/AceptaRealEnvido.java" />
       </list>
     </option>
   </component>
@@ -437,7 +519,93 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="jugadasPosibles" />
+              <option name="myItemId" value="manejadoresDeSituaciones" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tp2-Grupal-Truco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tp2-Grupal-Truco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algo3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modelo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jugadasPermitidas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tp2-Grupal-Truco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tp2-Grupal-Truco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algo3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modelo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jugadasPermitidas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="respuestasAPeticiones" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tp2-Grupal-Truco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tp2-Grupal-Truco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algo3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modelo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jugadasPermitidas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="peticiones" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -759,7 +927,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447641226614</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="&quot;Refactorizacion + eliminacion temporal del test de no acepta envido &quot;">
+      <created>1447642171235</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1447642171236</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -797,7 +971,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;Refactorizaciones y modificaciones de tests&quot;" />
     <MESSAGE value="&quot;Refactorizaciones y modificaciones de tests, eliminacion de clase cantos se agrego SeJuegaConFlor&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Refactorizaciones y modificaciones de tests, eliminacion de clase cantos se agrego SeJuegaConFlor&quot;" />
+    <MESSAGE value="&quot;Refactorizacion + eliminacion temporal del test de no acepta envido &quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Refactorizacion + eliminacion temporal del test de no acepta envido &quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -810,19 +985,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/test/fiuba/algo3/tests/TrucoTest.java</url>
-          <line>143</line>
+          <line>148</line>
           <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/test/fiuba/algo3/tests/TrucoTest.java</url>
-          <line>78</line>
+          <line>81</line>
           <properties />
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/test/fiuba/algo3/tests/TrucoTest.java</url>
-          <line>121</line>
+          <line>125</line>
           <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
@@ -884,138 +1059,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/AceptaFaltaEnvido.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/AceptaFlor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/ReTrucoAceptado.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/CartaJugada.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/AceptaEnvido.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/AceptaRealEnvido.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/NoAceptaEnvido.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/FlorCantada.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/TrucoCantado.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/ValeCuatroCantado.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/ValeCuatroAceptado.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/TrucoAceptado.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/ReTrucoCantado.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/FaltaEnvidoCantado.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDeJuego.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/Jugada.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/excepciones/NoExisteLaJugadaError.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1045,16 +1088,6 @@
         <state vertical-scroll-proportion="0.49">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/tests/MesaTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="91" selection-start-line="94" selection-start-column="91" selection-end-line="94" selection-end-column="91" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1140,97 +1173,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDeTurnos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/RealEnvidoCantado.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#577#578#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/EnvidoCantado.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#476#477#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/Mesa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1730#1731#0" expanded="true" />
-            <element signature="e#1776#1777#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/JugadaPosible.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/JugadaDePeticion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="38" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/JugadaDeRespuestaAPeticion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/JugadorEnRonda.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="e#584#585#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/Jugador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33297873">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1498#1499#0" expanded="true" />
-            <element signature="e#1525#1526#0" expanded="true" />
-            <element signature="e#1823#1824#0" expanded="true" />
-            <element signature="e#1893#1894#0" expanded="true" />
-            <element signature="e#1937#1938#0" expanded="true" />
-            <element signature="e#1976#1977#0" expanded="true" />
-            <element signature="e#2007#2008#0" expanded="true" />
-            <element signature="e#2037#2038#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1251,11 +1199,291 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/Jugador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1498#1499#0" expanded="true" />
+            <element signature="e#1525#1526#0" expanded="true" />
+            <element signature="e#1823#1824#0" expanded="true" />
+            <element signature="e#1893#1894#0" expanded="true" />
+            <element signature="e#1937#1938#0" expanded="true" />
+            <element signature="e#1976#1977#0" expanded="true" />
+            <element signature="e#2007#2008#0" expanded="true" />
+            <element signature="e#2037#2038#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/JugadaPosible.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45945945">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/JugadaDePeticion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5084459">
+          <caret line="66" column="38" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPosibles/JugadaDeRespuestaAPeticion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5084459">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/Jugada.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="79" selection-start-line="10" selection-start-column="79" selection-end-line="10" selection-end-column="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/CartaJugada.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/AceptaEnvido.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/AceptaFaltaEnvido.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/AceptaFlor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/NoAceptaEnvido.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/ReTrucoAceptado.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/TrucoAceptado.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/ValeCuatroAceptado.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/EnvidoCantado.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#536#537#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/FaltaEnvidoCantado.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="72" selection-start-line="21" selection-start-column="72" selection-end-line="21" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/FlorCantada.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/RealEnvidoCantado.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/ReTrucoCantado.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="70" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/TrucoCantado.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="67" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/peticiones/ValeCuatroCantado.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="70" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDeJuego.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/tests/TrucoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20945945">
-          <caret line="103" column="4" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="148" column="26" selection-start-line="148" selection-start-column="26" selection-end-line="148" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/tests/MesaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="130" column="26" selection-start-line="130" selection-start-column="26" selection-end-line="130" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/Mesa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2680#2681#0" expanded="true" />
+            <element signature="e#2738#2739#0" expanded="true" />
+            <element signature="e#2778#2779#0" expanded="true" />
+            <element signature="e#2828#2829#0" expanded="true" />
+            <element signature="e#2870#2871#0" expanded="true" />
+            <element signature="e#2915#2916#0" expanded="true" />
+            <element signature="e#2952#2953#0" expanded="true" />
+            <element signature="e#3006#3007#0" expanded="true" />
+            <element signature="e#3501#3502#0" expanded="true" />
+            <element signature="e#3554#3555#0" expanded="true" />
+            <element signature="e#3610#3611#0" expanded="true" />
+            <element signature="e#3650#3651#0" expanded="true" />
+            <element signature="e#3683#3684#0" expanded="true" />
+            <element signature="e#3724#3725#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDeTurnos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/tests/ManejadorDeJugadasTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/manejadoresDeSituaciones/ManejadorDeJugadas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.656383">
+          <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1689#1690#0" expanded="true" />
+            <element signature="e#1735#1736#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/modelo/jugadasPermitidas/respuestasAPeticiones/AceptaRealEnvido.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6317568">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
