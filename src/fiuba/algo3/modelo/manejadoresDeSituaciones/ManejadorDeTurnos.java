@@ -28,13 +28,13 @@ public class ManejadorDeTurnos {
         return this.jugadorTurnoEnMano;
     }
     public void pasarTurnoEnMano(){
-        if (jugadorTurnoEnMano.getJugador().getNombre().equals("jugador1"))
+        if (jugadorTurnoEnMano.getJugador().getNombre().equals(this.jugador1.getJugador().getNombre()))
             jugadorTurnoEnMano = jugador2;
         else
             jugadorTurnoEnMano = jugador1;
     }
     public void pasarJugadorMano(){
-        if (jugadorMano.getJugador().getNombre().equals("jugador1"))
+        if (jugadorMano.getJugador().getNombre().equals(this.jugador1.getJugador().getNombre()))
             jugadorMano = jugador2;
         else
             jugadorMano = jugador1;

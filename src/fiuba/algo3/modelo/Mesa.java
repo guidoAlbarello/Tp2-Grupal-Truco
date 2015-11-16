@@ -54,8 +54,10 @@ public class Mesa {
 
     public boolean terminoLaRonda(){   ///------    N O   C O N T E M P L A   3   E M P A R D E S!!   Y SOLO FUNCIONA PARA 2 JUGADORES
         boolean termino;
+        Integer cartasEnManoDelJugadorActual = this.manejadorDeTurnos.getJugadorTurnoEnMano().getJugador().getMano().getCartasRestantesEnMano();
         this.manejadorDeTurnos.pasarTurnoEnMano();
-        termino = this.manejadorDeTurnos.getJugadorTurnoEnMano().getJugador().getMano().getCartasRestantesEnMano()==0;
+        Integer cartasEnManoDelOtroJugador = this.manejadorDeTurnos.getJugadorTurnoEnMano().getJugador().getMano().getCartasRestantesEnMano();
+        termino = (cartasEnManoDelJugadorActual==0 & cartasEnManoDelOtroJugador==0);
         if (!termino) {
             this.manejadorDeTurnos.pasarTurnoEnMano(); //vuelvo al jugador que tenia el turno original
             return false;
