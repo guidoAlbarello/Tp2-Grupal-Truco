@@ -33,7 +33,7 @@ public class Mesa {
     public void resolverEnvido(EnvidoCantado envido) {
         manejadorDeTurnos.pasarTurnoEnMano();
         Jugador jugadorQueLeTocaResponder = manejadorDeTurnos.getJugadorTurnoEnMano().getJugador();
-        Jugada jugadaDelJugador = jugadorQueLeTocaResponder.responderEnvio();
+        Jugada jugadaDelJugador = jugadorQueLeTocaResponder.seleccionarRespuesta("AceptaEnvido");
         this.resolverJugada(jugadaDelJugador);
     }
 
@@ -63,7 +63,7 @@ public class Mesa {
     public void resolverRealEnvido(RealEnvidoCantado realEnvido){
         manejadorDeTurnos.pasarTurnoEnMano();
         Jugador jugador = manejadorDeTurnos.getJugadorTurnoEnMano().getJugador();
-        Jugada respuesta = jugador.responderRealEnvido();
+        Jugada respuesta = jugador.seleccionarRespuesta("AceptaRealEnvido");
         this.resolverJugada(respuesta);
     }
 

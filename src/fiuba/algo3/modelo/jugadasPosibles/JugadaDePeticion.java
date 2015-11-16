@@ -64,7 +64,7 @@ public class JugadaDePeticion extends JugadaPosible {
     protected Object crearClase(String unaJugadaNueva, Jugador unJugador) {
         Object nuevoObjeto = null;
         int posicionDeJugadaEnLista = this.compararNombresJugadas(unaJugadaNueva);
-        if(posicionDeJugadaEnLista  > 0){
+        if(posicionDeJugadaEnLista  >= 0){
             Class definicionDeClase = null;
             try {
                 definicionDeClase = Class.forName(this.jugadasPosibles.get(posicionDeJugadaEnLista));

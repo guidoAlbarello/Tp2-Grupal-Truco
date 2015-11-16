@@ -55,29 +55,9 @@ public class Jugador {
     }
 
     public Jugada seleccionarJugada(String nuevaJugada){
+        this.jugadaPosible = new JugadaDePeticion(this.jugadaPosible.getSeJuegaConFlor());
         Jugada jugadaNueva = this.jugadaPosible.hacerJugada(nuevaJugada, this);
-        this.jugadaPosible = new JugadaDeRespuestaAPeticion(this.jugadaPosible.getSeJuegaConFlor());
         return jugadaNueva;
-    }
-
-    public int puntaje() {
-        return this.puntaje;
-    }
-
-    public Jugada responderEnvio() {
-        return new AceptaEnvido(this);
-    }
-
-    public Jugada responderRealEnvio() {
-        return new AceptaRealEnvido(this);
-    }
-
-    public Jugada noAceptarEnvio() {
-        return new NoAceptaEnvido(this);
-    }
-
-    public Jugada responderRealEnvido() {
-        return new AceptaRealEnvido(this);
     }
 
     public int calcularEnvido() {
@@ -93,6 +73,11 @@ public class Jugador {
     }
 
 
+    public Jugada seleccionarRespuesta(String unaJugadaDeRespuesta) {
+        this.jugadaPosible = new JugadaDeRespuestaAPeticion(this.jugadaPosible.getSeJuegaConFlor());
+        Jugada respuestaNueva = this.jugadaPosible.hacerJugada(unaJugadaDeRespuesta, this);
+        return respuestaNueva;
+    }
 }
     /*public void jugarCarta(Carta unaCarta){
         this.manosGanadas.jugarCarta(unaCarta);

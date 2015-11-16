@@ -8,6 +8,7 @@ import fiuba.algo3.modelo.jugadasPermitidas.Jugada;
 import fiuba.algo3.modelo.jugadasPermitidas.respuestasAPeticiones.*;
 import org.omg.CORBA.NO_IMPLEMENT;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -68,7 +69,7 @@ public class JugadaDeRespuestaAPeticion extends JugadaPosible {
     protected Object crearClase(String unaJugadaNueva, Jugador unJugador) {
         Object nuevoObjeto = null;
         int posicionDeJugadaEnLista = this.compararNombresJugadas(unaJugadaNueva);
-        if(posicionDeJugadaEnLista  < 0){
+        if(posicionDeJugadaEnLista  >= 0){
             Class definicionDeClase = null;
             try {
                 definicionDeClase = Class.forName(this.jugadasPosibles.get(posicionDeJugadaEnLista));
@@ -76,7 +77,13 @@ public class JugadaDeRespuestaAPeticion extends JugadaPosible {
                 throw new NoExisteLaJugadaError();
             }
             try {
-                nuevoObjeto = definicionDeClase.newInstance();
+                try {
+                    nuevoObjeto = definicionDeClase.getConstructor(Jugador.class).newInstance(unJugador);
+                } catch (InvocationTargetException e) {
+                    e.printStackTrace();
+                } catch (NoSuchMethodException e) {
+                    e.printStackTrace();
+                }
             } catch (InstantiationException e) {
                 e.printStackTrace();
             } catch (IllegalAccessException e) {
