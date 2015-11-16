@@ -1,9 +1,12 @@
 package fiuba.algo3.modelo;
 
-import fiuba.algo3.modelo.jugadasPosibles.respuestasAPeticiones.AceptaEnvido;
-import fiuba.algo3.modelo.jugadasPosibles.respuestasAPeticiones.AceptaRealEnvido;
-import fiuba.algo3.modelo.jugadasPosibles.Jugada;
-import fiuba.algo3.modelo.jugadasPosibles.respuestasAPeticiones.NoAceptaEnvido;
+import fiuba.algo3.modelo.jugadasPosibles.*;
+import fiuba.algo3.modelo.jugadasPermitidas.Jugada;
+import fiuba.algo3.modelo.jugadasPermitidas.respuestasAPeticiones.AceptaEnvido;
+import fiuba.algo3.modelo.jugadasPermitidas.respuestasAPeticiones.AceptaRealEnvido;
+import fiuba.algo3.modelo.jugadasPermitidas.respuestasAPeticiones.NoAceptaEnvido;
+
+import java.util.List;
 
 /**
  * Created by Fechee on 10/11/2015.
@@ -12,14 +15,14 @@ public class Jugador {
 
     private String nombreJugador;
     private Mano manoDelJugador;
-    private Cantos cantosPosibles;
+    private JugadaPosible jugadaPosible;
     private int puntaje;
     //private Cantos cantos;
 
 
-    public Jugador(String nombre, Cantos cantosDeJuego) {
+    public Jugador(String nombre, SeJuegaConFlor seJuegaConFlor) {
         this.nombreJugador = nombre;
-        this.cantosPosibles = cantosDeJuego;
+        jugadaPosible = new JugadaDePeticion(seJuegaConFlor);
         this.manoDelJugador = new Mano();
         this.puntaje = 0;
     }
@@ -37,14 +40,24 @@ public class Jugador {
         return this.manoDelJugador;
     }
 
-    public Cantos getCantosPosibles() {
+   /* public Cantos getCantosPosibles() {
         return this.cantosPosibles;
-    }
+    }*/
 
     public Jugada hacerJugada() {
-        //en lagun lado hay q darle la opcion par aelejir
-        //return cantosPosibles.cantarEnvido() ;
+        List<String> jugadasDisponibles = this.jugadaPosible.getJugadasPosibles();
+        Jugada jugadaRealizada = this.elegirJugada(jugadasDisponibles);
+        return jugadaRealizada;
+    }
+
+    private Jugada elegirJugada(List<String> unaNuevaJugada) {
         return null;
+    }
+
+    public Jugada seleccionarJugada(String nuevaJugada){
+        Jugada jugadaNueva = this.jugadaPosible.hacerJugada(nuevaJugada, this);
+        this.jugadaPosible = new JugadaDeRespuestaAPeticion(this.jugadaPosible.getSeJuegaConFlor());
+        return jugadaNueva;
     }
 
     public int puntaje() {

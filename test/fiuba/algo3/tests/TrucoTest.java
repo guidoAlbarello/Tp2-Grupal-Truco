@@ -1,5 +1,6 @@
 import fiuba.algo3.modelo.*;
-import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeJuego;
+import fiuba.algo3.modelo.jugadasPosibles.ConFlor;
+import fiuba.algo3.modelo.jugadasPosibles.SeJuegaConFlor;
 import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeTurnos;
 import fiuba.algo3.modelo.palosPosibles.*;
 import org.junit.Assert;
@@ -10,7 +11,7 @@ import org.junit.Test;
  * Created by anthony on 11/11/2015.
  */
 public class TrucoTest {
-    private Cantos cantos;
+    private SeJuegaConFlor seJuegaConFlor;
     private Jugador jugador1;
     private Jugador jugador2;
     private JugadorEnRonda jugadorEnRonda1;
@@ -23,9 +24,9 @@ public class TrucoTest {
 
     @Before
     public void setup(){
-        cantos = new CantosConFlor();
-        jugador1 = new Jugador("jugador1",cantos);
-        jugador2 = new Jugador("jugador2",cantos);
+        seJuegaConFlor = new ConFlor();
+        jugador1 = new Jugador("jugador1",seJuegaConFlor);
+        jugador2 = new Jugador("jugador2",seJuegaConFlor);
         jugadorEnRonda1 = new JugadorEnRonda(jugador1);
         jugadorEnRonda2 = new JugadorEnRonda(jugador2);
         manejadorDeTurnos = new ManejadorDeTurnos(jugadorEnRonda1,jugadorEnRonda2);
@@ -53,7 +54,7 @@ public class TrucoTest {
         jugadorEnRonda2.getJugador().getMano().agregarCarta(carta1copa);
 
         Mesa mesa = new Mesa(jugadorEnRonda1,jugadorEnRonda2,manejadorDeTurnos);
-        mesa.resolverJugada(jugadorEnRonda1.getJugador().getCantosPosibles().cantarEnvido(jugador1));
+        mesa.resolverJugada(jugadorEnRonda1.getJugador().seleccionarJugada("EnvidoCantado"));
         Assert.assertTrue(jugadorEnRonda1.getPuntosGanadosEnRonda() == 2);
     }
 
@@ -75,7 +76,7 @@ public class TrucoTest {
         jugadorEnRonda2.getJugador().getMano().agregarCarta(carta7espada);
 
         Mesa mesa = new Mesa(jugadorEnRonda1,jugadorEnRonda2,manejadorDeTurnos);
-        mesa.resolverJugada(jugadorEnRonda1.getJugador().getCantosPosibles().cantarEnvido(jugador1));
+        mesa.resolverJugada(jugadorEnRonda1.getJugador().seleccionarJugada("EnvidoCantado"));
         Assert.assertTrue(jugadorEnRonda2.getPuntosGanadosEnRonda() == 2);
     }
     @Test
@@ -96,7 +97,7 @@ public class TrucoTest {
         jugador2.getMano().agregarCarta(carta1copa);
 
         Mesa mesa = new Mesa(jugadorEnRonda1,jugadorEnRonda2,manejadorDeTurnos);
-        mesa.resolverJugada(jugadorEnRonda1.getJugador().getCantosPosibles().cantarEnvido(jugador1));//jugador 1 es mano por q es el que inicia la jugada
+        mesa.resolverJugada(jugadorEnRonda1.getJugador().seleccionarJugada("EnvidoCantado"));//jugador 1 es mano por q es el que inicia la jugada
         Assert.assertTrue(jugadorEnRonda1.getPuntosGanadosEnRonda() == 2);
     }
 
@@ -140,7 +141,7 @@ public class TrucoTest {
         jugador2.getMano().agregarCarta(carta1copa);
 
         Mesa mesa = new Mesa(jugadorEnRonda1,jugadorEnRonda2,manejadorDeTurnos);
-        mesa.resolverJugada(jugadorEnRonda1.getJugador().getCantosPosibles().cantarRealEnvido(jugador1));
+        mesa.resolverJugada(jugadorEnRonda1.getJugador().seleccionarJugada("RealEnvidoCantado"));
         Assert.assertTrue(jugadorEnRonda1.getPuntosGanadosEnRonda() == 4);
     }
 

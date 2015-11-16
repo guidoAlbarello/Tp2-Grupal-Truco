@@ -1,9 +1,9 @@
 package fiuba.algo3.modelo.manejadoresDeSituaciones;
 
 import fiuba.algo3.modelo.*;
-import fiuba.algo3.modelo.jugadasPosibles.peticiones.EnvidoCantado;
-import fiuba.algo3.modelo.jugadasPosibles.Jugada;
-import fiuba.algo3.modelo.jugadasPosibles.peticiones.RealEnvidoCantado;
+import fiuba.algo3.modelo.jugadasPermitidas.peticiones.EnvidoCantado;
+import fiuba.algo3.modelo.jugadasPermitidas.Jugada;
+import fiuba.algo3.modelo.jugadasPermitidas.peticiones.RealEnvidoCantado;
 
 /**
  * Created by anthony on 12/11/2015.

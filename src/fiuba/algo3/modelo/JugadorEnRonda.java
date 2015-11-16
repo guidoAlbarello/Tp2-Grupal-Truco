@@ -1,6 +1,6 @@
 package fiuba.algo3.modelo;
 
-import fiuba.algo3.modelo.jugadasPosibles.Jugada;
+import fiuba.algo3.modelo.Jugador;
 
 /**
  * Created by anthony on 12/11/2015.

@@ -1,5 +1,6 @@
 import fiuba.algo3.modelo.*;
-import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeJuego;
+import fiuba.algo3.modelo.jugadasPosibles.ConFlor;
+import fiuba.algo3.modelo.jugadasPosibles.SeJuegaConFlor;
 import fiuba.algo3.modelo.palosPosibles.Palo;
 import org.junit.Assert;
 import org.junit.Test;
@@ -35,8 +36,8 @@ public class MazoTest {
 
     @Test
     public void testMazoReparteCartasAlJugadorCorrectamente(){
-        Cantos cantos = new CantosConFlor();
-        Jugador pedro = new Jugador("pedro",cantos);
+        SeJuegaConFlor seJuegaConFlor = new ConFlor();
+        Jugador pedro = new Jugador("pedro",seJuegaConFlor);
         Mazo unMazo = new Mazo();
         unMazo.mezclarMazo();
         unMazo.repartirCartasAJugador(pedro);

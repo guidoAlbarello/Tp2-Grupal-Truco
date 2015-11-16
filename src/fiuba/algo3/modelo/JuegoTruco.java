@@ -1,7 +1,9 @@
 package fiuba.algo3.modelo;
 
 
-import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeJuego;
+import fiuba.algo3.modelo.jugadasPosibles.ConFlor;
+import fiuba.algo3.modelo.jugadasPosibles.SeJuegaConFlor;
+import fiuba.algo3.modelo.jugadasPosibles.SinFlor;
 import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeTurnos;
 
 import java.util.LinkedList;
@@ -25,7 +27,7 @@ public class JuegoTruco {
     private Jugador jugadorMano;
     private Jugador turnoActual;
     private ManejadorDeTurnos manejadorDeTurnos;
-    private Cantos cantosDelJuego;
+    private SeJuegaConFlor seJuegaConFlor;
 
     private Mazo mazoDeCartas;
     private Mesa mesa;
@@ -35,11 +37,11 @@ public class JuegoTruco {
     public JuegoTruco(boolean conFlor){
         mezclarCartas();
         if (conFlor){
-            this.cantosDelJuego = new CantosConFlor();
+            this.seJuegaConFlor = new ConFlor();
 
         }
         else{
-            this.cantosDelJuego = new CantosSinFlor();
+            this.seJuegaConFlor = new SinFlor();
         }
     }
 

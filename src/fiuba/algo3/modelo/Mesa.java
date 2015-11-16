@@ -1,11 +1,12 @@
 package fiuba.algo3.modelo;
 
-import fiuba.algo3.modelo.jugadasPosibles.*;
-import fiuba.algo3.modelo.jugadasPosibles.peticiones.EnvidoCantado;
-import fiuba.algo3.modelo.jugadasPosibles.peticiones.RealEnvidoCantado;
-import fiuba.algo3.modelo.jugadasPosibles.respuestasAPeticiones.AceptaEnvido;
-import fiuba.algo3.modelo.jugadasPosibles.respuestasAPeticiones.AceptaRealEnvido;
-import fiuba.algo3.modelo.jugadasPosibles.respuestasAPeticiones.NoAceptaEnvido;
+import fiuba.algo3.modelo.jugadasPermitidas.Jugada;
+import fiuba.algo3.modelo.jugadasPermitidas.CartaJugada;
+import fiuba.algo3.modelo.jugadasPermitidas.peticiones.EnvidoCantado;
+import fiuba.algo3.modelo.jugadasPermitidas.peticiones.RealEnvidoCantado;
+import fiuba.algo3.modelo.jugadasPermitidas.respuestasAPeticiones.AceptaEnvido;
+import fiuba.algo3.modelo.jugadasPermitidas.respuestasAPeticiones.AceptaRealEnvido;
+import fiuba.algo3.modelo.jugadasPermitidas.respuestasAPeticiones.NoAceptaEnvido;
 import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeTurnos;
 
 import java.util.LinkedList;
