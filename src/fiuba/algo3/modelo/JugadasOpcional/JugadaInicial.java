@@ -3,6 +3,7 @@ package fiuba.algo3.modelo.JugadasOpcional;
 import fiuba.algo3.modelo.Jugador;
 import fiuba.algo3.modelo.excepciones.NoSeEstaJugandoConFlorError;
 import fiuba.algo3.modelo.jugadasPosibles.SeJuegaConFlor;
+import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeJugadas;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,4 +39,11 @@ public class JugadaInicial extends Jugada {
     public boolean esUnaJugadaValida(Jugada unaJugada) {
         return this.respuestasPosibles.contains(unaJugada.getClass());
     }
+
+    protected void setRespuestasPosibles(List<Class> respuestasPosibles){
+        this.respuestasPosibles = respuestasPosibles;
+    }
+
+    @Override
+    public void resolverEnManejadorDeJugadas(ManejadorDeJugadas manejadorDeJugadas) {}
 }

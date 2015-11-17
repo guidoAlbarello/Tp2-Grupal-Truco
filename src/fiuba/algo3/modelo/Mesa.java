@@ -101,4 +101,14 @@ public class Mesa {
     public void limpiarMesa() {
         this.cartasEnMesa.clear();
     }
+
+    public JugadorEnRonda compararFlor(JugadorEnRonda jugador1EnRonda, JugadorEnRonda jugador2EnRonda) {
+        if (jugadorEnRonda1.getJugador().calcularFlor() == jugadorEnRonda2.getJugador().calcularFlor()){
+            return manejadorDeTurnos.getJugadorMano();
+        }
+        if (jugadorEnRonda1.getJugador().calcularFlor()> jugadorEnRonda2.getJugador().calcularFlor())
+            return jugadorEnRonda1;
+        else
+            return jugadorEnRonda2;
+    }
 }

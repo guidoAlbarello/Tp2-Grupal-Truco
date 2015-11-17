@@ -47,6 +47,10 @@ public class Jugador {
     public int getPuntaje() {
         return puntaje;
     }
+
+    public int calcularFlor() {
+        return this.manoDelJugador.calcularFlor();
+    }
 }
 
 

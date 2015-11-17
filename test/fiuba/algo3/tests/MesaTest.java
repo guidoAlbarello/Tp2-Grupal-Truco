@@ -1,7 +1,5 @@
 import fiuba.algo3.modelo.*;
-import fiuba.algo3.modelo.jugadasPermitidas.respuestasAPeticiones.ReTrucoAceptado;
-import fiuba.algo3.modelo.jugadasPermitidas.respuestasAPeticiones.TrucoAceptado;
-import fiuba.algo3.modelo.jugadasPermitidas.respuestasAPeticiones.ValeCuatroAceptado;
+
 import fiuba.algo3.modelo.jugadasPosibles.SeJuegaConFlor;
 import fiuba.algo3.modelo.jugadasPosibles.SinFlor;
 import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeTurnos;
@@ -16,8 +14,8 @@ public class MesaTest {
     @Test
     public void determinarGanadorDeMano(){
         SeJuegaConFlor seJuegaConFlor = new SinFlor();
-        JugadorEnRonda jugador1 = new JugadorEnRonda(new Jugador("jugador1",seJuegaConFlor));
-        JugadorEnRonda jugador2 = new JugadorEnRonda(new Jugador("jugador2",seJuegaConFlor));
+        JugadorEnRonda jugador1 = new JugadorEnRonda(new Jugador("jugador1"));
+        JugadorEnRonda jugador2 = new JugadorEnRonda(new Jugador("jugador2"));
         ManejadorDeTurnos turnos = new ManejadorDeTurnos(jugador1,jugador2);
         Mesa mesa = new Mesa(jugador1,jugador2,turnos);
         Mazo mazo = new Mazo();
@@ -92,8 +90,8 @@ public class MesaTest {
     public void simulacionPartidaConTrucoRetrucoYVale4() {
         // SETUP
         SeJuegaConFlor seJuegaConFlor = new SinFlor();
-        JugadorEnRonda jugador1 = new JugadorEnRonda(new Jugador("jugador1", seJuegaConFlor));
-        JugadorEnRonda jugador2 = new JugadorEnRonda(new Jugador("jugador2", seJuegaConFlor));
+        JugadorEnRonda jugador1 = new JugadorEnRonda(new Jugador("jugador1"));
+        JugadorEnRonda jugador2 = new JugadorEnRonda(new Jugador("jugador2"));
         ManejadorDeTurnos turnos = new ManejadorDeTurnos(jugador1, jugador2);
         Mesa mesa = new Mesa(jugador1, jugador2, turnos);
         ManejadorDeJugadas manejadorDeJugadas = new ManejadorDeJugadas(jugador1, jugador2, turnos, mesa);

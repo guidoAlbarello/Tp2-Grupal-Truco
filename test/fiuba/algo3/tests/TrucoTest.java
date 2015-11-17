@@ -1,6 +1,7 @@
 import fiuba.algo3.modelo.*;
 import fiuba.algo3.modelo.jugadasPosibles.ConFlor;
 import fiuba.algo3.modelo.jugadasPosibles.SeJuegaConFlor;
+import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeJugadas;
 import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeTurnos;
 import fiuba.algo3.modelo.palosPosibles.*;
 import org.junit.Assert;
@@ -25,8 +26,8 @@ public class TrucoTest {
     @Before
     public void setup(){
         seJuegaConFlor = new ConFlor();
-        jugador1 = new Jugador("jugador1",seJuegaConFlor);
-        jugador2 = new Jugador("jugador2",seJuegaConFlor);
+        jugador1 = new Jugador("jugador1");
+        jugador2 = new Jugador("jugador2");
         jugadorEnRonda1 = new JugadorEnRonda(jugador1);
         jugadorEnRonda2 = new JugadorEnRonda(jugador2);
         manejadorDeTurnos = new ManejadorDeTurnos(jugadorEnRonda1,jugadorEnRonda2);

@@ -1,6 +1,7 @@
 package fiuba.algo3.modelo.JugadasOpcional;
 
 import fiuba.algo3.modelo.Jugador;
+import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeJugadas;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,8 +16,8 @@ public class CantoContraFlor extends CantosFlor{
         this.setValorDeJugada(3);
         this.setJugadorQueLoCanto(unJugador);
         this.respuestasPosibles = new ArrayList<>();
-        this.respuestasPosibles.add(Quiero.class);
-        this.respuestasPosibles.add(NoQuiero.class);
+        this.respuestasPosibles.add(QuieroFlor.class);
+        this.respuestasPosibles.add(NoQuieroFlor.class);
         this.respuestasPosibles.add(CantoContraFlorAlResto.class);
     }
 
@@ -28,5 +29,10 @@ public class CantoContraFlor extends CantosFlor{
     @Override
     public boolean esUnaJugadaValida(Jugada unaJugada) {
         return this.respuestasPosibles.contains(unaJugada.getClass());
+    }
+
+    @Override
+    public void resolverEnManejadorDeJugadas(ManejadorDeJugadas manejadorDeJugadas) {
+        manejadorDeJugadas.resolverJugadaTipo(this);
     }
 }

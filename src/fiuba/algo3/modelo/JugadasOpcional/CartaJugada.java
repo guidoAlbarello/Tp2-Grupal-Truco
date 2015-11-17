@@ -2,6 +2,7 @@ package fiuba.algo3.modelo.JugadasOpcional;
 
 import fiuba.algo3.modelo.Carta;
 import fiuba.algo3.modelo.JugadorEnRonda;
+import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeJugadas;
 
 import java.util.List;
 
@@ -22,11 +23,6 @@ public class CartaJugada extends Jugada {
     }
 
     @Override
-    public void resolverEnManejadorDeJugadas(ManejadorDeJugadas unManejadorDeJugadas) {
-
-    }
-
-    @Override
     public List<Class> getJugadasPosibles() {
         return null;
     }
@@ -34,5 +30,10 @@ public class CartaJugada extends Jugada {
     @Override
     public boolean esUnaJugadaValida(Jugada unaJugada) {
         return false;
+    }
+
+    @Override
+    public void resolverEnManejadorDeJugadas(ManejadorDeJugadas manejadorDeJugadas) {
+        manejadorDeJugadas.resolverJugadaTipo(this);
     }
 }

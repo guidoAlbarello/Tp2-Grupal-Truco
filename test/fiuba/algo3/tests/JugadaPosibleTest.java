@@ -1,4 +1,10 @@
+import fiuba.algo3.modelo.JugadasOpcional.*;
+import fiuba.algo3.modelo.Jugador;
+import fiuba.algo3.modelo.JugadorEnRonda;
+import fiuba.algo3.modelo.Mesa;
 import fiuba.algo3.modelo.jugadasPosibles.*;
+import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeJugadas;
+import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeTurnos;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -7,42 +13,37 @@ import org.junit.Test;
  */
 public class JugadaPosibleTest {
     @Test
-    public void testMostrarLasOpcionesDeJugadasPosibleARealizar(){
-        SeJuegaConFlor seJuegaConFlor = new ConFlor();
-        JugadaPosible jugadaPosible = new JugadaDePeticion(seJuegaConFlor);
+    public void testHacerUnaJugada() {
+        Jugador unJugador = new Jugador("Juan");
+        Jugador otroJugador = new Jugador("Pepe");
+        JugadorEnRonda jugadorEnRonda1 = new JugadorEnRonda(unJugador);
+        JugadorEnRonda jugadorEnRonda2 = new JugadorEnRonda(otroJugador);
+        ManejadorDeTurnos manejadorDeTurnos = new ManejadorDeTurnos(jugadorEnRonda1, jugadorEnRonda2);
+        Mesa mesa = new Mesa(jugadorEnRonda1, jugadorEnRonda2, manejadorDeTurnos);
+        ManejadorDeJugadas manejadorDeJugadas = new ManejadorDeJugadas(jugadorEnRonda1, jugadorEnRonda2, manejadorDeTurnos, mesa);
 
-        Assert.assertTrue(jugadaPosible.compararNombresJugadas("CartaJugada") >=0);
-        Assert.assertTrue(jugadaPosible.compararNombresJugadas("EnvidoCantado") >=0);
-        Assert.assertTrue(jugadaPosible.compararNombresJugadas("RealEnvidoCantado") >=0);
-        Assert.assertTrue(jugadaPosible.compararNombresJugadas("FaltaEnvidoCantado") >=0);
-        Assert.assertTrue(jugadaPosible.compararNombresJugadas("FlorCantada") >=0);
-        Assert.assertTrue(jugadaPosible.compararNombresJugadas("TrucoCantado") >=0);
-        Assert.assertTrue(jugadaPosible.compararNombresJugadas("ReTrucoCantado") >=0);
-        Assert.assertTrue(jugadaPosible.compararNombresJugadas("ValeCuatroCantado") >=0);
+        Jugada jugadaInicial = new JugadaInicial(unJugador, 1, new ConFlor());
+        JugadaPosible jugadaPosible = new JugadaPosible(jugadaInicial, manejadorDeJugadas);
 
-        Assert.assertFalse(jugadaPosible.compararNombresJugadas("AceptaEnvido") >=0);
-        Assert.assertFalse(jugadaPosible.compararNombresJugadas("AceptaRealEnvido") >=0);
-        Assert.assertFalse(jugadaPosible.compararNombresJugadas("NoAceptaEnvido") >=0);
-        Assert.assertFalse(jugadaPosible.compararNombresJugadas("ReTrucoAceptado")  >=0);
-        Assert.assertFalse(jugadaPosible.compararNombresJugadas("TrucoAceptado") >=0);
-        Assert.assertFalse(jugadaPosible.compararNombresJugadas("ValeCuatroAceptado") >=0);
+        Jugada nuevoEnvido = new CantoEnvido(unJugador);
+        jugadaPosible.setNuevaJugada(nuevoEnvido);
 
-        jugadaPosible = new JugadaDeRespuestaAPeticion(jugadaPosible.getSeJuegaConFlor());
+        jugadaPosible.resolverJugada();
 
-        Assert.assertFalse(jugadaPosible.compararNombresJugadas("EnvidoCantado") >=0);
-        Assert.assertFalse(jugadaPosible.compararNombresJugadas("RealEnvidoCantado") >=0);
-        Assert.assertFalse(jugadaPosible.compararNombresJugadas("FaltaEnvidoCantado")>=0);
-        Assert.assertFalse(jugadaPosible.compararNombresJugadas("FlorCantada")>=0);
-        Assert.assertFalse(jugadaPosible.compararNombresJugadas("TrucoCantado")>=0);
-        Assert.assertFalse(jugadaPosible.compararNombresJugadas("ReTrucoCantado")>=0);
-        Assert.assertFalse(jugadaPosible.compararNombresJugadas("ValeCuatroCantado")>=0);
+        Jugada decisionJugada = new QuieroEnvido(unJugador);
+        jugadaPosible.setNuevaJugada(decisionJugada);
 
-        Assert.assertTrue(jugadaPosible.compararNombresJugadas("CartaJugada")>=0);
-        Assert.assertTrue(jugadaPosible.compararNombresJugadas("AceptaEnvido")>=0);
-        Assert.assertTrue(jugadaPosible.compararNombresJugadas("AceptaRealEnvido")>=0);
-        Assert.assertTrue(jugadaPosible.compararNombresJugadas("NoAceptaEnvido")>=0);
-        Assert.assertTrue(jugadaPosible.compararNombresJugadas("ReTrucoAceptado")>=0);
-        Assert.assertTrue(jugadaPosible.compararNombresJugadas("TrucoAceptado")>=0);
-        Assert.assertTrue(jugadaPosible.compararNombresJugadas("ValeCuatroAceptado")>=0);
+        jugadaPosible.resolverJugada();
+
+        JugadaInicial otraJugada = new JugadaInicial(unJugador, 1, new ConFlor());
+
+
+        Assert.assertFalse(jugadaPosible.getJugadasPosibles().contains(CantoEnvido.class));
+        Assert.assertFalse(jugadaPosible.getJugadasPosibles().contains(CantoRealEnvido.class));
+        Assert.assertFalse(jugadaPosible.getJugadasPosibles().contains(CantoFaltaEnvido.class));
+        Assert.assertFalse(jugadaPosible.getJugadasPosibles().contains(CantoFlor.class));
+        Assert.assertTrue(jugadaPosible.getJugadasPosibles().contains(CantoTruco.class));
+
+
     }
 }

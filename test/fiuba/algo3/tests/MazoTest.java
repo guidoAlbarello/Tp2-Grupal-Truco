@@ -37,7 +37,7 @@ public class MazoTest {
     @Test
     public void testMazoReparteCartasAlJugadorCorrectamente(){
         SeJuegaConFlor seJuegaConFlor = new ConFlor();
-        Jugador pedro = new Jugador("pedro",seJuegaConFlor);
+        Jugador pedro = new Jugador("pedro");
         Mazo unMazo = new Mazo();
         unMazo.mezclarMazo();
         unMazo.repartirCartasAJugador(pedro);

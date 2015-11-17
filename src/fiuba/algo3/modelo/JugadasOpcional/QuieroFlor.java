@@ -7,21 +7,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Krion on 16/11/2015.
+ * Created by Krion on 17/11/2015.
  */
-public class CantoEnvido extends CantosEnvido {
+public class QuieroFlor extends DecisionesFinalesDelCanto {
     private List<Class> respuestasPosibles;
 
-    public CantoEnvido(Jugador unJugador) {
-        this.setValorDeJugada(2);
+    public QuieroFlor(Jugador unJugador) {
+        this.setValorDeJugada(-1);
         this.setJugadorQueLoCanto(unJugador);
         this.respuestasPosibles = new ArrayList<>();
-        this.respuestasPosibles.add(QuieroEnvido.class);
-        this.respuestasPosibles.add(NoQuieroEnvido.class);
-        this.respuestasPosibles.add(CantoEnvido.class);
-        this.respuestasPosibles.add(CantoRealEnvido.class);
-        this.respuestasPosibles.add(CantoFaltaEnvido.class);
-        this.respuestasPosibles.add(CantoFlor.class);
     }
 
     @Override
@@ -31,12 +25,11 @@ public class CantoEnvido extends CantosEnvido {
 
     @Override
     public boolean esUnaJugadaValida(Jugada unaJugada) {
-        return this.respuestasPosibles.contains(unaJugada.getClass());
+        return false;
     }
 
     @Override
     public void resolverEnManejadorDeJugadas(ManejadorDeJugadas manejadorDeJugadas) {
         manejadorDeJugadas.resolverJugadaTipo(this);
     }
-
 }

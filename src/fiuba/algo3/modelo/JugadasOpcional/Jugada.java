@@ -1,6 +1,7 @@
 package fiuba.algo3.modelo.JugadasOpcional;
 
 import fiuba.algo3.modelo.Jugador;
+import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeJugadas;
 
 import java.util.List;
 
@@ -30,4 +31,6 @@ public abstract class Jugada {
     public abstract List<Class> getJugadasPosibles();
 
     public abstract boolean esUnaJugadaValida(Jugada unaJugada);
+
+    public abstract void resolverEnManejadorDeJugadas(ManejadorDeJugadas manejadorDeJugadas);
 }
