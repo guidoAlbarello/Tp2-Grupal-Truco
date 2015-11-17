@@ -10,8 +10,8 @@ import java.util.List;
  * Created by Krion on 17/11/2015.
  */
 public class JugadaInicialSinEnvidoNiFlor extends JugadaInicial {
-    public JugadaInicialSinEnvidoNiFlor(Jugador unJugador, int numeroDeMano, SeJuegaConFlor seJuegaConFlor) {
-        super(unJugador, numeroDeMano, seJuegaConFlor);
+    public JugadaInicialSinEnvidoNiFlor(Jugador unJugador, SeJuegaConFlor seJuegaConFlor) {
+        super(unJugador, seJuegaConFlor);
         List<Class> jugadasPosibles = new ArrayList<>();
         jugadasPosibles.add(CantoTruco.class);
         this.setRespuestasPosibles(jugadasPosibles);

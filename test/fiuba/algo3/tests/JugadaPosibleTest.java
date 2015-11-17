@@ -22,7 +22,7 @@ public class JugadaPosibleTest {
         Mesa mesa = new Mesa(jugadorEnRonda1, jugadorEnRonda2, manejadorDeTurnos);
         ManejadorDeJugadas manejadorDeJugadas = new ManejadorDeJugadas(jugadorEnRonda1, jugadorEnRonda2, manejadorDeTurnos, mesa);
 
-        Jugada jugadaInicial = new JugadaInicial(unJugador, 1, new ConFlor());
+        Jugada jugadaInicial = new JugadaInicial(unJugador, new ConFlor());
         JugadaPosible jugadaPosible = new JugadaPosible(jugadaInicial, manejadorDeJugadas);
 
         Jugada nuevoEnvido = new CantoEnvido(unJugador);
@@ -35,7 +35,7 @@ public class JugadaPosibleTest {
 
         jugadaPosible.resolverJugada();
 
-        JugadaInicial otraJugada = new JugadaInicial(unJugador, 1, new ConFlor());
+        JugadaInicial otraJugada = new JugadaInicialSinEnvidoNiFlor(unJugador, new ConFlor());
 
 
         Assert.assertFalse(jugadaPosible.getJugadasPosibles().contains(CantoEnvido.class));

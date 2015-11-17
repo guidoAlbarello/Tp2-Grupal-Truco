@@ -14,9 +14,8 @@ import java.util.List;
 public class JugadaInicial extends Jugada {
     private List<Class> respuestasPosibles;
 
-    public JugadaInicial(Jugador unJugador, int numeroDeMano, SeJuegaConFlor seJuegaConFlor) {
-        if(numeroDeMano == 1) {
-            try{
+    public JugadaInicial(Jugador unJugador, SeJuegaConFlor seJuegaConFlor) {
+        try{
                 seJuegaConFlor.getSiHayJugadaFlor();
                 this.respuestasPosibles.add(CantoFlor.class);
             }catch(NoSeEstaJugandoConFlorError e){}
@@ -25,9 +24,7 @@ public class JugadaInicial extends Jugada {
             this.respuestasPosibles.add(CantoEnvido.class);
             this.respuestasPosibles.add(CantoRealEnvido.class);
             this.respuestasPosibles.add(CantoFaltaEnvido.class);
-        }
-
-        this.respuestasPosibles.add(CantoTruco.class);
+            this.respuestasPosibles.add(CantoTruco.class);
     }
 
     @Override
