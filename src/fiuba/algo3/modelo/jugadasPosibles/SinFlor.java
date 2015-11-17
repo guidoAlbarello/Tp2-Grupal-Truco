@@ -1,7 +1,7 @@
 package fiuba.algo3.modelo.jugadasPosibles;
 
+import fiuba.algo3.modelo.JugadasOpcional.Jugada;
 import fiuba.algo3.modelo.excepciones.NoSeEstaJugandoConFlorError;
-import fiuba.algo3.modelo.jugadasPermitidas.Jugada;
 
 /**
  * Created by Krion on 15/11/2015.
@@ -9,7 +9,7 @@ import fiuba.algo3.modelo.jugadasPermitidas.Jugada;
 public class SinFlor extends SeJuegaConFlor {
 
     @Override
-    protected Jugada getSiHayJugadaFlor() {
+    public Jugada getSiHayJugadaFlor() {
         throw new NoSeEstaJugandoConFlorError();
     }
 }

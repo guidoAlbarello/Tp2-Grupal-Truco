@@ -27,7 +27,7 @@ public class ManejadorDeJuego {
         JugadorEnRonda jugadorEnRonda2 = new JugadorEnRonda(this.jugador2);
         manejadorDeTurnos = new ManejadorDeTurnos(jugadorEnRonda1,jugadorEnRonda2);
         mesaDelJuego = new Mesa(jugadorEnRonda1,jugadorEnRonda2,manejadorDeTurnos);//se crea la mesa para
-        this.manejadorDeJugadas = new ManejadorDeJugadas(jugadorEnRonda1, jugadorEnRonda2, manejadorDeTurnos, mesaDelJuego);
+        this.manejadorDeJugadas = new ManejadorDeJugadas(jugadorEnRonda1, jugadorEnRonda2, manejadorDeTurnos, mesaDelJuego); //refactorizar constructor
         this.manejadorDePuntaje = new ManejadorDePuntaje(this.jugador1.getNombre(), this.jugador2.getNombre());
         this.elejirJugadorMano(jugadorEnRonda1, jugadorEnRonda1);
         while (jugadorEnRonda1.getJugador().getPuntaje() < 30 && jugadorEnRonda2.getJugador().getPuntaje() < 30)
@@ -44,7 +44,7 @@ public class ManejadorDeJuego {
         while (jugadorEnRonda1.getManosGanadas() < 2 && jugadorEnRonda2.getManosGanadas() < 2) {
             JugadorEnRonda jugadorMano = manejadorDeTurnos.getJugadorMano();
             Jugada jugada = jugadorMano.getJugador().hacerJugada();
-            manejadorDeJugadas.resolverJugada(jugada);
+            this.manejadorDeJugadas.resolverJugada(jugada);
             jugadorEnRonda1.actualizarPuntajeDeJugador();
             jugadorEnRonda1.inicializarParaNuevaRonda();
             jugadorEnRonda2.actualizarPuntajeDeJugador();

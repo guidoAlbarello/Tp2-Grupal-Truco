@@ -1,7 +1,6 @@
 import fiuba.algo3.modelo.*;
 import fiuba.algo3.modelo.jugadasPosibles.ConFlor;
 import fiuba.algo3.modelo.jugadasPosibles.SeJuegaConFlor;
-import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeJugadas;
 import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeTurnos;
 import fiuba.algo3.modelo.palosPosibles.*;
 import org.junit.Assert;

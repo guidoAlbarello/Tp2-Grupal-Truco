@@ -4,7 +4,6 @@ import fiuba.algo3.modelo.jugadasPermitidas.respuestasAPeticiones.TrucoAceptado;
 import fiuba.algo3.modelo.jugadasPermitidas.respuestasAPeticiones.ValeCuatroAceptado;
 import fiuba.algo3.modelo.jugadasPosibles.SeJuegaConFlor;
 import fiuba.algo3.modelo.jugadasPosibles.SinFlor;
-import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeJugadas;
 import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeTurnos;
 import org.junit.Assert;
 import org.junit.Test;

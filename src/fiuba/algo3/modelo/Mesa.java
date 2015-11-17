@@ -1,6 +1,6 @@
 package fiuba.algo3.modelo;
 
-import fiuba.algo3.modelo.jugadasPermitidas.CartaJugada;
+import fiuba.algo3.modelo.JugadasOpcional.CartaJugada;
 import fiuba.algo3.modelo.manejadoresDeSituaciones.ManejadorDeTurnos;
 
 import java.util.LinkedList;
