@@ -18,4 +18,6 @@ public abstract class Palo {
     public abstract boolean esDelMismoPalo(PaloCopa unPalo);
 
     public abstract boolean esDelMismoPalo(PaloEspada unPalo);
+
+    public abstract int getValorDeHash();
 }

@@ -30,4 +30,8 @@ public class PaloBasto extends Palo {
         return false;
     }
 
+    @Override
+    public int getValorDeHash(){
+        return 24;
+    }
 }

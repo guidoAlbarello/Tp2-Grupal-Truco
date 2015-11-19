@@ -28,4 +28,11 @@ public class PaloEspada extends Palo {
     public boolean esDelMismoPalo(PaloCopa unPalo){
         return false;
     }
+
+    @Override
+    public int getValorDeHash(){
+        return 0;
+    }
+
+
 }
