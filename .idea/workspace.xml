@@ -2,30 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d1b8bb5-0683-40a4-98b6-298629766e0f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadoDeJuego.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadoEnvido.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fiuba/algo3/EstadoEnvidoTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadoFaltaEnvido.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fiuba/algo3/EstadoFaltaEnvidoTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadoPrimeraMano.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadoRealEnvido.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fiuba/algo3/EstadoRealEnvidoTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadoRetruco.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fiuba/algo3/EstadoRetrucoTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadoTruco.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fiuba/algo3/EstadoTrucoTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadoValeCuatro.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fiuba/algo3/EstadoValeCuatroTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Juego.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/JugadaInvalidaPrimeraManoError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/NoSeResuelvValeCuatroError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/NoSeResuelveEnvidoError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/NoSeResuelveFaltaEnvidoError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/NoSeResuelveRealEnvidoError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/NoSeResuelveRetrucoError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/NoSeResuelveTrucoError.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tp2-Grupal-Truco.iml" afterPath="$PROJECT_DIR$/Tp2-Grupal-Truco.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="DELETED" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\src\fiuba\algo3\EstadoDeJuego.java" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\src\fiuba\algo3\EstadoDeJuego.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoDeJuego.java" />
+      <change type="MOVED" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\src\fiuba\algo3\EstadoEnvido.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoEnvido.java" />
+      <change type="MOVED" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\src\fiuba\algo3\EstadoFaltaEnvido.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoFaltaEnvido.java" />
+      <change type="MOVED" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\src\fiuba\algo3\EstadoPrimeraMano.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoPrimeraMano.java" />
+      <change type="MOVED" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\src\fiuba\algo3\EstadoRealEnvido.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoRealEnvido.java" />
+      <change type="MOVED" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\src\fiuba\algo3\EstadoRetruco.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoRetruco.java" />
+      <change type="MOVED" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\src\fiuba\algo3\EstadoTruco.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTruco.java" />
+      <change type="MOVED" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\src\fiuba\algo3\EstadoValeCuatro.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoValeCuatro.java" />
+      <change type="MOVED" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\src\fiuba\algo3\JugadaInvalidaPrimeraManoError.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Excepciones/JugadaInvalidaPrimeraManoError.java" />
+      <change type="MOVED" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\src\fiuba\algo3\NoSeResuelvValeCuatroError.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Excepciones/NoSeResuelvValeCuatroError.java" />
+      <change type="MOVED" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\src\fiuba\algo3\NoSeResuelveEnvidoError.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Excepciones/NoSeResuelveEnvidoError.java" />
+      <change type="MOVED" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\src\fiuba\algo3\NoSeResuelveFaltaEnvidoError.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Excepciones/NoSeResuelveFaltaEnvidoError.java" />
+      <change type="MOVED" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\src\fiuba\algo3\NoSeResuelveRealEnvidoError.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Excepciones/NoSeResuelveRealEnvidoError.java" />
+      <change type="MOVED" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\src\fiuba\algo3\NoSeResuelveRetrucoError.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Excepciones/NoSeResuelveRetrucoError.java" />
+      <change type="MOVED" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\src\fiuba\algo3\NoSeResuelveTrucoError.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Excepciones/NoSeResuelveTrucoError.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/EstadoEnvidoTest.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/EstadoEnvidoTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/EstadoFaltaEnvidoTest.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/EstadoFaltaEnvidoTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/EstadoRealEnvidoTest.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/EstadoRealEnvidoTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/EstadoRetrucoTest.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/EstadoRetrucoTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/EstadoTrucoTest.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/EstadoTrucoTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/EstadoValeCuatroTest.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/EstadoValeCuatroTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Juego.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Juego.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Tp2-Grupal-Truco.iws" />
@@ -48,24 +47,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Juego.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Juego.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Juego.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.73846155">
+              <caret line="20" column="81" selection-start-line="20" selection-start-column="81" selection-end-line="20" selection-end-column="81" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EstadoEnvidoTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EstadoEnvidoTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/EstadoEnvidoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52307695">
-              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EstadoFaltaEnvido.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoFaltaEnvido.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -74,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/EstadoRealEnvidoTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,7 +95,7 @@
         <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/EstadoFaltaEnvidoTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,7 +107,7 @@
         <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/EstadoTrucoTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,7 +119,7 @@
         <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/EstadoRetrucoTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -130,34 +139,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EstadoValeCuatro.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadoValeCuatro.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="EstadoTruco.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadoTruco.java">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTruco.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+              <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
               <folding>
-                <element signature="e#1180#1181#0" expanded="true" />
-                <element signature="e#1230#1231#0" expanded="true" />
+                <element signature="e#1277#1278#0" expanded="true" />
+                <element signature="e#1327#1328#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="EstadoRetruco.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadoRetruco.java">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoRetruco.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
+              <caret line="32" column="56" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -197,7 +196,6 @@
         <option value="$PROJECT_DIR$/src/fiuba/algo3/NoSeResuelveRetrucoError.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/EstadoTruco.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/NoSeResuelveTrucoError.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/Juego.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/EstadoValeCuatro.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/NoSeResuelvValeCuatroError.java" />
         <option value="$PROJECT_DIR$/test/fiuba/algo3/EstadoEnvidoTest.java" />
@@ -206,6 +204,7 @@
         <option value="$PROJECT_DIR$/test/fiuba/algo3/EstadoRetrucoTest.java" />
         <option value="$PROJECT_DIR$/test/fiuba/algo3/EstadoTrucoTest.java" />
         <option value="$PROJECT_DIR$/test/fiuba/algo3/EstadoValeCuatroTest.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/Juego.java" />
       </list>
     </option>
   </component>
@@ -503,22 +502,34 @@
       <option name="project" value="LOCAL" />
       <updated>1447895733850</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="cambios de estado">
+      <created>1447896742674</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1447896742674</updated>
+    </task>
+    <task id="LOCAL-00003" summary="cambios de estado">
+      <created>1447898430039</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1447898430039</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="754" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3279743" sideWeight="0.50610685" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279743" sideWeight="0.5091603" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3279743" sideWeight="0.49389312" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329582" sideWeight="0.49694657" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3279743" sideWeight="0.4908397" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329582" sideWeight="0.49389312" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24961832" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -540,7 +551,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="probando repositorio" />
-    <option name="LAST_COMMIT_MESSAGE" value="probando repositorio" />
+    <MESSAGE value="cambios de estado" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambios de estado" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -551,7 +563,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadoDeJuego.java">
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoDeJuego.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.6666665">
           <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
@@ -559,7 +571,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/NoSeResuelveEnvidoError.java">
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Excepciones/NoSeResuelveEnvidoError.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
@@ -567,7 +579,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadoEnvido.java">
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoEnvido.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
@@ -575,7 +587,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/NoSeResuelveFaltaEnvidoError.java">
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Excepciones/NoSeResuelveFaltaEnvidoError.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="66" selection-start-line="5" selection-start-column="66" selection-end-line="5" selection-end-column="66" />
@@ -583,15 +595,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadoFaltaEnvido.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/JugadaInvalidaPrimeraManoError.java">
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Excepciones/JugadaInvalidaPrimeraManoError.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="68" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
@@ -599,29 +603,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadoPrimeraMano.java">
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoPrimeraMano.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
           <folding>
-            <element signature="e#383#384#0" expanded="true" />
-            <element signature="e#436#437#0" expanded="true" />
+            <element signature="e#488#489#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadoRealEnvido.java">
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoRealEnvido.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
           <folding>
-            <element signature="e#487#488#0" expanded="true" />
-            <element signature="e#542#543#0" expanded="true" />
+            <element signature="e#589#590#0" expanded="true" />
+            <element signature="e#644#645#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/NoSeResuelveRealEnvidoError.java">
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Excepciones/NoSeResuelveRealEnvidoError.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="65" selection-start-line="5" selection-start-column="65" selection-end-line="5" selection-end-column="65" />
@@ -629,7 +633,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/NoSeResuelveRetrucoError.java">
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Excepciones/NoSeResuelveRetrucoError.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
@@ -637,7 +641,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/NoSeResuelveTrucoError.java">
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Excepciones/NoSeResuelveTrucoError.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
@@ -645,7 +649,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/NoSeResuelvValeCuatroError.java">
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Excepciones/NoSeResuelvValeCuatroError.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="64" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
@@ -653,7 +657,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadoValeCuatro.java">
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoValeCuatro.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
@@ -661,29 +665,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadoTruco.java">
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTruco.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+          <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
           <folding>
-            <element signature="e#1180#1181#0" expanded="true" />
-            <element signature="e#1230#1231#0" expanded="true" />
+            <element signature="e#1277#1278#0" expanded="true" />
+            <element signature="e#1327#1328#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadoRetruco.java">
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoRetruco.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Juego.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <caret line="32" column="56" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -701,7 +697,7 @@
     <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/EstadoTrucoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -711,7 +707,7 @@
     <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/EstadoRetrucoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -721,7 +717,7 @@
     <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/EstadoRealEnvidoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -731,7 +727,7 @@
     <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/EstadoFaltaEnvidoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -740,11 +736,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/EstadoEnvidoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52307695">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoFaltaEnvido.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Juego.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73846155">
+          <caret line="20" column="81" selection-start-line="20" selection-start-column="81" selection-end-line="20" selection-end-column="81" />
+          <folding />
         </state>
       </provider>
     </entry>

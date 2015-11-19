@@ -1,24 +1,23 @@
 package fiuba.algo3;
 
+import fiuba.algo3.EstadosDeJuego.*;
+
 /**
  * Created by anthony on 18/11/2015.
  */
 public class Juego {
-    public void cambiarEstadoRealEnvido() {
-    }
+    private EstadoDeJuego estadoDeJuego;
 
-    public void cambiarEstadoFaltaEnvido() {
-    }
+    public void cambiarEstadoRealEnvido() {this.estadoDeJuego = new EstadoRealEnvido();   }
 
-    public void cambiarEstadoEnvido() {
-    }
+    public void cambiarEstadoFaltaEnvido() {this.estadoDeJuego = new EstadoFaltaEnvido();   }
 
-    public void cambiarEstadoTruco() {
-    }
+    public void cambiarEstadoEnvido() {this.estadoDeJuego = new EstadoEnvido();    }
 
-    public void cambiarEstadoValeCuatro() {
-    }
+    public void cambiarEstadoTruco() {this.estadoDeJuego = new EstadoTruco();    }
 
-    public void cambiarEstadoRetruco() {
+    public void cambiarEstadoValeCuatro() {this.estadoDeJuego = new EstadoValeCuatro();    }
+
+    public void cambiarEstadoRetruco() {this.estadoDeJuego = new EstadoRetruco();
     }
 }
