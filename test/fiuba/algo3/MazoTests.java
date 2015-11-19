@@ -17,7 +17,7 @@ public class MazoTests {
         Carta carta1 = unMazo.repartirUltimaCarta();
         Assert.assertEquals(39, unMazo.obtenerNumeroDeCartas());
         Carta carta2 = unMazo.repartirUltimaCarta();
-        Assert.assertTrue(carta1.getPaloDeCarta()!=carta2.getPaloDeCarta() & carta1.getValorDeCarta()!=carta2.getValorDeCarta());
+        Assert.assertTrue(carta1.getPaloDeCarta()!=carta2.getPaloDeCarta() || carta1.getValorDeCarta()!=carta2.getValorDeCarta());
         Assert.assertEquals(38, unMazo.obtenerNumeroDeCartas());
     }
 

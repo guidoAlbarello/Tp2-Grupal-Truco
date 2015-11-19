@@ -133,7 +133,7 @@ public class Carta {
     }
 
     public int getValorDeCarta() {
-        return valorDeCarta;
+        return this.valorDeCarta;
     }
 
     public Envido calcularEnvidoCon(Carta unaCarta){
