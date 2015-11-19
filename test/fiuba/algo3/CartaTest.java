@@ -3,6 +3,7 @@ package fiuba.algo3;
 import fiuba.algo3.Excepciones.ValorDeCartaInvalidoError;
 import fiuba.algo3.ModeladoDeCarta.Carta;
 import fiuba.algo3.ModeladoDeCarta.Palo;
+import fiuba.algo3.ModeladoDeCarta.PaloBasto;
 import fiuba.algo3.ModeladoDeCarta.PaloEspada;
 import org.junit.Assert;
 import org.junit.Test;
@@ -23,5 +24,4 @@ public class CartaTest {
         Carta cartaBienCreada = new Carta(1, unPalo );
         Assert.assertEquals(1, cartaBienCreada.getValorDeCarta());
     }
-
 }
