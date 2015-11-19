@@ -9,9 +9,11 @@ import org.junit.Test;
  */
 public class EstadoTrucoTest {
     private EstadoDeJuego estadoDeJuego;
+    private Juego juego;
     @Before
     public void setup(){
-        estadoDeJuego = new EstadoTruco();
+        juego = new Juego();
+        estadoDeJuego = new EstadoTruco(juego);
     }
     @Test(expected = RuntimeException.class)
     public void seCantaTrucoCuandoSeCantoUnTrucoYSeLanzaUnaExcepcion(){estadoDeJuego.truco();}

@@ -9,7 +9,9 @@ import fiuba.algo3.Excepciones.NoSeResuelveRetrucoError;
  */
 public class EstadoRetruco implements EstadoDeJuego {
     private Juego juego;
-
+    public EstadoRetruco(Juego juego) {
+        this.juego = juego;
+    }
     @Override
     public void envido() {throw new NoSeResuelveRetrucoError();
     }

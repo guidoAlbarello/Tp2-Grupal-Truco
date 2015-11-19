@@ -9,7 +9,9 @@ import fiuba.algo3.Excepciones.NoSeResuelveTrucoError;
  */
 public class EstadoTruco implements EstadoDeJuego {
     private Juego juego;
-
+    public EstadoTruco(Juego juego) {
+        this.juego = juego;
+    }
     @Override
     public void envido() {
         throw new NoSeResuelveTrucoError();/* aca en realidad esto no es correcto por que

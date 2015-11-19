@@ -1,23 +1,20 @@
 package fiuba.algo3.EstadosDeJuego;
 
-
 import fiuba.algo3.CartaJugada;
+import fiuba.algo3.Excepciones.NoSeResuelveEnvidoEnvidoError;
 import fiuba.algo3.Juego;
-import fiuba.algo3.Excepciones.NoSeResuelveEnvidoError;
 
 /**
- * Created by anthony on 18/11/2015.
+ * Created by anthony on 19/11/2015.
  */
-public class EstadoEnvido implements EstadoDeJuego {
+public class EstadoEnvidoEnvido implements EstadoDeJuego{
     private Juego juego;
-
-    public EstadoEnvido(Juego juego) {
+    public EstadoEnvidoEnvido(Juego juego) {
         this.juego = juego;
     }
-
     @Override
     public void envido() {
-        this.juego.cambiarEstadoEnvidoEnvido();
+        throw new NoSeResuelveEnvidoEnvidoError();
     }
 
     @Override
@@ -32,17 +29,17 @@ public class EstadoEnvido implements EstadoDeJuego {
 
     @Override
     public void truco() {
-        throw new NoSeResuelveEnvidoError();
+        throw new NoSeResuelveEnvidoEnvidoError();
     }
 
     @Override
     public void retruco() {
-        throw new NoSeResuelveEnvidoError();
+        throw new NoSeResuelveEnvidoEnvidoError();
     }
 
     @Override
     public void valeCuatro() {
-        throw new NoSeResuelveEnvidoError();
+        throw new NoSeResuelveEnvidoEnvidoError();
     }
 
     @Override
@@ -56,7 +53,7 @@ public class EstadoEnvido implements EstadoDeJuego {
     }
 
     @Override
-    public void irseAlMaso() {throw new NoSeResuelveEnvidoError();
+    public void irseAlMaso() {throw new NoSeResuelveEnvidoEnvidoError();
     }
 
     @Override
@@ -66,6 +63,6 @@ public class EstadoEnvido implements EstadoDeJuego {
 
     @Override
     public void jugarCarta(CartaJugada cartaJugada) {
-        throw new NoSeResuelveEnvidoError();
+        throw new NoSeResuelveEnvidoEnvidoError();
     }
 }

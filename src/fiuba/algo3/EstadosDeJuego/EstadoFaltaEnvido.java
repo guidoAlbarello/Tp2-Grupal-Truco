@@ -2,11 +2,16 @@ package fiuba.algo3.EstadosDeJuego;
 
 import fiuba.algo3.CartaJugada;
 import fiuba.algo3.Excepciones.NoSeResuelveFaltaEnvidoError;
+import fiuba.algo3.Juego;
 
 /**
  * Created by anthony on 18/11/2015.
  */
 public class EstadoFaltaEnvido implements EstadoDeJuego {
+    private Juego juego;
+    public EstadoFaltaEnvido(Juego juego) {
+        this.juego = juego;
+    }
     @Override
     public void envido() {throw new NoSeResuelveFaltaEnvidoError();
     }

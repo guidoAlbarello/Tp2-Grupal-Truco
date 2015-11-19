@@ -15,17 +15,17 @@ public class Juego {
     }
 
 
-    public void cambiarEstadoRealEnvido() {this.estadoDeJuego = new EstadoRealEnvido();   }
+    public void cambiarEstadoRealEnvido() {this.estadoDeJuego = new EstadoRealEnvido(this);   }
 
-    public void cambiarEstadoFaltaEnvido() {this.estadoDeJuego = new EstadoFaltaEnvido();   }
+    public void cambiarEstadoFaltaEnvido() {this.estadoDeJuego = new EstadoFaltaEnvido(this);   }
 
-    public void cambiarEstadoEnvido() {this.estadoDeJuego = new EstadoEnvido();    }
+    public void cambiarEstadoEnvido() {this.estadoDeJuego = new EstadoEnvido(this);    }
 
-    public void cambiarEstadoTruco() {this.estadoDeJuego = new EstadoTruco();    }
+    public void cambiarEstadoTruco() {this.estadoDeJuego = new EstadoTruco(this);    }
 
-    public void cambiarEstadoValeCuatro() {this.estadoDeJuego = new EstadoValeCuatro();    }
+    public void cambiarEstadoValeCuatro() {this.estadoDeJuego = new EstadoValeCuatro(this);    }
 
-    public void cambiarEstadoRetruco() {this.estadoDeJuego = new EstadoRetruco();
+    public void cambiarEstadoRetruco() {this.estadoDeJuego = new EstadoRetruco(this);
     }
 
     public void setEstadoDeJuego(EstadoDeJuego estadoDeJuego) {
@@ -39,5 +39,9 @@ public class Juego {
     public Mesa mesaDelJuego() {
         return this.mesaDelJuego;
 
+    }
+
+    public void cambiarEstadoEnvidoEnvido() {
+        this.estadoDeJuego = new EstadoEnvidoEnvido(this);
     }
 }

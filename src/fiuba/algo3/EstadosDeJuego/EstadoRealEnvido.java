@@ -9,6 +9,11 @@ import fiuba.algo3.Excepciones.NoSeResuelveRealEnvidoError;
  */
 public class EstadoRealEnvido implements EstadoDeJuego {
     protected Juego juego;
+
+    public EstadoRealEnvido(Juego juego) {
+        this.juego = juego;
+    }
+
     @Override
     public void envido() {
         throw new NoSeResuelveRealEnvidoError();
