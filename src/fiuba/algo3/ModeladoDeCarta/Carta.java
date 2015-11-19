@@ -25,4 +25,8 @@ public class Carta {
     public void setPaloDeCarta(Palo unPaloDeCarta) {
         this.paloDeCarta = unPaloDeCarta;
     }
+
+    public int getValorDeCarta() {
+        return valorDeCarta;
+    }
 }
