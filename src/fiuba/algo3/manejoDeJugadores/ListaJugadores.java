@@ -8,12 +8,23 @@ public class ListaJugadores {
     protected NodoJugador primero;
     protected NodoJugador ultimo;
     public int tamanio;
+    private Equipo equipo1,equipo2;
 
 
     public ListaJugadores() {
         primero = null;
         ultimo = null;
         tamanio = 0;
+        equipo1= new Equipo("Equipo 1");
+        equipo2= new Equipo("Equipo 2");
+    }
+
+    public ListaJugadores(String nombre1, String nombre2) {
+        primero = null;
+        ultimo = null;
+        tamanio = 0;
+        equipo1= new Equipo(nombre1);
+        equipo2= new Equipo(nombre2);
     }
 
 
@@ -56,7 +67,22 @@ public class ListaJugadores {
             ultimo = nuevo;
         }
         tamanio++;
+        configurarEquipoParaUnJugador(jugador);
     }
+
+
+
+    private void configurarEquipoParaUnJugador(Jugador jugador) {
+        if (tamanio%2 == 0){
+            jugador.setEquipo(equipo2);
+            equipo2.agregarJugador(jugador);
+        }
+        else{
+            jugador.setEquipo(equipo1);
+            equipo2.agregarJugador(jugador);
+            }
+    }
+
 
 
     public void reiniciarManosGanadasDeTodosLosJugadores() {

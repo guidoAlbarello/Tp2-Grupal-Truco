@@ -11,6 +11,7 @@ public class Jugador {
     private String nombreJugador;
     private Mano manoDelJugador;
     private int manosGanadas;
+    private Equipo equipo;                 //POR AHORA 2 EQUIPOS
 
 
     public Jugador(String nombre) {
@@ -34,6 +35,12 @@ public class Jugador {
     public void ganarMano() { this.manosGanadas+=1; }
 
     public void recibirCarta(Carta unaCarta) {  this.manoDelJugador.agregarCarta(unaCarta);   }
+
+    public void setEquipo(Equipo equipo) {
+        this.equipo = equipo;
+    }
+
+    public Equipo getEquipo() {  return this.equipo;  }
 
     //public int calcularEnvido() {}
 
