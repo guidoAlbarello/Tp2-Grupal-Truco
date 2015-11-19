@@ -78,4 +78,7 @@ public class Mano {
         valorDeFlor += 20;
         return valorDeFlor;
     }
+
+
+    public List<Carta> getCartasEnMano(){  return this.cartasEnLaMano;  }
 }

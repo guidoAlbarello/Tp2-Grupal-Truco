@@ -51,12 +51,11 @@ public class Mazo {
 
 
     //ENTREGA 3 CARTAS AL JUGADOR
-    /*
     public void repartirCartasAJugador(Jugador jugador) {
         jugador.recibirCarta(repartirUltimaCarta());
         jugador.recibirCarta(repartirUltimaCarta());
         jugador.recibirCarta(repartirUltimaCarta());
-    }*/
+    }
 
     public int obtenerNumeroDeCartas() {
         return mazoDelJuego.size();

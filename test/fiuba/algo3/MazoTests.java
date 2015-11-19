@@ -33,7 +33,7 @@ public class MazoTests {
         }
     }
 
-/*
+
     @Test
     public void testMazoReparteTresCartas(){
         //Cantos cantos = new CantosConFlor();
@@ -43,5 +43,5 @@ public class MazoTests {
         unMazo.repartirCartasAJugador(pedro);
         Assert.assertEquals(3,pedro.getMano().getCartasEnMano().size());
     }
-*/
+
 }
