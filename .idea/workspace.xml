@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad713f93-70cd-4514-b05c-bdcdaf751803" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/EnvidoTest.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/EnvidoTest.java" />
+    <list default="true" id="ad713f93-70cd-4514-b05c-bdcdaf751803" name="Default" comment="&quot;Se agrega&quot;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/ModeladoDeCarta/Carta.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/ModeladoDeCarta/Carta.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/CartaTest.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/CartaTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Tp2-Grupal-Truco.iws" />
@@ -25,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EnvidoTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EnvidoTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/EnvidoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45945945">
+            <state vertical-scroll-proportion="0.0">
               <caret line="16" column="83" selection-start-line="16" selection-start-column="83" selection-end-line="16" selection-end-column="83" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -61,8 +62,43 @@
         <entry file="file://$USER_HOME$/Desktop/TP2-Grupal-Truco/src/fiuba/algo3/modelo/Carta.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="150" column="42" selection-start-line="150" selection-start-column="42" selection-end-line="150" selection-end-column="42" />
+              <caret line="146" column="3" selection-start-line="146" selection-start-column="3" selection-end-line="155" selection-end-column="5" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CartaTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/TP2-Grupal-Truco/test/fiuba/algo3/tests/CartaTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="43" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CartaTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/CartaTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="33" column="57" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Carta.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/ModeladoDeCarta/Carta.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8902027">
+              <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+              <folding>
+                <element signature="e#1304#1305#0" expanded="true" />
+                <element signature="e#1343#1344#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,12 +134,12 @@
         <option value="$PROJECT_DIR$/src/fiuba/algo3/ModeladoDeCarta/CartaFigura.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/Excepciones/ValorDeCartaInvalidoError.java" />
         <option value="$PROJECT_DIR$/test/fiuba/algo3/JuegoTest.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/ModeladoDeCarta/Carta.java" />
-        <option value="$PROJECT_DIR$/test/fiuba/algo3/CartaTest.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/ModeladoDeCarta/Envido.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/ModeladoDeCarta/EnvidoCartasDiferentePalo.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/ModeladoDeCarta/EnvidoCartasIgualPalo.java" />
         <option value="$PROJECT_DIR$/test/fiuba/algo3/EnvidoTest.java" />
+        <option value="$PROJECT_DIR$/test/fiuba/algo3/CartaTest.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/ModeladoDeCarta/Carta.java" />
       </list>
     </option>
   </component>
@@ -521,7 +557,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447941620768</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="&quot;Refactorizacion test de clase envido&quot;">
+      <created>1447941805247</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1447941805247</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -536,10 +578,10 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -560,7 +602,8 @@
     <MESSAGE value="&quot;Se agrego la clase palo&quot;" />
     <MESSAGE value="&quot;Se agrega la clase carta&quot;" />
     <MESSAGE value="&quot;Se agrega la clase Envido&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Se agrega la clase Envido&quot;" />
+    <MESSAGE value="&quot;Refactorizacion test de clase envido&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Refactorizacion test de clase envido&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -720,29 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/CartaTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7466216">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/ModeladoDeCarta/Carta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8614865">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="e#692#693#0" expanded="true" />
-            <element signature="e#740#741#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-            <element signature="e#811#812#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/TP2-Grupal-Truco/src/fiuba/algo3/modelo/EnvidoCartasDiferentePalo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1722973">
@@ -755,22 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1722973">
           <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="17" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/TP2-Grupal-Truco/test/fiuba/algo3/tests/CartaTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6317568">
-          <caret line="36" column="0" selection-start-line="29" selection-start-column="4" selection-end-line="42" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/TP2-Grupal-Truco/src/fiuba/algo3/modelo/Carta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="150" column="42" selection-start-line="150" selection-start-column="42" selection-end-line="150" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -801,10 +805,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/EnvidoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45945945">
+        <state vertical-scroll-proportion="0.0">
           <caret line="16" column="83" selection-start-line="16" selection-start-column="83" selection-end-line="16" selection-end-column="83" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/CartaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="57" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/TP2-Grupal-Truco/test/fiuba/algo3/tests/CartaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/TP2-Grupal-Truco/src/fiuba/algo3/modelo/Carta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="146" column="3" selection-start-line="146" selection-start-column="3" selection-end-line="155" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/ModeladoDeCarta/Carta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8902027">
+          <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+          <folding>
+            <element signature="e#1304#1305#0" expanded="true" />
+            <element signature="e#1343#1344#0" expanded="true" />
           </folding>
         </state>
       </provider>

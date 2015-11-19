@@ -29,4 +29,19 @@ public class Carta {
     public int getValorDeCarta() {
         return valorDeCarta;
     }
+
+    public Envido calcularEnvidoCon(Carta unaCarta){
+        boolean sonDelMismoPalo = this.getPaloDeCarta().esDelMismoPaloQue(unaCarta.getPaloDeCarta());
+        Envido envidoACalcular;
+        if(sonDelMismoPalo)
+            envidoACalcular = new EnvidoCartasIgualPalo();
+        else
+            envidoACalcular = new EnvidoCartasDiferentePalo();
+
+        return envidoACalcular.calcularEnvido(this.getValorDeCarta(), unaCarta.getValorDeCarta());
+    }
+
+    public Palo getPaloDeCarta() {
+        return this.paloDeCarta;
+    }
 }
