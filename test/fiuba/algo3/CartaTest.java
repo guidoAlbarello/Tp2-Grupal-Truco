@@ -26,7 +26,7 @@ public class CartaTest {
     }
 
     @Test
-    public void testChequeoDeCalculoDelEnvidoEntreDosCartas(){
+    public void testChequeoDeCalculoDelEnvidoEntreDosCartasNoFiguras(){
         Palo unPalo = new PaloEspada();
         Carta cartaNueva1 = new Carta(5, unPalo);
         Carta cartaNueva2 = new Carta(7, unPalo);
@@ -39,5 +39,21 @@ public class CartaTest {
         Assert.assertEquals(5, cartaNueva1.calcularEnvidoCon(cartaNueva3).getValorEnvido());
         Assert.assertEquals(7, cartaNueva3.calcularEnvidoCon(cartaNueva2).getValorEnvido());
     }
+
+    @Test
+    public void testChequeoDeCalculoDelEnvidoEntreDosFiguras(){
+        Palo unPalo = new PaloEspada();
+        Carta cartaNueva1 = new Carta(5, unPalo);
+        Carta cartaNueva2 = new Carta(10, unPalo);
+
+        Assert.assertEquals(25, cartaNueva1.calcularEnvidoCon(cartaNueva2).getValorEnvido());
+
+        Palo otroPalo = new PaloBasto();
+        Carta cartaNueva3 = new Carta(11, otroPalo);
+
+        Assert.assertEquals(5, cartaNueva1.calcularEnvidoCon(cartaNueva3).getValorEnvido());
+        Assert.assertEquals(0, cartaNueva3.calcularEnvidoCon(cartaNueva2).getValorEnvido());
+    }
+
 
 }

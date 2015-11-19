@@ -8,10 +8,15 @@ import fiuba.algo3.Excepciones.ValorDeCartaInvalidoError;
 public class Carta {
     private int valorDeCarta;
     private Palo paloDeCarta;
+    private TipoDeCarta tipoDeCarta;
 
     public Carta(int unValor, Palo unPalo) {
         this.setValorDeCarta(unValor);
         this.setPaloDeCarta(unPalo);
+        if(unValor < 10)
+            this.tipoDeCarta = new CartaNoFigura();
+        else
+            this.tipoDeCarta = new CartaFigura();
     }
 
     public void setValorDeCarta(int unValorDeCarta) {
@@ -26,6 +31,10 @@ public class Carta {
         this.paloDeCarta = unPaloDeCarta;
     }
 
+    public int getValorDeEnvido(){
+        return this.tipoDeCarta.getValorDeEnvido(this.getValorDeCarta());
+    }
+
     public int getValorDeCarta() {
         return valorDeCarta;
     }
@@ -38,7 +47,7 @@ public class Carta {
         else
             envidoACalcular = new EnvidoCartasDiferentePalo();
 
-        return envidoACalcular.calcularEnvido(this.getValorDeCarta(), unaCarta.getValorDeCarta());
+        return envidoACalcular.calcularEnvido(this.getValorDeEnvido(), unaCarta.getValorDeEnvido());
     }
 
     public Palo getPaloDeCarta() {
