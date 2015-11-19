@@ -1,5 +1,6 @@
 package fiuba.algo3.EstadosDeJuego;
 
+import fiuba.algo3.CartaJugada;
 import fiuba.algo3.Juego;
 import fiuba.algo3.Excepciones.NoSeResuelveRetrucoError;
 
@@ -50,5 +51,10 @@ public class EstadoRetruco implements EstadoDeJuego {
     @Override
     public int puntos() {
         return 0;
+    }
+
+    @Override
+    public void jugarCarta(CartaJugada cartaJugada) {
+        throw new NoSeResuelveRetrucoError();
     }
 }

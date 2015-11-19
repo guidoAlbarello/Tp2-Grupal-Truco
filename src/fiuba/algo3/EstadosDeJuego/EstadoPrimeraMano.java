@@ -1,5 +1,6 @@
 package fiuba.algo3.EstadosDeJuego;
 
+import fiuba.algo3.CartaJugada;
 import fiuba.algo3.Juego;
 import fiuba.algo3.Excepciones.JugadaInvalidaPrimeraManoError;
 
@@ -8,6 +9,10 @@ import fiuba.algo3.Excepciones.JugadaInvalidaPrimeraManoError;
  */
 public class EstadoPrimeraMano implements EstadoDeJuego {
     private Juego juego;
+
+    public EstadoPrimeraMano(Juego juego) {
+        this.juego = juego;
+    }
 
     @Override
     public void envido() {
@@ -56,5 +61,11 @@ public class EstadoPrimeraMano implements EstadoDeJuego {
     @Override
     public int puntos() {
         return 0;
+    }
+
+    @Override
+    public void jugarCarta(CartaJugada cartaJugada) {
+        this.juego.mesaDelJuego().agregarCartaALsitaDeCartasJugadas(cartaJugada);
+        // aca tendria q pasar el turno pero no kiero tocarr eso por q todavia no tengo a  manejador de turnos
     }
 }

@@ -1,5 +1,7 @@
 package fiuba.algo3.EstadosDeJuego;
 
+import fiuba.algo3.CartaJugada;
+
 public interface EstadoDeJuego {
     //despues habria q agregar todo lo de flor o sin flor
     public void envido();
@@ -13,4 +15,5 @@ public interface EstadoDeJuego {
     public void irseAlMaso();
     public int puntos();
 
+    void jugarCarta(CartaJugada cartaJugada);
 }

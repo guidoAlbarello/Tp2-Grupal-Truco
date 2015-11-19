@@ -1,5 +1,6 @@
 package fiuba.algo3.EstadosDeJuego;
 
+import fiuba.algo3.CartaJugada;
 import fiuba.algo3.Excepciones.NoSeResuelveFaltaEnvidoError;
 
 /**
@@ -47,5 +48,10 @@ public class EstadoFaltaEnvido implements EstadoDeJuego {
     @Override
     public int puntos() {
         return 3;
+    }
+
+    @Override
+    public void jugarCarta(CartaJugada cartaJugada) {
+        throw new NoSeResuelveFaltaEnvidoError();
     }
 }

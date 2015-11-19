@@ -1,5 +1,6 @@
 package fiuba.algo3.EstadosDeJuego;
 
+import fiuba.algo3.CartaJugada;
 import fiuba.algo3.Excepciones.NoSeResuelvValeCuatroError;
 
 /**
@@ -7,43 +8,39 @@ import fiuba.algo3.Excepciones.NoSeResuelvValeCuatroError;
  */
 public class EstadoValeCuatro implements EstadoDeJuego {
     @Override
-    public void envido() {throw new NoSeResuelvValeCuatroError();
-    }
+    public void envido() {throw new NoSeResuelvValeCuatroError();}
 
     @Override
-    public void realEnvido() {throw new NoSeResuelvValeCuatroError();
-    }
+    public void realEnvido() {throw new NoSeResuelvValeCuatroError();}
 
     @Override
-    public void faltaEnvido() {throw new NoSeResuelvValeCuatroError();
-    }
+    public void faltaEnvido() {throw new NoSeResuelvValeCuatroError();}
 
     @Override
-    public void truco() {throw new NoSeResuelvValeCuatroError();
-    }
+    public void truco() {throw new NoSeResuelvValeCuatroError();}
 
     @Override
-    public void retruco() {throw new NoSeResuelvValeCuatroError();
-    }
+    public void retruco() {throw new NoSeResuelvValeCuatroError();}
 
     @Override
-    public void valeCuatro() {throw new NoSeResuelvValeCuatroError();
-    }
+    public void valeCuatro() {throw new NoSeResuelvValeCuatroError();}
 
     @Override
-    public void quiero() {throw new NoSeResuelvValeCuatroError();
-    }
+    public void quiero() {throw new NoSeResuelvValeCuatroError();}
 
     @Override
-    public void noQuiero() {throw new NoSeResuelvValeCuatroError();
-    }
+    public void noQuiero() {throw new NoSeResuelvValeCuatroError();}
 
     @Override
-    public void irseAlMaso() {throw new NoSeResuelvValeCuatroError();
-    }
+    public void irseAlMaso() {throw new NoSeResuelvValeCuatroError();}
 
     @Override
     public int puntos() {
         return 0;
+    }
+
+    @Override
+    public void jugarCarta(CartaJugada cartaJugada) {
+        throw new NoSeResuelvValeCuatroError();
     }
 }
