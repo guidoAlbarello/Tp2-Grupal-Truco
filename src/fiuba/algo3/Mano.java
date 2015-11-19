@@ -1,7 +1,9 @@
 package fiuba.algo3;
 
+import fiuba.algo3.Excepciones.NoHayFlorEnLaManoError;
 import fiuba.algo3.ModeladoDeCarta.Carta;
 import fiuba.algo3.ModeladoDeCarta.Envido;
+import fiuba.algo3.ModeladoDeCarta.Palo;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -56,5 +58,24 @@ public class Mano {
                 envidosPosibles.add(EnvidoTmp);
             }
         }
+    }
+
+    public int calcularFlor(){
+        Iterator<Carta> iteradorCartasEnLaMano = this.cartasEnLaMano.iterator();
+        Carta primerCarta = iteradorCartasEnLaMano.next();
+        Palo unPalo = primerCarta.getPaloDeCarta();
+        int valorDeFlor = primerCarta.getValorDeCarta();
+
+        while(iteradorCartasEnLaMano.hasNext()){
+            Carta cartaTmp = iteradorCartasEnLaMano.next();
+            if(cartaTmp.getPaloDeCarta().esDelMismoPaloQue(unPalo)){
+                valorDeFlor += cartaTmp.getValorDeCarta();
+            }else{
+                throw new NoHayFlorEnLaManoError();
+            }
+        }
+
+        valorDeFlor += 20;
+        return valorDeFlor;
     }
 }
