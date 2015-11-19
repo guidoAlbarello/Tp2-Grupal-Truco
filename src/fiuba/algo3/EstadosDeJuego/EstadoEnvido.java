@@ -1,5 +1,8 @@
-package fiuba.algo3;
+package fiuba.algo3.EstadosDeJuego;
 
+
+import fiuba.algo3.Juego;
+import fiuba.algo3.Excepciones.NoSeResuelveEnvidoError;
 
 /**
  * Created by anthony on 18/11/2015.

@@ -1,5 +1,7 @@
 package fiuba.algo3;
 
+import fiuba.algo3.EstadosDeJuego.*;
+
 /**
  * Created by anthony on 18/11/2015.
  */

@@ -1,4 +1,4 @@
-package fiuba.algo3;
+package fiuba.algo3.EstadosDeJuego;
 
 public interface EstadoDeJuego {
     //despues habria q agregar todo lo de flor o sin flor

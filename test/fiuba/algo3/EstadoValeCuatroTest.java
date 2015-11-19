@@ -1,4 +1,6 @@
 package fiuba.algo3;
+import fiuba.algo3.EstadosDeJuego.EstadoDeJuego;
+import fiuba.algo3.EstadosDeJuego.EstadoValeCuatro;
 import org.junit.Before;
 import org.junit.Test;
 
