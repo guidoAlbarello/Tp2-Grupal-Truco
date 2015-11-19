@@ -2,30 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d1b8bb5-0683-40a4-98b6-298629766e0f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadoDeJuego.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadoEnvido.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fiuba/algo3/EstadoEnvidoTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadoFaltaEnvido.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fiuba/algo3/EstadoFaltaEnvidoTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadoPrimeraMano.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadoRealEnvido.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fiuba/algo3/EstadoRealEnvidoTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadoRetruco.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fiuba/algo3/EstadoRetrucoTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadoTruco.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fiuba/algo3/EstadoTrucoTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadoValeCuatro.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fiuba/algo3/EstadoValeCuatroTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Juego.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/JugadaInvalidaPrimeraManoError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/NoSeResuelvValeCuatroError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/NoSeResuelveEnvidoError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/NoSeResuelveFaltaEnvidoError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/NoSeResuelveRealEnvidoError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/NoSeResuelveRetrucoError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/NoSeResuelveTrucoError.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tp2-Grupal-Truco.iml" afterPath="$PROJECT_DIR$/Tp2-Grupal-Truco.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Juego.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Juego.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Tp2-Grupal-Truco.iws" />
@@ -48,24 +25,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Juego.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Juego.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Juego.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.73846155">
+              <caret line="18" column="81" selection-start-line="18" selection-start-column="81" selection-end-line="18" selection-end-column="81" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EstadoEnvidoTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EstadoEnvidoTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/EstadoEnvidoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52307695">
+            <state vertical-scroll-proportion="0.0">
               <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EstadoFaltaEnvido.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadoFaltaEnvido.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -130,16 +117,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EstadoValeCuatro.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadoValeCuatro.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="EstadoTruco.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadoTruco.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -197,7 +174,6 @@
         <option value="$PROJECT_DIR$/src/fiuba/algo3/NoSeResuelveRetrucoError.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/EstadoTruco.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/NoSeResuelveTrucoError.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/Juego.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/EstadoValeCuatro.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/NoSeResuelvValeCuatroError.java" />
         <option value="$PROJECT_DIR$/test/fiuba/algo3/EstadoEnvidoTest.java" />
@@ -206,6 +182,7 @@
         <option value="$PROJECT_DIR$/test/fiuba/algo3/EstadoRetrucoTest.java" />
         <option value="$PROJECT_DIR$/test/fiuba/algo3/EstadoTrucoTest.java" />
         <option value="$PROJECT_DIR$/test/fiuba/algo3/EstadoValeCuatroTest.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/Juego.java" />
       </list>
     </option>
   </component>
@@ -503,7 +480,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447895733850</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="cambios de estado">
+      <created>1447896742674</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1447896742674</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -514,11 +497,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3279743" sideWeight="0.50610685" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3279743" sideWeight="0.5091603" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3279743" sideWeight="0.49389312" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329582" sideWeight="0.49694657" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3279743" sideWeight="0.4908397" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329582" sideWeight="0.49389312" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24961832" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -540,7 +523,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="probando repositorio" />
-    <option name="LAST_COMMIT_MESSAGE" value="probando repositorio" />
+    <MESSAGE value="cambios de estado" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambios de estado" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -579,14 +563,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="66" selection-start-line="5" selection-start-column="66" selection-end-line="5" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadoFaltaEnvido.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -680,14 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Juego.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/EstadoValeCuatroTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -740,11 +708,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/EstadoEnvidoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52307695">
+        <state vertical-scroll-proportion="0.0">
           <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadoFaltaEnvido.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Juego.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73846155">
+          <caret line="18" column="81" selection-start-line="18" selection-start-column="81" selection-end-line="18" selection-end-column="81" />
+          <folding />
         </state>
       </provider>
     </entry>
