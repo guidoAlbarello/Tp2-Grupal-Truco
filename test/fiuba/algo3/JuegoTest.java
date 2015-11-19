@@ -2,6 +2,7 @@ package fiuba.algo3;
 
 import fiuba.algo3.EstadosDeJuego.EstadoDeJuego;
 import fiuba.algo3.EstadosDeJuego.EstadoPrimeraMano;
+import fiuba.algo3.ModeladoDeCarta.Carta;
 import fiuba.algo3.manejoDeJugadores.Jugador;
 import org.junit.Assert;
 import org.junit.Before;
