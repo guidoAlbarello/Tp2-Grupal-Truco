@@ -1,5 +1,7 @@
 package fiuba.algo3.manejoDeJugadores;
 
+import fiuba.algo3.Mazo;
+
 /**
  * Created by Fechee on 18/11/2015.
  */
@@ -94,6 +96,7 @@ public class ListaJugadores {
             jugadorActual = nodoActual.getJugador();
         }
     }
+
 
     /*
     public void sacarCartas() {

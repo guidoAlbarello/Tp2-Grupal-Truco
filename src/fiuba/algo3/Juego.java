@@ -4,6 +4,7 @@ import fiuba.algo3.EstadosDeJuego.*;
 import fiuba.algo3.manejoDeJugadores.Jugador;
 import fiuba.algo3.manejoDeJugadores.ListaJugadores;
 import fiuba.algo3.manejoDeJugadores.ManejadorDeTurnos;
+import fiuba.algo3.manejoDeJugadores.NodoJugador;
 
 /**
  * Created by anthony on 18/11/2015.
@@ -45,25 +46,24 @@ public class Juego {
         estadoDeJuego.jugarCarta(cartaJugada);
     }
 
-    public Mesa mesaDelJuego() {
-        return this.mesaDelJuego;
+    public Mesa mesaDelJuego() {       return this.mesaDelJuego;    }
 
-    }
+    public void configurarManejadorDeTurnos(){ this.manejadorDeTurnos = new ManejadorDeTurnos(this.listaDeJugadores); }
 
     public void cambiarEstadoEnvidoEnvido() {
         this.estadoDeJuego = new EstadoEnvidoEnvido(this);
     }
 
-    public void agregarJugador(Jugador jugador) {
-        listaDeJugadores.agregarUltimo(jugador);
-    }
+    public void agregarJugador(Jugador jugador) {       listaDeJugadores.agregarUltimo(jugador);    }
 
     public void repartirCartasAJugadores() {
-
+        for (int i = 0 ; i < this.listaDeJugadores.getTamanio() ; i++) {
+            Jugador actual = this.listaDeJugadores.getJugadorEnPosicion(i);
+            this.mazoDelJuego.repartirCartasAJugador(actual);
+        }
     }
 
-    public void noSeQuizoEnvido() {
-        this.manejadorDeTurnos.pasarElTurno();
-        this.manejadorDeTurnos.getJugadorConTurnoActual().getEquipo().sumarPuntos(1);
-    }
+    public void seCantaEnvido() {  this.manejadorDeTurnos.getJugadorConTurnoActual().envido();  }
+
+    public void noSeQuizoEnvido() { this.manejadorDeTurnos.getJugadorConTurnoActual().getEquipo().sumarPuntos(1);   }
 }
