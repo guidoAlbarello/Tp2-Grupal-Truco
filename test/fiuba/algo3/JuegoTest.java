@@ -45,7 +45,7 @@ public class JuegoTest {
         Palo unPalo = new PaloEspada();
         Carta carta = new Carta(2, unPalo);
         CartaJugada cartaJugada = new CartaJugada(carta, jugador1);
-        juego.jugarCarta(cartaJugada);
+        jugador1.jugarCarta(cartaJugada);
         Assert.assertTrue(juego.mesaDelJuego().listaDeCartasJugadas().size() == 1);
     }
     @Test
