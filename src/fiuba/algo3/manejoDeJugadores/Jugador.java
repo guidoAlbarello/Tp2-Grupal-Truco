@@ -1,5 +1,6 @@
 package fiuba.algo3.manejoDeJugadores;
 
+import fiuba.algo3.Juego;
 import fiuba.algo3.Mano;
 import fiuba.algo3.ModeladoDeCarta.Carta;
 
@@ -11,7 +12,8 @@ public class Jugador {
     private String nombreJugador;
     private Mano manoDelJugador;
     private int manosGanadas;
-    private Equipo equipo;                 //POR AHORA 2 EQUIPOS
+    private Equipo equipo;
+    private Juego juego;
 
 
     public Jugador(String nombre) {
@@ -19,6 +21,8 @@ public class Jugador {
         this.manoDelJugador = new Mano();
         this.manosGanadas = 0; // esto quizas convenga estar en manejador de puntajes ???
     }
+
+    public void setJuego(Juego nuevoJuego){ this.juego = nuevoJuego;}
 
     public Mano getMano(){  return this.manoDelJugador;  }
 
@@ -41,6 +45,15 @@ public class Jugador {
     }
 
     public Equipo getEquipo() {  return this.equipo;  }
+
+    public void envido() {
+        this.juego.cambiarEstadoEnvido();
+    }
+
+    public void noQuiero() {
+        this.juego.noSeQuizoEnvido();
+    }
+
 
     //public int calcularEnvido() {}
 

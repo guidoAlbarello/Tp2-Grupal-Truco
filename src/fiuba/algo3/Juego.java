@@ -1,6 +1,9 @@
 package fiuba.algo3;
 
 import fiuba.algo3.EstadosDeJuego.*;
+import fiuba.algo3.manejoDeJugadores.Jugador;
+import fiuba.algo3.manejoDeJugadores.ListaJugadores;
+import fiuba.algo3.manejoDeJugadores.ManejadorDeTurnos;
 
 /**
  * Created by anthony on 18/11/2015.
@@ -8,10 +11,16 @@ import fiuba.algo3.EstadosDeJuego.*;
 public class Juego {
     private EstadoDeJuego estadoDeJuego;
     private Mesa mesaDelJuego;
+    private ListaJugadores listaDeJugadores;
+    private ManejadorDeTurnos manejadorDeTurnos;
+    private Mazo mazoDelJuego;
 
     public Juego(){
         this.estadoDeJuego = new EstadoPrimeraMano(this);//no se si esta bien inicializarlo asi peor por ahora lo dejo asi
         this.mesaDelJuego = new Mesa();
+        this.listaDeJugadores = new ListaJugadores();
+        this.manejadorDeTurnos = new ManejadorDeTurnos(listaDeJugadores);
+        this.mazoDelJuego = new Mazo();
     }
 
 
@@ -43,5 +52,18 @@ public class Juego {
 
     public void cambiarEstadoEnvidoEnvido() {
         this.estadoDeJuego = new EstadoEnvidoEnvido(this);
+    }
+
+    public void agregarJugador(Jugador jugador) {
+        listaDeJugadores.agregarUltimo(jugador);
+    }
+
+    public void repartirCartasAJugadores() {
+
+    }
+
+    public void noSeQuizoEnvido() {
+        this.manejadorDeTurnos.pasarElTurno();
+        this.manejadorDeTurnos.getJugadorConTurnoActual().getEquipo().sumarPuntos(1);
     }
 }

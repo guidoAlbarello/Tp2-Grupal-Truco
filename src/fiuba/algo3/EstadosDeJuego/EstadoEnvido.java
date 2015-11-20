@@ -52,7 +52,7 @@ public class EstadoEnvido implements EstadoDeJuego {
 
     @Override
     public void noQuiero() {
-        //resolver que no se acepte - sumarle 1 punto al que canto el envido
+        juego.noSeQuizoEnvido();
     }
 
     @Override
