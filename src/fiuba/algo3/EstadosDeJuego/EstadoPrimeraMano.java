@@ -66,6 +66,7 @@ public class EstadoPrimeraMano implements EstadoDeJuego {
     @Override
     public void jugarCarta(CartaJugada cartaJugada) {
         this.juego.mesaDelJuego().agregarCartaALsitaDeCartasJugadas(cartaJugada);
+
         // aca tendria q pasar el turno pero no kiero tocarr eso por q todavia no tengo a  manejador de turnos
     }
 }

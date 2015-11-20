@@ -13,4 +13,12 @@ public class CartaJugada {
         this.jugador = jugador;
         this.carta = carta;
     }
+
+    public Carta getCarta() {
+        return carta;
+    }
+
+    public Jugador getJugador() {
+        return jugador;
+    }
 }

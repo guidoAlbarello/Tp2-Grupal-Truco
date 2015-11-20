@@ -1,5 +1,6 @@
 package fiuba.algo3.manejoDeJugadores;
 
+import fiuba.algo3.CartaJugada;
 import fiuba.algo3.Juego;
 import fiuba.algo3.Mano;
 import fiuba.algo3.ModeladoDeCarta.Carta;
@@ -52,6 +53,10 @@ public class Jugador {
 
     public void noQuiero() {
         this.juego.noSeQuizoEnvido();
+    }
+
+    public void jugarCarta(CartaJugada cartaDeJugador) {
+        this.juego.jugarCarta(cartaDeJugador);
     }
 
 

@@ -29,7 +29,9 @@ public class Juego {
 
     public void cambiarEstadoFaltaEnvido() {this.estadoDeJuego = new EstadoFaltaEnvido(this);   }
 
-    public void cambiarEstadoEnvido() {this.estadoDeJuego = new EstadoEnvido(this);    }
+    public void cambiarEstadoEnvido() {this.estadoDeJuego = new EstadoEnvido(this);
+        this.manejadorDeTurnos.pasarElTurno();
+    }
 
     public void cambiarEstadoTruco() {this.estadoDeJuego = new EstadoTruco(this);    }
 
@@ -43,7 +45,9 @@ public class Juego {
     }
 
     public void jugarCarta(CartaJugada cartaJugada) {
+
         estadoDeJuego.jugarCarta(cartaJugada);
+        this.manejadorDeTurnos.pasarElTurno();
     }
 
     public Mesa mesaDelJuego() {       return this.mesaDelJuego;    }
@@ -65,5 +69,9 @@ public class Juego {
 
     public void seCantaEnvido() {  this.manejadorDeTurnos.getJugadorConTurnoActual().envido();  }
 
-    public void noSeQuizoEnvido() { this.manejadorDeTurnos.getJugadorConTurnoActual().getEquipo().sumarPuntos(1);   }
+    public void noSeQuizoEnvido() {
+        this.manejadorDeTurnos.volverElTurno();
+        this.manejadorDeTurnos.getJugadorConTurnoActual().getEquipo().sumarPuntos(1);
+
+    }
 }

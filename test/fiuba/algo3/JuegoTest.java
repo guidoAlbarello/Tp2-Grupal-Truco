@@ -36,15 +36,20 @@ public class JuegoTest {
 
     @Test
     public void seJuegaUnaCartaEnEstadoPrimeraManoYEstaSeguardaEnMesa() {
+        jugador1.setJuego(juego);
+        juego.agregarJugador(jugador1);
+        jugador2.setJuego(juego);
+        juego.agregarJugador(jugador2);
+
+        juego.configurarManejadorDeTurnos();
         Palo unPalo = new PaloEspada();
         Carta carta = new Carta(2, unPalo);
         CartaJugada cartaJugada = new CartaJugada(carta, jugador1);
         juego.jugarCarta(cartaJugada);
         Assert.assertTrue(juego.mesaDelJuego().listaDeCartasJugadas().size() == 1);
     }
-
     @Test
-    public void unJugador1CantaEnvidoYJugador2NoQuiereEntoncesJugador1Suma1Punto(){
+    public void seRepartenCartasAJugadoresYCadaUnoTiene3Cartas() {
         jugador1.setJuego(juego);
 
         jugador2.setJuego(juego);
@@ -53,20 +58,42 @@ public class JuegoTest {
         juego.configurarManejadorDeTurnos();
 
         juego.repartirCartasAJugadores();
-        Assert.assertEquals(3,jugador1.getMano().getCartasEnMano().size()); // me aseguro que ambos jugadores recibieron cartas
-        Assert.assertEquals(3,jugador2.getMano().getCartasEnMano().size()); // me aseguro que ambos jugadores recibieron cartas
+        Assert.assertEquals(3, jugador1.getMano().getCartasEnMano().size()); // me aseguro que ambos jugadores recibieron cartas
+        Assert.assertEquals(3, jugador2.getMano().getCartasEnMano().size()); // me aseguro que ambos jugadores recibieron cartas
+    }
+    @Test
+    public void unJugador1CantaEnvidoYJugador2NoQuiereEntoncesJugador1Suma1Punto(){
+        jugador1.setJuego(juego);
 
-        //jugador1.envido();
-        //jugador2.noQuiero(); PARA MI ESTO NO TIENE QUE SER ASI...
-
+        jugador2.setJuego(juego);
+        juego.agregarJugador(jugador1);
+        juego.agregarJugador(jugador2);
+        juego.configurarManejadorDeTurnos();
+        juego.repartirCartasAJugadores();
+        jugador1.envido();
+        jugador2.noQuiero(); //PARA MI ESTO NO TIENE QUE SER ASI...
         //tiene que ser asi
-        juego.seCantaEnvido();
-        juego.noSeQuizoEnvido();
-
+        //juego.seCantaEnvido();
+        //juego.noSeQuizoEnvido();
         Assert.assertTrue( jugador1.getEquipo().getPuntaje() == 1);
+    }
 
+    @Test
+    public void cadaJugadorJuegaUnaCartaYSeDevuelveElJugadorGanador(){
+        Palo paloEspada = new PaloEspada();
+        Carta carta1Espada = new Carta(1,paloEspada);
+        Carta carta4Espada = new Carta(4,paloEspada);
+        jugador1.setJuego(juego);
+        jugador2.setJuego(juego);
+        CartaJugada cartaDeJugador1 = new CartaJugada(carta1Espada,jugador1);
+        CartaJugada cartaDeJugador2 = new CartaJugada(carta4Espada,jugador2);
+        juego.agregarJugador(jugador1);
+        juego.agregarJugador(jugador2);
+        juego.configurarManejadorDeTurnos();
+        jugador1.jugarCarta(cartaDeJugador1);
+        jugador1.jugarCarta(cartaDeJugador2);
 
-
+        Assert.assertEquals("jugador1" ,this.juego.mesaDelJuego().ganadorDeMano().getNombre());
     }
 
 
