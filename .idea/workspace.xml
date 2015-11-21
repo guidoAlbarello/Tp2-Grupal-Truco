@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ad713f93-70cd-4514-b05c-bdcdaf751803" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ManejadorDeTurnos.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ManejadorDeTurnos.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/ManejadorDeTurnosTests.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/ManejadorDeTurnosTests.java" />
     </list>
     <ignored path="Tp2-Grupal-Truco.iws" />
@@ -51,8 +52,8 @@
       <file leaf-file-name="ManejadorDeTurnosTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/ManejadorDeTurnosTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7504078">
-              <caret line="161" column="8" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.6101142">
+              <caret line="155" column="80" selection-start-line="155" selection-start-column="80" selection-end-line="155" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -96,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ManejadorDeTurnos.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+              <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -849,7 +850,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448128728712</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Arregle otro test, que rompi refactorizando">
+      <created>1448129272094</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1448129272094</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -861,9 +868,6 @@
     </history-entry>
     <history-entry file="ManejadorDeTurnosTests_testElJugadorQueEsManoAlPrincipioEsElPrimeroQueSeAgrego - 2015.11.21 at 15h 04m 27s.xml">
       <configuration name="ManejadorDeTurnosTests.testElJugadorQueEsManoAlPrincipioEsElPrimeroQueSeAgrego" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ManejadorDeTurnosTests_testPasarMano - 2015.11.21 at 14h 52m 25s.xml">
-      <configuration name="ManejadorDeTurnosTests.testPasarMano" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ManejadorDeTurnosTests_testPasarMano - 2015.11.21 at 14h 54m 04s.xml">
       <configuration name="ManejadorDeTurnosTests.testPasarMano" configurationId="JUnit" />
@@ -881,6 +885,9 @@
       <configuration name="fiuba.algo3 in Tp2-Grupal-Truco" configurationId="JUnit" />
     </history-entry>
     <history-entry file="fiuba_algo3_in_Tp2-Grupal-Truco - 2015.11.21 at 15h 07m 19s.xml">
+      <configuration name="fiuba.algo3 in Tp2-Grupal-Truco" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="fiuba_algo3_in_Tp2-Grupal-Truco - 2015.11.21 at 15h 11m 28s.xml">
       <configuration name="fiuba.algo3 in Tp2-Grupal-Truco" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -937,7 +944,8 @@
     <MESSAGE value="test de envido y carta jugada" />
     <MESSAGE value="Refactorice ManejadorDeTurnos para agregarle mas inteligencia y poder hacer un test integral para simular una ronda." />
     <MESSAGE value="Se arreglaron los tests que rompi temporalmente con la ultima refactorizacion." />
-    <option name="LAST_COMMIT_MESSAGE" value="Se arreglaron los tests que rompi temporalmente con la ultima refactorizacion." />
+    <MESSAGE value="Arregle otro test, que rompi refactorizando" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arregle otro test, que rompi refactorizando" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1353,7 +1361,7 @@
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ManejadorDeTurnos.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1362,8 +1370,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/ManejadorDeTurnosTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7504078">
-          <caret line="161" column="8" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.6101142">
+          <caret line="155" column="80" selection-start-line="155" selection-start-column="80" selection-end-line="155" selection-end-column="80" />
           <folding />
         </state>
       </provider>

@@ -90,4 +90,14 @@ public class ManejadorDeTurnos {
     public int getManoActual(){ return this.manoActual; }
 
 
+    public Jugador getJugadorSiguienteAlTurnoActual(){
+        return this.getNodoJugadorConTurnoActual().getSiguiente().getJugador();
+    }
+
+
+    public Jugador getJugadorAnteriorAlTurnoActual(){
+        return this.getNodoJugadorConTurnoActual().getAnterior().getJugador();
+    }
+
+
 }
