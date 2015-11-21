@@ -78,6 +78,10 @@ public class JuegoTest {
         Assert.assertTrue( jugador1.getEquipo().getPuntaje() == 1);
     }
 
+
+
+
+
     @Test
     public void cadaJugadorJuegaUnaCartaYSeDevuelveElJugadorGanador(){
         Palo paloEspada = new PaloEspada();
@@ -95,6 +99,8 @@ public class JuegoTest {
 
         Assert.assertEquals("jugador1" ,this.juego.mesaDelJuego().ganadorDeMano().getNombre());
     }
+
+
 
 
 

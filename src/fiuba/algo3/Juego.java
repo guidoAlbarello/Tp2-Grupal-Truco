@@ -1,6 +1,7 @@
 package fiuba.algo3;
 
 import fiuba.algo3.EstadosDeJuego.*;
+import fiuba.algo3.ModeladoDeCarta.Carta;
 import fiuba.algo3.manejoDeJugadores.Jugador;
 import fiuba.algo3.manejoDeJugadores.ListaJugadores;
 import fiuba.algo3.manejoDeJugadores.ManejadorDeTurnos;
@@ -20,7 +21,6 @@ public class Juego {
         this.estadoDeJuego = new EstadoPrimeraMano(this);//no se si esta bien inicializarlo asi peor por ahora lo dejo asi
         this.mesaDelJuego = new Mesa();
         this.listaDeJugadores = new ListaJugadores();
-        this.manejadorDeTurnos = new ManejadorDeTurnos(listaDeJugadores);
         this.mazoDelJuego = new Mazo();
     }
 
@@ -45,14 +45,13 @@ public class Juego {
     }
 
     public void jugarCarta(CartaJugada cartaJugada) {
-
         estadoDeJuego.jugarCarta(cartaJugada);
-        this.manejadorDeTurnos.pasarElTurno();
+        //this.manejadorDeTurnos.pasarElTurno();
     }
 
     public Mesa mesaDelJuego() {       return this.mesaDelJuego;    }
 
-    public void configurarManejadorDeTurnos(){ this.manejadorDeTurnos = new ManejadorDeTurnos(this.listaDeJugadores); }
+    public void configurarManejadorDeTurnos(){ this.manejadorDeTurnos = new ManejadorDeTurnos(this.listaDeJugadores,this); }
 
     public void cambiarEstadoEnvidoEnvido() {
         this.estadoDeJuego = new EstadoEnvidoEnvido(this);
@@ -73,5 +72,14 @@ public class Juego {
         this.manejadorDeTurnos.volverElTurno();
         this.manejadorDeTurnos.getJugadorConTurnoActual().getEquipo().sumarPuntos(1);
 
+    }
+
+
+    public void seJuegaUnaCartaDeLaManoDelJugadorEnPosicion(int indiceDeLaCarta){
+        Jugador jugadorConTurno = this.manejadorDeTurnos.getJugadorConTurnoActual();
+        Carta carta = jugadorConTurno.jugarCartaEnPosicion(indiceDeLaCarta);
+        CartaJugada cartaJugada = new CartaJugada(carta,jugadorConTurno);
+        this.mesaDelJuego.agregarCartaALsitaDeCartasJugadas(cartaJugada);
+        this.manejadorDeTurnos.pasarElTurno();
     }
 }

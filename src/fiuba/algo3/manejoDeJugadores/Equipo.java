@@ -10,11 +10,13 @@ public class Equipo {
     private String nombre;
     private int puntaje;
     private List<Jugador> jugadores;
+    private int manosGanadas;
 
     public Equipo(String nombre){
         this.puntaje=0;
         this.nombre=nombre;
         this.jugadores = new ArrayList<Jugador>();
+        this.manosGanadas = 0;
     }
 
     public void agregarJugador(Jugador unJugador){
@@ -32,5 +34,11 @@ public class Equipo {
     public void setNombre(String nombre) {  this.nombre = nombre;  }
 
     public List<Jugador> getJugadores(){  return this.jugadores;  }
+
+    public void ganarMano() { this.manosGanadas+=1; }
+
+    public void reiniciarManosGanadas() { this.manosGanadas = 0; }
+
+    public Integer getManosGanadas(){ return this.manosGanadas; }
 
 }

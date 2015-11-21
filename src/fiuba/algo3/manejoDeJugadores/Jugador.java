@@ -12,7 +12,6 @@ public class Jugador {
 
     private String nombreJugador;
     private Mano manoDelJugador;
-    private int manosGanadas;
     private Equipo equipo;
     private Juego juego;
 
@@ -20,7 +19,7 @@ public class Jugador {
     public Jugador(String nombre) {
         this.nombreJugador = nombre;
         this.manoDelJugador = new Mano();
-        this.manosGanadas = 0; // esto quizas convenga estar en manejador de puntajes ???
+        //this.manosGanadas = 0; // esto quizas convenga estar en manejador de puntajes ???
     }
 
     public void setJuego(Juego nuevoJuego){ this.juego = nuevoJuego;}
@@ -31,13 +30,11 @@ public class Jugador {
         return this.nombreJugador;
     }
 
-    public int getManosGanadas() {
-        return this.manosGanadas;
-    }
+   // public int getManosGanadas() {        return this.manosGanadas;    }
 
-    public void reiniciarManosGanadas() {this.manosGanadas=0;}
+   // public void reiniciarManosGanadas() {this.manosGanadas=0;}
 
-    public void ganarMano() { this.manosGanadas+=1; }
+
 
     public void recibirCarta(Carta unaCarta) {  this.manoDelJugador.agregarCarta(unaCarta);   }
 
@@ -57,6 +54,10 @@ public class Jugador {
 
     public void jugarCarta(CartaJugada cartaDeJugador) {
         this.juego.jugarCarta(cartaDeJugador);
+    }
+
+    public Carta jugarCartaEnPosicion(int indiceDeLaCarta){
+        return this.manoDelJugador.jugarCarta(indiceDeLaCarta);
     }
 
 

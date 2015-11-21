@@ -10,7 +10,7 @@ public class ListaJugadores {
     protected NodoJugador primero;
     protected NodoJugador ultimo;
     public int tamanio;
-    private Equipo equipo1,equipo2;
+    private Equipo equipo1,equipo2,ganadorDeRonda;
 
 
     public ListaJugadores() {
@@ -76,11 +76,11 @@ public class ListaJugadores {
 
     private void configurarEquipoParaUnJugador(Jugador jugador) {
         if (tamanio%2 == 0){
-            jugador.setEquipo(equipo2);
-            equipo2.agregarJugador(jugador);
+            jugador.setEquipo(equipo1);
+            equipo1.agregarJugador(jugador);
         }
         else{
-            jugador.setEquipo(equipo1);
+            jugador.setEquipo(equipo2);
             equipo2.agregarJugador(jugador);
             }
     }
@@ -91,10 +91,29 @@ public class ListaJugadores {
         NodoJugador nodoActual = this.primero;
         Jugador jugadorActual = nodoActual.getJugador();
         for (int i = 0; i < this.tamanio; i++) {
-            jugadorActual.reiniciarManosGanadas();
+            jugadorActual.getEquipo().reiniciarManosGanadas();
             nodoActual = nodoActual.getSiguiente();
             jugadorActual = nodoActual.getJugador();
         }
+    }
+
+    public boolean hayGanador() {
+        NodoJugador nodoActual = this.primero;
+        Jugador jugadorActual = nodoActual.getJugador();
+        for (int i = 0 ; i< this.tamanio ; i++){
+            if (jugadorActual.getEquipo().getManosGanadas()==2){ // O SI EMPARDO PRIMERA Y GANO OTRA - - - TODO IMPLMENTAR
+                this.ganadorDeRonda = jugadorActual.getEquipo();
+                return true;
+            }
+            nodoActual= nodoActual.getSiguiente();
+            jugadorActual=nodoActual.getJugador();
+        }
+        return false;
+    }
+
+
+    public Equipo getEquipoGanador() {
+        return ganadorDeRonda;
     }
 
 

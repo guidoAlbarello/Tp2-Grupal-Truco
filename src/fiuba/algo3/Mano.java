@@ -15,7 +15,13 @@ import java.util.List;
  */
 public class Mano {
     private List<Carta> cartasEnLaMano;
+    private List<Integer> indicesDeCartasJugadas;
+
+
+
+
     public Mano(){
+        this.indicesDeCartasJugadas = new ArrayList<Integer>();
         this.cartasEnLaMano = new ArrayList<Carta>();
     }
 
@@ -81,4 +87,15 @@ public class Mano {
 
 
     public List<Carta> getCartasEnMano(){  return this.cartasEnLaMano;  }
+
+    public Carta jugarCarta(int indiceDeLaCarta) {
+        this.indicesDeCartasJugadas.add(indiceDeLaCarta);
+        return this.cartasEnLaMano.get(indiceDeLaCarta);
+    }
+
+
+    public void reiniciarMano(){
+        this.indicesDeCartasJugadas = new ArrayList<Integer>();
+        this.cartasEnLaMano = new ArrayList<Carta>();
+    }
 }
