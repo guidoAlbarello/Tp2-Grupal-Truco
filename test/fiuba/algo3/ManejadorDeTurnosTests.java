@@ -52,17 +52,27 @@ public class ManejadorDeTurnosTests {
         jugador2.recibirCarta(new Carta(6,copa));             //CARTA POS 2
     }
 
-/*
+
 
     @Test
     public void testElJugadorConElTurnoInicialEsElPrimeroQueSeAgrego(){
+        ListaJugadores estosJugadores = new ListaJugadores();
+        estosJugadores.agregarUltimo(jugador1);
+        estosJugadores.agregarUltimo(jugador2);
+        ManejadorDeTurnos turnos = new ManejadorDeTurnos(estosJugadores,null);  //le paso null en lugar de un juego para testear unitariamente pasar mano
         Assert.assertEquals(jugador1,turnos.getJugadorConTurnoActual());
     }
 
     @Test
     public void testElJugadorQueEsManoAlPrincipioEsElPrimeroQueSeAgrego(){
+        ListaJugadores estosJugadores = new ListaJugadores();
+        estosJugadores.agregarUltimo(jugador1);
+        estosJugadores.agregarUltimo(jugador2);
+        ManejadorDeTurnos turnos = new ManejadorDeTurnos(estosJugadores,null);  //le paso null en lugar de un juego para testear unitariamente pasar mano
         Assert.assertEquals(jugador1,turnos.getJugadorQueEsMano());
     }
+
+
 /*
     @Test
     public void testPasarTurnoEnUnaManoCompleta(){
@@ -121,7 +131,7 @@ public class ManejadorDeTurnosTests {
 
 */
     @Test
-    public void testPasarMano(){
+    public void testPasarTurno(){
         ListaJugadores estosJugadores = new ListaJugadores();
         estosJugadores.agregarUltimo(jugador1);
         estosJugadores.agregarUltimo(jugador2);
@@ -135,9 +145,25 @@ public class ManejadorDeTurnosTests {
         turnos.pasarElTurno();
 
         Assert.assertEquals(jugador2,turnos.getJugadorConTurnoActual());
+    }
 
+
+    @Test
+    public void testPasarMano() {
+        ListaJugadores estosJugadores = new ListaJugadores();
+        estosJugadores.agregarUltimo(jugador1);
+        estosJugadores.agregarUltimo(jugador2);
+        ManejadorDeTurnos turnos = new ManejadorDeTurnos(estosJugadores, null);  //le paso null en lugar de un juego para testear unitariamente pasar mano
+
+        turnos.pasarMano();
+
+        Assert.assertEquals(jugador2,turnos.getJugadorConTurnoActual());
+        Assert.assertEquals(jugador2,turnos.getJugadorQueEsMano());
 
     }
+
+
+
 
 
 

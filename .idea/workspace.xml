@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ad713f93-70cd-4514-b05c-bdcdaf751803" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/ManejadorDeTurnosTests.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/ManejadorDeTurnosTests.java" />
     </list>
     <ignored path="Tp2-Grupal-Truco.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ManejadorDeTurnosTests.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ManejadorDeTurnosTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/ManejadorDeTurnosTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="139" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.7504078">
+              <caret line="161" column="8" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -77,16 +78,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListaJugadores.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ListaJugadores.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="120" column="45" selection-start-line="120" selection-start-column="45" selection-end-line="120" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Mano.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Mano.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -101,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ManejadorDeTurnos.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ManejadorDeTurnos.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ManejadorDeTurnos.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7504078">
-              <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -190,11 +181,11 @@
         <option value="$PROJECT_DIR$/test/fiuba/algo3/MesaTests.java" />
         <option value="$PROJECT_DIR$/test/fiuba/algo3/JuegoTest.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/Mesa.java" />
-        <option value="$PROJECT_DIR$/test/fiuba/algo3/ManejadorDeTurnosTests.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/Mano.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ListaJugadores.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/Juego.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ManejadorDeTurnos.java" />
+        <option value="$PROJECT_DIR$/test/fiuba/algo3/ManejadorDeTurnosTests.java" />
       </list>
     </option>
   </component>
@@ -308,28 +299,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ModeladoDeCarta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tp2-Grupal-Truco" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tp2-Grupal-Truco" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="algo3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="manejoDeJugadores" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -421,58 +390,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ManejadorDeTurnosTests.testSimulacionPartidaSinCantos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="fiuba.algo3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Tp2-Grupal-Truco" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="fiuba.algo3" />
-      <option name="MAIN_CLASS_NAME" value="fiuba.algo3.ManejadorDeTurnosTests" />
-      <option name="METHOD_NAME" value="testSimulacionPartidaSinCantos" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="ManejadorDeTurnosTests.testSimulacionPartidaSinCantosDosJugadores" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="fiuba.algo3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Tp2-Grupal-Truco" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="fiuba.algo3" />
-      <option name="MAIN_CLASS_NAME" value="fiuba.algo3.ManejadorDeTurnosTests" />
-      <option name="METHOD_NAME" value="testSimulacionPartidaSinCantosDosJugadores" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="JuegoTest.cadaJugadorJuegaUnaCartaYSeDevuelveElJugadorGanador" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -512,6 +429,58 @@
       <option name="PACKAGE_NAME" value="fiuba.algo3" />
       <option name="MAIN_CLASS_NAME" value="fiuba.algo3.ManejadorDeTurnosTests" />
       <option name="METHOD_NAME" value="testPasarMano" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ManejadorDeTurnosTests.testElJugadorQueEsManoAlPrincipioEsElPrimeroQueSeAgrego" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="fiuba.algo3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Tp2-Grupal-Truco" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="fiuba.algo3" />
+      <option name="MAIN_CLASS_NAME" value="fiuba.algo3.ManejadorDeTurnosTests" />
+      <option name="METHOD_NAME" value="testElJugadorQueEsManoAlPrincipioEsElPrimeroQueSeAgrego" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ManejadorDeTurnosTests.testElJugadorConElTurnoInicialEsElPrimeroQueSeAgrego" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="fiuba.algo3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Tp2-Grupal-Truco" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="fiuba.algo3" />
+      <option name="MAIN_CLASS_NAME" value="fiuba.algo3.ManejadorDeTurnosTests" />
+      <option name="METHOD_NAME" value="testElJugadorConElTurnoInicialEsElPrimeroQueSeAgrego" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -770,18 +739,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.fiuba.algo3 in Tp2-Grupal-Truco" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ManejadorDeTurnosTests.testSimulacionPartidaSinCantos" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ManejadorDeTurnosTests.testSimulacionPartidaSinCantosDosJugadores" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.JuegoTest.cadaJugadorJuegaUnaCartaYSeDevuelveElJugadorGanador" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ManejadorDeTurnosTests.testPasarMano" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.JuegoTest.cadaJugadorJuegaUnaCartaYSeDevuelveElJugadorGanador" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ManejadorDeTurnosTests.testPasarMano" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ManejadorDeTurnosTests.testElJugadorQueEsManoAlPrincipioEsElPrimeroQueSeAgrego" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ManejadorDeTurnosTests.testElJugadorConElTurnoInicialEsElPrimeroQueSeAgrego" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.fiuba.algo3 in Tp2-Grupal-Truco" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.ManejadorDeTurnosTests.testPasarMano" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.JuegoTest.cadaJugadorJuegaUnaCartaYSeDevuelveElJugadorGanador" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ManejadorDeTurnosTests.testSimulacionPartidaSinCantosDosJugadores" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ManejadorDeTurnosTests.testSimulacionPartidaSinCantos" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ManejadorDeTurnosTests.testElJugadorQueEsManoAlPrincipioEsElPrimeroQueSeAgrego" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ManejadorDeTurnosTests.testElJugadorConElTurnoInicialEsElPrimeroQueSeAgrego" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.JuegoTest.cadaJugadorJuegaUnaCartaYSeDevuelveElJugadorGanador" />
       </list>
     </recent_temporary>
   </component>
@@ -874,15 +843,24 @@
       <option name="project" value="LOCAL" />
       <updated>1448128659354</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Se arreglaron los tests que rompi temporalmente con la ultima refactorizacion.">
+      <created>1448128728712</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1448128728712</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JuegoTest_cadaJugadorJuegaUnaCartaYSeDevuelveElJugadorGanador - 2015.11.21 at 04h 01m 56s.xml">
-      <configuration name="JuegoTest.cadaJugadorJuegaUnaCartaYSeDevuelveElJugadorGanador" configurationId="JUnit" />
+    <history-entry file="ManejadorDeTurnosTests_testElJugadorConElTurnoInicialEsElPrimeroQueSeAgrego - 2015.11.21 at 15h 04m 24s.xml">
+      <configuration name="ManejadorDeTurnosTests.testElJugadorConElTurnoInicialEsElPrimeroQueSeAgrego" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JuegoTest_cadaJugadorJuegaUnaCartaYSeDevuelveElJugadorGanador - 2015.11.21 at 04h 02m 56s.xml">
-      <configuration name="JuegoTest.cadaJugadorJuegaUnaCartaYSeDevuelveElJugadorGanador" configurationId="JUnit" />
+    <history-entry file="ManejadorDeTurnosTests_testElJugadorQueEsManoAlPrincipioEsElPrimeroQueSeAgrego - 2015.11.21 at 15h 04m 16s.xml">
+      <configuration name="ManejadorDeTurnosTests.testElJugadorQueEsManoAlPrincipioEsElPrimeroQueSeAgrego" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ManejadorDeTurnosTests_testElJugadorQueEsManoAlPrincipioEsElPrimeroQueSeAgrego - 2015.11.21 at 15h 04m 27s.xml">
+      <configuration name="ManejadorDeTurnosTests.testElJugadorQueEsManoAlPrincipioEsElPrimeroQueSeAgrego" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ManejadorDeTurnosTests_testPasarMano - 2015.11.21 at 14h 52m 25s.xml">
       <configuration name="ManejadorDeTurnosTests.testPasarMano" configurationId="JUnit" />
@@ -890,22 +868,19 @@
     <history-entry file="ManejadorDeTurnosTests_testPasarMano - 2015.11.21 at 14h 54m 04s.xml">
       <configuration name="ManejadorDeTurnosTests.testPasarMano" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ManejadorDeTurnosTests_testSimulacionPartidaSinCantosDosJugadores - 2015.11.21 at 03h 18m 23s.xml">
-      <configuration name="ManejadorDeTurnosTests.testSimulacionPartidaSinCantosDosJugadores" configurationId="JUnit" />
+    <history-entry file="ManejadorDeTurnosTests_testPasarMano - 2015.11.21 at 15h 02m 16s.xml">
+      <configuration name="ManejadorDeTurnosTests.testPasarMano" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="fiuba_algo3_in_Tp2-Grupal-Truco - 2015.11.21 at 04h 03m 09s.xml">
-      <configuration name="fiuba.algo3 in Tp2-Grupal-Truco" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="fiuba_algo3_in_Tp2-Grupal-Truco - 2015.11.21 at 04h 05m 05s.xml">
-      <configuration name="fiuba.algo3 in Tp2-Grupal-Truco" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="fiuba_algo3_in_Tp2-Grupal-Truco - 2015.11.21 at 04h 06m 04s.xml">
-      <configuration name="fiuba.algo3 in Tp2-Grupal-Truco" configurationId="JUnit" />
+    <history-entry file="ManejadorDeTurnosTests_testPasarMano - 2015.11.21 at 15h 07m 11s.xml">
+      <configuration name="ManejadorDeTurnosTests.testPasarMano" configurationId="JUnit" />
     </history-entry>
     <history-entry file="fiuba_algo3_in_Tp2-Grupal-Truco - 2015.11.21 at 14h 56m 32s.xml">
       <configuration name="fiuba.algo3 in Tp2-Grupal-Truco" configurationId="JUnit" />
     </history-entry>
     <history-entry file="fiuba_algo3_in_Tp2-Grupal-Truco - 2015.11.21 at 14h 58m 03s.xml">
+      <configuration name="fiuba.algo3 in Tp2-Grupal-Truco" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="fiuba_algo3_in_Tp2-Grupal-Truco - 2015.11.21 at 15h 07m 19s.xml">
       <configuration name="fiuba.algo3 in Tp2-Grupal-Truco" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -920,7 +895,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32241014" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32241014" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24166666" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
@@ -1321,14 +1296,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Mesa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/MesaTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1336,14 +1303,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/ManejadorDeTurnosTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="139" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1356,14 +1315,6 @@
             <element signature="e#3208#3209#0" expanded="true" />
             <element signature="e#3259#3260#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ListaJugadores.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="120" column="45" selection-start-line="120" selection-start-column="45" selection-end-line="120" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1383,13 +1334,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ListaJugadores.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="89" column="16" selection-start-line="89" selection-start-column="16" selection-end-line="89" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Mesa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ManejadorDeTurnos.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7504078">
-          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/ManejadorDeTurnosTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7504078">
+          <caret line="161" column="8" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
