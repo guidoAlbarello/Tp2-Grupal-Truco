@@ -119,15 +119,26 @@ public class ManejadorDeTurnosTests {
     }
 
 
-
+*/
     @Test
     public void testPasarMano(){
-        turnos.pasarMano(); //pasar mano se supone a llamar cuando termine la ronda
+        ListaJugadores estosJugadores = new ListaJugadores();
+        estosJugadores.agregarUltimo(jugador1);
+        estosJugadores.agregarUltimo(jugador2);
+        ManejadorDeTurnos turnos = new ManejadorDeTurnos(estosJugadores,null);  //le paso null en lugar de un juego para testear unitariamente pasar mano
+
+
+        Assert.assertEquals(jugador1,turnos.getJugadorConTurnoActual());
+
+        Assert.assertEquals(jugador2,turnos.getNodoJugadorConTurnoActual().getSiguiente().getJugador());
+
+        turnos.pasarElTurno();
+
         Assert.assertEquals(jugador2,turnos.getJugadorConTurnoActual());
-        Assert.assertTrue(turnos.getNumeroDeManoActual()==1);
-        Assert.assertTrue(turnos.getRondaActual()==2);
+
+
     }
-    */
+
 
 
     @Test

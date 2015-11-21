@@ -98,4 +98,9 @@ public class Mano {
         this.indicesDeCartasJugadas = new ArrayList<Integer>();
         this.cartasEnLaMano = new ArrayList<Carta>();
     }
+
+
+    public void reiniciarIndicesDeCartasTiradas(){
+        this.indicesDeCartasJugadas.clear();
+    }
 }

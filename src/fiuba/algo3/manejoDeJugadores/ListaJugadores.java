@@ -117,16 +117,16 @@ public class ListaJugadores {
     }
 
 
-    /*
-    public void sacarCartas() {
+
+    public void sacarCartasATodosLosJugadores() {
         NodoJugador nodoActual = this.primero;
         Jugador jugadorActual = nodoActual.getJugador();
         for (int i = 0 ; i< this.tamanio ; i++){
             jugadorActual.getMano().getCartasEnMano().clear();
-            jugadorActual.getMano().resetearIndicesDeCartasEnMesa();
+            jugadorActual.getMano().reiniciarIndicesDeCartasTiradas();
             nodoActual= nodoActual.getSiguiente();
             jugadorActual=nodoActual.getJugador();
         }
-    }*/
+    }
 
 }
