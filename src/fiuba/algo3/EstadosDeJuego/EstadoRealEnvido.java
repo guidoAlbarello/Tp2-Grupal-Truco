@@ -50,7 +50,7 @@ public class EstadoRealEnvido implements EstadoDeJuego {
 
     @Override
     public void noQuiero() {
-        //resolver el no quiero
+        juego.noSeQuizoEnvido();
     }
 
     @Override

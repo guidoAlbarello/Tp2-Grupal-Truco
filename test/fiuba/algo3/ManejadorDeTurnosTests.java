@@ -177,7 +177,7 @@ public class ManejadorDeTurnosTests {
 
 
 
-
+/*
     @Test
     public void testSimulacionPartidaSinCantosDosJugadores(){
         Equipo equipoDelJugador1, equipoDelJugador2;
@@ -199,5 +199,5 @@ public class ManejadorDeTurnosTests {
 
         Assert.assertTrue(equipoDelJugador1.getPuntaje()==1);
     }
-
+*/
 }

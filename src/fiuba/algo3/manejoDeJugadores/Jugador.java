@@ -56,8 +56,8 @@ public class Jugador {
         this.juego.jugarCarta(cartaDeJugador);
     }
 
-    public Carta jugarCartaEnPosicion(int indiceDeLaCarta){
-        return this.manoDelJugador.jugarCarta(indiceDeLaCarta);
+    public void jugarCartaEnPosicion(int indiceDeLaCarta){
+        this.juego.jugarCarta(new CartaJugada(this.manoDelJugador.jugarCarta(indiceDeLaCarta),this));
     }
 
     public void truco() {

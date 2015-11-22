@@ -2,6 +2,7 @@ package fiuba.algo3;
 
 import fiuba.algo3.EstadosDeJuego.*;
 import fiuba.algo3.ModeladoDeCarta.Carta;
+import fiuba.algo3.manejoDeJugadores.Equipo;
 import fiuba.algo3.manejoDeJugadores.Jugador;
 import fiuba.algo3.manejoDeJugadores.ListaJugadores;
 import fiuba.algo3.manejoDeJugadores.ManejadorDeTurnos;
@@ -31,7 +32,14 @@ public class Juego {
 
     public void jugarCarta(CartaJugada cartaJugada) {
         estadoDeJuego.jugarCarta(cartaJugada);
-        //this.manejadorDeTurnos.pasarElTurno();
+
+        this.manejadorDeTurnos.pasarTurno();
+        Equipo equipo1 = listaDeJugadores.getPrimero().getJugador().getEquipo();
+        Equipo equipo2 = listaDeJugadores.getUltimo().getJugador().getEquipo();
+        if (equipo1.getManosGanadas() == 2)
+            equipo1.sumarPuntos(1);
+        if (equipo2.getManosGanadas() == 2)
+            equipo2.sumarPuntos(1);
     }
 
     public Mesa mesaDelJuego() {       return this.mesaDelJuego;    }
@@ -65,14 +73,14 @@ public class Juego {
     }
 
 
-    public void seJuegaUnaCartaDeLaManoDelJugadorEnPosicion(int indiceDeLaCarta){
+   /* public void seJuegaUnaCartaDeLaManoDelJugadorEnPosicion(int indiceDeLaCarta){
         Jugador jugadorConTurno = this.manejadorDeTurnos.getJugadorConTurnoActual();
         Carta carta = jugadorConTurno.jugarCartaEnPosicion(indiceDeLaCarta);
         CartaJugada cartaJugada = new CartaJugada(carta,jugadorConTurno);
         this.mesaDelJuego.agregarCartaALsitaDeCartasJugadas(cartaJugada);
         this.manejadorDeTurnos.pasarElTurno();
     }
-
+*/
 
     public void seCantaTruco() {
         this.estadoDeJuego.truco();
@@ -100,5 +108,9 @@ public class Juego {
     public void seCantaRealEnvido() {
         this.estadoDeJuego.realEnvido();
         this.manejadorDeTurnos.pasarTurno();
+    }
+
+    public void agregarCartaAMesa(CartaJugada cartaJugada) {
+        this.mesaDelJuego.agregarCartaALsitaDeCartasJugadas(cartaJugada);
     }
 }

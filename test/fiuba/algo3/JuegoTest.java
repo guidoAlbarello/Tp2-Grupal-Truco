@@ -77,13 +77,13 @@ public class JuegoTest {
 
         Carta carta1Espada = new Carta(1,paloEspada);
         Carta carta4Espada = new Carta(4,paloEspada);
-        CartaJugada cartaDeJugador1 = new CartaJugada(carta1Espada,jugador1);
-        CartaJugada cartaDeJugador2 = new CartaJugada(carta4Espada,jugador2);
+        jugador1.recibirCarta(carta1Espada);
+        jugador2.recibirCarta(carta4Espada);
 
-        jugador1.jugarCarta(cartaDeJugador1);
-        jugador2.jugarCarta(cartaDeJugador2);
+        jugador1.jugarCartaEnPosicion(0);
+        jugador2.jugarCartaEnPosicion(0);
 
-        Assert.assertEquals("jugador1",this.juego.mesaDelJuego().ganadorDeMano().getNombre());
+        Assert.assertTrue(jugador1.getEquipo().getManosGanadas() == 1);
     }
 
     @Test
@@ -144,4 +144,26 @@ public class JuegoTest {
 
         Assert.assertEquals(4,jugador2.getEquipo().getPuntaje());
     }
+
+    @Test
+    public void test(){
+        jugador1.recibirCarta(new Carta(11,paloOro));
+        jugador1.recibirCarta(new Carta(5,paloBasto));
+        jugador1.recibirCarta(new Carta(6,paloBasto));          // ENVIDO SUPUESTO 31
+
+        jugador2.recibirCarta(new Carta(7,paloBasto));
+        jugador2.recibirCarta(new Carta(6,paloBasto));
+        jugador2.recibirCarta(new Carta(3,paloEspada));          //ENVIDO SUPUESTO 33
+
+        jugador1.jugarCartaEnPosicion(0);
+        jugador2.jugarCartaEnPosicion(0);
+        jugador1.jugarCartaEnPosicion(1);
+        jugador2.jugarCartaEnPosicion(1);
+        jugador1.jugarCartaEnPosicion(2);
+        jugador2.jugarCartaEnPosicion(2);
+
+        Assert.assertEquals(1,jugador2.getEquipo().getPuntaje());
+    }
+
+
 }

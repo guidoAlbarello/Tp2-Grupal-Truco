@@ -2,6 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad713f93-70cd-4514-b05c-bdcdaf751803" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoPrimeraMano.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoPrimeraMano.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoRealEnvido.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoRealEnvido.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Juego.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Juego.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/JuegoTest.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/JuegoTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/Jugador.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/Jugador.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/ManejadorDeTurnosTests.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/ManejadorDeTurnosTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Mesa.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Mesa.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/MesaTests.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/MesaTests.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Tp2-Grupal-Truco.iws" />
@@ -27,32 +35,68 @@
       <file leaf-file-name="JuegoTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/JuegoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46489105">
-              <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.34140435">
+              <caret line="153" column="51" selection-start-line="153" selection-start-column="51" selection-end-line="153" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EnvidoTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/EnvidoTest.java">
+      <file leaf-file-name="Mesa.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Mesa.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+              <caret line="38" column="78" selection-start-line="38" selection-start-column="78" selection-end-line="38" selection-end-column="78" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EstadoEnvidoEnvido.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoEnvidoEnvido.java">
+      <file leaf-file-name="ManejadorDeTurnosTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/ManejadorDeTurnosTests.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="60" column="16" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
+              <caret line="201" column="2" selection-start-line="201" selection-start-column="2" selection-end-line="201" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Carta.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/ModeladoDeCarta/Carta.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
               <folding>
-                <element signature="e#1042#1043#0" expanded="true" />
-                <element signature="e#1086#1087#0" expanded="true" />
+                <element signature="e#4518#4519#0" expanded="true" />
+                <element signature="e#4558#4559#0" expanded="true" />
+                <element signature="e#5053#5054#0" expanded="true" />
+                <element signature="e#5092#5093#0" expanded="true" />
+                <element signature="e#5186#5187#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mano.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Mano.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#797#805#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ManejadorDeTurnos.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ManejadorDeTurnos.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -61,16 +105,29 @@
         <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/Jugador.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="71" column="29" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
+              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding>
                 <element signature="e#1177#1178#0" expanded="true" />
                 <element signature="e#1219#1220#0" expanded="true" />
                 <element signature="e#1249#1250#0" expanded="true" />
                 <element signature="e#1286#1287#0" expanded="true" />
-                <element signature="e#1624#1625#0" expanded="true" />
-                <element signature="e#1659#1660#0" expanded="true" />
-                <element signature="e#1691#1692#0" expanded="true" />
-                <element signature="e#1737#1738#0" expanded="true" />
+                <element signature="e#1661#1662#0" expanded="true" />
+                <element signature="e#1696#1697#0" expanded="true" />
+                <element signature="e#1728#1729#0" expanded="true" />
+                <element signature="e#1774#1775#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CartaJugada.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/CartaJugada.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <element signature="e#387#388#0" expanded="true" />
+                <element signature="e#415#416#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,12 +137,12 @@
         <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Juego.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="101" column="44" selection-start-line="101" selection-start-column="44" selection-end-line="101" selection-end-column="44" />
+              <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
               <folding>
-                <element signature="e#869#870#0" expanded="true" />
-                <element signature="e#919#920#0" expanded="true" />
-                <element signature="e#2792#2793#0" expanded="true" />
-                <element signature="e#2884#2885#0" expanded="true" />
+                <element signature="e#914#915#0" expanded="true" />
+                <element signature="e#964#965#0" expanded="true" />
+                <element signature="e#3159#3160#0" expanded="true" />
+                <element signature="e#3251#3252#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -95,59 +152,11 @@
         <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoPrimeraMano.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
               <folding>
                 <element signature="e#406#407#0" expanded="true" />
+                <element signature="e#479#480#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EstadoRealEnvido.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoRealEnvido.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-              <folding>
-                <element signature="e#606#607#0" expanded="true" />
-                <element signature="e#679#680#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListaJugadores.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ListaJugadores.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding>
-                <element signature="e#792#793#0" expanded="true" />
-                <element signature="e#827#828#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EstadoEnvido.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoEnvido.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="32" />
-              <folding>
-                <element signature="e#1032#1033#0" expanded="true" />
-                <element signature="e#1071#1072#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EstadoDeJuego.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoDeJuego.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -205,24 +214,24 @@
         <option value="$PROJECT_DIR$/src/fiuba/algo3/CartaJugada.java" />
         <option value="$PROJECT_DIR$/test/fiuba/algo3/CartaTest.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/Equipo.java" />
-        <option value="$PROJECT_DIR$/test/fiuba/algo3/MesaTests.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/Mesa.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/Mano.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ListaJugadores.java" />
-        <option value="$PROJECT_DIR$/test/fiuba/algo3/ManejadorDeTurnosTests.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/EstadoTrucoConEnvido.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTrucoConEnvido.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoRetruco.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTruco.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ManejadorDeTurnos.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoPrimeraMano.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoDeJuego.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoEnvido.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoEnvidoEnvido.java" />
-        <option value="$PROJECT_DIR$/test/fiuba/algo3/JuegoTest.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/Jugador.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/Juego.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoRealEnvido.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/Jugador.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoPrimeraMano.java" />
+        <option value="$PROJECT_DIR$/test/fiuba/algo3/ManejadorDeTurnosTests.java" />
+        <option value="$PROJECT_DIR$/test/fiuba/algo3/MesaTests.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/Mesa.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/Juego.java" />
+        <option value="$PROJECT_DIR$/test/fiuba/algo3/JuegoTest.java" />
       </list>
     </option>
   </component>
@@ -608,32 +617,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="JuegoTest.unJugador1CantaEnvidoYJugador2NoQuiereEntoncesJugador1Suma1Punto" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="fiuba.algo3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Tp2-Grupal-Truco" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="fiuba.algo3" />
-      <option name="MAIN_CLASS_NAME" value="fiuba.algo3.JuegoTest" />
-      <option name="METHOD_NAME" value="unJugador1CantaEnvidoYJugador2NoQuiereEntoncesJugador1Suma1Punto" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="JuegoTest.testEnvidoQuerido" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -647,6 +630,32 @@
       <option name="PACKAGE_NAME" value="fiuba.algo3" />
       <option name="MAIN_CLASS_NAME" value="fiuba.algo3.JuegoTest" />
       <option name="METHOD_NAME" value="testEnvidoQuerido" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="JuegoTest.cadaJugadorJuegaUnaCartaYSeDevuelveElJugadorGanadorDeMano" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="fiuba.algo3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Tp2-Grupal-Truco" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="fiuba.algo3" />
+      <option name="MAIN_CLASS_NAME" value="fiuba.algo3.JuegoTest" />
+      <option name="METHOD_NAME" value="cadaJugadorJuegaUnaCartaYSeDevuelveElJugadorGanadorDeMano" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -811,16 +820,16 @@
       <item index="0" class="java.lang.String" itemvalue="JUnit.fiuba.algo3 in Tp2-Grupal-Truco" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.All in Tp2-Grupal-Truco" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.JuegoTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.JuegoTest.unJugador1CantaEnvidoYJugador2NoQuiereEntoncesJugador1Suma1Punto" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.JuegoTest.testEnvidoQuerido" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.JuegoTest.testEnvidoQuerido" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.JuegoTest.cadaJugadorJuegaUnaCartaYSeDevuelveElJugadorGanadorDeMano" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.All in Tp2-Grupal-Truco" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.JuegoTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.fiuba.algo3 in Tp2-Grupal-Truco" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.JuegoTest.testEnvidoQuerido" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.JuegoTest.unJugador1CantaEnvidoYJugador2NoQuiereEntoncesJugador1Suma1Punto" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.JuegoTest.cadaJugadorJuegaUnaCartaYSeDevuelveElJugadorGanadorDeMano" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.JuegoTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.fiuba.algo3 in Tp2-Grupal-Truco" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.JuegoTest.testEnvidoQuerido" />
       </list>
     </recent_temporary>
   </component>
@@ -949,7 +958,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448230470527</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="test para envido y real envido  aceptado">
+      <created>1448230488037</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1448230488037</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1039,7 +1054,8 @@
     <MESSAGE value="Se arreglaron los tests que rompi temporalmente con la ultima refactorizacion." />
     <MESSAGE value="Arregle otro test, que rompi refactorizando" />
     <MESSAGE value="sub un test en juego test" />
-    <option name="LAST_COMMIT_MESSAGE" value="sub un test en juego test" />
+    <MESSAGE value="test para envido y real envido  aceptado" />
+    <option name="LAST_COMMIT_MESSAGE" value="test para envido y real envido  aceptado" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1051,12 +1067,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/test/fiuba/algo3/JuegoTest.java</url>
-          <line>66</line>
+          <line>79</line>
           <properties />
-          <option name="timeStamp" value="59" />
+          <option name="timeStamp" value="63" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="63" />
+      <option name="time" value="64" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1065,16 +1081,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/NodoJugador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#513#514#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Excepciones/NoSeResuelveEnvidoEnvidoError.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1087,10 +1093,10 @@
         <state vertical-scroll-proportion="0.2857143">
           <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding>
-            <element signature="e#869#870#0" expanded="true" />
-            <element signature="e#919#920#0" expanded="true" />
-            <element signature="e#2792#2793#0" expanded="true" />
-            <element signature="e#2884#2885#0" expanded="true" />
+            <element signature="e#914#915#0" expanded="true" />
+            <element signature="e#964#965#0" expanded="true" />
+            <element signature="e#3159#3160#0" expanded="true" />
+            <element signature="e#3251#3252#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1121,13 +1127,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/ModeladoDeCarta/PaloEspada.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1254,32 +1253,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/CartaJugada.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#480#481#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/ModeladoDeCarta/Palo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23415978">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/ModeladoDeCarta/PaloCopa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTrucoConEnvido.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1303,26 +1276,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/ManejadorDeTurnosTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/ListaJugadoresTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Mesa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1351,17 +1308,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Mano.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#797#805#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42261904">
@@ -1378,17 +1324,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/ModeladoDeCarta/Carta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-          <folding>
-            <element signature="e#5053#5054#0" expanded="true" />
-            <element signature="e#5092#5093#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/NodoJugador.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1397,27 +1332,6 @@
             <element signature="e#513#514#0" expanded="true" />
             <element signature="e#710#711#0" expanded="true" />
             <element signature="e#745#746#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ManejadorDeTurnos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding>
-            <element signature="e#2337#2338#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ListaJugadores.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <element signature="e#792#793#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1449,50 +1363,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/Jugador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="29" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
-          <folding>
-            <element signature="e#1177#1178#0" expanded="true" />
-            <element signature="e#1219#1220#0" expanded="true" />
-            <element signature="e#1249#1250#0" expanded="true" />
-            <element signature="e#1286#1287#0" expanded="true" />
-            <element signature="e#1624#1625#0" expanded="true" />
-            <element signature="e#1659#1660#0" expanded="true" />
-            <element signature="e#1691#1692#0" expanded="true" />
-            <element signature="e#1737#1738#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Juego.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="101" column="44" selection-start-line="101" selection-start-column="44" selection-end-line="101" selection-end-column="44" />
-          <folding>
-            <element signature="e#869#870#0" expanded="true" />
-            <element signature="e#919#920#0" expanded="true" />
-            <element signature="e#2792#2793#0" expanded="true" />
-            <element signature="e#2884#2885#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoPrimeraMano.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#406#407#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoEnvido.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="32" />
+          <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="32" />
           <folding>
             <element signature="e#1032#1033#0" expanded="true" />
             <element signature="e#1071#1072#0" expanded="true" />
@@ -1503,18 +1377,175 @@
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoRealEnvido.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding>
             <element signature="e#606#607#0" expanded="true" />
             <element signature="e#679#680#0" expanded="true" />
+            <element signature="e#1098#1099#0" expanded="true" />
+            <element signature="e#1137#1138#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/MesaTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="7" selection-start-line="66" selection-start-column="7" selection-end-line="66" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ListaJugadores.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="e#827#828#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/ModeladoDeCarta/PaloEspada.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#230#231#0" expanded="true" />
+            <element signature="e#299#300#0" expanded="true" />
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#659#660#0" expanded="true" />
+            <element signature="e#683#684#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/ModeladoDeCarta/PaloCopa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#227#228#0" expanded="true" />
+            <element signature="e#581#582#0" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/ModeladoDeCarta/Palo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#210#211#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/ModeladoDeCarta/Carta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+          <folding>
+            <element signature="e#4518#4519#0" expanded="true" />
+            <element signature="e#4558#4559#0" expanded="true" />
+            <element signature="e#5053#5054#0" expanded="true" />
+            <element signature="e#5092#5093#0" expanded="true" />
+            <element signature="e#5186#5187#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoPrimeraMano.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding>
+            <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#479#480#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Mano.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#797#805#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/CartaJugada.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#387#388#0" expanded="true" />
+            <element signature="e#415#416#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ManejadorDeTurnos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Mesa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="78" selection-start-line="38" selection-start-column="78" selection-end-line="38" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/Jugador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding>
+            <element signature="e#1177#1178#0" expanded="true" />
+            <element signature="e#1219#1220#0" expanded="true" />
+            <element signature="e#1249#1250#0" expanded="true" />
+            <element signature="e#1286#1287#0" expanded="true" />
+            <element signature="e#1661#1662#0" expanded="true" />
+            <element signature="e#1696#1697#0" expanded="true" />
+            <element signature="e#1728#1729#0" expanded="true" />
+            <element signature="e#1774#1775#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Juego.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+          <folding>
+            <element signature="e#914#915#0" expanded="true" />
+            <element signature="e#964#965#0" expanded="true" />
+            <element signature="e#3159#3160#0" expanded="true" />
+            <element signature="e#3251#3252#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/ManejadorDeTurnosTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="201" column="2" selection-start-line="201" selection-start-column="2" selection-end-line="201" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/JuegoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46489105">
-          <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.34140435">
+          <caret line="153" column="51" selection-start-line="153" selection-start-column="51" selection-end-line="153" selection-end-column="51" />
           <folding />
         </state>
       </provider>
