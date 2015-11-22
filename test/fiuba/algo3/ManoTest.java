@@ -16,9 +16,9 @@ public class ManoTest {
         Palo unPalo = new PaloEspada();
         Palo otroPalo = new PaloBasto();
 
-        Carta carta1 = new Carta(3, unPalo);
+        Carta carta1 = new Carta(3, otroPalo);
         Carta carta2 = new Carta(6, unPalo);
-        Carta carta3 = new Carta(5, otroPalo);
+        Carta carta3 = new Carta(5, unPalo);
 
         manoNueva.agregarCarta(carta1);
         manoNueva.agregarCarta(carta2);
@@ -26,7 +26,7 @@ public class ManoTest {
 
         Envido envidoMaximo= manoNueva.obtenerEnvido();
 
-        Assert.assertEquals(29, envidoMaximo.getValorEnvido());
+        Assert.assertEquals(31, envidoMaximo.getValorEnvido());
     }
 
     @Test

@@ -39,6 +39,8 @@ public class JuegoTest {
 
         juego.configurarManejadorDeTurnos();
         paloEspada = new PaloEspada();
+        paloBasto = new PaloBasto();
+        paloOro = new PaloOro();
     }
 
     @Test
@@ -93,7 +95,7 @@ public class JuegoTest {
         Assert.assertEquals(jugador2.getEquipo().getPuntaje(),1);
     }
 
-     /*   @Test
+       @Test
         public void testEnvidoQuerido(){
             jugador1.recibirCarta(new Carta(11,paloOro));
             jugador1.recibirCarta(new Carta(5,paloBasto));
@@ -108,5 +110,5 @@ public class JuegoTest {
             jugador2.quiero();
 
             Assert.assertEquals(2,jugador2.getEquipo().getPuntaje());
-    }*/
+    }
 }
