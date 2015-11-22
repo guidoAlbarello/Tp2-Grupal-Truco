@@ -1,8 +1,6 @@
 package fiuba.algo3;
 
-import fiuba.algo3.ModeladoDeCarta.Carta;
-import fiuba.algo3.ModeladoDeCarta.Palo;
-import fiuba.algo3.ModeladoDeCarta.PaloEspada;
+import fiuba.algo3.ModeladoDeCarta.*;
 import fiuba.algo3.manejoDeJugadores.Equipo;
 import fiuba.algo3.manejoDeJugadores.Jugador;
 import org.junit.Assert;
@@ -19,6 +17,10 @@ public class JuegoTest {
     private Jugador jugador1;
     private Jugador jugador2;
     private Mesa mesaDeJuego;
+    private PaloEspada paloEspada;
+    private PaloBasto paloBasto;
+    private PaloOro paloOro;
+    private PaloCopa paloCopa;
 
     @Before
     public void setup(){
@@ -36,7 +38,7 @@ public class JuegoTest {
         juego.agregarJugador(jugador2);
 
         juego.configurarManejadorDeTurnos();
-
+        paloEspada = new PaloEspada();
     }
 
     @Test
@@ -68,13 +70,9 @@ public class JuegoTest {
         Assert.assertTrue( jugador1.getEquipo().getPuntaje() == 1);
     }
 
-
-
-
-
     @Test
-    public void cadaJugadorJuegaUnaCartaYSeDevuelveElJugadorGanador(){
-        Palo paloEspada = new PaloEspada();
+    public void cadaJugadorJuegaUnaCartaYSeDevuelveElJugadorGanadorDeMano(){
+
         Carta carta1Espada = new Carta(1,paloEspada);
         Carta carta4Espada = new Carta(4,paloEspada);
         CartaJugada cartaDeJugador1 = new CartaJugada(carta1Espada,jugador1);
@@ -83,7 +81,7 @@ public class JuegoTest {
         jugador1.jugarCarta(cartaDeJugador1);
         jugador2.jugarCarta(cartaDeJugador2);
 
-        Assert.assertEquals("jugador1" ,this.juego.mesaDelJuego().ganadorDeMano().getNombre());
+        Assert.assertEquals("jugador1",this.juego.mesaDelJuego().ganadorDeMano().getNombre());
     }
 
     @Test
@@ -92,11 +90,23 @@ public class JuegoTest {
         jugador1.truco();
         jugador2.envido();
         jugador1.noQuiero();
-
         Assert.assertEquals(jugador2.getEquipo().getPuntaje(),1);
     }
 
+     /*   @Test
+        public void testEnvidoQuerido(){
+            jugador1.recibirCarta(new Carta(11,paloOro));
+            jugador1.recibirCarta(new Carta(5,paloBasto));
+            jugador1.recibirCarta(new Carta(6,paloBasto));          // ENVIDO SUPUESTO 31
+
+            jugador2.recibirCarta(new Carta(7,paloEspada));
+            jugador2.recibirCarta(new Carta(3,paloBasto));
+            jugador2.recibirCarta(new Carta(6,paloEspada));          //ENVIDO SUPUESTO 33
 
 
+            jugador1.envido();
+            jugador2.quiero();
 
+            Assert.assertEquals(2,jugador2.getEquipo().getPuntaje());
+    }*/
 }

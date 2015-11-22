@@ -16,7 +16,7 @@ public class EstadoPrimeraMano implements EstadoDeJuego {
 
     @Override
     public void envido() {
-        this.juego.setEstadoDeJuego(new EstadoEnvidoEnvido(this.juego));
+        this.juego.setEstadoDeJuego(new EstadoEnvido(this.juego));
     }
 
     @Override

@@ -49,7 +49,7 @@ public class Jugador {
     }
 
     public void noQuiero() {
-        this.juego.noSeQuizoEnvido();
+        this.juego.noQuiero();
     }
 
     public void jugarCarta(CartaJugada cartaDeJugador) {
@@ -62,6 +62,10 @@ public class Jugador {
 
     public void truco() {
         this.juego.seCantaTruco();
+    }
+
+    public void quiero() {
+        this.juego.quiero();
     }
 
 

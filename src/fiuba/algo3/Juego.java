@@ -51,8 +51,15 @@ public class Juego {
     public void seCantaEnvido() { this.estadoDeJuego.envido();
     this.manejadorDeTurnos.pasarTurno();}
 
-    public void noSeQuizoEnvido() {
+    public void noQuiero(){
+
         this.manejadorDeTurnos.pasarTurno();
+        this.estadoDeJuego.noQuiero();
+
+
+    }
+
+    public void noSeQuizoEnvido() {
         this.manejadorDeTurnos.getJugadorConTurnoActual().getEquipo().sumarPuntos(1);
 
     }
@@ -70,5 +77,23 @@ public class Juego {
     public void seCantaTruco() {
         this.estadoDeJuego.truco();
         this.manejadorDeTurnos.pasarTurno();
+    }
+
+    public void quiero() {
+        this.manejadorDeTurnos.pasarTurno();
+        this.estadoDeJuego.quiero();
+    }
+
+    public void siSeQuizoEnvido() {
+        getGanadorDeEnvido().getEquipo().sumarPuntos(2);
+    }
+
+    public Jugador getGanadorDeEnvido(){
+        int tantosJugador1 = listaDeJugadores.getPrimero().getJugador().getMano().obtenerEnvido().getValorEnvido();
+        int tantosJugador2 = listaDeJugadores.getPrimero().getJugador().getMano().obtenerEnvido().getValorEnvido();
+        if (tantosJugador1 > tantosJugador2)
+            return listaDeJugadores.getPrimero().getJugador();
+        else
+            return listaDeJugadores.getUltimo().getJugador();
     }
 }
