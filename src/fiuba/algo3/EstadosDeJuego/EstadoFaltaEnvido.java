@@ -51,7 +51,7 @@ public class EstadoFaltaEnvido implements EstadoDeJuego {
     }
 
     @Override
-    public int puntos() {
+    public int puntosDeEstado() {
         return 3;
     }
 

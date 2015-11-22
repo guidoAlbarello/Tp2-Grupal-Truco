@@ -111,4 +111,37 @@ public class JuegoTest {
 
             Assert.assertEquals(2,jugador2.getEquipo().getPuntaje());
     }
+
+    @Test
+    public void testEnvidoEnvidoQuerido(){
+        jugador1.recibirCarta(new Carta(11,paloOro));
+        jugador1.recibirCarta(new Carta(5,paloBasto));
+        jugador1.recibirCarta(new Carta(6,paloBasto));          // ENVIDO SUPUESTO 31
+
+        jugador2.recibirCarta(new Carta(7,paloEspada));
+        jugador2.recibirCarta(new Carta(3,paloBasto));
+        jugador2.recibirCarta(new Carta(6,paloEspada));          //ENVIDO SUPUESTO 33
+
+
+        jugador1.envido();
+        jugador2.envido();
+        jugador1.quiero();
+
+        Assert.assertEquals(3,jugador2.getEquipo().getPuntaje());
+    }
+    @Test
+    public void testRealEnvidoQuerido(){
+        jugador1.recibirCarta(new Carta(11,paloOro));
+        jugador1.recibirCarta(new Carta(5,paloBasto));
+        jugador1.recibirCarta(new Carta(6,paloBasto));          // ENVIDO SUPUESTO 31
+
+        jugador2.recibirCarta(new Carta(7,paloEspada));
+        jugador2.recibirCarta(new Carta(3,paloBasto));
+        jugador2.recibirCarta(new Carta(6,paloEspada));          //ENVIDO SUPUESTO 33
+
+        jugador1.realEnvido();
+        jugador2.quiero();
+
+        Assert.assertEquals(4,jugador2.getEquipo().getPuntaje());
+    }
 }

@@ -85,7 +85,7 @@ public class Juego {
     }
 
     public void siSeQuizoEnvido() {
-        getGanadorDeEnvido().getEquipo().sumarPuntos(2);
+        getGanadorDeEnvido().getEquipo().sumarPuntos(estadoDeJuego.puntosDeEstado());
     }
 
     public Jugador getGanadorDeEnvido(){
@@ -95,5 +95,10 @@ public class Juego {
             return listaDeJugadores.getPrimero().getJugador();
         else
             return listaDeJugadores.getUltimo().getJugador();
+    }
+
+    public void seCantaRealEnvido() {
+        this.estadoDeJuego.realEnvido();
+        this.manejadorDeTurnos.pasarTurno();
     }
 }

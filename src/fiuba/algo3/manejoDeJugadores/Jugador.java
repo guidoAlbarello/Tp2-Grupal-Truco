@@ -68,6 +68,10 @@ public class Jugador {
         this.juego.quiero();
     }
 
+    public void realEnvido() {
+        this.juego.seCantaRealEnvido();
+    }
+
 
     //public int calcularEnvido() {}
 

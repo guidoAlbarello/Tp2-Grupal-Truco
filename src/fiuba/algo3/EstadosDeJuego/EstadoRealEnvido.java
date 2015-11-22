@@ -46,8 +46,7 @@ public class EstadoRealEnvido implements EstadoDeJuego {
 
     @Override
     public void quiero() {
-        // resolver el quiero
-    }
+        juego.siSeQuizoEnvido();    }
 
     @Override
     public void noQuiero() {
@@ -60,8 +59,8 @@ public class EstadoRealEnvido implements EstadoDeJuego {
     }
 
     @Override
-    public int puntos() {
-        return 2;
+    public int puntosDeEstado() {
+        return 4;
     }
 
     @Override

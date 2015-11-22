@@ -13,7 +13,7 @@ public interface EstadoDeJuego {
     public void quiero();
     public void noQuiero();
     public void irseAlMaso();
-    public int puntos();
+    public int puntosDeEstado();
 
     void jugarCarta(CartaJugada cartaJugada);
 }

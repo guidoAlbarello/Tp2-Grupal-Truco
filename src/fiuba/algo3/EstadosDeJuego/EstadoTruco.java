@@ -57,7 +57,7 @@ public class EstadoTruco implements EstadoDeJuego {
     }
 
     @Override
-    public int puntos() {
+    public int puntosDeEstado() {
         return 0;
     }
 

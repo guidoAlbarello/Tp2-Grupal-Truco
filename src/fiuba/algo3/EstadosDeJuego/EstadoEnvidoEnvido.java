@@ -44,7 +44,7 @@ public class EstadoEnvidoEnvido implements EstadoDeJuego{
 
     @Override
     public void quiero() {
-        //resolver buscar el que tenga mas tantos y sumarle 2 puntos
+        this.juego.siSeQuizoEnvido();
     }
 
     @Override
@@ -57,8 +57,8 @@ public class EstadoEnvidoEnvido implements EstadoDeJuego{
     }
 
     @Override
-    public int puntos() {
-        return 1;
+    public int puntosDeEstado() {
+        return 3;
     }
 
     @Override

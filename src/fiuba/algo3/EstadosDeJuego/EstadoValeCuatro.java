@@ -41,7 +41,7 @@ public class EstadoValeCuatro implements EstadoDeJuego {
     public void irseAlMaso() {throw new NoSeResuelvValeCuatroError();}
 
     @Override
-    public int puntos() {
+    public int puntosDeEstado() {
         return 0;
     }
 

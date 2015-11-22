@@ -60,8 +60,8 @@ public class EstadoEnvido implements EstadoDeJuego {
     }
 
     @Override
-    public int puntos() {
-        return 1;
+    public int puntosDeEstado() {
+        return 2;
     }
 
     @Override
