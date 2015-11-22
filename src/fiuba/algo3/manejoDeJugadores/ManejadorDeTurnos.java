@@ -56,6 +56,10 @@ public class ManejadorDeTurnos {
 
     public Integer getNumeroDeManoActual(){    return this.manoActual;   }
 
+    public void pasarTurno(){//c Anthony : cre este metodo por q no me  sirve de que pasa el turno pase el tunro y a la vez calcule cosas
+        this.turnoActual = this.turnoActual.getSiguiente();
+    }
+
 
     public void pasarElTurno(){
         this.turnoActual = this.turnoActual.getSiguiente();                         //SI LE QUIEREN SACAR ESTA FUNCIONALIDAD CAMBIAR DE ACA PARA ABAJO (EN ESTE METODO)

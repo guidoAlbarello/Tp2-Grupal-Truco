@@ -26,7 +26,7 @@ public class EstadoRealEnvido implements EstadoDeJuego {
 
     @Override
     public void faltaEnvido() {
-        this.juego.cambiarEstadoFaltaEnvido();
+        this.juego.setEstadoDeJuego(new EstadoFaltaEnvido(juego));
     }
 
     @Override

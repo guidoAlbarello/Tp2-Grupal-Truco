@@ -14,8 +14,7 @@ public class EstadoTruco implements EstadoDeJuego {
     }
     @Override
     public void envido() {
-        throw new NoSeResuelveTrucoError();/* aca en realidad esto no es correcto por que
-        si se puede cantar Envido cuando se canto Truco*/
+        this.juego.setEstadoDeJuego(new EstadoTrucoConEnvido(juego));
     }
 
     @Override
@@ -35,7 +34,7 @@ public class EstadoTruco implements EstadoDeJuego {
     }
 
     @Override
-    public void retruco() {this.juego.cambiarEstadoRetruco();
+    public void retruco() {this.juego.setEstadoDeJuego(new EstadoRetruco(juego));
     }
 
     @Override
@@ -48,7 +47,8 @@ public class EstadoTruco implements EstadoDeJuego {
     }
 
     @Override
-    public void noQuiero() {throw new NoSeResuelveTrucoError();
+    public void noQuiero() {
+        this.juego.noSeQuizoEnvido();
     }
 
     @Override

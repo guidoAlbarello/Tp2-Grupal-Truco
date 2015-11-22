@@ -5,7 +5,6 @@ import fiuba.algo3.ModeladoDeCarta.Carta;
 import fiuba.algo3.manejoDeJugadores.Jugador;
 import fiuba.algo3.manejoDeJugadores.ListaJugadores;
 import fiuba.algo3.manejoDeJugadores.ManejadorDeTurnos;
-import fiuba.algo3.manejoDeJugadores.NodoJugador;
 
 /**
  * Created by anthony on 18/11/2015.
@@ -25,20 +24,6 @@ public class Juego {
     }
 
 
-    public void cambiarEstadoRealEnvido() {this.estadoDeJuego = new EstadoRealEnvido(this);   }
-
-    public void cambiarEstadoFaltaEnvido() {this.estadoDeJuego = new EstadoFaltaEnvido(this);   }
-
-    public void cambiarEstadoEnvido() {this.estadoDeJuego = new EstadoEnvido(this);
-        this.manejadorDeTurnos.pasarElTurno();
-    }
-
-    public void cambiarEstadoTruco() {this.estadoDeJuego = new EstadoTruco(this);    }
-
-    public void cambiarEstadoValeCuatro() {this.estadoDeJuego = new EstadoValeCuatro(this);    }
-
-    public void cambiarEstadoRetruco() {this.estadoDeJuego = new EstadoRetruco(this);
-    }
 
     public void setEstadoDeJuego(EstadoDeJuego estadoDeJuego) {
         this.estadoDeJuego = estadoDeJuego;
@@ -53,10 +38,6 @@ public class Juego {
 
     public void configurarManejadorDeTurnos(){ this.manejadorDeTurnos = new ManejadorDeTurnos(this.listaDeJugadores,this); }
 
-    public void cambiarEstadoEnvidoEnvido() {
-        this.estadoDeJuego = new EstadoEnvidoEnvido(this);
-    }
-
     public void agregarJugador(Jugador jugador) {       listaDeJugadores.agregarUltimo(jugador);    }
 
     public void repartirCartasAJugadores() {
@@ -67,10 +48,11 @@ public class Juego {
         }
     }
 
-    public void seCantaEnvido() {  this.manejadorDeTurnos.getJugadorConTurnoActual().envido();  }
+    public void seCantaEnvido() { this.estadoDeJuego.envido();
+    this.manejadorDeTurnos.pasarTurno();}
 
     public void noSeQuizoEnvido() {
-        this.manejadorDeTurnos.volverElTurno();
+        this.manejadorDeTurnos.pasarTurno();
         this.manejadorDeTurnos.getJugadorConTurnoActual().getEquipo().sumarPuntos(1);
 
     }
@@ -82,5 +64,11 @@ public class Juego {
         CartaJugada cartaJugada = new CartaJugada(carta,jugadorConTurno);
         this.mesaDelJuego.agregarCartaALsitaDeCartasJugadas(cartaJugada);
         this.manejadorDeTurnos.pasarElTurno();
+    }
+
+
+    public void seCantaTruco() {
+        this.estadoDeJuego.truco();
+        this.manejadorDeTurnos.pasarTurno();
     }
 }

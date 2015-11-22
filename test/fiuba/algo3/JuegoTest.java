@@ -100,6 +100,19 @@ public class JuegoTest {
         Assert.assertEquals("jugador1" ,this.juego.mesaDelJuego().ganadorDeMano().getNombre());
     }
 
+    @Test
+    public void seCantaTrucoEnLaPrimeraManoYelSegundoJugadorCantaElEnvidoYElQueCantTrucoNoQuiere(){
+        jugador1.setJuego(juego);
+        jugador2.setJuego(juego);
+        juego.agregarJugador(jugador1);
+        juego.agregarJugador(jugador2);
+        juego.configurarManejadorDeTurnos();
+        jugador1.truco();
+        jugador2.envido();
+        jugador1.noQuiero();
+
+        Assert.assertEquals(jugador2.getEquipo().getPuntaje(),1);
+    }
 
 
 

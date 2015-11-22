@@ -33,7 +33,7 @@ public class EstadoRetruco implements EstadoDeJuego {
     }
 
     @Override
-    public void valeCuatro() {this.juego.cambiarEstadoValeCuatro();
+    public void valeCuatro() {this.juego.setEstadoDeJuego(new EstadoValeCuatro(juego));
     }
 
     @Override

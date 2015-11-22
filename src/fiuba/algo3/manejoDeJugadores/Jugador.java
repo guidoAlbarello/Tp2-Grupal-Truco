@@ -45,7 +45,7 @@ public class Jugador {
     public Equipo getEquipo() {  return this.equipo;  }
 
     public void envido() {
-        this.juego.cambiarEstadoEnvido();
+        this.juego.seCantaEnvido();
     }
 
     public void noQuiero() {
@@ -58,6 +58,10 @@ public class Jugador {
 
     public Carta jugarCartaEnPosicion(int indiceDeLaCarta){
         return this.manoDelJugador.jugarCarta(indiceDeLaCarta);
+    }
+
+    public void truco() {
+        this.juego.seCantaTruco();
     }
 
 

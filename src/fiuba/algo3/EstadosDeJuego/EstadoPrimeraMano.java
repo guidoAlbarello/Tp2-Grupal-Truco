@@ -16,22 +16,22 @@ public class EstadoPrimeraMano implements EstadoDeJuego {
 
     @Override
     public void envido() {
-        this.juego.cambiarEstadoEnvido();
+        this.juego.setEstadoDeJuego(new EstadoEnvidoEnvido(this.juego));
     }
 
     @Override
     public void realEnvido() {
-        this.juego.cambiarEstadoRealEnvido();
+        this.juego.setEstadoDeJuego(new EstadoRealEnvido(juego));
     }
 
     @Override
     public void faltaEnvido() {
-        this.juego.cambiarEstadoFaltaEnvido();
+        this.juego.setEstadoDeJuego(new EstadoFaltaEnvido(juego));
     }
 
     @Override
     public void truco() {
-        this.juego.cambiarEstadoTruco();
+        this.juego.setEstadoDeJuego(new EstadoTruco(juego));
     }
 
     @Override
