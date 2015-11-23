@@ -26,11 +26,10 @@ public class Mesa {
     }
 
     public void agregarCartaALsitaDeCartasJugadas(CartaJugada cartaJugada) {
-        this.listaDeCartasJugadas.add(cartaJugada);
-        if (listaDeCartasJugadas.size() == 2){//para el caso de 2 jugadores
-            this.ganadorDeMano().getEquipo().ganarMano();
-            this.limpiarCartasEnMesa();
-        }
+            this.listaDeCartasJugadas.add(cartaJugada);
+            if (cartaJugada.getCarta().getValorDePoder() > ganadora.getCarta().getValorDePoder()){   //ESTO SUENA MAL CUANDO LOS 4 JUGADORES TIREN LOS 4 CUATROS....
+                this.ganadora=cartaJugada;
+            }
 
     }
 

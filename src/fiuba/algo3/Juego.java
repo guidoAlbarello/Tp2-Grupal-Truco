@@ -31,14 +31,7 @@ public class Juego {
 
     public void jugarCarta(CartaJugada cartaJugada) {
         estadoDeJuego.jugarCarta(cartaJugada);
-
-        this.manejadorDeTurnos.pasarTurnoCantos();
-        Equipo equipo1 = listaDeJugadores.getPrimero().getJugador().getEquipo();
-        Equipo equipo2 = listaDeJugadores.getUltimo().getJugador().getEquipo();
-        if (equipo1.getManosGanadas() == 2)
-            equipo1.sumarPuntos(1);
-        if (equipo2.getManosGanadas() == 2)
-            equipo2.sumarPuntos(1);
+        this.manejadorDeTurnos.pasarTurnoCartas();
     }
 
     public Mesa mesaDelJuego() {       return this.mesaDelJuego;    }
