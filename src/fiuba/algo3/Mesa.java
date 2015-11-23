@@ -60,5 +60,6 @@ public class Mesa {
 
     public void limpiarCartasEnMesa() {
         this.listaDeCartasJugadas.clear();
+        this.ganadora = new CartaJugada(new Carta(4, new PaloCopa()),null);
     }
 }

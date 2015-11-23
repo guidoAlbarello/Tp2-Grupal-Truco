@@ -76,6 +76,9 @@ public class ManejadorDeTurnos {
         this.juego.setEstadoDeJuego(new EstadoJuegoConFlor(juego));
         this.juego.setPuntosDeTruco(1);//vuelven a 1 par ala siguente ronda
     }
+
+
+
     public void pasarTurnoCartas(){
         this.turnoActual = this.turnoActual.getSiguiente();
         this.vecesQueSePasoElTurno+=1;

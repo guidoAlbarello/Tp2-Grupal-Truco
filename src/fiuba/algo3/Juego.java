@@ -45,6 +45,8 @@ public class Juego {
 
     public void repartirCartasAJugadores() {
         this.listaDeJugadores.sacarCartasATodosLosJugadores();
+        this.mazoDelJuego = new Mazo();
+        this.mazoDelJuego.mezclarMazo();
         for (int i = 0 ; i < this.listaDeJugadores.getTamanio() ; i++) {
             Jugador actual = this.listaDeJugadores.getJugadorEnPosicion(i);
             this.mazoDelJuego.repartirCartasAJugador(actual);

@@ -314,4 +314,42 @@ public class JuegoTest {
     }
 
 
+    @Test
+    public void testPasaManoyReparteCartasCuandoTerminaRonda(){
+
+        jugador1.recibirCarta(new Carta(11,paloOro));  //carta en posicion 0
+        jugador1.recibirCarta(new Carta(5,paloCopa)); //carta en posicion 1
+        jugador1.recibirCarta(new Carta(6,paloBasto));  //carta en posicion 2
+
+        jugador2.recibirCarta(new Carta(10,paloBasto));   //carta en posicion 0
+        jugador2.recibirCarta(new Carta(6,paloOro));      //carta en posicion 1
+        jugador2.recibirCarta(new Carta(3,paloOro));   //carta en posicion 2
+
+        jugador1.jugarCartaEnPosicion(0);
+        jugador2.jugarCartaEnPosicion(0);
+
+        jugador1.jugarCartaEnPosicion(1);
+        jugador2.jugarCartaEnPosicion(1);
+
+        jugador1.jugarCartaEnPosicion(2);
+        jugador2.jugarCartaEnPosicion(2);
+
+
+        //suma 1 pt por ganar ronda
+        Assert.assertEquals(1,jugador2.getEquipo().getPuntaje());
+
+
+        //termina la ronda y el jugador2, ahora es mano
+        Assert.assertEquals(jugador2,juego.manejadorDeTurnos.getJugadorQueEsMano());
+
+
+        //Verifico que cuando la ronda termino se repartieron las cartas
+        Assert.assertEquals(3,jugador1.getMano().getCartasEnMano().size());
+        Assert.assertEquals(3,jugador2.getMano().getCartasEnMano().size());
+
+
+
+    }
+
+
 }
