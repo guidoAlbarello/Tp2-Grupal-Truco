@@ -15,16 +15,20 @@ public class Juego {
     private ListaJugadores listaDeJugadores;
     public ManejadorDeTurnos manejadorDeTurnos;
     private Mazo mazoDelJuego;
+    private int puntosDeTruco;
 
     public Juego(){
         this.estadoDeJuego = new EstadoPrimeraMano(this);//no se si esta bien inicializarlo asi peor por ahora lo dejo asi
         this.mesaDelJuego = new Mesa();
         this.listaDeJugadores = new ListaJugadores();
         this.mazoDelJuego = new Mazo();
+        this.puntosDeTruco= 1;
     }
 
 
-
+    public int getPuntosDeTruco(){
+        return this.puntosDeTruco;
+    }
     public void setEstadoDeJuego(EstadoDeJuego estadoDeJuego) {
         this.estadoDeJuego = estadoDeJuego;
     }
@@ -105,5 +109,15 @@ public class Juego {
 
     public void agregarCartaAMesa(CartaJugada cartaJugada) {
         this.mesaDelJuego.agregarCartaALsitaDeCartasJugadas(cartaJugada);
+    }
+
+    public void siSeQuizoTruco() {
+        this.manejadorDeTurnos.volverTurnoCanto();
+        this.puntosDeTruco = this.estadoDeJuego.puntosDeEstado();
+
+    }
+
+    public void setPuntosDeTruco(int puntosDeTruco) {
+        this.puntosDeTruco = puntosDeTruco;
     }
 }

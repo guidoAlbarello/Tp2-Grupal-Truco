@@ -113,11 +113,11 @@ public class JuegoTest {
     public void testEnvidoEnvidoQuerido(){
         jugador1.recibirCarta(new Carta(11,paloOro));
         jugador1.recibirCarta(new Carta(5,paloBasto));
-        jugador1.recibirCarta(new Carta(6,paloBasto));          // ENVIDO SUPUESTO 31
+        jugador1.recibirCarta(new Carta(6,paloBasto));
 
         jugador2.recibirCarta(new Carta(7,paloEspada));
         jugador2.recibirCarta(new Carta(3,paloBasto));
-        jugador2.recibirCarta(new Carta(6,paloEspada));          //ENVIDO SUPUESTO 33
+        jugador2.recibirCarta(new Carta(6,paloEspada));
 
 
         jugador1.envido();
@@ -130,11 +130,11 @@ public class JuegoTest {
     public void testRealEnvidoQuerido(){
         jugador1.recibirCarta(new Carta(11,paloOro));
         jugador1.recibirCarta(new Carta(5,paloBasto));
-        jugador1.recibirCarta(new Carta(6,paloBasto));          // ENVIDO SUPUESTO 31
+        jugador1.recibirCarta(new Carta(6,paloBasto));
 
         jugador2.recibirCarta(new Carta(7,paloEspada));
         jugador2.recibirCarta(new Carta(3,paloBasto));
-        jugador2.recibirCarta(new Carta(6,paloEspada));          //ENVIDO SUPUESTO 33
+        jugador2.recibirCarta(new Carta(6,paloEspada));
 
         jugador1.realEnvido();
         jugador2.quiero();
@@ -166,11 +166,11 @@ public class JuegoTest {
     public void seCantaUnEnvidoYLuegoSeJueganCartasJugador1Gana2PuntosDelEnvidoYjuagdor2GanaLaRonda(){
         jugador1.recibirCarta(new Carta(11,paloOro));
         jugador1.recibirCarta(new Carta(5,paloBasto));
-        jugador1.recibirCarta(new Carta(6,paloBasto));          // ENVIDO SUPUESTO 31
+        jugador1.recibirCarta(new Carta(6,paloBasto));
 
         jugador2.recibirCarta(new Carta(7,paloBasto));
         jugador2.recibirCarta(new Carta(6,paloOro));
-        jugador2.recibirCarta(new Carta(3,paloEspada));          //ENVIDO SUPUESTO 33
+        jugador2.recibirCarta(new Carta(3,paloEspada));
 
         jugador1.envido();
         jugador2.quiero();
@@ -183,6 +183,50 @@ public class JuegoTest {
 
         Assert.assertEquals(1,jugador2.getEquipo().getPuntaje());
         Assert.assertEquals(2,jugador1.getEquipo().getPuntaje());
+    }
+
+    @Test
+         public void seJuegan2ManosYelmismoJugadorGanaLas2Manos(){
+        jugador1.recibirCarta(new Carta(11,paloOro));
+        jugador1.recibirCarta(new Carta(5,paloBasto));
+        jugador1.recibirCarta(new Carta(6,paloBasto));
+
+        jugador2.recibirCarta(new Carta(7,paloBasto));
+        jugador2.recibirCarta(new Carta(6,paloOro));
+        jugador2.recibirCarta(new Carta(3,paloEspada));
+
+        jugador1.envido();
+        jugador2.quiero();
+
+        jugador1.jugarCartaEnPosicion(1);
+        jugador2.jugarCartaEnPosicion(1);
+        jugador1.jugarCartaEnPosicion(2);
+        jugador2.jugarCartaEnPosicion(2);
+
+        Assert.assertEquals(1,jugador2.getEquipo().getPuntaje());
+    }
+
+    @Test
+    public void seCantaTrucoYseAceptaYSeSuman2untosAganadorDeLaRonda(){
+        jugador1.recibirCarta(new Carta(11,paloOro));
+        jugador1.recibirCarta(new Carta(5,paloBasto));
+        jugador1.recibirCarta(new Carta(6,paloBasto));
+
+        jugador2.recibirCarta(new Carta(7,paloBasto));
+        jugador2.recibirCarta(new Carta(6,paloOro));
+        jugador2.recibirCarta(new Carta(3,paloEspada));
+
+
+        jugador1.jugarCartaEnPosicion(0);
+        jugador2.jugarCartaEnPosicion(0);
+        jugador1.jugarCartaEnPosicion(1);
+        jugador2.jugarCartaEnPosicion(1);
+        jugador1.truco();
+        jugador2.quiero();
+        jugador1.jugarCartaEnPosicion(2);
+        jugador2.jugarCartaEnPosicion(2);
+
+        Assert.assertEquals(2,jugador2.getEquipo().getPuntaje());
     }
 
 }

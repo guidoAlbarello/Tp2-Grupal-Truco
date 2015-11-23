@@ -43,7 +43,9 @@ public class EstadoTruco implements EstadoDeJuego {
 
     @Override
     public void quiero() {
-
+            this.juego.siSeQuizoTruco();
+        this.juego.setPuntosDeTruco(this.puntosDeEstado());
+        juego.setEstadoDeJuego(new EstadoTrucoJugado(juego));
     }
 
     @Override
@@ -58,7 +60,7 @@ public class EstadoTruco implements EstadoDeJuego {
 
     @Override
     public int puntosDeEstado() {
-        return 0;
+        return 2;
     }
 
     @Override
