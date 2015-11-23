@@ -9,6 +9,7 @@ import fiuba.algo3.Excepciones.NoSeResuelveRealEnvidoError;
  */
 public class EstadoRealEnvido implements EstadoDeJuego {
     protected Juego juego;
+    private int puntosDeEstado = 4;
 
     public EstadoRealEnvido(Juego juego) {
         this.juego = juego;
@@ -46,11 +47,15 @@ public class EstadoRealEnvido implements EstadoDeJuego {
 
     @Override
     public void quiero() {
-        juego.siSeQuizoEnvido();    }
+        juego.siSeQuizoEnvido();
+
+        juego.setEstadoDeJuego(new EstadoSinEnvido(juego));}
 
     @Override
     public void noQuiero() {
         juego.noSeQuizoEnvido();
+
+        juego.setEstadoDeJuego(new EstadoSinEnvido(juego));
     }
 
     @Override
@@ -60,7 +65,7 @@ public class EstadoRealEnvido implements EstadoDeJuego {
 
     @Override
     public int puntosDeEstado() {
-        return 4;
+        return puntosDeEstado;
     }
 
     @Override

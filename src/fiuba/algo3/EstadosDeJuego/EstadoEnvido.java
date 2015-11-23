@@ -54,6 +54,8 @@ public class EstadoEnvido implements EstadoDeJuego {
     @Override
     public void noQuiero() {
         juego.noSeQuizoEnvido();
+
+        juego.setEstadoDeJuego(new EstadoSinEnvido(juego));
     }
 
     @Override

@@ -41,6 +41,7 @@ public class JuegoTest {
         paloEspada = new PaloEspada();
         paloBasto = new PaloBasto();
         paloOro = new PaloOro();
+        paloCopa = new PaloCopa();
     }
 
     @Test
@@ -262,4 +263,32 @@ public class JuegoTest {
         Assert.assertEquals(4,jugador2.getEquipo().getPuntaje());
     }
 
+    @Test
+    public void rondaCompleta(){
+        jugador1.recibirCarta(new Carta(11,paloOro));  //carta en posicion 0
+        jugador1.recibirCarta(new Carta(5,paloCopa)); //carta en posicion 1
+        jugador1.recibirCarta(new Carta(6,paloBasto));  //carta en posicion 2
+        // ENVIDO = 31
+        jugador2.recibirCarta(new Carta(7,paloBasto));   //carta en posicion 0
+        jugador2.recibirCarta(new Carta(6,paloOro));      //carta en posicion 1
+        jugador2.recibirCarta(new Carta(3,paloOro));   //carta en posicion 2
+        //ENVIDO = 7
+
+        jugador1.envido();
+        jugador2.envido();
+        jugador1.quiero();
+        jugador2.jugarCartaEnPosicion(0);
+        jugador1.jugarCartaEnPosicion(0);
+        jugador2.truco();
+        jugador1.retruco();
+        jugador2.quiero();
+        jugador1.jugarCartaEnPosicion(1);
+        jugador2.jugarCartaEnPosicion(1);
+        jugador1.valeCuatro();
+        jugador2.quiero();
+        jugador1.jugarCartaEnPosicion(2);
+        jugador2.jugarCartaEnPosicion(2);
+
+        Assert.assertEquals(7,jugador2.getEquipo().getPuntaje());
+    }
 }

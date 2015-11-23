@@ -45,12 +45,13 @@ public class EstadoEnvidoEnvido implements EstadoDeJuego{
     @Override
     public void quiero() {
         this.juego.siSeQuizoEnvido();
+
+        juego.setEstadoDeJuego(new EstadoSinEnvido(juego));
     }
 
     @Override
     public void noQuiero() {
-        //resolver que no se acepte - sumarle 1 punto al que canto el envido
-    }
+        juego.noSeQuizoEnvido();    }
 
     @Override
     public void irseAlMaso() {throw new NoSeResuelveEnvidoEnvidoError();
