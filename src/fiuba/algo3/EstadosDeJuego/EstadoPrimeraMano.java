@@ -16,6 +16,7 @@ public class EstadoPrimeraMano implements EstadoDeJuego {
 
     @Override
     public void envido() {
+        this.juego.manejadorDeTurnos.pasarTurnoCantos();
         this.juego.setEstadoDeJuego(new EstadoEnvido(this.juego));
     }
 

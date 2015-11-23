@@ -1,7 +1,6 @@
 package fiuba.algo3;
 
 import fiuba.algo3.EstadosDeJuego.*;
-import fiuba.algo3.ModeladoDeCarta.Carta;
 import fiuba.algo3.manejoDeJugadores.Equipo;
 import fiuba.algo3.manejoDeJugadores.Jugador;
 import fiuba.algo3.manejoDeJugadores.ListaJugadores;
@@ -14,7 +13,7 @@ public class Juego {
     private EstadoDeJuego estadoDeJuego;
     private Mesa mesaDelJuego;
     private ListaJugadores listaDeJugadores;
-    private ManejadorDeTurnos manejadorDeTurnos;
+    public ManejadorDeTurnos manejadorDeTurnos;
     private Mazo mazoDelJuego;
 
     public Juego(){
@@ -33,7 +32,7 @@ public class Juego {
     public void jugarCarta(CartaJugada cartaJugada) {
         estadoDeJuego.jugarCarta(cartaJugada);
 
-        this.manejadorDeTurnos.pasarTurno();
+        this.manejadorDeTurnos.pasarTurnoCantos();
         Equipo equipo1 = listaDeJugadores.getPrimero().getJugador().getEquipo();
         Equipo equipo2 = listaDeJugadores.getUltimo().getJugador().getEquipo();
         if (equipo1.getManosGanadas() == 2)
@@ -56,19 +55,16 @@ public class Juego {
         }
     }
 
-    public void seCantaEnvido() { this.estadoDeJuego.envido();
-    this.manejadorDeTurnos.pasarTurno();}
+    public void seCantaEnvido() {
+        this.estadoDeJuego.envido();
+    }
 
     public void noQuiero(){
-
-        this.manejadorDeTurnos.pasarTurno();
         this.estadoDeJuego.noQuiero();
-
-
     }
 
     public void noSeQuizoEnvido() {
-        this.manejadorDeTurnos.getJugadorConTurnoActual().getEquipo().sumarPuntos(1);
+        this.manejadorDeTurnos.getJugadorConTurnoCanto().getEquipo().sumarPuntos(1);
 
     }
 
@@ -78,17 +74,17 @@ public class Juego {
         Carta carta = jugadorConTurno.jugarCartaEnPosicion(indiceDeLaCarta);
         CartaJugada cartaJugada = new CartaJugada(carta,jugadorConTurno);
         this.mesaDelJuego.agregarCartaALsitaDeCartasJugadas(cartaJugada);
-        this.manejadorDeTurnos.pasarElTurno();
+        this.manejadorDeTurnos.pasarTurnoCartas();
     }
 */
 
     public void seCantaTruco() {
         this.estadoDeJuego.truco();
-        this.manejadorDeTurnos.pasarTurno();
+        this.manejadorDeTurnos.pasarTurnoCantos();
     }
 
     public void quiero() {
-        this.manejadorDeTurnos.pasarTurno();
+        this.manejadorDeTurnos.pasarTurnoCantos();
         this.estadoDeJuego.quiero();
     }
 
@@ -107,7 +103,7 @@ public class Juego {
 
     public void seCantaRealEnvido() {
         this.estadoDeJuego.realEnvido();
-        this.manejadorDeTurnos.pasarTurno();
+        this.manejadorDeTurnos.pasarTurnoCantos();
     }
 
     public void agregarCartaAMesa(CartaJugada cartaJugada) {

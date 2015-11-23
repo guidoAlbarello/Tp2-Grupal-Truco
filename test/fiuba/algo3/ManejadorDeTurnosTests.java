@@ -1,7 +1,6 @@
 package fiuba.algo3;
 
 import fiuba.algo3.ModeladoDeCarta.*;
-import fiuba.algo3.manejoDeJugadores.Equipo;
 import fiuba.algo3.manejoDeJugadores.Jugador;
 import fiuba.algo3.manejoDeJugadores.ListaJugadores;
 import fiuba.algo3.manejoDeJugadores.ManejadorDeTurnos;
@@ -86,17 +85,17 @@ public class ManejadorDeTurnosTests {
         //DOY UNA VUELTA EN LA MESA (una mano completa)
 
         Assert.assertTrue(1==turnos.getManoActual());
-        turnos.pasarElTurno();
+        turnos.pasarTurnoCartas();
         Assert.assertEquals(jugador2,turnos.getJugadorConTurnoActual());
 
-        turnos.pasarElTurno();
+        turnos.pasarTurnoCartas();
         Assert.assertEquals(jugador3,turnos.getJugadorConTurnoActual());
 
-        turnos.pasarElTurno();
+        turnos.pasarTurnoCartas();
         Assert.assertEquals(jugador4,turnos.getJugadorConTurnoActual());
         Assert.assertTrue(1==turnos.getRondaActual());
 
-        turnos.pasarElTurno();
+        turnos.pasarTurnoCartas();
         Assert.assertEquals(jugador1,turnos.getJugadorConTurnoActual());
         Assert.assertTrue(2==turnos.getManoActual());
     }
@@ -106,31 +105,31 @@ public class ManejadorDeTurnosTests {
     public void testPasarTurnoEnUnaRondaCompleta(){
         //DOY UNA VUELTA EN LA MESA (una mano completa)
 
-        turnos.pasarElTurno();
+        turnos.pasarTurnoCartas();
 
-        turnos.pasarElTurno();
+        turnos.pasarTurnoCartas();
 
-        turnos.pasarElTurno();
+        turnos.pasarTurnoCartas();
 
-        turnos.pasarElTurno();
+        turnos.pasarTurnoCartas();
         Assert.assertEquals(2,turnos.getManoActual());
         //--------------------------------------- COMIENZA SEGUNDA MANO
-        turnos.pasarElTurno();
+        turnos.pasarTurnoCartas();
 
-        turnos.pasarElTurno();
+        turnos.pasarTurnoCartas();
 
-        turnos.pasarElTurno();
+        turnos.pasarTurnoCartas();
 
-        turnos.pasarElTurno();
+        turnos.pasarTurnoCartas();
         Assert.assertEquals(3,turnos.getManoActual());
         //--------------------------------------- COMIENZA ULTIMA MANO
-        turnos.pasarElTurno();
+        turnos.pasarTurnoCartas();
 
-        turnos.pasarElTurno();
+        turnos.pasarTurnoCartas();
 
-        turnos.pasarElTurno();
+        turnos.pasarTurnoCartas();
 
-        turnos.pasarElTurno();
+        turnos.pasarTurnoCartas();
         Assert.assertEquals(1,turnos.getManoActual());//SE VERIFICA QUE TERMINO LA ULTIMA MANO Y SE PASA A OTRA RONDA
         Assert.assertTrue(2==turnos.getRondaActual());
     }
@@ -149,7 +148,7 @@ public class ManejadorDeTurnosTests {
 
         Assert.assertEquals(jugador2,turnos.getJugadorSiguienteAlTurnoActual());
 
-        turnos.pasarElTurno();
+        turnos.pasarTurnoCartas();
 
         Assert.assertEquals(jugador2,turnos.getJugadorConTurnoActual());
 

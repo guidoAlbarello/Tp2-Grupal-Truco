@@ -76,11 +76,11 @@ public class ListaJugadores {
 
     private void configurarEquipoParaUnJugador(Jugador jugador) {
         if (tamanio%2 == 0){
-            jugador.setEquipo(equipo1);
+            jugador.setEquipo(equipo2);
             equipo1.agregarJugador(jugador);
         }
         else{
-            jugador.setEquipo(equipo2);
+            jugador.setEquipo(equipo1);
             equipo2.agregarJugador(jugador);
             }
     }

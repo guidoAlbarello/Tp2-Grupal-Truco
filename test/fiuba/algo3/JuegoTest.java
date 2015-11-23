@@ -65,11 +65,8 @@ public class JuegoTest {
 
         juego.repartirCartasAJugadores();
         jugador1.envido();
-        jugador2.noQuiero(); //PARA MI ESTO NO TIENE QUE SER ASI...
-        //tiene que ser asi
-        //juego.seCantaEnvido();
-        //juego.noSeQuizoEnvido();
-        Assert.assertTrue( jugador1.getEquipo().getPuntaje() == 1);
+        jugador2.noQuiero();
+        Assert.assertEquals(1, jugador1.getEquipo().getPuntaje());
     }
 
     @Test

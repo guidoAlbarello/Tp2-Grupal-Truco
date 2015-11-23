@@ -10,10 +10,16 @@ public class ManejadorDeTurnos {
 
     private NodoJugador jugadorMano;
     private NodoJugador turnoActual;
+    private ListaJugadores jugadores;
+
+
     private int manoActual;                                     // esto lo pongo aca, quizas haya que moverlo a mesa o donde quieran
     private int rondaActual;                                    // esto lo pongo aca, quizas haya que moverlo a mesa o donde quieran
-    private ListaJugadores jugadores;
     private int vecesQueSePasoElTurno;                          // esto lo pongo aca, quizas haya que moverlo a mesa o donde quieran
+
+    private NodoJugador jugadorCanto;
+
+
     private Juego juego;
     private Mesa mesa;
 
@@ -21,6 +27,7 @@ public class ManejadorDeTurnos {
     public ManejadorDeTurnos(ListaJugadores listaDeJugadores, Juego juego) {
         this.jugadorMano = listaDeJugadores.getPrimero();
         this.turnoActual = listaDeJugadores.getPrimero();
+        this.jugadorCanto = this.turnoActual;
         this.manoActual = 1;
         this.rondaActual=+1;
         this.jugadores = listaDeJugadores;
@@ -53,17 +60,17 @@ public class ManejadorDeTurnos {
 
     public Jugador getJugadorConTurnoActual() {     return this.turnoActual.getJugador();    }
 
+    public Jugador getJugadorConTurnoCanto() { return this.jugadorCanto.getJugador(); }
 
     public Integer getNumeroDeManoActual(){    return this.manoActual;   }
 
-    public void pasarTurno(){//c Anthony : cre este metodo por q no me  sirve de que pasa el turno pase el tunro y a la vez calcule cosas
-        this.turnoActual = this.turnoActual.getSiguiente();
+    public void pasarTurnoCantos(){//c Anthony : cre este metodo por q no me  sirve de que pasa el turno pase el tunro y a la vez calcule cosas
+        this.jugadorCanto = this.jugadorCanto.getSiguiente();
     }
 
 
-    public void pasarElTurno(){
-        this.turnoActual = this.turnoActual.getSiguiente();                         //SI LE QUIEREN SACAR ESTA FUNCIONALIDAD CAMBIAR DE ACA PARA ABAJO (EN ESTE METODO)
-                                                                                    // TAMBIEN SACAR LO DE GET MANOACTUAL
+    public void pasarTurnoCartas(){
+        this.turnoActual = this.turnoActual.getSiguiente();
         this.vecesQueSePasoElTurno+=1;
         if (this.vecesQueSePasoElTurno == this.jugadores.getTamanio()){ //SI TERMINO LA MANO
             this.manoActual+=1;
@@ -81,7 +88,9 @@ public class ManejadorDeTurnos {
 
     }
 
-    public void volverElTurno(){   this.turnoActual = this.turnoActual.getAnterior();   }
+
+
+    public void volverTurnoCanto(){   this.jugadorCanto = this.jugadorCanto.getAnterior();   }
 
     public void setJugadorTurnoActual(NodoJugador jugadorConTurnoActual) {
         this.turnoActual = jugadorConTurnoActual;
