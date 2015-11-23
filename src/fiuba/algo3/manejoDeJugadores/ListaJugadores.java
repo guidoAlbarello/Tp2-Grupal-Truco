@@ -108,11 +108,11 @@ public class ListaJugadores {
         }
     }
 
-    public boolean hayGanador() {
+    public boolean hayGanador(Jugador emparde) {
         NodoJugador nodoActual = this.primero;
         Jugador jugadorActual = nodoActual.getJugador();
         for (int i = 0 ; i< this.tamanio ; i++){
-            if (jugadorActual.getEquipo().getManosGanadas()==2){ // O SI EMPARDO PRIMERA Y GANO OTRA - - - TODO IMPLMENTAR
+            if (jugadorActual.getEquipo().getManosGanadas()==2 | (emparde.getEquipo().getManosGanadas()==1 & jugadorActual.getEquipo().getManosGanadas()==1)){
                 this.ganadorDeRonda = jugadorActual.getEquipo();
                 return true;
             }

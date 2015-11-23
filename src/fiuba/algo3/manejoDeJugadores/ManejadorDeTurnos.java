@@ -87,9 +87,10 @@ public class ManejadorDeTurnos {
             this.vecesQueSePasoElTurno=0;
             Jugador ganador = this.mesa.ganadorDeManoUsandoIndicesDeCartas();
             ganador.getEquipo().ganarMano();
-            this.setJugadorTurnoActual(this.jugadores.buscarNodoJugadorPorJugador(ganador));
+            if (!ganador.getNombre().equals("emparde")){
+                this.setJugadorTurnoActual(this.jugadores.buscarNodoJugadorPorJugador(ganador)); }
             this.mesa.limpiarCartasEnMesa();
-            if (this.manoActual==4 | this.jugadores.hayGanador()){                                    //SI TERMINO LA RONDA
+            if (this.manoActual==4 | this.jugadores.hayGanador(this.mesa.getEmparde())){                                    //SI TERMINO LA RONDA
                 this.jugadores.getEquipoGanador().sumarPuntos(this.juego.getPuntosDeTruco());                                      //se suman puntosDeEstado depende del estado HARCODIE Y PUSE 1
                 this.reiniciarRonda();
             }
