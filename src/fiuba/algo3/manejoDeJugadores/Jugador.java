@@ -72,6 +72,14 @@ public class Jugador {
         this.juego.seCantaRealEnvido();
     }
 
+    public void retruco() {
+        this.juego.seCantaRetruco();
+    }
+
+    public void valeCuatro() {
+        this.juego.seCantaValeCuatro();
+    }
+
 
     //public int calcularEnvido() {}
 

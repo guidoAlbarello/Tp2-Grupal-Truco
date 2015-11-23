@@ -9,8 +9,10 @@ import fiuba.algo3.Excepciones.NoSeResuelveTrucoError;
  */
 public class EstadoTruco implements EstadoDeJuego {
     private Juego juego;
+    private int puntosDeEstado;
+
     public EstadoTruco(Juego juego) {
-        this.juego = juego;
+        this.juego = juego;this.puntosDeEstado = 2;
     }
     @Override
     public void envido() {
@@ -60,7 +62,7 @@ public class EstadoTruco implements EstadoDeJuego {
 
     @Override
     public int puntosDeEstado() {
-        return 2;
+        return this.puntosDeEstado;
     }
 
     @Override

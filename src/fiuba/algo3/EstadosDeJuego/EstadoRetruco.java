@@ -9,8 +9,10 @@ import fiuba.algo3.Excepciones.NoSeResuelveRetrucoError;
  */
 public class EstadoRetruco implements EstadoDeJuego {
     private Juego juego;
+    private int puntosDeEstado;
+
     public EstadoRetruco(Juego juego) {
-        this.juego = juego;
+        this.juego = juego;this.puntosDeEstado = 3;
     }
     @Override
     public void envido() {throw new NoSeResuelveRetrucoError();
@@ -38,7 +40,9 @@ public class EstadoRetruco implements EstadoDeJuego {
 
     @Override
     public void quiero() {
-
+        this.juego.siSeQuizoTruco();
+        this.juego.setPuntosDeTruco(this.puntosDeEstado());
+        juego.setEstadoDeJuego(new EstadoTrucoJugado(juego));
     }
 
     @Override
@@ -52,11 +56,12 @@ public class EstadoRetruco implements EstadoDeJuego {
 
     @Override
     public int puntosDeEstado() {
-        return 0;
+        return this.puntosDeEstado;
     }
 
     @Override
     public void jugarCarta(CartaJugada cartaJugada) {
-        throw new NoSeResuelveRetrucoError();
+
+        this.juego.agregarCartaAMesa(cartaJugada);
     }
 }

@@ -113,11 +113,20 @@ public class Juego {
 
     public void siSeQuizoTruco() {
         this.manejadorDeTurnos.volverTurnoCanto();
-        this.puntosDeTruco = this.estadoDeJuego.puntosDeEstado();
 
     }
 
     public void setPuntosDeTruco(int puntosDeTruco) {
         this.puntosDeTruco = puntosDeTruco;
+    }
+
+    public void seCantaRetruco() {
+        this.estadoDeJuego.retruco();
+        this.manejadorDeTurnos.volverTurnoCanto();
+    }
+
+    public void seCantaValeCuatro() {
+        this.estadoDeJuego.valeCuatro();
+        this.manejadorDeTurnos.volverTurnoCanto();
     }
 }

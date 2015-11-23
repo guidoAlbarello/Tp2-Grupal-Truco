@@ -115,9 +115,9 @@ public class JuegoTest {
         jugador1.recibirCarta(new Carta(5,paloBasto));
         jugador1.recibirCarta(new Carta(6,paloBasto));          // ENVIDO SUPUESTO 31
 
-        jugador2.recibirCarta(new Carta(7,paloEspada));
-        jugador2.recibirCarta(new Carta(3,paloBasto));
-        jugador2.recibirCarta(new Carta(6,paloEspada));          //ENVIDO SUPUESTO 33
+        jugador2.recibirCarta(new Carta(7, paloEspada));
+        jugador2.recibirCarta(new Carta(3, paloBasto));
+        jugador2.recibirCarta(new Carta(6, paloEspada));          //ENVIDO SUPUESTO 33
 
 
         jugador1.envido();
@@ -182,8 +182,83 @@ public class JuegoTest {
         jugador1.jugarCartaEnPosicion(2);
         jugador2.jugarCartaEnPosicion(2);
 
-        Assert.assertEquals(1,jugador2.getEquipo().getPuntaje());
+        Assert.assertEquals(1, jugador2.getEquipo().getPuntaje());
         Assert.assertEquals(2,jugador1.getEquipo().getPuntaje());
     }
+
+    @Test
+    public void seCantaTrucoYSeAceptaAlfinalDeLarondaElGanadorSeLleva2Puntos(){
+        jugador1.recibirCarta(new Carta(11,paloOro));  //carta en posicion 0
+        jugador1.recibirCarta(new Carta(5,paloBasto)); //carta en posicion 1
+        jugador1.recibirCarta(new Carta(6,paloBasto));  //carta en posicion 2
+        // ENVIDO = 31
+        jugador2.recibirCarta(new Carta(7,paloBasto));   //carta en posicion 0
+        jugador2.recibirCarta(new Carta(6,paloOro));      //carta en posicion 1
+        jugador2.recibirCarta(new Carta(3,paloEspada));   //carta en posicion 2
+        //ENVIDO = 7
+
+
+        jugador1.jugarCartaEnPosicion(0);
+        jugador2.jugarCartaEnPosicion(0);
+        jugador1.jugarCartaEnPosicion(1);
+        jugador2.jugarCartaEnPosicion(1);
+        jugador1.truco();
+        jugador2.quiero();
+        jugador1.jugarCartaEnPosicion(2);
+        jugador2.jugarCartaEnPosicion(2);
+
+        Assert.assertEquals(2,jugador2.getEquipo().getPuntaje());
+    }
+
+    @Test
+    public void seCantaTrucoYLuegoRetrucoSeAceptaAlfinalDeLarondaElGanadorSeLleva3Puntos(){
+        jugador1.recibirCarta(new Carta(11,paloOro));  //carta en posicion 0
+        jugador1.recibirCarta(new Carta(5,paloBasto)); //carta en posicion 1
+        jugador1.recibirCarta(new Carta(6,paloBasto));  //carta en posicion 2
+        // ENVIDO = 31
+        jugador2.recibirCarta(new Carta(7,paloBasto));   //carta en posicion 0
+        jugador2.recibirCarta(new Carta(6,paloOro));      //carta en posicion 1
+        jugador2.recibirCarta(new Carta(3,paloEspada));   //carta en posicion 2
+        //ENVIDO = 7
+
+
+        jugador1.jugarCartaEnPosicion(0);
+        jugador2.jugarCartaEnPosicion(0);
+        jugador1.jugarCartaEnPosicion(1);
+        jugador2.jugarCartaEnPosicion(1);
+        jugador1.truco();
+        jugador2.retruco();
+        jugador1.quiero();
+        jugador2.jugarCartaEnPosicion(2);
+        jugador1.jugarCartaEnPosicion(2);
+
+        Assert.assertEquals(3,jugador2.getEquipo().getPuntaje());
+    }
+/*
+    @Test
+    public void seCantaTrucoYLuegoRetrucoYLuegoUnVale4SeAceptaAlfinalDeLarondaElGanadorSeLleva4Puntos(){
+        jugador1.recibirCarta(new Carta(11,paloOro));  //carta en posicion 0
+        jugador1.recibirCarta(new Carta(5,paloBasto)); //carta en posicion 1
+        jugador1.recibirCarta(new Carta(6,paloBasto));  //carta en posicion 2
+        // ENVIDO = 31
+        jugador2.recibirCarta(new Carta(7,paloBasto));   //carta en posicion 0
+        jugador2.recibirCarta(new Carta(6,paloOro));      //carta en posicion 1
+        jugador2.recibirCarta(new Carta(3,paloEspada));   //carta en posicion 2
+        //ENVIDO = 7
+
+        jugador1.truco();
+        jugador2.retruco();
+        jugador1.jugarCartaEnPosicion(0);
+        jugador2.jugarCartaEnPosicion(0);
+        jugador1.jugarCartaEnPosicion(1);
+        jugador2.jugarCartaEnPosicion(1);
+
+        jugador1.valeCuatro();
+        jugador2.quiero();
+        jugador1.jugarCartaEnPosicion(2);
+        jugador2.jugarCartaEnPosicion(2);
+
+        Assert.assertEquals(4,jugador2.getEquipo().getPuntaje());
+    }*/
 
 }

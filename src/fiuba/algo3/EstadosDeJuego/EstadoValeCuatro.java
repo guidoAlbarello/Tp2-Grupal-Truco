@@ -9,9 +9,11 @@ import fiuba.algo3.Juego;
  */
 public class EstadoValeCuatro implements EstadoDeJuego {
     private Juego juego;
+    private int puntosDeEstado;
 
     public EstadoValeCuatro(Juego juego) {
         this.juego = juego;
+        this.puntosDeEstado = 4;
     }
     @Override
     public void envido() {throw new NoSeResuelvValeCuatroError();}
@@ -32,7 +34,9 @@ public class EstadoValeCuatro implements EstadoDeJuego {
     public void valeCuatro() {throw new NoSeResuelvValeCuatroError();}
 
     @Override
-    public void quiero() {throw new NoSeResuelvValeCuatroError();}
+    public void quiero() {            this.juego.siSeQuizoTruco();
+        this.juego.setPuntosDeTruco(this.puntosDeEstado());
+        juego.setEstadoDeJuego(new EstadoTrucoJugado(juego));}
 
     @Override
     public void noQuiero() {throw new NoSeResuelvValeCuatroError();}
@@ -42,11 +46,12 @@ public class EstadoValeCuatro implements EstadoDeJuego {
 
     @Override
     public int puntosDeEstado() {
-        return 0;
+        return this.puntosDeEstado;
     }
 
     @Override
     public void jugarCarta(CartaJugada cartaJugada) {
-        throw new NoSeResuelvValeCuatroError();
+
+        this.juego.agregarCartaAMesa(cartaJugada);
     }
 }
