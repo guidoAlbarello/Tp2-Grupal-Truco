@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad713f93-70cd-4514-b05c-bdcdaf751803" name="Default" comment="Agregue la logica para e">
+    <list default="true" id="ad713f93-70cd-4514-b05c-bdcdaf751803" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Mesa.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Mesa.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ListaJugadores.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ListaJugadores.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ManejadorDeTurnos.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ManejadorDeTurnos.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/JuegoTest.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/JuegoTest.java" />
     </list>
     <ignored path="Tp2-Grupal-Truco.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -97,7 +93,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.41518578">
               <caret line="85" column="31" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
-              <folding />
+              <folding>
+                <element signature="e#2237#2238#0" expanded="true" />
+                <element signature="e#2276#2277#0" expanded="true" />
+                <element signature="e#2574#2575#0" expanded="true" />
+                <element signature="e#2750#2751#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -945,7 +946,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448303749627</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Agregue la logica para detectar emparde! Con respectivo test!&#10;">
+      <created>1448306549779</created>
+      <option name="number" value="00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1448306549779</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -960,9 +967,6 @@
     </history-entry>
     <history-entry file="JuegoTest_testPrimerManoEmpardadaYSegundaDefinida - 2015.11.23 at 16h 21m 48s.xml">
       <configuration name="JuegoTest.testPrimerManoEmpardadaYSegundaDefinida" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ListaJugadoresTests_seObtieneNodoDeJugadorConElJugador - 2015.11.23 at 15h 32m 53s.xml">
-      <configuration name="ListaJugadoresTests.seObtieneNodoDeJugadorConElJugador" configurationId="JUnit" />
     </history-entry>
     <history-entry file="fiuba_algo3_in_Tp2-Grupal-Truco - 2015.11.23 at 15h 35m 21s.xml">
       <configuration name="fiuba.algo3 in Tp2-Grupal-Truco" configurationId="JUnit" />
@@ -979,6 +983,9 @@
     <history-entry file="fiuba_algo3_in_Tp2-Grupal-Truco - 2015.11.23 at 16h 22m 01s.xml">
       <configuration name="fiuba.algo3 in Tp2-Grupal-Truco" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="fiuba_algo3_in_Tp2-Grupal-Truco - 2015.11.23 at 16h 25m 53s.xml">
+      <configuration name="fiuba.algo3 in Tp2-Grupal-Truco" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -991,7 +998,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31635803" sideWeight="0.5151745" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31606767" sideWeight="0.4848255" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31606767" sideWeight="0.4848255" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24166666" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
@@ -1045,7 +1052,8 @@
     <MESSAGE value="Refactorice cuando se reparten las cartas, y agregue nuevos tests." />
     <MESSAGE value="Agregue un metodo en ListaJugadores para buscar un jugador. Con sus respectivos tests." />
     <MESSAGE value="Modifique manejador de turnos, agregue la inteligencia para que se configure que el jugador que gano la mano sea elprimero en tirar." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modifique manejador de turnos, agregue la inteligencia para que se configure que el jugador que gano la mano sea elprimero en tirar." />
+    <MESSAGE value="Agregue la logica para detectar emparde! Con respectivo test!&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregue la logica para detectar emparde! Con respectivo test!&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1476,7 +1484,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41518578">
           <caret line="85" column="31" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
-          <folding />
+          <folding>
+            <element signature="e#2237#2238#0" expanded="true" />
+            <element signature="e#2276#2277#0" expanded="true" />
+            <element signature="e#2574#2575#0" expanded="true" />
+            <element signature="e#2750#2751#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
