@@ -162,7 +162,7 @@ public class JuegoTest {
         Assert.assertEquals(1,jugador2.getEquipo().getPuntaje());
     }
 
-  /*  @Test
+   @Test
     public void seCantaUnEnvidoYLuegoSeJueganCartasJugador1Gana2PuntosDelEnvidoYjuagdor2GanaLaRonda(){
         jugador1.recibirCarta(new Carta(11,paloOro));
         jugador1.recibirCarta(new Carta(5,paloBasto));
@@ -184,5 +184,5 @@ public class JuegoTest {
         Assert.assertEquals(1,jugador2.getEquipo().getPuntaje());
         Assert.assertEquals(2,jugador1.getEquipo().getPuntaje());
     }
-*/
+
 }

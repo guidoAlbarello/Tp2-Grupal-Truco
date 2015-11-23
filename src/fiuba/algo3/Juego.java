@@ -49,7 +49,9 @@ public class Juego {
     }
 
     public void seCantaEnvido() {
+
         this.estadoDeJuego.envido();
+        this.manejadorDeTurnos.pasarTurnoCantos();
     }
 
     public void noQuiero(){
@@ -57,6 +59,7 @@ public class Juego {
     }
 
     public void noSeQuizoEnvido() {
+        this.manejadorDeTurnos.volverTurnoCanto();
         this.manejadorDeTurnos.getJugadorConTurnoCanto().getEquipo().sumarPuntos(1);
 
     }
@@ -82,12 +85,13 @@ public class Juego {
     }
 
     public void siSeQuizoEnvido() {
+        this.manejadorDeTurnos.volverTurnoCanto();
         getGanadorDeEnvido().getEquipo().sumarPuntos(estadoDeJuego.puntosDeEstado());
     }
 
     public Jugador getGanadorDeEnvido(){
         int tantosJugador1 = listaDeJugadores.getPrimero().getJugador().getMano().obtenerEnvido().getValorEnvido();
-        int tantosJugador2 = listaDeJugadores.getPrimero().getJugador().getMano().obtenerEnvido().getValorEnvido();
+        int tantosJugador2 = listaDeJugadores.getUltimo().getJugador().getMano().obtenerEnvido().getValorEnvido();
         if (tantosJugador1 > tantosJugador2)
             return listaDeJugadores.getPrimero().getJugador();
         else

@@ -48,11 +48,11 @@ public class EstadoEnvido implements EstadoDeJuego {
     @Override
     public void quiero() {
         juego.siSeQuizoEnvido();
+        juego.setEstadoDeJuego(new EstadoSinEnvido(juego));
     }
 
     @Override
     public void noQuiero() {
-        this.juego.manejadorDeTurnos.volverTurnoCanto();
         juego.noSeQuizoEnvido();
     }
 

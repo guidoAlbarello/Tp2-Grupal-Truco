@@ -2,32 +2,29 @@ package fiuba.algo3.EstadosDeJuego;
 
 import fiuba.algo3.CartaJugada;
 import fiuba.algo3.Juego;
-import fiuba.algo3.Excepciones.JugadaInvalidaPrimeraManoError;
 
 /**
- * Created by anthony on 18/11/2015.
+ * Created by anthony on 22/11/2015.
  */
-public class EstadoPrimeraMano implements EstadoDeJuego {
+public class EstadoSinEnvido implements EstadoDeJuego {
     private Juego juego;
-
-    public EstadoPrimeraMano(Juego juego) {
+    public EstadoSinEnvido(Juego juego) {
         this.juego = juego;
     }
 
     @Override
     public void envido() {
-
-        this.juego.setEstadoDeJuego(new EstadoEnvido(this.juego));
+        throw new YaSeJugoEnvidoError();
     }
 
     @Override
     public void realEnvido() {
-        this.juego.setEstadoDeJuego(new EstadoRealEnvido(juego));
+        throw new YaSeJugoEnvidoError();
     }
 
     @Override
     public void faltaEnvido() {
-        this.juego.setEstadoDeJuego(new EstadoFaltaEnvido(juego));
+        throw new YaSeJugoEnvidoError();
     }
 
     @Override
@@ -37,21 +34,22 @@ public class EstadoPrimeraMano implements EstadoDeJuego {
 
     @Override
     public void retruco() {
-        throw new JugadaInvalidaPrimeraManoError();
+        throw new NoSeJugoTruco();
     }
 
     @Override
     public void valeCuatro() {
-        throw new JugadaInvalidaPrimeraManoError();
+        throw new NoSeJugoTruco();
     }
 
     @Override
     public void quiero() {
-        throw new JugadaInvalidaPrimeraManoError();
+        throw new JugadaNoValidaError();
     }
 
     @Override
-    public void noQuiero() {throw new JugadaInvalidaPrimeraManoError();
+    public void noQuiero() {
+        throw new JugadaNoValidaError();
     }
 
     @Override
@@ -66,8 +64,7 @@ public class EstadoPrimeraMano implements EstadoDeJuego {
 
     @Override
     public void jugarCarta(CartaJugada cartaJugada) {
-        this.juego.agregarCartaAMesa(cartaJugada);
 
-        // aca tendria q pasar el turno pero no kiero tocarr eso por q todavia no tengo a  manejador de turnos
+        this.juego.agregarCartaAMesa(cartaJugada);
     }
 }
