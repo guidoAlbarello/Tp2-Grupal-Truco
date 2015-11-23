@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ad713f93-70cd-4514-b05c-bdcdaf751803" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ListaJugadores.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ListaJugadores.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fiuba/algo3/ListaJugadoresTests.java" afterPath="$PROJECT_DIR$/test/fiuba/algo3/ListaJugadoresTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ManejadorDeTurnos.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ManejadorDeTurnos.java" />
     </list>
     <ignored path="Tp2-Grupal-Truco.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ManejadorDeTurnos.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ManejadorDeTurnos.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ManejadorDeTurnos.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="87" column="55" selection-start-line="87" selection-start-column="55" selection-end-line="87" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.631664">
+              <caret line="92" column="56" selection-start-line="92" selection-start-column="56" selection-end-line="92" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -109,16 +108,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListaJugadoresTests.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/ListaJugadoresTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8352181">
-              <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -189,12 +178,12 @@
         <option value="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoEnvido.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/Jugador.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTrucoAceptado.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ManejadorDeTurnos.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/Juego.java" />
         <option value="$PROJECT_DIR$/test/fiuba/algo3/JuegoTest.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/Mesa.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ListaJugadores.java" />
         <option value="$PROJECT_DIR$/test/fiuba/algo3/ListaJugadoresTests.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ManejadorDeTurnos.java" />
       </list>
     </option>
   </component>
@@ -354,7 +343,7 @@
       <recent name="fiuba.algo3.ModeladoDeCarta" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ListaJugadoresTests.seObtieneNodoDeJugadorConElJugador">
+  <component name="RunManager" selected="JUnit.fiuba.algo3 in Tp2-Grupal-Truco">
     <configuration default="false" name="JuegoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -737,9 +726,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ListaJugadoresTests.seObtieneNodoDeJugadorConElJugador" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.JuegoTest.testDosRondasVerificarPasoDeManoIntegral" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.fiuba.algo3 in Tp2-Grupal-Truco" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.fiuba.algo3 in Tp2-Grupal-Truco" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ListaJugadoresTests.seObtieneNodoDeJugadorConElJugador" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.JuegoTest.testDosRondasVerificarPasoDeManoIntegral" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.JuegoTest" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.JuegoTest.rondaCompleta" />
       </list>
@@ -936,13 +925,16 @@
       <option name="project" value="LOCAL" />
       <updated>1448302295816</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Agregue un metodo en ListaJugadores para buscar un jugador. Con sus respectivos tests.">
+      <created>1448303611383</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1448303611383</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JuegoTest_testDosRondasVerificarPasoDeManoIntegral - 2015.11.23 at 15h 02m 12s.xml">
-      <configuration name="JuegoTest.testDosRondasVerificarPasoDeManoIntegral" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="JuegoTest_testDosRondasVerificarPasoDeManoIntegral - 2015.11.23 at 15h 03m 21s.xml">
       <configuration name="JuegoTest.testDosRondasVerificarPasoDeManoIntegral" configurationId="JUnit" />
     </history-entry>
@@ -969,6 +961,9 @@
     </history-entry>
     <history-entry file="ListaJugadoresTests_seObtieneNodoDeJugadorConElJugador - 2015.11.23 at 15h 32m 53s.xml">
       <configuration name="ListaJugadoresTests.seObtieneNodoDeJugadorConElJugador" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="fiuba_algo3_in_Tp2-Grupal-Truco - 2015.11.23 at 15h 35m 21s.xml">
+      <configuration name="fiuba.algo3 in Tp2-Grupal-Truco" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -1034,7 +1029,8 @@
     <MESSAGE value="test de simulacion de una ronda completa" />
     <MESSAGE value="test simulacion cuando un jugador se va al mazo se sumanlospuntos del truco al otro jugador" />
     <MESSAGE value="Refactorice cuando se reparten las cartas, y agregue nuevos tests." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactorice cuando se reparten las cartas, y agregue nuevos tests." />
+    <MESSAGE value="Agregue un metodo en ListaJugadores para buscar un jugador. Con sus respectivos tests." />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregue un metodo en ListaJugadores para buscar un jugador. Con sus respectivos tests." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1463,22 +1459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ManejadorDeTurnos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="87" column="55" selection-start-line="87" selection-start-column="55" selection-end-line="87" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Mesa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ListaJugadores.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1492,8 +1472,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/fiuba/algo3/ListaJugadoresTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8352181">
-          <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.7253635">
+          <caret line="57" column="42" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Mesa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ManejadorDeTurnos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.631664">
+          <caret line="92" column="56" selection-start-line="92" selection-start-column="56" selection-end-line="92" selection-end-column="56" />
           <folding />
         </state>
       </provider>
