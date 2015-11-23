@@ -15,17 +15,17 @@ public class EstadoEnvidoEnvido implements EstadoDeJuego{
 
     @Override
     public void flor() {
-
+        throw new NoSeResuelveEnvidoEnvidoError();
     }
 
     @Override
     public void contraFlor() {
-
+        throw new NoSeResuelveEnvidoEnvidoError();
     }
 
     @Override
     public void contraFlorAlResto() {
-
+        throw new NoSeResuelveEnvidoEnvidoError();
     }
 
     @Override

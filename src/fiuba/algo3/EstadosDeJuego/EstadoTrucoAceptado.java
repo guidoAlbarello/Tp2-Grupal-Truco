@@ -69,7 +69,7 @@ public class EstadoTrucoAceptado implements EstadoDeJuego {
 
     @Override
     public void irseAlMaso() {
-
+        this.juego.seFueronAlMaso();
     }
 
     @Override

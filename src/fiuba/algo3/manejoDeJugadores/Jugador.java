@@ -80,6 +80,10 @@ public class Jugador {
         this.juego.seCantaValeCuatro();
     }
 
+    public void meVoyAlMaso() {
+        this.juego.meVoyAlMaso();
+    }
+
 
     //public int calcularEnvido() {}
 

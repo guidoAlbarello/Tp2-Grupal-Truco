@@ -17,17 +17,17 @@ public class Juego {
     private int puntosDeTruco;
 
     public Juego(){
-        this.estadoDeJuego = new EstadoJuegoConFlor(this);//no se si esta bien inicializarlo asi peor por ahora lo dejo asi
+        this.estadoDeJuego = new EstadoJuegoConFlor(this);//por ahora directamente se incializa con flor depseus veremos
         this.mesaDelJuego = new Mesa();
         this.listaDeJugadores = new ListaJugadores();
         this.mazoDelJuego = new Mazo();
-        this.puntosDeTruco= 1;
+        this.puntosDeTruco= 1;// si no se quiere o un se va al maso directamente
     }
-
 
     public int getPuntosDeTruco(){
         return this.puntosDeTruco;
     }
+
     public void setEstadoDeJuego(EstadoDeJuego estadoDeJuego) {
         this.estadoDeJuego = estadoDeJuego;
     }
@@ -52,7 +52,6 @@ public class Juego {
     }
 
     public void seCantaEnvido() {
-
         this.estadoDeJuego.envido();
         this.manejadorDeTurnos.pasarTurnoCantos();
     }
@@ -67,17 +66,6 @@ public class Juego {
 
     }
 
-
-   /* public void seJuegaUnaCartaDeLaManoDelJugadorEnPosicion(int indiceDeLaCarta){
-        Jugador jugadorConTurno = this.manejadorDeTurnos.getJugadorConTurnoActual();
-        Carta carta = jugadorConTurno.jugarCartaEnPosicion(indiceDeLaCarta);
-        CartaJugada cartaJugada = new CartaJugada(carta,jugadorConTurno);
-        this.mesaDelJuego.agregarCartaALsitaDeCartasJugadas(cartaJugada);
-        this.manejadorDeTurnos.pasarTurnoCartas();
-    }
-*/
-
-
     public void quiero() {
         this.manejadorDeTurnos.pasarTurnoCantos();
         this.estadoDeJuego.quiero();
@@ -91,6 +79,8 @@ public class Juego {
     public Jugador getGanadorDeEnvido(){
         int tantosJugador1 = listaDeJugadores.getPrimero().getJugador().getMano().obtenerEnvido().getValorEnvido();
         int tantosJugador2 = listaDeJugadores.getUltimo().getJugador().getMano().obtenerEnvido().getValorEnvido();
+        if (tantosJugador1 == tantosJugador2)
+            return this.manejadorDeTurnos.getJugadorQueEsMano();
         if (tantosJugador1 > tantosJugador2)
             return listaDeJugadores.getPrimero().getJugador();
         else
@@ -127,5 +117,16 @@ public class Juego {
     public void seCantaValeCuatro() {
         this.estadoDeJuego.valeCuatro();
         this.manejadorDeTurnos.pasarTurnoCantos();
+    }
+
+
+    public void meVoyAlMaso() {
+        this.estadoDeJuego.irseAlMaso();
+    }
+
+    public void seFueronAlMaso() {
+        this.manejadorDeTurnos.pasarTurnoCantos();// paso el turno asi me paro donde el siguiente jugador que es el contrario al q se fue al mazo
+        this.manejadorDeTurnos.getJugadorConTurnoCanto().getEquipo().sumarPuntos(this.puntosDeTruco);
+        this.manejadorDeTurnos.reiniciarRonda();
     }
 }

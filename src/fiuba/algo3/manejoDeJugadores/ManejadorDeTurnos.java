@@ -1,5 +1,6 @@
 package fiuba.algo3.manejoDeJugadores;
 
+import fiuba.algo3.EstadosDeJuego.EstadoJuegoConFlor;
 import fiuba.algo3.Juego;
 import fiuba.algo3.Mesa;
 
@@ -68,7 +69,13 @@ public class ManejadorDeTurnos {
         this.jugadorCanto = this.jugadorCanto.getSiguiente();
     }
 
-
+    public void reiniciarRonda(){
+        this.jugadores.reiniciarManosGanadasDeTodosLosJugadores();
+        this.juego.repartirCartasAJugadores();
+        this.pasarMano();
+        this.juego.setEstadoDeJuego(new EstadoJuegoConFlor(juego));
+        this.juego.setPuntosDeTruco(1);//vuelven a 1 par ala siguente ronda
+    }
     public void pasarTurnoCartas(){
         this.turnoActual = this.turnoActual.getSiguiente();
         this.vecesQueSePasoElTurno+=1;
@@ -80,9 +87,7 @@ public class ManejadorDeTurnos {
             this.mesa.limpiarCartasEnMesa();
             if (this.manoActual==4 | this.jugadores.hayGanador()){                                    //SI TERMINO LA RONDA
                 this.jugadores.getEquipoGanador().sumarPuntos(this.juego.getPuntosDeTruco());                                      //se suman puntosDeEstado depende del estado HARCODIE Y PUSE 1
-                this.jugadores.reiniciarManosGanadasDeTodosLosJugadores();
-                this.juego.repartirCartasAJugadores();
-                this.pasarMano();
+                this.reiniciarRonda();
             }
         }
 

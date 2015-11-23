@@ -11,6 +11,7 @@ import fiuba.algo3.Excepciones.NoSeResuelveEnvidoError;
  */
 public class EstadoEnvido implements EstadoDeJuego {
     private Juego juego;
+    private int puntosDeEstado = 2;
 
     public EstadoEnvido(Juego juego) {
         this.juego = juego;
@@ -70,7 +71,6 @@ public class EstadoEnvido implements EstadoDeJuego {
     @Override
     public void noQuiero() {
         juego.noSeQuizoEnvido();
-
         juego.setEstadoDeJuego(new EstadoSinEnvido(juego));
     }
 
@@ -80,7 +80,7 @@ public class EstadoEnvido implements EstadoDeJuego {
 
     @Override
     public int puntosDeEstado() {
-        return 2;
+        return this.puntosDeEstado;
     }
 
     @Override

@@ -264,6 +264,27 @@ public class JuegoTest {
     }
 
     @Test
+    public void jugador1CantaTrucoYJugador2AceptaDespuesDeTirarUnasCartasJugador2SeVaAlMasoEntoncesJugador1SeLlevaLosPuntosDelTruco(){
+        jugador1.recibirCarta(new Carta(11,paloOro));  //carta en posicion 0
+        jugador1.recibirCarta(new Carta(5,paloCopa)); //carta en posicion 1
+        jugador1.recibirCarta(new Carta(6,paloBasto));  //carta en posicion 2
+        // ENVIDO = 31
+        jugador2.recibirCarta(new Carta(7,paloBasto));   //carta en posicion 0
+        jugador2.recibirCarta(new Carta(6,paloOro));      //carta en posicion 1
+        jugador2.recibirCarta(new Carta(3,paloOro));   //carta en posicion 2
+        //ENVIDO = 7
+
+        jugador1.jugarCartaEnPosicion(0);
+        jugador2.jugarCartaEnPosicion(0);
+        jugador1.truco();
+        jugador2.quiero();
+        jugador1.jugarCartaEnPosicion(1);
+        jugador2.meVoyAlMaso();
+
+        Assert.assertEquals(2,jugador1.getEquipo().getPuntaje());
+    }
+
+    @Test
     public void rondaCompleta(){
         jugador1.recibirCarta(new Carta(11,paloOro));  //carta en posicion 0
         jugador1.recibirCarta(new Carta(5,paloCopa)); //carta en posicion 1
@@ -291,4 +312,6 @@ public class JuegoTest {
 
         Assert.assertEquals(7,jugador2.getEquipo().getPuntaje());
     }
+
+
 }
