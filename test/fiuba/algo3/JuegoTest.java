@@ -234,7 +234,7 @@ public class JuegoTest {
 
         Assert.assertEquals(3,jugador2.getEquipo().getPuntaje());
     }
-/*
+
     @Test
     public void seCantaTrucoYLuegoRetrucoYLuegoUnVale4SeAceptaAlfinalDeLarondaElGanadorSeLleva4Puntos(){
         jugador1.recibirCarta(new Carta(11,paloOro));  //carta en posicion 0
@@ -248,17 +248,18 @@ public class JuegoTest {
 
         jugador1.truco();
         jugador2.retruco();
-        jugador1.jugarCartaEnPosicion(0);
+        jugador1.quiero();
         jugador2.jugarCartaEnPosicion(0);
-        jugador1.jugarCartaEnPosicion(1);
+        jugador1.jugarCartaEnPosicion(0);
         jugador2.jugarCartaEnPosicion(1);
+        jugador1.jugarCartaEnPosicion(1);
 
-        jugador1.valeCuatro();
-        jugador2.quiero();
-        jugador1.jugarCartaEnPosicion(2);
+        jugador2.valeCuatro();
+        jugador1.quiero();
         jugador2.jugarCartaEnPosicion(2);
+        jugador1.jugarCartaEnPosicion(2);
 
         Assert.assertEquals(4,jugador2.getEquipo().getPuntaje());
-    }*/
+    }
 
 }

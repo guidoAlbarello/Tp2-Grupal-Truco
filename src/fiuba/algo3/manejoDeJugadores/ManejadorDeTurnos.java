@@ -89,7 +89,6 @@ public class ManejadorDeTurnos {
     }
 
 
-
     public void volverTurnoCanto(){   this.jugadorCanto = this.jugadorCanto.getAnterior();   }
 
     public void setJugadorTurnoActual(NodoJugador jugadorConTurnoActual) {

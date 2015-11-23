@@ -6,9 +6,9 @@ import fiuba.algo3.Juego;
 /**
  * Created by anthony on 23/11/2015.
  */
-public class EstadoTrucoJugado implements EstadoDeJuego {
+public class EstadoTrucoAceptado implements EstadoDeJuego {
     private Juego juego;
-    public EstadoTrucoJugado(Juego juego) {
+    public EstadoTrucoAceptado(Juego juego) {
         this.juego = juego;
     }
 
@@ -39,7 +39,7 @@ public class EstadoTrucoJugado implements EstadoDeJuego {
 
     @Override
     public void valeCuatro() {
-
+        this.juego.setEstadoDeJuego(new EstadoValeCuatro(juego));
     }
 
     @Override

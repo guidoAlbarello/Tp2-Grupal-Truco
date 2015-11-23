@@ -78,10 +78,6 @@ public class Juego {
     }
 */
 
-    public void seCantaTruco() {
-        this.estadoDeJuego.truco();
-        this.manejadorDeTurnos.pasarTurnoCantos();
-    }
 
     public void quiero() {
         this.manejadorDeTurnos.pasarTurnoCantos();
@@ -112,21 +108,25 @@ public class Juego {
     }
 
     public void siSeQuizoTruco() {
-        this.manejadorDeTurnos.volverTurnoCanto();
-
+        this.manejadorDeTurnos.pasarTurnoCantos();
     }
 
     public void setPuntosDeTruco(int puntosDeTruco) {
         this.puntosDeTruco = puntosDeTruco;
     }
 
+    public void seCantaTruco() {
+        this.estadoDeJuego.truco();
+        this.manejadorDeTurnos.pasarTurnoCantos();
+    }
+
     public void seCantaRetruco() {
         this.estadoDeJuego.retruco();
-        this.manejadorDeTurnos.volverTurnoCanto();
+        this.manejadorDeTurnos.pasarTurnoCantos();
     }
 
     public void seCantaValeCuatro() {
         this.estadoDeJuego.valeCuatro();
-        this.manejadorDeTurnos.volverTurnoCanto();
+        this.manejadorDeTurnos.pasarTurnoCantos();
     }
 }

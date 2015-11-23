@@ -42,7 +42,7 @@ public class EstadoRetruco implements EstadoDeJuego {
     public void quiero() {
         this.juego.siSeQuizoTruco();
         this.juego.setPuntosDeTruco(this.puntosDeEstado());
-        juego.setEstadoDeJuego(new EstadoTrucoJugado(juego));
+        juego.setEstadoDeJuego(new EstadoTrucoAceptado(juego));
     }
 
     @Override
