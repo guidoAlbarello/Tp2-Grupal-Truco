@@ -53,6 +53,17 @@ public class ListaJugadores {
     }
 
 
+    public NodoJugador buscarNodoJugadorPorJugador(Jugador unJugador){
+        NodoJugador actual = this.primero;
+        for (int i = 0; i < this.tamanio ; i++) {
+            if (actual.getJugador()==unJugador){
+                return actual;
+            }else actual = actual.getSiguiente();
+        }
+        return null;
+    }
+
+
     public void agregarUltimo(Jugador jugador) {
 
         NodoJugador nuevo = new NodoJugador(jugador);

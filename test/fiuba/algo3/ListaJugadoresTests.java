@@ -53,6 +53,11 @@ public class ListaJugadoresTests {
 
     @Test
     public void seObtieneNodoDeJugadorConElJugador(){
+        jugadores.agregarUltimo(jugador1);
+        jugadores.agregarUltimo(jugador2);
+        jugadores.agregarUltimo(jugador3);
+        jugadores.agregarUltimo(jugador4);
 
+        Assert.assertTrue(jugadores.buscarNodoJugadorPorJugador(jugador3).getSiguiente().getJugador()==jugador4);
     }
 }
