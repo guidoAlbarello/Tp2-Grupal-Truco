@@ -14,6 +14,22 @@ public class EstadoRetruco implements EstadoDeJuego {
     public EstadoRetruco(Juego juego) {
         this.juego = juego;this.puntosDeEstado = 3;
     }
+
+    @Override
+    public void flor() {
+
+    }
+
+    @Override
+    public void contraFlor() {
+
+    }
+
+    @Override
+    public void contraFlorAlResto() {
+
+    }
+
     @Override
     public void envido() {throw new NoSeResuelveRetrucoError();
     }

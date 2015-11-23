@@ -1,17 +1,33 @@
 package fiuba.algo3.EstadosDeJuego;
 
 import fiuba.algo3.CartaJugada;
+import fiuba.algo3.Excepciones.NoSeCantoFlorError;
 import fiuba.algo3.Juego;
 import fiuba.algo3.Excepciones.JugadaInvalidaPrimeraManoError;
 
 /**
  * Created by anthony on 18/11/2015.
  */
-public class EstadoPrimeraMano implements EstadoDeJuego {
+public class EstadoJuegoConFlor implements EstadoDeJuego {
     private Juego juego;
 
-    public EstadoPrimeraMano(Juego juego) {
+    public EstadoJuegoConFlor(Juego juego) {
         this.juego = juego;
+    }
+
+    @Override
+    public void flor() {
+        this.juego.setEstadoDeJuego(new EstadoFlor(juego));
+    }
+
+    @Override
+    public void contraFlor() {
+        throw new NoSeCantoFlorError();
+    }
+
+    @Override
+    public void contraFlorAlResto() {
+        throw new NoSeCantoFlorError();
     }
 
     @Override

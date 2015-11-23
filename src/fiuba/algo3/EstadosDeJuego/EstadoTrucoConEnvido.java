@@ -13,6 +13,22 @@ public class EstadoTrucoConEnvido implements EstadoDeJuego {
     public EstadoTrucoConEnvido(Juego juego) {
         this.juego = juego;
     }
+
+    @Override
+    public void flor() {
+
+    }
+
+    @Override
+    public void contraFlor() {
+
+    }
+
+    @Override
+    public void contraFlorAlResto() {
+
+    }
+
     @Override
     public void envido() {
 

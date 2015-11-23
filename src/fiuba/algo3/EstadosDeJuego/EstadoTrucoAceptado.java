@@ -13,6 +13,21 @@ public class EstadoTrucoAceptado implements EstadoDeJuego {
     }
 
     @Override
+    public void flor() {
+
+    }
+
+    @Override
+    public void contraFlor() {
+
+    }
+
+    @Override
+    public void contraFlorAlResto() {
+
+    }
+
+    @Override
     public void envido() {
 
     }

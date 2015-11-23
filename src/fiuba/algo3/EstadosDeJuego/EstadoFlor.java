@@ -1,17 +1,14 @@
 package fiuba.algo3.EstadosDeJuego;
 
 import fiuba.algo3.CartaJugada;
-import fiuba.algo3.Excepciones.JugadaNoValidaError;
-import fiuba.algo3.Excepciones.NoSeJugoTruco;
-import fiuba.algo3.Excepciones.YaSeJugoEnvidoError;
 import fiuba.algo3.Juego;
 
 /**
- * Created by anthony on 22/11/2015.
+ * Created by anthony on 23/11/2015.
  */
-public class EstadoSinEnvido implements EstadoDeJuego {
+public class EstadoFlor implements EstadoDeJuego {
     private Juego juego;
-    public EstadoSinEnvido(Juego juego) {
+    public EstadoFlor(Juego juego) {
         this.juego = juego;
     }
 
@@ -32,42 +29,42 @@ public class EstadoSinEnvido implements EstadoDeJuego {
 
     @Override
     public void envido() {
-        throw new YaSeJugoEnvidoError();
+
     }
 
     @Override
     public void realEnvido() {
-        throw new YaSeJugoEnvidoError();
+
     }
 
     @Override
     public void faltaEnvido() {
-        throw new YaSeJugoEnvidoError();
+
     }
 
     @Override
     public void truco() {
-        this.juego.setEstadoDeJuego(new EstadoTruco(juego));
+
     }
 
     @Override
     public void retruco() {
-        throw new NoSeJugoTruco();
+
     }
 
     @Override
     public void valeCuatro() {
-        throw new NoSeJugoTruco();
+
     }
 
     @Override
     public void quiero() {
-        throw new JugadaNoValidaError();
+
     }
 
     @Override
     public void noQuiero() {
-        throw new JugadaNoValidaError();
+
     }
 
     @Override
@@ -83,6 +80,5 @@ public class EstadoSinEnvido implements EstadoDeJuego {
     @Override
     public void jugarCarta(CartaJugada cartaJugada) {
 
-        this.juego.agregarCartaAMesa(cartaJugada);
     }
 }

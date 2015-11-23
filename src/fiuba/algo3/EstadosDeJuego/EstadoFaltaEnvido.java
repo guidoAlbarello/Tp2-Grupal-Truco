@@ -12,6 +12,22 @@ public class EstadoFaltaEnvido implements EstadoDeJuego {
     public EstadoFaltaEnvido(Juego juego) {
         this.juego = juego;
     }
+
+    @Override
+    public void flor() {
+
+    }
+
+    @Override
+    public void contraFlor() {
+
+    }
+
+    @Override
+    public void contraFlorAlResto() {
+
+    }
+
     @Override
     public void envido() {throw new NoSeResuelveFaltaEnvidoError();
     }

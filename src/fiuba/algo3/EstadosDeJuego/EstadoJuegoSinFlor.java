@@ -1,48 +1,49 @@
 package fiuba.algo3.EstadosDeJuego;
 
 import fiuba.algo3.CartaJugada;
-import fiuba.algo3.Excepciones.JugadaNoValidaError;
-import fiuba.algo3.Excepciones.NoSeJugoTruco;
-import fiuba.algo3.Excepciones.YaSeJugoEnvidoError;
+import fiuba.algo3.Excepciones.JuegoSinFlorError;
+import fiuba.algo3.Excepciones.JugadaInvalidaPrimeraManoError;
 import fiuba.algo3.Juego;
 
 /**
- * Created by anthony on 22/11/2015.
+ * Created by anthony on 23/11/2015.
  */
-public class EstadoSinEnvido implements EstadoDeJuego {
+public class EstadoJuegoSinFlor implements EstadoDeJuego{
     private Juego juego;
-    public EstadoSinEnvido(Juego juego) {
+
+    public EstadoJuegoSinFlor(Juego juego) {
         this.juego = juego;
     }
 
     @Override
     public void flor() {
-
+       throw new JuegoSinFlorError();
     }
 
     @Override
     public void contraFlor() {
-
+        throw new JuegoSinFlorError();
     }
 
     @Override
     public void contraFlorAlResto() {
-
+        throw new JuegoSinFlorError();
     }
 
     @Override
     public void envido() {
-        throw new YaSeJugoEnvidoError();
+
+        this.juego.setEstadoDeJuego(new EstadoEnvido(this.juego));
     }
 
     @Override
     public void realEnvido() {
-        throw new YaSeJugoEnvidoError();
+        this.juego.setEstadoDeJuego(new EstadoRealEnvido(juego));
     }
 
     @Override
     public void faltaEnvido() {
-        throw new YaSeJugoEnvidoError();
+        this.juego.setEstadoDeJuego(new EstadoFaltaEnvido(juego));
     }
 
     @Override
@@ -52,22 +53,21 @@ public class EstadoSinEnvido implements EstadoDeJuego {
 
     @Override
     public void retruco() {
-        throw new NoSeJugoTruco();
+        throw new JugadaInvalidaPrimeraManoError();
     }
 
     @Override
     public void valeCuatro() {
-        throw new NoSeJugoTruco();
+        throw new JugadaInvalidaPrimeraManoError();
     }
 
     @Override
     public void quiero() {
-        throw new JugadaNoValidaError();
+        throw new JugadaInvalidaPrimeraManoError();
     }
 
     @Override
-    public void noQuiero() {
-        throw new JugadaNoValidaError();
+    public void noQuiero() {throw new JugadaInvalidaPrimeraManoError();
     }
 
     @Override
@@ -82,7 +82,8 @@ public class EstadoSinEnvido implements EstadoDeJuego {
 
     @Override
     public void jugarCarta(CartaJugada cartaJugada) {
-
         this.juego.agregarCartaAMesa(cartaJugada);
+
+        // aca tendria q pasar el turno pero no kiero tocarr eso por q todavia no tengo a  manejador de turnos
     }
 }

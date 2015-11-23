@@ -1,7 +1,6 @@
 package fiuba.algo3;
 
 import fiuba.algo3.EstadosDeJuego.*;
-import fiuba.algo3.manejoDeJugadores.Equipo;
 import fiuba.algo3.manejoDeJugadores.Jugador;
 import fiuba.algo3.manejoDeJugadores.ListaJugadores;
 import fiuba.algo3.manejoDeJugadores.ManejadorDeTurnos;
@@ -18,7 +17,7 @@ public class Juego {
     private int puntosDeTruco;
 
     public Juego(){
-        this.estadoDeJuego = new EstadoPrimeraMano(this);//no se si esta bien inicializarlo asi peor por ahora lo dejo asi
+        this.estadoDeJuego = new EstadoJuegoConFlor(this);//no se si esta bien inicializarlo asi peor por ahora lo dejo asi
         this.mesaDelJuego = new Mesa();
         this.listaDeJugadores = new ListaJugadores();
         this.mazoDelJuego = new Mazo();

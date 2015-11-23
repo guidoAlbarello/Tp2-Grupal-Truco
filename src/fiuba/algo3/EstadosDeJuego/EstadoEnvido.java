@@ -2,6 +2,7 @@ package fiuba.algo3.EstadosDeJuego;
 
 
 import fiuba.algo3.CartaJugada;
+import fiuba.algo3.Excepciones.NoSeCantoFlorError;
 import fiuba.algo3.Juego;
 import fiuba.algo3.Excepciones.NoSeResuelveEnvidoError;
 
@@ -13,6 +14,21 @@ public class EstadoEnvido implements EstadoDeJuego {
 
     public EstadoEnvido(Juego juego) {
         this.juego = juego;
+    }
+
+    @Override
+    public void flor() {
+        this.juego.setEstadoDeJuego(new EstadoFlor(juego));
+    }
+
+    @Override
+    public void contraFlor() {
+        throw new NoSeCantoFlorError();
+    }
+
+    @Override
+    public void contraFlorAlResto() {
+        throw new NoSeCantoFlorError();
     }
 
     @Override

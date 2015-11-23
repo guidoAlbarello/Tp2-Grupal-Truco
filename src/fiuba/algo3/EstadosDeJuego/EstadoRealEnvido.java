@@ -16,6 +16,21 @@ public class EstadoRealEnvido implements EstadoDeJuego {
     }
 
     @Override
+    public void flor() {
+
+    }
+
+    @Override
+    public void contraFlor() {
+
+    }
+
+    @Override
+    public void contraFlorAlResto() {
+
+    }
+
+    @Override
     public void envido() {
         throw new NoSeResuelveRealEnvidoError();
     }

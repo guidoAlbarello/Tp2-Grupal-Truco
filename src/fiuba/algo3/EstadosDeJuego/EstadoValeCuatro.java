@@ -15,6 +15,22 @@ public class EstadoValeCuatro implements EstadoDeJuego {
         this.juego = juego;
         this.puntosDeEstado = 4;
     }
+
+    @Override
+    public void flor() {
+
+    }
+
+    @Override
+    public void contraFlor() {
+
+    }
+
+    @Override
+    public void contraFlorAlResto() {
+
+    }
+
     @Override
     public void envido() {throw new NoSeResuelvValeCuatroError();}
 

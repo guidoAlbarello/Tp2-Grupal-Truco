@@ -14,6 +14,22 @@ public class EstadoTruco implements EstadoDeJuego {
     public EstadoTruco(Juego juego) {
         this.juego = juego;this.puntosDeEstado = 2;
     }
+
+    @Override
+    public void flor() {
+
+    }
+
+    @Override
+    public void contraFlor() {
+
+    }
+
+    @Override
+    public void contraFlorAlResto() {
+
+    }
+
     @Override
     public void envido() {
         this.juego.setEstadoDeJuego(new EstadoTrucoConEnvido(juego));
