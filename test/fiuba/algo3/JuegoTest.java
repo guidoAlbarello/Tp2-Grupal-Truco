@@ -157,8 +157,8 @@ public class JuegoTest {
         jugador2.jugarCartaEnPosicion(0);
         jugador1.jugarCartaEnPosicion(1);
         jugador2.jugarCartaEnPosicion(1);
-        jugador1.jugarCartaEnPosicion(2);
         jugador2.jugarCartaEnPosicion(2);
+        jugador1.jugarCartaEnPosicion(2);
 
         Assert.assertEquals(1,jugador2.getEquipo().getPuntaje());
     }
@@ -180,8 +180,8 @@ public class JuegoTest {
         jugador2.jugarCartaEnPosicion(0);
         jugador1.jugarCartaEnPosicion(1);
         jugador2.jugarCartaEnPosicion(1);
-        jugador1.jugarCartaEnPosicion(2);
         jugador2.jugarCartaEnPosicion(2);
+        jugador1.jugarCartaEnPosicion(2);
 
         Assert.assertEquals(1, jugador2.getEquipo().getPuntaje());
         Assert.assertEquals(2,jugador1.getEquipo().getPuntaje());
@@ -203,10 +203,10 @@ public class JuegoTest {
         jugador2.jugarCartaEnPosicion(0);
         jugador1.jugarCartaEnPosicion(1);
         jugador2.jugarCartaEnPosicion(1);
-        jugador1.truco();
-        jugador2.quiero();
-        jugador1.jugarCartaEnPosicion(2);
+        jugador2.truco();
+        jugador1.quiero();
         jugador2.jugarCartaEnPosicion(2);
+        jugador1.jugarCartaEnPosicion(2);
 
         Assert.assertEquals(2,jugador2.getEquipo().getPuntaje());
     }
@@ -227,9 +227,9 @@ public class JuegoTest {
         jugador2.jugarCartaEnPosicion(0);
         jugador1.jugarCartaEnPosicion(1);
         jugador2.jugarCartaEnPosicion(1);
-        jugador1.truco();
-        jugador2.retruco();
-        jugador1.quiero();
+        jugador2.truco();
+        jugador1.retruco();
+        jugador2.quiero();
         jugador2.jugarCartaEnPosicion(2);
         jugador1.jugarCartaEnPosicion(2);
 
@@ -252,8 +252,8 @@ public class JuegoTest {
         jugador1.quiero();
         jugador2.jugarCartaEnPosicion(0);
         jugador1.jugarCartaEnPosicion(0);
-        jugador2.jugarCartaEnPosicion(1);
         jugador1.jugarCartaEnPosicion(1);
+        jugador2.jugarCartaEnPosicion(1);
 
         jugador2.valeCuatro();
         jugador1.quiero();
@@ -331,8 +331,8 @@ public class JuegoTest {
         jugador1.jugarCartaEnPosicion(1);
         jugador2.jugarCartaEnPosicion(1);
 
+        jugador2.jugarCartaEnPosicion(2);// aca vuelve a jugar el juagdor 2 por que gano la mano anterior
         jugador1.jugarCartaEnPosicion(2);
-        jugador2.jugarCartaEnPosicion(2);
 
 
         //suma 1 pt por ganar ronda
@@ -386,6 +386,7 @@ public class JuegoTest {
 
 
     }
+
 
 
 }
