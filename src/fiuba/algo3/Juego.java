@@ -4,6 +4,7 @@ import fiuba.algo3.EstadosDeJuego.*;
 import fiuba.algo3.manejoDeJugadores.Jugador;
 import fiuba.algo3.manejoDeJugadores.ListaJugadores;
 import fiuba.algo3.manejoDeJugadores.ManejadorDeTurnos;
+import fiuba.algo3.manejoDeJugadores.NodoJugador;
 
 /**
  * Created by anthony on 18/11/2015.
@@ -108,6 +109,7 @@ public class Juego {
 
     public void seCantaTruco() {
         this.estadoDeJuego.truco();
+        this.manejadorDeTurnos.setJugadorQuecantoTruco(manejadorDeTurnos.getJugadorConTurnoActual());
         this.manejadorDeTurnos.pasarTurnoCantos();
     }
 

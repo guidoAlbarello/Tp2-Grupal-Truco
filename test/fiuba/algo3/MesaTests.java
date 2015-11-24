@@ -1,5 +1,7 @@
 package fiuba.algo3;
 
+import fiuba.algo3.EstadosDeJuego.EstadoEnvido;
+import fiuba.algo3.EstadosDeJuego.EstadoEnvidoEnvido;
 import fiuba.algo3.ModeladoDeCarta.*;
 import fiuba.algo3.manejoDeJugadores.Equipo;
 import fiuba.algo3.manejoDeJugadores.Jugador;

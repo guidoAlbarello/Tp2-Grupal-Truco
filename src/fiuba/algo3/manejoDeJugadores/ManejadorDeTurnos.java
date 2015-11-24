@@ -19,7 +19,7 @@ public class ManejadorDeTurnos {
     private int vecesQueSePasoElTurno;                          // esto lo pongo aca, quizas haya que moverlo a mesa o donde quieran
 
     private NodoJugador jugadorCanto;
-
+    private NodoJugador ultimoQueCantoTruco;//agregue par ael tema del truco en 4 jugadores
 
     private Juego juego;
     private Mesa mesa;
@@ -29,6 +29,7 @@ public class ManejadorDeTurnos {
         this.jugadorMano = listaDeJugadores.getPrimero();
         this.turnoActual = listaDeJugadores.getPrimero();
         this.jugadorCanto = this.turnoActual;
+        this.ultimoQueCantoTruco = null;
         this.manoActual = 1;
         this.rondaActual=+1;
         this.jugadores = listaDeJugadores;
@@ -122,4 +123,7 @@ public class ManejadorDeTurnos {
     }
 
 
+    public void setJugadorQuecantoTruco(Jugador jugadorQuecantoTruco) {
+        this.ultimoQueCantoTruco = jugadores.buscarNodoJugadorPorJugador(jugadorQuecantoTruco);
+    }
 }
