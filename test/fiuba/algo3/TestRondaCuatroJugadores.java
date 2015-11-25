@@ -88,7 +88,9 @@ public class TestRondaCuatroJugadores {
         Assert.assertTrue(1==juego.mesaDelJuego().getEmparde().getEquipo().getManosGanadas());  //PRIMER MANO SE EMPARDA
 
         jugador1.truco();
-        jugador2.quiero();
+        jugador2.retruco();
+        jugador1.quiero();
+        Assert.assertEquals(jugador1,juego.manejadorDeTurnos.getJugadorConTurnoCanto());
         jugador1.jugarCartaEnPosicion(1);
         jugador2.jugarCartaEnPosicion(1);
         jugador3.jugarCartaEnPosicion(1);
