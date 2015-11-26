@@ -17,7 +17,10 @@ public class EstadoJuegoConFlor implements EstadoDeJuego {
 
     @Override
     public void flor() {
-        this.juego.setEstadoDeJuego(new EstadoFlor(juego));
+        if (this.juego.manejadorDeTurnos.getJugadorConTurnoActual().getMano().hayFlorEnMano())
+            this.juego.setEstadoDeJuego(new EstadoFlor(juego));
+        else
+            throw new NoHayFlorEnManoError();
     }
 
     @Override
