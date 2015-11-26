@@ -221,6 +221,36 @@ public class TestRondaCuatroJugadores {
         Assert.assertEquals(3,jugador3.getMano().getCartasEnMano().size());
         Assert.assertEquals(3,jugador4.getMano().getCartasEnMano().size());
     }
+    @Test
+    public void testSeCantaDirectamenteUnRealEnvidoYdespuesSeVaAlMaso(){
+
+        jugador1.recibirCarta(new Carta(1,paloOro));  //carta en posicion 0
+        jugador1.recibirCarta(new Carta(4,paloCopa)); //carta en posicion 1
+        jugador1.recibirCarta(new Carta(6,paloOro));  //carta en posicion 2            ENVIDO = 27
+
+        jugador2.recibirCarta(new Carta(11,paloBasto));   //carta en posicion 0
+        jugador2.recibirCarta(new Carta(6,paloBasto));      //carta en posicion 1
+        jugador2.recibirCarta(new Carta(4,paloOro));   //carta en posicion 2           ENVIDO = 26
+
+        jugador3.recibirCarta(new Carta(3,paloEspada));   //carta en posicion 0
+        jugador3.recibirCarta(new Carta(6,paloEspada));      //carta en posicion 1
+        jugador3.recibirCarta(new Carta(11,paloEspada));   //carta en posicion 2           ENVIDO = 29
+
+        jugador4.recibirCarta(new Carta(11,paloCopa));   //carta en posicion 0
+        jugador4.recibirCarta(new Carta(7,paloCopa));      //carta en posicion 1
+        jugador4.recibirCarta(new Carta(5,paloCopa));   //carta en posicion 2             ENVIDO = 32
+
+        jugador1.realEnvido();
+        jugador2.quiero();
+        jugador1.jugarCartaEnPosicion(0);
+        jugador2.jugarCartaEnPosicion(0);
+        jugador3.jugarCartaEnPosicion(0);
+        jugador4.meVoyAlMaso();
+
+        Assert.assertEquals(3,jugador4.getEquipo().getPuntaje());
+        Assert.assertEquals(1,jugador1.getEquipo().getPuntaje());
+
+    }
 
 
 }
