@@ -12,6 +12,7 @@ public class EstadoTrucoConEnvido implements EstadoDeJuego {
 
     public EstadoTrucoConEnvido(Juego juego) {
         this.juego = juego;
+        this.juego.sumarPuntosEnvidoNoQuerido();
     }
 
     @Override
@@ -66,7 +67,9 @@ public class EstadoTrucoConEnvido implements EstadoDeJuego {
 
     @Override
     public void noQuiero() {
-        this.juego.noSeQuizoEnvido();
+        juego.setEstadoDeJuego(new EstadoSinEnvido(juego));//cambiar esto
+        juego.manejadorDeTurnos.setJugadorTurnoActual(juego.manejadorDeTurnos.getPrimeroQueCantoEnvido());
+        juego.noSeQuizoEnvido();
     }
 
     @Override
@@ -75,7 +78,7 @@ public class EstadoTrucoConEnvido implements EstadoDeJuego {
     }
 
     @Override
-    public int puntosDeEstado() {
+    public int puntosSiSeQuiere() {
         return 0;
     }
 

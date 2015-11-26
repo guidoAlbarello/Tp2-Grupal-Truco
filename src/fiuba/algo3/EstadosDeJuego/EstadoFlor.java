@@ -73,7 +73,7 @@ public class EstadoFlor implements EstadoDeJuego {
     }
 
     @Override
-    public int puntosDeEstado() {
+    public int puntosSiSeQuiere() {
         return 0;
     }
 

@@ -4,7 +4,6 @@ import fiuba.algo3.EstadosDeJuego.*;
 import fiuba.algo3.manejoDeJugadores.Jugador;
 import fiuba.algo3.manejoDeJugadores.ListaJugadores;
 import fiuba.algo3.manejoDeJugadores.ManejadorDeTurnos;
-import fiuba.algo3.manejoDeJugadores.NodoJugador;
 
 /**
  * Created by anthony on 18/11/2015.
@@ -16,12 +15,16 @@ public class Juego {
     public ManejadorDeTurnos manejadorDeTurnos;
     private Mazo mazoDelJuego;
     private int puntosDeTruco;
+    private int puntosDeEnvidoQuerido;
+    private int puntosDeEnvidoNoQuerido;
 
     public Juego(){
-        this.estadoDeJuego = new EstadoJuegoConFlor(this);//por ahora directamente se incializa con flor depseus veremos
+
         this.mesaDelJuego = new Mesa();
         this.listaDeJugadores = new ListaJugadores();
+        this.configurarManejadorDeTurnos();
         this.mazoDelJuego = new Mazo();
+        this.estadoDeJuego = new EstadoJuegoConFlor(this);//por ahora , se incializa con flor depseus veremos
         this.puntosDeTruco= 1;// si no se quiere o un se va al maso directamente
     }
 
@@ -33,12 +36,7 @@ public class Juego {
         this.estadoDeJuego = estadoDeJuego;
     }
 
-    public void jugarCarta(CartaJugada cartaJugada) {
-        estadoDeJuego.jugarCarta(cartaJugada);
-        this.manejadorDeTurnos.pasarTurnoCartas();
-    }
-
-    public Mesa mesaDelJuego() {       return this.mesaDelJuego;    }
+    public Mesa getMesaDelJuego() {       return this.mesaDelJuego;    }
 
     public void configurarManejadorDeTurnos(){ this.manejadorDeTurnos = new ManejadorDeTurnos(this.listaDeJugadores,this); }
 
@@ -54,83 +52,83 @@ public class Juego {
         }
     }
 
-    public void seCantaEnvido() {
-        this.estadoDeJuego.envido();
-        this.manejadorDeTurnos.pasarTurnoCantos();
-    }
+    public void jugarCarta(CartaJugada cartaJugada) {estadoDeJuego.jugarCarta(cartaJugada);}
 
-    public void noQuiero(){
-        this.estadoDeJuego.noQuiero();
-    }
+    public void seCantaEnvido() {this.estadoDeJuego.envido();    }
 
-    public void noSeQuizoEnvido() {
-        this.manejadorDeTurnos.volverTurnoCanto();
-        this.manejadorDeTurnos.getJugadorConTurnoCanto().getEquipo().sumarPuntos(1);
+    public void seCantaRealEnvido() {this.estadoDeJuego.realEnvido(); }
 
-    }
+    public void seCantaFaltaEnvido() {this.estadoDeJuego.faltaEnvido();}
 
-    public void quiero() {
-        this.manejadorDeTurnos.pasarTurnoCantos();
-        this.estadoDeJuego.quiero();
-    }
+    public void siSeQuizoEnvido() {getGanadorDeEnvido().getEquipo().sumarPuntos(this.puntosDeEnvidoQuerido);}
 
-    public void siSeQuizoEnvido() {
-        this.manejadorDeTurnos.volverTurnoCanto();
-        getGanadorDeEnvido().getEquipo().sumarPuntos(estadoDeJuego.puntosDeEstado());
-    }
+    public void siSeQuizoFaltaEnvido() {getGanadorDeEnvido().getEquipo().sumarPuntos(this.puntosDeFaltaEnvido());}
 
-    public Jugador getGanadorDeEnvido(){
-        int tantosJugador1 = listaDeJugadores.getPrimero().getJugador().getMano().obtenerEnvido().getValorEnvido();
-        int tantosJugador2 = listaDeJugadores.getUltimo().getJugador().getMano().obtenerEnvido().getValorEnvido();
-        if (tantosJugador1 == tantosJugador2)
-            return this.manejadorDeTurnos.getJugadorQueEsMano();
-        if (tantosJugador1 > tantosJugador2)
-            return listaDeJugadores.getPrimero().getJugador();
+    public void noSeQuizoEnvido() {this.manejadorDeTurnos.getJugadorConTurnoActual().getEquipo().sumarPuntos(this.puntosDeEnvidoNoQuerido);}
+
+    private Integer puntosDeFaltaEnvido() {
+        int puntajeEquipo1 = manejadorDeTurnos.getJugadorConTurnoActual().getEquipo().getPuntaje();
+        int puntajeEquipo2 = manejadorDeTurnos.getJugadorSiguienteAlTurnoActual().getEquipo().getPuntaje();
+        if (puntajeEquipo1 > puntajeEquipo2)
+            return 30 - puntajeEquipo1;// habria q hacer lgo mas lindo aca
         else
-            return listaDeJugadores.getUltimo().getJugador();
+            return 30 - puntajeEquipo2;
     }
 
-    public void seCantaRealEnvido() {
-        this.estadoDeJuego.realEnvido();
-        this.manejadorDeTurnos.pasarTurnoCantos();
-    }
+    public void quiero() {this.estadoDeJuego.quiero();}
 
-    public void agregarCartaAMesa(CartaJugada cartaJugada) {
-        this.mesaDelJuego.agregarCartaALsitaDeCartasJugadas(cartaJugada);
-    }
+    public void noQuiero(){this.estadoDeJuego.noQuiero();}
 
-    public void siSeQuizoTruco() {
-        this.manejadorDeTurnos.pasarTurnoCantos();
-    }
+    public void seCantaTruco() {this.estadoDeJuego.truco();}
+
+    public void seCantaRetruco() {this.estadoDeJuego.retruco();}
+
+    public void seCantaValeCuatro() {this.estadoDeJuego.valeCuatro();}
 
     public void setPuntosDeTruco(int puntosDeTruco) {
         this.puntosDeTruco = puntosDeTruco;
     }
-
-    public void seCantaTruco() {
-        this.estadoDeJuego.truco();
-        this.manejadorDeTurnos.setJugadorQuecantoTruco(manejadorDeTurnos.getJugadorConTurnoActual());
-        this.manejadorDeTurnos.pasarTurnoCantos();
-    }
-
-    public void seCantaRetruco() {
-        this.estadoDeJuego.retruco();
-        this.manejadorDeTurnos.pasarTurnoCantos();
-    }
-
-    public void seCantaValeCuatro() {
-        this.estadoDeJuego.valeCuatro();
-        this.manejadorDeTurnos.pasarTurnoCantos();
-    }
-
 
     public void meVoyAlMaso() {
         this.estadoDeJuego.irseAlMaso();
     }
 
     public void seFueronAlMaso() {
-        this.manejadorDeTurnos.pasarTurnoCantos();// paso el turno asi me paro donde el siguiente jugador que es el contrario al q se fue al mazo
-        this.manejadorDeTurnos.getJugadorConTurnoCanto().getEquipo().sumarPuntos(this.puntosDeTruco);
+        this.manejadorDeTurnos.getJugadorConTurnoActual().getEquipo().sumarPuntos(this.puntosDeTruco);
         this.manejadorDeTurnos.reiniciarRonda();
+    }
+
+    public ListaJugadores getJugadores() {return listaDeJugadores;}
+
+    public Jugador getGanadorDeEnvido(){
+        Jugador jugador1 = listaDeJugadores.getPrimero().getJugador().getEquipo().jugadorConEnvidoMayorEnEquipo();
+        Jugador jugador2 = listaDeJugadores.getPrimero().getSiguiente().getJugador().getEquipo().jugadorConEnvidoMayorEnEquipo();
+        int tantosJugador1 = jugador1.getMano().obtenerEnvido().getValorEnvido();
+        int tantosJugador2 = jugador2.getMano().obtenerEnvido().getValorEnvido();
+        if (tantosJugador1 == tantosJugador2)
+            return this.manejadorDeTurnos.getJugadorQueEsMano();
+        if (tantosJugador1 > tantosJugador2)
+            return jugador1;
+        else
+            return jugador2;
+    }
+
+    public void agregarCartaAMesa(CartaJugada cartaJugada) {
+        this.mesaDelJuego.agregarCartaALsitaDeCartasJugadas(cartaJugada);
+    }
+
+
+    public void sumarPuntosEnvidoNoQuerido() {
+        this.puntosDeEnvidoNoQuerido ++;
+    }
+
+    public void sumarPuntosEnvidoSiQuerido(int puntosDeEstado) {
+        this.puntosDeEnvidoQuerido += puntosDeEstado;
+    }
+
+    public void inicializarPuntosParaRonda(){
+        this.puntosDeTruco = 0;
+        this.puntosDeEnvidoQuerido = 0;
+        this.puntosDeEnvidoNoQuerido = 0;
     }
 }

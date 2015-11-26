@@ -32,23 +32,36 @@ public class EstadoJuegoConFlor implements EstadoDeJuego {
 
     @Override
     public void envido() {
-
+        this.juego.manejadorDeTurnos.setUltimoQueJugoEnvido(juego.manejadorDeTurnos.getJugadorConTurnoActual());
+        this.juego.manejadorDeTurnos.setPrimeroQueCantoEnvido(juego.manejadorDeTurnos.getJugadorConTurnoActual());
         this.juego.setEstadoDeJuego(new EstadoEnvido(this.juego));
+        this.juego.manejadorDeTurnos.pasarTurnoActual();
     }
+
 
     @Override
     public void realEnvido() {
+        this.juego.manejadorDeTurnos.setUltimoQueJugoEnvido(juego.manejadorDeTurnos.getJugadorConTurnoActual());
+        this.juego.manejadorDeTurnos.setPrimeroQueCantoEnvido(juego.manejadorDeTurnos.getJugadorConTurnoActual());
         this.juego.setEstadoDeJuego(new EstadoRealEnvido(juego));
+        this.juego.manejadorDeTurnos.pasarTurnoActual();
     }
 
     @Override
     public void faltaEnvido() {
+        this.juego.manejadorDeTurnos.setUltimoQueJugoEnvido(juego.manejadorDeTurnos.getJugadorConTurnoActual());
+        this.juego.manejadorDeTurnos.setPrimeroQueCantoEnvido(juego.manejadorDeTurnos.getJugadorConTurnoActual());
         this.juego.setEstadoDeJuego(new EstadoFaltaEnvido(juego));
+        this.juego.manejadorDeTurnos.pasarTurnoActual();
     }
 
     @Override
     public void truco() {
+        this.juego.manejadorDeTurnos.setUltimoQueJugoTruco(juego.manejadorDeTurnos.getJugadorConTurnoActual());
+        this.juego.manejadorDeTurnos.setPrimeroQueCantoTruco(juego.manejadorDeTurnos.getJugadorConTurnoActual());
         this.juego.setEstadoDeJuego(new EstadoTruco(juego));
+        this.juego.setPuntosDeTruco(this.puntosSiSeQuiere());
+        this.juego.manejadorDeTurnos.pasarTurnoActual();
     }
 
     @Override
@@ -76,14 +89,13 @@ public class EstadoJuegoConFlor implements EstadoDeJuego {
     }
 
     @Override
-    public int puntosDeEstado() {
+    public int puntosSiSeQuiere() {
         return 0;
     }
 
     @Override
     public void jugarCarta(CartaJugada cartaJugada) {
         this.juego.agregarCartaAMesa(cartaJugada);
-
-        // aca tendria q pasar el turno pero no kiero tocarr eso por q todavia no tengo a  manejador de turnos
+        this.juego.manejadorDeTurnos.pasarTurnoCartas();
     }
 }

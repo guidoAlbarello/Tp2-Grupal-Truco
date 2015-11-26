@@ -93,7 +93,7 @@ public class ListaJugadores {
         else{
             jugador.setEquipo(equipo1);
             equipo2.agregarJugador(jugador);
-            }
+        }
     }
 
 

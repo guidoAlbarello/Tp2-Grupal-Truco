@@ -1,6 +1,7 @@
 package fiuba.algo3.manejoDeJugadores;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -40,5 +41,16 @@ public class Equipo {
     public void reiniciarManosGanadas() { this.manosGanadas = 0; }
 
     public Integer getManosGanadas(){ return this.manosGanadas; }
+
+    public Jugador jugadorConEnvidoMayorEnEquipo(){
+        Iterator<Jugador> iterador = jugadores.iterator();
+        Jugador jugadorMaximoEnvido = iterador.next();
+        while ( iterador.hasNext()) {
+            Jugador jugador = iterador.next();
+            if ( jugadorMaximoEnvido.getMano().obtenerEnvido().getValorEnvido() < jugador.getMano().obtenerEnvido().getValorEnvido())
+                jugadorMaximoEnvido = jugador;
+        }
+        return jugadorMaximoEnvido;
+    }
 
 }

@@ -3,6 +3,7 @@ package fiuba.algo3.EstadosDeJuego;
 import fiuba.algo3.CartaJugada;
 import fiuba.algo3.Juego;
 import fiuba.algo3.Excepciones.NoSeResuelveTrucoError;
+import fiuba.algo3.manejoDeJugadores.Jugador;
 
 /**
  * Created by anthony on 18/11/2015.
@@ -32,7 +33,10 @@ public class EstadoTruco implements EstadoDeJuego {
 
     @Override
     public void envido() {
-        this.juego.setEstadoDeJuego(new EstadoTrucoConEnvido(juego));
+        this.juego.manejadorDeTurnos.setUltimoQueJugoEnvido(juego.manejadorDeTurnos.getJugadorConTurnoActual());
+        this.juego.manejadorDeTurnos.setPrimeroQueCantoEnvido(juego.manejadorDeTurnos.getJugadorConTurnoActual());
+        this.juego.setEstadoDeJuego(new EstadoTrucoConEnvido(this.juego));
+        this.juego.manejadorDeTurnos.pasarTurnoActual();
     }
 
     @Override
@@ -52,7 +56,11 @@ public class EstadoTruco implements EstadoDeJuego {
     }
 
     @Override
-    public void retruco() {this.juego.setEstadoDeJuego(new EstadoRetruco(juego));
+    public void retruco() {
+        Jugador jugadorTurnoActual = juego.manejadorDeTurnos.getJugadorConTurnoActual();
+        this.juego.manejadorDeTurnos.setJugadorTurnoActual(juego.manejadorDeTurnos.getUltimoQueJugoTruco());
+        juego.manejadorDeTurnos.setUltimoQueJugoTruco(jugadorTurnoActual);
+        this.juego.setEstadoDeJuego(new EstadoRetruco(juego));
     }
 
     @Override
@@ -61,14 +69,16 @@ public class EstadoTruco implements EstadoDeJuego {
 
     @Override
     public void quiero() {
-        this.juego.siSeQuizoTruco();
-        this.juego.setPuntosDeTruco(this.puntosDeEstado());
+        this.juego.setPuntosDeTruco(this.puntosSiSeQuiere());
         juego.setEstadoDeJuego(new EstadoTrucoAceptado(juego));
+        this.juego.manejadorDeTurnos.setJugadorTurnoActual(juego.manejadorDeTurnos.getPrimeroQueCantoTruco());
     }
 
     @Override
     public void noQuiero() {
-        this.juego.noSeQuizoEnvido();
+        this.juego.manejadorDeTurnos.setJugadorTurnoActual(juego.manejadorDeTurnos.getPrimeroQueCantoTruco());
+        this.juego.manejadorDeTurnos.getJugadorConTurnoActual().getEquipo().sumarPuntos(this.puntosDeEstado - 1);
+        this.juego.manejadorDeTurnos.reiniciarRonda();
     }
 
     @Override
@@ -77,7 +87,7 @@ public class EstadoTruco implements EstadoDeJuego {
     }
 
     @Override
-    public int puntosDeEstado() {
+    public int puntosSiSeQuiere() {
         return this.puntosDeEstado;
     }
 

@@ -2,14 +2,13 @@ package fiuba.algo3.EstadosDeJuego;
 
 import fiuba.algo3.CartaJugada;
 import fiuba.algo3.Juego;
-import fiuba.algo3.manejoDeJugadores.Jugador;
 
 /**
- * Created by anthony on 23/11/2015.
+ * Created by anthony on 25/11/2015.
  */
-public class EstadoTrucoAceptado implements EstadoDeJuego {
+public class EstadoValeCuatroAceptado implements EstadoDeJuego {
     private Juego juego;
-    public EstadoTrucoAceptado(Juego juego) {
+    public EstadoValeCuatroAceptado(Juego juego) {
         this.juego = juego;
     }
 
@@ -50,17 +49,12 @@ public class EstadoTrucoAceptado implements EstadoDeJuego {
 
     @Override
     public void retruco() {
-        Jugador jugadorTurnoActual = juego.manejadorDeTurnos.getJugadorConTurnoActual();
-        this.juego.manejadorDeTurnos.setJugadorTurnoActual(juego.manejadorDeTurnos.getUltimoQueJugoTruco());
-        juego.manejadorDeTurnos.setUltimoQueJugoTruco(jugadorTurnoActual);
-        juego.manejadorDeTurnos.setPrimeroQueCantoTruco(jugadorTurnoActual);
-        this.juego.setEstadoDeJuego(new EstadoRetruco(juego));
 
     }
 
     @Override
     public void valeCuatro() {
-        this.juego.setEstadoDeJuego(new EstadoValeCuatro(juego));
+
     }
 
     @Override
@@ -75,8 +69,7 @@ public class EstadoTrucoAceptado implements EstadoDeJuego {
 
     @Override
     public void irseAlMaso() {
-        this.juego.manejadorDeTurnos.pasarTurnoActual();
-        this.juego.seFueronAlMaso();
+
     }
 
     @Override

@@ -56,14 +56,16 @@ public class EstadoRetruco implements EstadoDeJuego {
 
     @Override
     public void quiero() {
-        this.juego.siSeQuizoTruco();
-        this.juego.setPuntosDeTruco(this.puntosDeEstado());
-        juego.setEstadoDeJuego(new EstadoTrucoAceptado(juego));
+        this.juego.setPuntosDeTruco(this.puntosSiSeQuiere());
+        juego.setEstadoDeJuego(new EstadoRetrucoAceptado(juego));
+        this.juego.manejadorDeTurnos.setJugadorTurnoActual(juego.manejadorDeTurnos.getPrimeroQueCantoTruco());
     }
 
     @Override
     public void noQuiero() {
-
+        this.juego.manejadorDeTurnos.setJugadorTurnoActual(juego.manejadorDeTurnos.getPrimeroQueCantoTruco());
+        this.juego.manejadorDeTurnos.getJugadorConTurnoActual().getEquipo().sumarPuntos(this.puntosDeEstado - 1);
+        this.juego.manejadorDeTurnos.reiniciarRonda();
     }
 
     @Override
@@ -71,7 +73,7 @@ public class EstadoRetruco implements EstadoDeJuego {
     }
 
     @Override
-    public int puntosDeEstado() {
+    public int puntosSiSeQuiere() {
         return this.puntosDeEstado;
     }
 

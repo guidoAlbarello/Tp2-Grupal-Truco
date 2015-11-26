@@ -11,22 +11,17 @@ public class EstadoFaltaEnvido implements EstadoDeJuego {
     private Juego juego;
     public EstadoFaltaEnvido(Juego juego) {
         this.juego = juego;
+        this.juego.sumarPuntosEnvidoNoQuerido();
     }
 
     @Override
-    public void flor() {
-
-    }
+    public void flor() {throw new NoSeResuelveFaltaEnvidoError();}
 
     @Override
-    public void contraFlor() {
-
-    }
+    public void contraFlor() {throw new NoSeResuelveFaltaEnvidoError();}
 
     @Override
-    public void contraFlorAlResto() {
-
-    }
+    public void contraFlorAlResto() {throw new NoSeResuelveFaltaEnvidoError();}
 
     @Override
     public void envido() {throw new NoSeResuelveFaltaEnvidoError();
@@ -54,7 +49,9 @@ public class EstadoFaltaEnvido implements EstadoDeJuego {
 
     @Override
     public void quiero() {
-        //resolver
+        juego.siSeQuizoFaltaEnvido();
+        juego.setEstadoDeJuego(new EstadoSinEnvido(juego));
+        juego.manejadorDeTurnos.setJugadorTurnoActual(juego.manejadorDeTurnos.getPrimeroQueCantoEnvido());
     }
 
     @Override
@@ -67,7 +64,7 @@ public class EstadoFaltaEnvido implements EstadoDeJuego {
     }
 
     @Override
-    public int puntosDeEstado() {
+    public int puntosSiSeQuiere() {
         return 3;
     }
 

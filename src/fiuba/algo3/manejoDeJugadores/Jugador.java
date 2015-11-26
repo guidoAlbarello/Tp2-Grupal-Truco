@@ -19,7 +19,6 @@ public class Jugador {
     public Jugador(String nombre) {
         this.nombreJugador = nombre;
         this.manoDelJugador = new Mano();
-        //this.manosGanadas = 0; // esto quizas convenga estar en manejador de puntajes ???
     }
 
     public void setJuego(Juego nuevoJuego){ this.juego = nuevoJuego;}
@@ -29,12 +28,6 @@ public class Jugador {
     public String getNombre() {
         return this.nombreJugador;
     }
-
-   // public int getManosGanadas() {        return this.manosGanadas;    }
-
-   // public void reiniciarManosGanadas() {this.manosGanadas=0;}
-
-
 
     public void recibirCarta(Carta unaCarta) {  this.manoDelJugador.agregarCarta(unaCarta);   }
 
@@ -72,6 +65,8 @@ public class Jugador {
         this.juego.seCantaRealEnvido();
     }
 
+    public void faltaEnvido() {this.juego.seCantaFaltaEnvido();}
+
     public void retruco() {
         this.juego.seCantaRetruco();
     }
@@ -84,11 +79,7 @@ public class Jugador {
         this.juego.meVoyAlMaso();
     }
 
-
-    //public int calcularEnvido() {}
-
-    //public void cantarAlgo()
-
-
-
 }
+
+
+
