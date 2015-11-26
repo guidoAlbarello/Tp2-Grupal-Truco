@@ -37,8 +37,6 @@ public class TestRondaCuatroJugadores {
         juego.agregarJugador(jugador3);
         jugador4.setJuego(juego);
         juego.agregarJugador(jugador4);
-
-
         juego.configurarManejadorDeTurnos();
 
         paloEspada = new PaloEspada();
@@ -46,9 +44,6 @@ public class TestRondaCuatroJugadores {
         paloOro = new PaloOro();
         paloCopa = new PaloCopa();
     }
-
-
-
 
     @Test
     public void testRondaCuatroJugadores(){
@@ -68,8 +63,6 @@ public class TestRondaCuatroJugadores {
         jugador4.recibirCarta(new Carta(11,paloCopa));   //carta en posicion 0
         jugador4.recibirCarta(new Carta(7,paloCopa));      //carta en posicion 1
         jugador4.recibirCarta(new Carta(4,paloCopa));   //carta en posicion 2             ENVIDO = 31
-
-
 
         jugador1.jugarCartaEnPosicion(0);
         jugador2.jugarCartaEnPosicion(0);
@@ -124,8 +117,6 @@ public class TestRondaCuatroJugadores {
         jugador4.recibirCarta(new Carta(7,paloCopa));      //carta en posicion 1
         jugador4.recibirCarta(new Carta(4,paloCopa));   //carta en posicion 2             ENVIDO = 31
 
-
-
         jugador1.jugarCartaEnPosicion(0);
         jugador2.jugarCartaEnPosicion(0);
         jugador3.jugarCartaEnPosicion(0);
@@ -177,7 +168,6 @@ public class TestRondaCuatroJugadores {
         jugador4.recibirCarta(new Carta(11,paloCopa));   //carta en posicion 0
         jugador4.recibirCarta(new Carta(7,paloCopa));      //carta en posicion 1
         jugador4.recibirCarta(new Carta(5,paloCopa));   //carta en posicion 2             ENVIDO = 32
-
 
         jugador1.envido();
         jugador2.envido();
@@ -249,6 +239,8 @@ public class TestRondaCuatroJugadores {
 
         Assert.assertEquals(3,jugador4.getEquipo().getPuntaje());
         Assert.assertEquals(1,jugador1.getEquipo().getPuntaje());
+        Assert.assertEquals(jugador2,juego.manejadorDeTurnos.getJugadorQueEsMano());
+        Assert.assertEquals(jugador2,juego.manejadorDeTurnos.getJugadorConTurnoActual());
 
     }
 

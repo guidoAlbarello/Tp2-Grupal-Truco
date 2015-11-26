@@ -17,9 +17,6 @@ public class Mano {
     private List<Carta> cartasEnLaMano;
     private List<Integer> indicesDeCartasJugadas;
 
-
-
-
     public Mano(){
         this.indicesDeCartasJugadas = new ArrayList<Integer>();
         this.cartasEnLaMano = new ArrayList<Carta>();
@@ -66,6 +63,7 @@ public class Mano {
         }
     }
 
+
     public int calcularFlor(){
         Iterator<Carta> iteradorCartasEnLaMano = this.cartasEnLaMano.iterator();
         Carta primerCarta = iteradorCartasEnLaMano.next();
@@ -93,14 +91,23 @@ public class Mano {
         return this.cartasEnLaMano.get(indiceDeLaCarta);
     }
 
-
     public void reiniciarMano(){
         this.indicesDeCartasJugadas = new ArrayList<Integer>();
         this.cartasEnLaMano = new ArrayList<Carta>();
     }
 
-
     public void reiniciarIndicesDeCartasTiradas(){
         this.indicesDeCartasJugadas.clear();
+    }
+
+    public boolean hayFlorEnMano() {
+        Iterator<Carta> iterador = this.cartasEnLaMano.iterator();
+        Carta primeraCartaDeLaMano = iterador.next();
+        boolean hayFlor = true;
+        while (hayFlor && iterador.hasNext()){
+            Carta cartaDeLaMano = iterador.next();
+            hayFlor = primeraCartaDeLaMano.getPaloDeCarta().esDelMismoPaloQue(cartaDeLaMano.getPaloDeCarta());
+        }
+        return hayFlor;
     }
 }
