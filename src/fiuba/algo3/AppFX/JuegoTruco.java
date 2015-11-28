@@ -105,6 +105,9 @@ public class JuegoTruco extends Application {
         mesa.setPrefWidth(600);
         mesa.setAlignment(Pos.TOP_CENTER);
 
+        cartas.setSpacing(30);
+        cartas.setAlignment(Pos.CENTER);
+
 
         TextArea log = new TextArea("Comenzo la partida.");
         log.setEditable(false);
