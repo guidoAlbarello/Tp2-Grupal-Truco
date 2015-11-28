@@ -1,5 +1,8 @@
 package fiuba.algo3.AppFX;
 
+import fiuba.algo3.Juego;
+import fiuba.algo3.manejoDeJugadores.Jugador;
+import fiuba.algo3.manejoDeJugadores.NodoJugador;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -12,7 +15,6 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -20,12 +22,30 @@ import java.util.List;
  */
 public class JuegoTruco extends Application {
 
+
+    Juego truco = new Juego();
+
+
+
     public Scene principal;
-    //public VBox principal;
     public VBox jugadores;
     public VBox configurar;
     public TextArea creditosParaMostrar = new TextArea(" Trabajo Practico Final\n Algoritmos y Programacion III - Facultad de Ingenieria de la Universidad De Buenos Aires (FIUBA) \n\n\n \n Colaboradores: \n Fede \n Guido \n Tony \n \n \n Tutor: Matias");
     public MenuBar barraMenu;
+
+
+
+
+
+    public VBox botonesyLog = new VBox();
+    public GridPane mesa = new GridPane();
+
+    public HBox contenedorBotonesYMesa = new HBox(botonesyLog,mesa);
+
+    public HBox cartas = new HBox();
+
+    public VBox mesaGral = new VBox(contenedorBotonesYMesa,cartas);
+
 
 
 
@@ -34,12 +54,8 @@ public class JuegoTruco extends Application {
 
         creditosParaMostrar.setPrefHeight(550);
 
-        stage.setTitle("T R U C O");
+        stage.setTitle(" T R U C O");
         principal = new Scene(new VBox(), 800, 600);
-
-
-        //resetearConfiguracion();
-        //resetearJugadores();
 
 
         creditosParaMostrar.setEditable(false);
@@ -53,10 +69,39 @@ public class JuegoTruco extends Application {
 
     }
 
+
     public void resetearJugadores() {
         jugadores = new VBox();
         jugadores.setSpacing(10);
     }
+
+
+
+    public void generarMesaInicialJuego(Integer cantidad){
+
+        List<VBox> contenedoresJugadores = new ArrayList<VBox>();
+        NodoJugador actual = this.truco.manejadorDeTurnos.getJugadores().getPrimero();
+        for (int i = 0 ; i < cantidad ; i++){
+            Label nombre = new Label(actual.getJugador().getNombre());
+            Button cartaJugada = new Button("?");
+            VBox representacionJugador = new VBox(nombre,cartaJugada);
+            contenedoresJugadores.add(representacionJugador);
+            actual = actual.getSiguiente();
+        }
+
+        if (cantidad == 2){
+            this.mesa.add(contenedoresJugadores.get(0),2,4);
+            this.mesa.add(contenedoresJugadores.get(1),2,1);
+        }else{
+            this.mesa.add(contenedoresJugadores.get(0),2,4);
+            this.mesa.add(contenedoresJugadores.get(1),1,3);
+            this.mesa.add(contenedoresJugadores.get(2),2,1);
+            this.mesa.add(contenedoresJugadores.get(3),4,3);
+        }
+
+
+    }
+
 
     public void resetearConfiguracion() {
         configurar = new VBox();
@@ -82,7 +127,7 @@ public class JuegoTruco extends Application {
 
 
 
-    public void generarPanelInicialDeJugadores(){
+    public void generarPanelDeConfiguracion(){
 
         Button botonConfirmar = new Button();
         botonConfirmar.setText("Confirmar");
@@ -100,24 +145,11 @@ public class JuegoTruco extends Application {
         HBox configNueva = new HBox(selector,conFlor);
         configNueva.setSpacing(30);
         configurar.getChildren().add(configNueva);
-        JuegoTruco juego = this;
 
-        botonConfirmar.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                resetearJugadores();
-                List<HBox> contenedores = generarContenedoresSegunCantidadDeJugadores(selector.getSelectionModel().getSelectedIndex());
-                jugadores.getChildren().addAll(contenedores);
-                limpiarContenedorPrincipal();
-                Button confirmarJugadores = new Button();
-                confirmarJugadores.setOnAction(new HandlerBotonConfirmarJugadores(contenedores,juego));
-                mostrarConfigNombresDeJugadores();
-            }
-        });
+        HandlerBotonConfirmarConfiguracion handler = new HandlerBotonConfirmarConfiguracion(this,selector);
+        botonConfirmar.setOnAction(handler);
 
         configurar.getChildren().add(botonConfirmar);
-
-
 
     }
 
@@ -171,8 +203,13 @@ public class JuegoTruco extends Application {
     }
 
 
-    public void mostrarConfigNombresDeJugadores() {
+    public void mostrarConfigNombresDeJugadores(Button confirmar) {
         ((VBox) principal.getRoot()).getChildren().add(jugadores);
+        ((VBox) principal.getRoot()).getChildren().add(confirmar);
     }
 
+    public void mostrarMesa() {
+        limpiarContenedorPrincipal();
+        ((VBox) principal.getRoot()).getChildren().add(mesaGral);
+    }
 }
