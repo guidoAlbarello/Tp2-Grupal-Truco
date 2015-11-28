@@ -16,7 +16,7 @@ public class ManejadorDeTurnos {
     private int rondaActual;                                    // esto lo pongo aca, quizas haya que moverlo a mesa o donde quieran
     private int vecesQueSePasoElTurno;                          // esto lo pongo aca, quizas haya que moverlo a mesa o donde quieran
     private NodoJugador ultimoQueJugoEnvido;
-    private NodoJugador ultimoQueJugoTruco;//agregue par ael tema del truco en 4 jugadores
+    private NodoJugador ultimoQueJugoTruco;//agregue par ael tema del truco en 4 configJugadores
     private NodoJugador primeroQueCantoEnvido;
     private NodoJugador primeroQueCantoTruco;
     private Juego juego;

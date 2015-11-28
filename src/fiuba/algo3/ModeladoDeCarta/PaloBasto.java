@@ -34,4 +34,8 @@ public class PaloBasto extends Palo {
     public int getValorDeHash(){
         return 24;
     }
+
+    public String getNombre() {
+        return "Basto";
+    }
 }

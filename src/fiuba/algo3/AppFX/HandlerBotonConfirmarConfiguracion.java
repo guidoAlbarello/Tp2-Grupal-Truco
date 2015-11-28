@@ -22,9 +22,9 @@ public class HandlerBotonConfirmarConfiguracion implements EventHandler<ActionEv
 
     @Override
     public void handle(ActionEvent event) {
-        this.juego.resetearJugadores();
+        this.juego.resetearConfigJugadores();
         List<HBox> contenedores = this.juego.generarContenedoresSegunCantidadDeJugadores(selector.getSelectionModel().getSelectedIndex());
-        this.juego.jugadores.getChildren().addAll(contenedores);
+        this.juego.configJugadores.getChildren().addAll(contenedores);
         this.juego.limpiarContenedorPrincipal();
         Button confirmarJugadores = new Button("Confirmar");
         confirmarJugadores.setOnAction(new HandlerBotonConfirmarJugadores(contenedores,juego));

@@ -45,8 +45,8 @@ public class JuegoTest {
     @Test
     public void seRepartenCartasAJugadoresYCadaUnoTiene3Cartas() {
         juego.repartirCartasAJugadores();
-        Assert.assertEquals(3, jugador1.getMano().getCartasEnMano().size()); // me aseguro que ambos jugadores recibieron cartas
-        Assert.assertEquals(3, jugador2.getMano().getCartasEnMano().size()); // me aseguro que ambos jugadores recibieron cartas
+        Assert.assertEquals(3, jugador1.getMano().getCartasEnMano().size()); // me aseguro que ambos configJugadores recibieron cartas
+        Assert.assertEquals(3, jugador2.getMano().getCartasEnMano().size()); // me aseguro que ambos configJugadores recibieron cartas
     }
     @Test
     public void unJugador1CantaEnvidoYJugador2NoQuiereEntoncesJugador1Suma1Punto(){

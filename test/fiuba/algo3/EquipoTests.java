@@ -32,7 +32,7 @@ public class EquipoTests {
         Jugador ale = new Jugador("ale");
 
 
-        ListaJugadores jugadores = new ListaJugadores();    // se supone que los jugadores se vana agregando en orden
+        ListaJugadores jugadores = new ListaJugadores();    // se supone que los configJugadores se vana agregando en orden
         jugadores.agregarUltimo(juan);
         jugadores.agregarUltimo(carlos);
         jugadores.agregarUltimo(pedro);
@@ -50,7 +50,7 @@ public class EquipoTests {
         Jugador juan = new Jugador("juan");
         Jugador carlos = new Jugador("carlos");
 
-        ListaJugadores jugadores = new ListaJugadores();    // se supone que los jugadores se vana agregando en orden
+        ListaJugadores jugadores = new ListaJugadores();    // se supone que los configJugadores se vana agregando en orden
         jugadores.agregarUltimo(juan);
         jugadores.agregarUltimo(carlos);
 

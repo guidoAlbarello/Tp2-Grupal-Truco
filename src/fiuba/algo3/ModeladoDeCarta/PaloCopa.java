@@ -34,4 +34,8 @@ public class PaloCopa extends Palo{
         return 12;
     }
 
+    public String getNombre() {
+        return "Copa";
+    }
+
 }

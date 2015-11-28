@@ -35,4 +35,9 @@ public class PaloEspada extends Palo {
     }
 
 
+    public String getNombre() {
+        return "Espada";
+    }
+
+
 }

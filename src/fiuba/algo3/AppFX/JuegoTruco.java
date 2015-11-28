@@ -1,12 +1,14 @@
 package fiuba.algo3.AppFX;
 
 import fiuba.algo3.Juego;
+import fiuba.algo3.ModeladoDeCarta.Carta;
 import fiuba.algo3.manejoDeJugadores.Jugador;
 import fiuba.algo3.manejoDeJugadores.NodoJugador;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
@@ -28,7 +30,7 @@ public class JuegoTruco extends Application {
 
 
     public Scene principal;
-    public VBox jugadores;
+    public VBox configJugadores;
     public VBox configurar;
     public TextArea creditosParaMostrar = new TextArea(" Trabajo Practico Final\n Algoritmos y Programacion III - Facultad de Ingenieria de la Universidad De Buenos Aires (FIUBA) \n\n\n \n Colaboradores: \n Fede \n Guido \n Tony \n \n \n Tutor: Matias");
     public MenuBar barraMenu;
@@ -39,6 +41,8 @@ public class JuegoTruco extends Application {
 
     public VBox botonesyLog = new VBox();
     public GridPane mesa = new GridPane();
+
+    public List<VBox> jugadoresMostrados;
 
     public HBox contenedorBotonesYMesa = new HBox(botonesyLog,mesa);
 
@@ -70,9 +74,9 @@ public class JuegoTruco extends Application {
     }
 
 
-    public void resetearJugadores() {
-        jugadores = new VBox();
-        jugadores.setSpacing(10);
+    public void resetearConfigJugadores() {
+        configJugadores = new VBox();
+        configJugadores.setSpacing(10);
     }
 
 
@@ -83,24 +87,62 @@ public class JuegoTruco extends Application {
         NodoJugador actual = this.truco.manejadorDeTurnos.getJugadores().getPrimero();
         for (int i = 0 ; i < cantidad ; i++){
             Label nombre = new Label(actual.getJugador().getNombre());
+            nombre.setAlignment(Pos.TOP_CENTER);
             Button cartaJugada = new Button("?");
             VBox representacionJugador = new VBox(nombre,cartaJugada);
+            representacionJugador.setPrefWidth(75);
+            representacionJugador.setPrefHeight(85);
+            representacionJugador.setAlignment(Pos.TOP_CENTER);
             contenedoresJugadores.add(representacionJugador);
             actual = actual.getSiguiente();
         }
+
+        jugadoresMostrados = contenedoresJugadores;
+
+        mesa.setHgap(25);
+        mesa.setVgap(20);
+        mesa.setPrefHeight(500);
+        mesa.setPrefWidth(600);
+        mesa.setAlignment(Pos.TOP_CENTER);
+
+
+        TextArea log = new TextArea("Comenzo la partida.");
+        log.setEditable(false);
+        log.setPrefWidth(150);
+        log.setPrefHeight(50);
+        botonesyLog.getChildren().add(log);
 
         if (cantidad == 2){
             this.mesa.add(contenedoresJugadores.get(0),2,4);
             this.mesa.add(contenedoresJugadores.get(1),2,1);
         }else{
-            this.mesa.add(contenedoresJugadores.get(0),2,4);
-            this.mesa.add(contenedoresJugadores.get(1),1,3);
+            this.mesa.add(contenedoresJugadores.get(0),2,5);
+            this.mesa.add(contenedoresJugadores.get(1),4,3);
             this.mesa.add(contenedoresJugadores.get(2),2,1);
-            this.mesa.add(contenedoresJugadores.get(3),4,3);
+            this.mesa.add(contenedoresJugadores.get(3),0,3);
         }
-
-
     }
+
+
+    public void mostrarCartasParaJugador(){
+        List<Carta> cartasParaMostrar = new ArrayList<Carta>();
+        Jugador jugadorActual = this.truco.manejadorDeTurnos.getJugadorConTurnoActual();
+        for (int i = 0 ; i <3 ; i++) {
+            if (!jugadorActual.getMano().getIndicesDeCartasJugadas().contains(i)) {
+                Button tirarcarta = this.crearBotonParaTirarCarta(jugadorActual.getMano().getCartasEnMano().get(i), i);
+                cartasParaMostrar.add(jugadorActual.getMano().getCartasEnMano().get(0));
+                this.cartas.getChildren().add(tirarcarta);
+            }
+        }
+    }
+
+    public Button crearBotonParaTirarCarta(Carta unaCarta, Integer indiceDeLaCarta) {
+            Button tirarCarta = new Button();
+            tirarCarta.setText(unaCarta.getValorDeCarta() + " de " + unaCarta.getPaloDeCarta().getNombre());
+            HandlerBotonTirarCarta manejadorDeTirarCarta = new HandlerBotonTirarCarta(this, indiceDeLaCarta);
+            tirarCarta.setOnAction(manejadorDeTirarCarta);
+            return tirarCarta;
+        }
 
 
     public void resetearConfiguracion() {
@@ -139,7 +181,7 @@ public class JuegoTruco extends Application {
         CheckBox conFlor = new CheckBox("Con Flor");
         conFlor.setSelected(true);
 
-        configurar.getChildren().add(new Label("      Seleccione la cantidad de jugadores y el modo de juego.!"));
+        configurar.getChildren().add(new Label("      Seleccione la cantidad de jugadores y el modo de juego."));
 
 
         HBox configNueva = new HBox(selector,conFlor);
@@ -204,7 +246,7 @@ public class JuegoTruco extends Application {
 
 
     public void mostrarConfigNombresDeJugadores(Button confirmar) {
-        ((VBox) principal.getRoot()).getChildren().add(jugadores);
+        ((VBox) principal.getRoot()).getChildren().add(configJugadores);
         ((VBox) principal.getRoot()).getChildren().add(confirmar);
     }
 

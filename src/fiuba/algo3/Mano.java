@@ -110,4 +110,8 @@ public class Mano {
         }
         return hayFlor;
     }
+
+    public List<Integer> getIndicesDeCartasJugadas(){
+        return this.indicesDeCartasJugadas;
+    }
 }

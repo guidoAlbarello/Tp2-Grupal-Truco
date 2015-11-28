@@ -34,4 +34,9 @@ public class PaloOro extends Palo {
         return 24;
     }
 
+
+    public String getNombre() {
+        return "Oro";
+    }
+
 }

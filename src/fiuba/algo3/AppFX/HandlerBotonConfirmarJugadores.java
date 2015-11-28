@@ -50,6 +50,7 @@ public class HandlerBotonConfirmarJugadores implements EventHandler<ActionEvent>
             this.juego.truco.repartirCartasAJugadores();
             this.juego.generarMesaInicialJuego(tamanio);
             this.juego.mostrarMesa();
+            this.juego.mostrarCartasParaJugador();
         }
 
     }
