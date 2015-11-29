@@ -17,6 +17,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -42,7 +43,7 @@ public class JuegoTruco extends Application {
     public VBox botonesyLog = new VBox();
     public GridPane mesa = new GridPane();
 
-    public List<VBox> jugadoresMostrados;
+    public LinkedList<VBox> jugadoresMostrados;
 
     public HBox contenedorBotonesYMesa = new HBox(botonesyLog,mesa);
 
@@ -83,7 +84,7 @@ public class JuegoTruco extends Application {
 
     public void generarMesaInicialJuego(Integer cantidad){
 
-        List<VBox> contenedoresJugadores = new ArrayList<VBox>();
+        LinkedList<VBox> contenedoresJugadores = new LinkedList<VBox>();
         NodoJugador actual = this.truco.manejadorDeTurnos.getJugadores().getPrimero();
         for (int i = 0 ; i < cantidad ; i++){
             Label nombre = new Label(actual.getJugador().getNombre());
@@ -142,7 +143,7 @@ public class JuegoTruco extends Application {
     public Button crearBotonParaTirarCarta(Carta unaCarta, Integer indiceDeLaCarta) {
             Button tirarCarta = new Button();
             tirarCarta.setText(unaCarta.getValorDeCarta() + " de " + unaCarta.getPaloDeCarta().getNombre());
-            HandlerBotonTirarCarta manejadorDeTirarCarta = new HandlerBotonTirarCarta(this, indiceDeLaCarta);
+            HandlerBotonTirarCarta manejadorDeTirarCarta = new HandlerBotonTirarCarta(this, indiceDeLaCarta,tirarCarta.getText());
             tirarCarta.setOnAction(manejadorDeTirarCarta);
             return tirarCarta;
         }
