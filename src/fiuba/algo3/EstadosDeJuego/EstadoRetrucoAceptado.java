@@ -1,6 +1,7 @@
 package fiuba.algo3.EstadosDeJuego;
 
 import fiuba.algo3.CartaJugada;
+import fiuba.algo3.InteligenciaArtificial.DecisionSegunEstado;
 import fiuba.algo3.Juego;
 import fiuba.algo3.manejoDeJugadores.Jugador;
 
@@ -86,5 +87,10 @@ public class EstadoRetrucoAceptado implements EstadoDeJuego {
     public void jugarCarta(CartaJugada cartaJugada) {
         this.juego.agregarCartaAMesa(cartaJugada);
         this.juego.manejadorDeTurnos.pasarTurnoCartas();
+    }
+
+    @Override
+    public void elegirJugadaJugadorArtificial(DecisionSegunEstado decisionSegunEstado) {
+        decisionSegunEstado.elegirJugadaEstadoRetrucoAceptado();
     }
 }

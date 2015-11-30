@@ -1,6 +1,7 @@
 package fiuba.algo3.EstadosDeJuego;
 
 import fiuba.algo3.CartaJugada;
+import fiuba.algo3.InteligenciaArtificial.DecisionSegunEstado;
 import fiuba.algo3.Juego;
 import fiuba.algo3.Excepciones.NoSeResuelveRealEnvidoError;
 
@@ -90,5 +91,10 @@ public class EstadoRealEnvido implements EstadoDeJuego {
     @Override
     public void jugarCarta(CartaJugada cartaJugada) {
         throw new NoSeResuelveRealEnvidoError();
+    }
+
+    @Override
+    public void elegirJugadaJugadorArtificial(DecisionSegunEstado decisionSegunEstado) {
+        decisionSegunEstado.elegirJugadaEstadoRealEnvido();
     }
 }

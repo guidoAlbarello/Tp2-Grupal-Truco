@@ -1,6 +1,7 @@
 package fiuba.algo3.EstadosDeJuego;
 
 import fiuba.algo3.CartaJugada;
+import fiuba.algo3.InteligenciaArtificial.DecisionSegunEstado;
 import fiuba.algo3.Juego;
 import fiuba.algo3.Excepciones.NoSeResuelveTrucoError;
 import fiuba.algo3.manejoDeJugadores.Jugador;
@@ -95,5 +96,10 @@ public class EstadoTruco implements EstadoDeJuego {
     @Override
     public void jugarCarta(CartaJugada cartaJugada) {
         throw new NoSeResuelveTrucoError();
+    }
+
+    @Override
+    public void elegirJugadaJugadorArtificial(DecisionSegunEstado decisionSegunEstado) {
+        decisionSegunEstado.elegirJugadaEstadoTruco();
     }
 }

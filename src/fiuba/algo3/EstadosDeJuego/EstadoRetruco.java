@@ -1,6 +1,7 @@
 package fiuba.algo3.EstadosDeJuego;
 
 import fiuba.algo3.CartaJugada;
+import fiuba.algo3.InteligenciaArtificial.DecisionSegunEstado;
 import fiuba.algo3.Juego;
 import fiuba.algo3.Excepciones.NoSeResuelveRetrucoError;
 import fiuba.algo3.manejoDeJugadores.Jugador;
@@ -87,5 +88,10 @@ public class EstadoRetruco implements EstadoDeJuego {
     public void jugarCarta(CartaJugada cartaJugada) {
 
         this.juego.agregarCartaAMesa(cartaJugada);
+    }
+
+    @Override
+    public void elegirJugadaJugadorArtificial(DecisionSegunEstado decisionSegunEstado) {
+        decisionSegunEstado.elegirJugadaEstadoRetruco();
     }
 }

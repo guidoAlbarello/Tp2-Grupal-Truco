@@ -83,4 +83,8 @@ public class Mesa {
 
 
     public Jugador getEmparde(){return this.emparde;}
+
+    public CartaJugada getCartaGanadora() {
+        return ganadora;
+    }
 }

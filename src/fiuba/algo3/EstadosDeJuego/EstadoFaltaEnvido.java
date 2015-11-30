@@ -2,6 +2,7 @@ package fiuba.algo3.EstadosDeJuego;
 
 import fiuba.algo3.CartaJugada;
 import fiuba.algo3.Excepciones.NoSeResuelveFaltaEnvidoError;
+import fiuba.algo3.InteligenciaArtificial.DecisionSegunEstado;
 import fiuba.algo3.Juego;
 
 /**
@@ -71,5 +72,10 @@ public class EstadoFaltaEnvido implements EstadoDeJuego {
     @Override
     public void jugarCarta(CartaJugada cartaJugada) {
         throw new NoSeResuelveFaltaEnvidoError();
+    }
+
+    @Override
+    public void elegirJugadaJugadorArtificial(DecisionSegunEstado decisionSegunEstado) {
+        decisionSegunEstado.elegirJugadaEstadoFaltaEnvido();
     }
 }

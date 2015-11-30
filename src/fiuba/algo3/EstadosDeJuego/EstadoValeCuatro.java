@@ -2,6 +2,7 @@ package fiuba.algo3.EstadosDeJuego;
 
 import fiuba.algo3.CartaJugada;
 import fiuba.algo3.Excepciones.NoSeResuelvValeCuatroError;
+import fiuba.algo3.InteligenciaArtificial.DecisionSegunEstado;
 import fiuba.algo3.Juego;
 
 /**
@@ -66,5 +67,10 @@ public class EstadoValeCuatro implements EstadoDeJuego {
     @Override
     public void jugarCarta(CartaJugada cartaJugada) {
         throw new NoSeResuelvValeCuatroError();
+    }
+
+    @Override
+    public void elegirJugadaJugadorArtificial(DecisionSegunEstado decisionSegunEstado) {
+        decisionSegunEstado.elegirJugadaEstadoValeCuatro();
     }
 }

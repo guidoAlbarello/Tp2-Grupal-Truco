@@ -3,6 +3,7 @@ package fiuba.algo3.EstadosDeJuego;
 import fiuba.algo3.CartaJugada;
 import fiuba.algo3.Excepciones.JuegoSinFlorError;
 import fiuba.algo3.Excepciones.JugadaInvalidaPrimeraManoError;
+import fiuba.algo3.InteligenciaArtificial.DecisionSegunEstado;
 import fiuba.algo3.Juego;
 
 /**
@@ -96,5 +97,10 @@ public class EstadoJuegoSinFlor implements EstadoDeJuego{
     public void jugarCarta(CartaJugada cartaJugada) {
         this.juego.agregarCartaAMesa(cartaJugada);
         this.juego.manejadorDeTurnos.pasarTurnoCartas();
+    }
+
+    @Override
+    public void elegirJugadaJugadorArtificial(DecisionSegunEstado decisionSegunEstado) {
+        decisionSegunEstado.elegirJugadaEstadoJuegoSinFlor();
     }
 }

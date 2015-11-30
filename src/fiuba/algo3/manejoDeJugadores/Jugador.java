@@ -79,6 +79,12 @@ public class Jugador {
         this.juego.meVoyAlMaso();
     }
 
+    public void flor() {
+    }
+
+    public Juego getJuego() {
+        return juego;
+    }
 }
 
 

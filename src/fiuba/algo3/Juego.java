@@ -136,4 +136,8 @@ public class Juego {
     public int getPuntosDeEnvidoQuerido(){
         return this.puntosDeEnvidoQuerido;
     }
+
+    public EstadoDeJuego getEstadoDeJuego() {
+        return estadoDeJuego;
+    }
 }

@@ -4,6 +4,7 @@ import fiuba.algo3.CartaJugada;
 import fiuba.algo3.Excepciones.JugadaNoValidaError;
 import fiuba.algo3.Excepciones.NoSeJugoTruco;
 import fiuba.algo3.Excepciones.YaSeJugoEnvidoError;
+import fiuba.algo3.InteligenciaArtificial.DecisionSegunEstado;
 import fiuba.algo3.Juego;
 
 /**
@@ -82,6 +83,11 @@ public class EstadoSinEnvido implements EstadoDeJuego {
     public void jugarCarta(CartaJugada cartaJugada) {
         this.juego.agregarCartaAMesa(cartaJugada);
         this.juego.manejadorDeTurnos.pasarTurnoCartas();
+    }
+
+    @Override
+    public void elegirJugadaJugadorArtificial(DecisionSegunEstado decisionSegunEstado) {
+        decisionSegunEstado.elegirJugadaEstadoSinEnvido();
     }
 }
 

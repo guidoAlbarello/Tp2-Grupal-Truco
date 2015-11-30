@@ -1,6 +1,7 @@
 package fiuba.algo3.EstadosDeJuego;
 
 import fiuba.algo3.CartaJugada;
+import fiuba.algo3.InteligenciaArtificial.DecisionSegunEstado;
 
 public interface EstadoDeJuego {
     public void flor();
@@ -17,4 +18,6 @@ public interface EstadoDeJuego {
     public void irseAlMaso();
     public int puntosSiSeQuiere();
     public void jugarCarta(CartaJugada cartaJugada);
+
+    void elegirJugadaJugadorArtificial(DecisionSegunEstado decisionSegunEstado);
 }

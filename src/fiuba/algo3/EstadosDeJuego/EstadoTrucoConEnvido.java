@@ -2,6 +2,7 @@ package fiuba.algo3.EstadosDeJuego;
 
 import fiuba.algo3.CartaJugada;
 import fiuba.algo3.EstadosDeJuego.EstadoDeJuego;
+import fiuba.algo3.InteligenciaArtificial.DecisionSegunEstado;
 import fiuba.algo3.Juego;
 
 /**
@@ -85,5 +86,10 @@ public class EstadoTrucoConEnvido implements EstadoDeJuego {
     @Override
     public void jugarCarta(CartaJugada cartaJugada) {
 
+    }
+
+    @Override
+    public void elegirJugadaJugadorArtificial(DecisionSegunEstado decisionSegunEstado) {
+        decisionSegunEstado.elegirJugadaEstadoTrucoSinEnvido();
     }
 }

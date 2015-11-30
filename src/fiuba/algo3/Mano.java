@@ -114,4 +114,26 @@ public class Mano {
     public List<Integer> getIndicesDeCartasJugadas(){
         return this.indicesDeCartasJugadas;
     }
+
+    public int getIndiceCartaMasBaja() {
+        int indiceCartaMasBaja = 120;
+        for(int i = 0; i < 3;i++){
+            if(!indicesDeCartasJugadas.contains(i)) {
+                if (indiceCartaMasBaja > cartasEnLaMano.get(i).getValorDePoder())
+                    indiceCartaMasBaja = cartasEnLaMano.get(i).getValorDePoder();
+            }
+        }
+        return indiceCartaMasBaja;
+    }
+
+    public int getIndiceCartaMasAlta() {
+        int indiceCartaMasAlta = 0;
+        for(int i = 0; i < 3;i++){
+            if(!indicesDeCartasJugadas.contains(i)) {
+                if (indiceCartaMasAlta < cartasEnLaMano.get(i).getValorDePoder())
+                    indiceCartaMasAlta = cartasEnLaMano.get(i).getValorDePoder();
+            }
+        }
+        return indiceCartaMasAlta;
+    }
 }
