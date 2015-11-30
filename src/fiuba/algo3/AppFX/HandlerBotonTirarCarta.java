@@ -7,7 +7,8 @@ import javafx.scene.control.Button;
 
 /**
  * Created by Fechee on 28/11/2015.
- */
+ **/
+/*
 public class HandlerBotonTirarCarta implements EventHandler<ActionEvent> {
     private JuegoTruco juego;
     private Integer indiceDeCarta;
@@ -39,3 +40,4 @@ public class HandlerBotonTirarCarta implements EventHandler<ActionEvent> {
         //TODO: ACTUALIZAR MESA, MOSTRAR CARTAS DEL OTRO JUGADOR O MOSTRAR PUNTAJE
     }
 }
+*/

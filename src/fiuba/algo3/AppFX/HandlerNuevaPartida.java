@@ -1,24 +1,38 @@
 package fiuba.algo3.AppFX;
 
+import fiuba.algo3.AppFX.beta.BetaTestVentanas;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Pos;
+import javafx.scene.control.*;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 /**
  * Created by Fechee on 28/11/2015.
  */
 public class HandlerNuevaPartida implements EventHandler<ActionEvent> {
 
-    JuegoTruco juego;
+    BetaTestVentanas aplicacion;
 
-    public HandlerNuevaPartida(JuegoTruco juego){
-        this.juego=juego;
+    public HandlerNuevaPartida(BetaTestVentanas juego){
+        this.aplicacion=juego;
     }
 
     @Override
     public void handle(ActionEvent event) {
+        this.aplicacion.panel.setCenter(this.aplicacion.generarPanelDeConfiguracion());
+
+
+
+        /*
         this.juego.resetearConfiguracion();
         this.juego.limpiarContenedorPrincipal();
         this.juego.generarPanelDeConfiguracion();
-        this.juego.mostrarPanelInicialDeJugaodres();
+        this.juego.mostrarPanelInicialDeJugaodres();*/
     }
+
+
+
 }

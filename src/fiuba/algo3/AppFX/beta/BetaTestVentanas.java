@@ -1,23 +1,25 @@
 package fiuba.algo3.AppFX.beta;
 
 
+import fiuba.algo3.AppFX.HandlerBotonConfirmarConfiguracion;
+import fiuba.algo3.AppFX.HandlerNuevaPartida;
 import fiuba.algo3.Juego;
 import fiuba.algo3.ModeladoDeCarta.Carta;
 import fiuba.algo3.manejoDeJugadores.Jugador;
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.collections.FXCollections;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.ContentDisplay;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 
 
 import java.util.List;
@@ -27,7 +29,7 @@ import java.util.List;
  * Created by Fechee on 29/11/2015.
  */
 public class BetaTestVentanas extends Application {
-    private BorderPane panel;
+    public BorderPane panel;
     private ImageView contenedorCartaJugador1, contenedorCartaJugador2,
             contenedorCartaJugador3,contenedorCartaJugador4;
 
@@ -37,6 +39,7 @@ public class BetaTestVentanas extends Application {
     public Integer manoActual=0;
     public Integer rondaActual=1;
     public GridPane verticalMedio;
+    public VBox configurar;
 
 
     public BetaTestVentanas(){
@@ -52,11 +55,16 @@ public class BetaTestVentanas extends Application {
     @Override
     public void start(Stage stage){
 
-        stage.setTitle("Truco- Algoritmos y programacion 3");
+        stage.setTitle("Truco - Algoritmos y programacion 3");
         panel = new BorderPane();
+
         //panel.setRight(this.contenedorDeJugadas());
-        panel.setCenter(this.inicializarMesaParaNuevaPartida());
+        //panel.setCenter(this.inicializarMesaParaNuevaPartida());
+
+        panel.setCenter(this.generarPanelDeConfiguracion());
+
         panel.setLeft(this.contenedorEstadoDeJuego());
+        panel.setTop(this.crearMenuDeVentana(stage));
 
         stage.setWidth(770);
         stage.setHeight(700);
@@ -66,8 +74,70 @@ public class BetaTestVentanas extends Application {
         stage.show();
     }
 
+    public VBox generarPanelDeConfiguracion(){
+
+        configurar = new VBox();
+        configurar.setSpacing(40);
+
+        Label bienvenida = new Label("Bienvenido al Truco!");
+        bienvenida.setFont(Font.font ("Verdana", 28));
+        configurar.getChildren().add(bienvenida);
+
+        Button botonConfirmar = new Button();
+        botonConfirmar.setText("Confirmar");
+
+
+        ChoiceBox selector = new ChoiceBox(FXCollections.observableArrayList("2 Jugadores", "4 Jugadores"));
+        selector.setTooltip((new Tooltip("Seleccione la cantidad de jugadores.")));
+        selector.getSelectionModel().selectFirst();
+        CheckBox conFlor = new CheckBox("Con Flor");
+        conFlor.setSelected(true);
+
+        configurar.getChildren().add(new Label("      Seleccione la cantidad de jugadores y el modo de juego."));
+
+
+        HBox configNueva = new HBox(selector,conFlor);
+        configNueva.setAlignment(Pos.CENTER);
+        configNueva.setSpacing(30);
+        configurar.getChildren().add(configNueva);
+
+        HandlerBotonConfirmarConfiguracion handler = new HandlerBotonConfirmarConfiguracion(this,selector);
+        botonConfirmar.setOnAction(handler);
+
+        configurar.getChildren().add(botonConfirmar);
+
+        configurar.setAlignment(Pos.CENTER);
+        return configurar;
+    }
+
+
+
+    private MenuBar crearMenuDeVentana(Stage stage) {
+        MenuBar barraDeMenu = new MenuBar();
+        barraDeMenu.prefWidthProperty().bind(stage.widthProperty());
+
+        Menu menuDeArchivo = new Menu("Archivo");
+        MenuItem nuevoJuegoItemMenu = new MenuItem("Nuevo Juego");
+        nuevoJuegoItemMenu.setOnAction(new HandlerNuevaPartida(this));
+        MenuItem opcionesItemMenu = new MenuItem("Opciones");
+        MenuItem salirItemMenu = new MenuItem("Salir");
+        salirItemMenu.setOnAction(actionEvent-> Platform.exit());
+
+        menuDeArchivo.getItems().addAll(nuevoJuegoItemMenu, opcionesItemMenu, new SeparatorMenuItem(), salirItemMenu);
+
+        Menu menuDeSoporte = new Menu("Ayuda y Soporte");
+        MenuItem valoresDeCartasItemMenu = new MenuItem("Valores de Cartas");
+        MenuItem creditosItemMenu = new MenuItem("Creditos..");
+
+        menuDeSoporte.getItems().addAll(valoresDeCartasItemMenu, creditosItemMenu);
+
+        barraDeMenu.getMenus().addAll(menuDeArchivo, menuDeSoporte);
+        return barraDeMenu;
+    }
+
 
     public GridPane inicializarMesaParaNuevaPartida(){
+        this.juego = inicializarJuego();
         verticalMedio = new GridPane();
         verticalMedio.setStyle("-fx-background-color: #009900");
         ColumnConstraints columna0 = new ColumnConstraints(150,150,150);
@@ -101,10 +171,9 @@ public class BetaTestVentanas extends Application {
         inicializarCartasEnMano(verticalMedio);
 
         //imagenes de cartas en mesa
-        if (manoActual != this.juego.manejadorDeTurnos.getManoActual()){
-            inicializarImagenesDeCartasEnMesa(5,null);
-            manoActual = this.juego.manejadorDeTurnos.getManoActual();
-        }
+
+        inicializarImagenesDeCartasEnMesa(5,null);
+
 
         //contenedorCartaJugador1.setImage(new Image("imagenes/naipeDota.jpg"));
 
@@ -331,28 +400,32 @@ public class BetaTestVentanas extends Application {
     public VBox contenedorEstadoDeJuego(){
         // label Jugador en turno
         Label jugadorEnTurno = new Label("Turno actual:\n"+"    "+juego.manejadorDeTurnos.getJugadorConTurnoActual().getNombre());
-        jugadorEnTurno.setFont(new Font("Comic",15));
+        jugadorEnTurno.setFont(Font.font("Comic",FontWeight.BOLD, 15));
+        jugadorEnTurno.setStyle("-fx-text-fill: #FFFFFF");
 
         // label puntajede jugador en turno
-        Label puntajeDeJugadorEnTurno = new Label("Puntaje Equipo1:\n"+"            "+juego.manejadorDeTurnos.getJugadores().getJugadorEnPosicion(0).getEquipo().getPuntaje());
-        puntajeDeJugadorEnTurno.setFont(new Font("Comic",15));
-
+        Label puntajeDeJugador1 = new Label("Puntaje Equipo1:\n"+"            "+juego.manejadorDeTurnos.getJugadores().getJugadorEnPosicion(0).getEquipo().getPuntaje());
+        puntajeDeJugador1.setFont(Font.font("Comic",FontWeight.BOLD, 15));
+        puntajeDeJugador1.setStyle("-fx-text-fill: #FFFFFF");
         //label puntaje del juego
-        Label puntajeDeJuego = new Label("Puntaje Equipo2:\n"+"            "+juego.manejadorDeTurnos.getJugadores().getJugadorEnPosicion(1).getEquipo().getPuntaje());
-        puntajeDeJuego.setFont(new Font("Comic",15));
+        Label puntajeDeJugador2 = new Label("Puntaje Equipo2:\n"+"            "+juego.manejadorDeTurnos.getJugadores().getJugadorEnPosicion(1).getEquipo().getPuntaje());
+        puntajeDeJugador2.setFont(Font.font("Comic",FontWeight.BOLD, 15));
+        puntajeDeJugador2.setStyle("-fx-text-fill: #FFFFFF");
 
         // lable manos ganadas por equipo
-        Label manosGanadasPorRonda = new Label("Mano Actual:\n "+"        "+juego.manejadorDeTurnos.getManoActual());
-        manosGanadasPorRonda.setFont(new Font("Comic",15));
+        Label manoActual = new Label("Mano Actual:\n "+"        "+juego.manejadorDeTurnos.getManoActual());
+        manoActual.setFont(Font.font("Comic",FontWeight.BOLD, 15));
+        manoActual.setStyle("-fx-text-fill: #FFFFFF");
 
         Label numeroDeRonda = new Label("Ronda Actual:\n"+"         "+juego.manejadorDeTurnos.getRondaActual());
-        numeroDeRonda.setFont(new Font("Comic",15));
+        numeroDeRonda.setFont(Font.font("Comic",FontWeight.BOLD, 15));
+        numeroDeRonda.setStyle("-fx-text-fill: #FFFFFF");
 
 
         // contenedor vertical donde se muestra el estado del juego
-        VBox contenedorDeEstadoDeJuego = new VBox(jugadorEnTurno,puntajeDeJugadorEnTurno,puntajeDeJuego,manosGanadasPorRonda,numeroDeRonda);
+        VBox contenedorDeEstadoDeJuego = new VBox(jugadorEnTurno,puntajeDeJugador1,puntajeDeJugador2,manoActual,numeroDeRonda);
         contenedorDeEstadoDeJuego.setPrefSize(150, 150);
-        contenedorDeEstadoDeJuego.setStyle("-fx-background-color: #FF0000");
+        contenedorDeEstadoDeJuego.setStyle("-fx-background-image: url('imagenes/texturaMesa.jpg')");
         contenedorDeEstadoDeJuego.setAlignment(Pos.CENTER);
         contenedorDeEstadoDeJuego.setPadding(new Insets(10));
         contenedorDeEstadoDeJuego.setSpacing(20);

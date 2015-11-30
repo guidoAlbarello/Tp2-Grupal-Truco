@@ -23,6 +23,7 @@ import java.util.List;
 /**
  * Created by Fechee on 28/11/2015.
  */
+/*
 public class JuegoTruco extends Application {
 
 
@@ -259,3 +260,4 @@ public class JuegoTruco extends Application {
         ((VBox) principal.getRoot()).getChildren().add(mesaGral);
     }
 }
+*/

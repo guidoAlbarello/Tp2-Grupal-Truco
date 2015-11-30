@@ -1,5 +1,6 @@
 package fiuba.algo3.AppFX;
 
+import fiuba.algo3.AppFX.beta.BetaTestVentanas;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
@@ -11,23 +12,21 @@ import java.util.List;
 /**
  * Created by Fechee on 28/11/2015.
  */
+
+
 public class HandlerBotonConfirmarConfiguracion implements EventHandler<ActionEvent> {
-    JuegoTruco juego;
+    BetaTestVentanas aplicacion;
     ChoiceBox selector;
 
-    public HandlerBotonConfirmarConfiguracion(JuegoTruco juego, ChoiceBox selector ){
-        this.juego = juego;
+    public HandlerBotonConfirmarConfiguracion(BetaTestVentanas juego, ChoiceBox selector ){
+        this.aplicacion = juego;
         this.selector = selector;
     }
 
     @Override
     public void handle(ActionEvent event) {
-        this.juego.resetearConfigJugadores();
-        List<HBox> contenedores = this.juego.generarContenedoresSegunCantidadDeJugadores(selector.getSelectionModel().getSelectedIndex());
-        this.juego.configJugadores.getChildren().addAll(contenedores);
-        this.juego.limpiarContenedorPrincipal();
-        Button confirmarJugadores = new Button("Confirmar");
-        confirmarJugadores.setOnAction(new HandlerBotonConfirmarJugadores(contenedores,juego));
-        this.juego.mostrarConfigNombresDeJugadores(confirmarJugadores);
+        if (selector.getSelectionModel().getSelectedIndex()==1){
+            this.aplicacion.panel.setCenter(this.aplicacion.inicializarMesaParaNuevaPartida());
+        }
     }
 }

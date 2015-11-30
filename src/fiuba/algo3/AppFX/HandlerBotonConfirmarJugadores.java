@@ -12,6 +12,8 @@ import java.util.List;
 /**
  * Created by Fechee on 28/11/2015.
  */
+
+/*
 public class HandlerBotonConfirmarJugadores implements EventHandler<ActionEvent> {
 
     public JuegoTruco juego;
@@ -60,3 +62,4 @@ public class HandlerBotonConfirmarJugadores implements EventHandler<ActionEvent>
 
 
 }
+*/
