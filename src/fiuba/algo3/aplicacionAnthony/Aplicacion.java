@@ -5,6 +5,9 @@ import fiuba.algo3.Eventos.HandlerBotonEnvido;
 import fiuba.algo3.Eventos.HandlerBotonFlor;
 import fiuba.algo3.Eventos.HandlerBotonTruco;
 import fiuba.algo3.Eventos.HandlerBotonVolver;
+import fiuba.algo3.Juego;
+import fiuba.algo3.ModeladoDeCarta.Carta;
+import fiuba.algo3.manejoDeJugadores.Jugador;
 import javafx.application.Application;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
@@ -19,11 +22,15 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 
+import java.util.List;
+
+
 /**
  * Created by anthony on 29/11/2015.
  */
 public class Aplicacion extends Application {
     private BorderPane panel;
+    private Juego juego;
 
     public static void main(String[] args){
         launch(args);
@@ -31,7 +38,7 @@ public class Aplicacion extends Application {
 
     @Override
     public void start(Stage stage){
-
+        juego = this.inicializarJuego();
         stage.setTitle("Truco- Algoritmos y programacion 3");
         panel = new BorderPane();
         panel.setRight(this.contenedorDeJugadas());
@@ -48,6 +55,7 @@ public class Aplicacion extends Application {
 
 
     public GridPane cuadriculaDeJuego(){
+        Jugador jugadorConTurno = juego.manejadorDeTurnos.getJugadorConTurnoActual();
         GridPane verticalMedio = new GridPane();
         verticalMedio.setStyle("-fx-background-color: #009900");
         ColumnConstraints columna0 = new ColumnConstraints(150,150,150);
@@ -76,13 +84,21 @@ public class Aplicacion extends Application {
         verticalMedio.setPadding(new Insets(10));
 
         // imagenes de cartas
-        Image cartaMano1 = new Image("imagenes/1e.jpg");
-        Image cartaMano2 = new Image("imagenes/3c.jpg");
-        Image cartaMano3 = new Image("imagenes/1o.jpg");
-        Image cartaJugador1 = new Image("imagenes/1c.jpg");
-        Image cartaJugador2 = new Image("imagenes/2e.jpg");
-        Image cartaJugador3 = new Image("imagenes/2o.jpg");
-        Image cartaJugador4 = new Image("imagenes/2c.jpg");
+        List<Carta> cartasMano = juego.manejadorDeTurnos.getJugadorConTurnoActual().getMano().getCartasEnMano();
+        Carta carta = cartasMano.get(0);
+        String direccionCarta = "imagenes/"+carta.getValorDeCarta()+carta.getPaloDeCarta().getNombre()+".jpg";
+        Image cartaMano1 = new Image(direccionCarta);
+        carta = cartasMano.get(1);
+        direccionCarta = "imagenes/"+carta.getValorDeCarta()+carta.getPaloDeCarta().getNombre()+".jpg";
+        Image cartaMano2 = new Image(direccionCarta);
+        carta = cartasMano.get(2);
+        direccionCarta = "imagenes/"+carta.getValorDeCarta()+carta.getPaloDeCarta().getNombre()+".jpg";
+        Image cartaMano3 = new Image(direccionCarta);
+
+        Image cartaJugador1 = new Image("imagenes/1Copa.jpg");
+        Image cartaJugador2 = new Image("imagenes/2Espada.jpg");
+        Image cartaJugador3 = new Image("imagenes/2Oro.jpg");
+        Image cartaJugador4 = new Image("imagenes/2Copa.jpg");
 
         ImageView contenedorCartaMano1 = new ImageView(cartaMano1);
         contenedorCartaMano1.setFitHeight(90);
@@ -266,7 +282,26 @@ public class Aplicacion extends Application {
         return contenedorDeEstadoDeJuego;
     }
 
+    public Juego inicializarJuego() {
+        Juego juego = new Juego();
 
+        Jugador jugador1 = new Jugador("jugador1"),
+                jugador2 = new Jugador("jugador2"),
+                jugador3 = new Jugador("jugador3"),
+                jugador4 = new Jugador("jugador4");
+
+        jugador1.setJuego(juego);
+        juego.agregarJugador(jugador1);
+        jugador2.setJuego(juego);
+        juego.agregarJugador(jugador2);
+        jugador3.setJuego(juego);
+        juego.agregarJugador(jugador3);
+        jugador4.setJuego(juego);
+        juego.agregarJugador(jugador4);
+        juego.configurarManejadorDeTurnos();
+        juego.repartirCartasAJugadores();
+        return juego;
+    }
 
     public BorderPane getBorderPane() {
         return this.panel;
