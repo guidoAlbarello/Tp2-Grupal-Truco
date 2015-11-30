@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42b23ff1-80f4-4894-82ee-097f2e4df9f3" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\src\fiuba\algo3\Eventos\HandlerBotonJugarCartaEnPosicion.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/HandlerBotonJugarCartaEnPosicion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/aplicacionAnthony/Aplicacion.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/aplicacionAnthony/Aplicacion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/BetaTestVentanas.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/BetaTestVentanas.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonEnvido.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonEnvido.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonFaltaEnvido.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonFaltaEnvido.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonJugarCarta1.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonJugarCarta1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonJugarCarta2.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonJugarCarta2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonJugarCarta3.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonJugarCarta3.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonNoQuiero.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonNoQuiero.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonQuiero.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonQuiero.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonRealEnvido.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonRealEnvido.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonRetruco.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonRetruco.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonTruco.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonTruco.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonValeCuatro.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonValeCuatro.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonVolver.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonVolver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoRetruco.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoRetruco.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTruco.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTruco.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Tp2-Grupal-Truco.iws" />
@@ -42,8 +29,8 @@
       <file leaf-file-name="Aplicacion.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/aplicacionAnthony/Aplicacion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.74209243">
-              <caret line="287" column="8" selection-start-line="287" selection-start-column="8" selection-end-line="287" selection-end-column="8" />
+            <state vertical-scroll-proportion="3.8442822">
+              <caret line="287" column="0" selection-start-line="287" selection-start-column="0" selection-end-line="287" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -75,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTrucoAceptado.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="78" selection-end-column="36" />
+              <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -85,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTruco.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="61" column="74" selection-start-line="61" selection-start-column="74" selection-end-line="61" selection-end-column="74" />
+              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="63" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -125,7 +112,7 @@
         <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoRetruco.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <caret line="59" column="57" selection-start-line="59" selection-start-column="57" selection-end-line="59" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -197,6 +184,8 @@
         <option value="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonQuiero.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonNoQuiero.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/aplicacionAnthony/Aplicacion.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTruco.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoRetruco.java" />
       </list>
     </option>
   </component>
@@ -429,32 +418,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="TestRondaCuatroJugadores.test2RondasSeguidas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="fiuba.algo3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Tp2-Grupal-Truco" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="fiuba.algo3" />
-      <option name="MAIN_CLASS_NAME" value="fiuba.algo3.TestRondaCuatroJugadores" />
-      <option name="METHOD_NAME" value="test2RondasSeguidas" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="BetaTestVentanas" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -493,6 +456,27 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="Tp2-Grupal-Truco" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="All in Tp2-Grupal-Truco" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Tp2-Grupal-Truco" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -645,17 +629,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.Aplicacion" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.TestRondaCuatroJugadores" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.TestRondaCuatroJugadores.test2RondasSeguidas" />
-      <item index="3" class="java.lang.String" itemvalue="Application.BetaTestVentanas" />
-      <item index="4" class="java.lang.String" itemvalue="Application.JuegoTruco" />
+      <item index="2" class="java.lang.String" itemvalue="Application.BetaTestVentanas" />
+      <item index="3" class="java.lang.String" itemvalue="Application.JuegoTruco" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.All in Tp2-Grupal-Truco" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Aplicacion" />
-        <item index="1" class="java.lang.String" itemvalue="Application.BetaTestVentanas" />
-        <item index="2" class="java.lang.String" itemvalue="Application.JuegoTruco" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TestRondaCuatroJugadores" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.TestRondaCuatroJugadores.test2RondasSeguidas" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in Tp2-Grupal-Truco" />
+        <item index="2" class="java.lang.String" itemvalue="Application.BetaTestVentanas" />
+        <item index="3" class="java.lang.String" itemvalue="Application.JuegoTruco" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.TestRondaCuatroJugadores" />
       </list>
     </recent_temporary>
   </component>
@@ -757,7 +741,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448902152259</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="desahabilitar botones">
+      <created>1448906836939</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1448906836939</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -822,7 +812,8 @@
     <MESSAGE value="interfaz grafica de la mesa de juego" />
     <MESSAGE value="interfaz grafica de la mesa de juegocon jugadas solo con cartas" />
     <MESSAGE value="botones quiero y no quiero" />
-    <option name="LAST_COMMIT_MESSAGE" value="botones quiero y no quiero" />
+    <MESSAGE value="desahabilitar botones" />
+    <option name="LAST_COMMIT_MESSAGE" value="desahabilitar botones" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1256,22 +1247,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTruco.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="74" selection-start-line="61" selection-start-column="74" selection-end-line="61" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoRetruco.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoEnvido.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1291,15 +1266,31 @@
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTrucoAceptado.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="78" selection-end-column="36" />
+          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTruco.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="63" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoRetruco.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="57" selection-start-line="59" selection-start-column="57" selection-end-line="59" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/aplicacionAnthony/Aplicacion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74209243">
-          <caret line="287" column="8" selection-start-line="287" selection-start-column="8" selection-end-line="287" selection-end-column="8" />
+        <state vertical-scroll-proportion="3.8442822">
+          <caret line="287" column="0" selection-start-line="287" selection-start-column="0" selection-end-line="287" selection-end-column="0" />
           <folding />
         </state>
       </provider>

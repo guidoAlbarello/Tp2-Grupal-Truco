@@ -58,6 +58,7 @@ public class EstadoTruco implements EstadoDeJuego {
     @Override
     public void retruco() {
         Jugador jugadorTurnoActual = juego.manejadorDeTurnos.getJugadorConTurnoActual();
+        juego.manejadorDeTurnos.setPrimeroQueCantoTruco(jugadorTurnoActual);
         this.juego.manejadorDeTurnos.setJugadorTurnoActual(juego.manejadorDeTurnos.getUltimoQueJugoTruco());
         juego.manejadorDeTurnos.setUltimoQueJugoTruco(jugadorTurnoActual);
         this.juego.setEstadoDeJuego(new EstadoRetruco(juego));

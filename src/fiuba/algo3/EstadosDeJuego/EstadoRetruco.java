@@ -3,6 +3,7 @@ package fiuba.algo3.EstadosDeJuego;
 import fiuba.algo3.CartaJugada;
 import fiuba.algo3.Juego;
 import fiuba.algo3.Excepciones.NoSeResuelveRetrucoError;
+import fiuba.algo3.manejoDeJugadores.Jugador;
 
 /**
  * Created by anthony on 18/11/2015.
@@ -51,7 +52,12 @@ public class EstadoRetruco implements EstadoDeJuego {
     }
 
     @Override
-    public void valeCuatro() {this.juego.setEstadoDeJuego(new EstadoValeCuatro(juego));
+    public void valeCuatro() {
+        Jugador jugadorTurnoActual = juego.manejadorDeTurnos.getJugadorConTurnoActual();
+        juego.manejadorDeTurnos.setPrimeroQueCantoTruco(jugadorTurnoActual);
+        this.juego.manejadorDeTurnos.setJugadorTurnoActual(juego.manejadorDeTurnos.getUltimoQueJugoTruco());
+        juego.manejadorDeTurnos.setUltimoQueJugoTruco(jugadorTurnoActual);
+        this.juego.setEstadoDeJuego(new EstadoValeCuatro(juego));
     }
 
     @Override
