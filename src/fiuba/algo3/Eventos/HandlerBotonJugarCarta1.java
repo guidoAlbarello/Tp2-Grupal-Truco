@@ -21,6 +21,7 @@ public class HandlerBotonJugarCarta1 implements EventHandler {
         aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().jugarCartaEnPosicion(0);
         aplicacion.getBorderPane().setCenter(aplicacion.cuadriculaDeJuego());
         aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
+        aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
 
 
     }

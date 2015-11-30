@@ -1,7 +1,6 @@
 package fiuba.algo3.AppFX.beta;
 
 
-import fiuba.algo3.Eventos.*;
 import fiuba.algo3.Juego;
 import fiuba.algo3.ModeladoDeCarta.Carta;
 import fiuba.algo3.manejoDeJugadores.Jugador;

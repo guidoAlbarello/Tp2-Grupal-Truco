@@ -15,7 +15,8 @@ public class HandlerBotonValeCuatro implements EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent event) {
-        this.aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
+        aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().valeCuatro();
+        aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
         aplicacion.getBorderPane().setCenter(aplicacion.cuadriculaDeJuego());
         aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
     }

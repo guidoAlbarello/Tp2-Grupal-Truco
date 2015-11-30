@@ -286,10 +286,13 @@ public void actualizarMesa(){
         botonNoQuiero.setAlignment(Pos.CENTER);
         botonNoQuiero.setOnAction(new HandlerBotonNoQuiero(this));
 
+
         Button botonEnvido = new Button("Envido");
         botonEnvido.setPrefSize(100,50);
         botonEnvido.setAlignment(Pos.CENTER);
         botonEnvido.setOnAction(new HandlerBotonJugadasEnvido(this));
+        if (this.getJuego().manejadorDeTurnos.getManoActual() > 1)
+            botonEnvido.setDisable(true);
 
 
         Button botonAlMazo = new Button("mazo");
@@ -301,11 +304,17 @@ public void actualizarMesa(){
         botonTruco.setPrefSize(100,50);
         botonTruco.setAlignment(Pos.CENTER);
         botonTruco.setOnAction(new HandlerBotonJugadasTruco(this));
-
+        if(juego.manejadorDeTurnos.getPrimeroQueCantoTruco() != null ){
+                if ((juego.manejadorDeTurnos.getPrimeroQueCantoTruco().getJugador().getEquipo().getNombre())
+                        .equals(juego.manejadorDeTurnos.getJugadorConTurnoActual().getEquipo().getNombre()))
+                botonTruco.setDisable(true);
+        }
         Button botonFlor = new Button("Flor");
         botonFlor.setPrefSize(100,50);
         botonFlor.setAlignment(Pos.CENTER);
         botonFlor.setOnAction(new HandlerBotonJugadasFlor(this));
+        if (!this.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().getMano().hayFlorEnMano())
+            botonFlor.setDisable(true);
 
         VBox contenedorDeJugadas = new VBox(textoJugadas,botonEnvido,botonTruco,botonFlor,botonAlMazo,textoEspacio,botonQuiero,botonNoQuiero);
         contenedorDeJugadas.setPrefSize(150,150);
@@ -313,6 +322,7 @@ public void actualizarMesa(){
         contenedorDeJugadas.setAlignment(Pos.CENTER);
         contenedorDeJugadas.setSpacing(20);
         contenedorDeJugadas.setPadding(new Insets(10));
+
         return contenedorDeJugadas;
     }
 

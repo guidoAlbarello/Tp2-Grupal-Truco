@@ -1,4 +1,4 @@
-package fiuba.algo3.Eventos;
+package fiuba.algo3.AppFX.beta;
 
 import fiuba.algo3.AppFX.beta.BetaTestVentanas;
 import javafx.event.Event;

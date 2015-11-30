@@ -17,6 +17,5 @@ public class HandlerBotonVolver implements EventHandler {
     @Override
     public void handle(Event event) {
         this.aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
-
     }
 }

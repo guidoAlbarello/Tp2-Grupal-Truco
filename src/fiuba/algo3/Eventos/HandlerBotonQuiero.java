@@ -17,5 +17,7 @@ public class HandlerBotonQuiero implements EventHandler<ActionEvent> {
     public void handle(ActionEvent event) {
         aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().quiero();
         aplicacion.getBorderPane().setCenter(aplicacion.cuadriculaDeJuego());
+        aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
+        aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
     }
 }

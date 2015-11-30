@@ -17,5 +17,7 @@ public class HandlerBotonNoQuiero implements EventHandler<ActionEvent> {
     public void handle(ActionEvent event) {
         aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().noQuiero();
         aplicacion.getBorderPane().setCenter(aplicacion.cuadriculaDeJuego());
+        aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
+        aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
     }
 }
