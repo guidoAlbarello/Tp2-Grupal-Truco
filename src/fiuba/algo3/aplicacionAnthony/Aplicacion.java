@@ -42,7 +42,7 @@ public class Aplicacion extends Application {
         stage.setHeight(700);
         Scene scene = new Scene(panel);
         stage.setScene(scene);
-        stage.setResizable(true);
+        stage.setResizable(false);
         stage.show();
     }
 
