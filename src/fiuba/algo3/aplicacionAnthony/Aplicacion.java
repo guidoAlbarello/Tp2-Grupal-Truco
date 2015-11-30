@@ -134,6 +134,10 @@ public class Aplicacion extends Application {
         contenedorCartaJugador4.setFitHeight(90);
         contenedorCartaJugador4.setFitWidth(65);
         verticalMedio.setHalignment(contenedorCartaJugador4, HPos.CENTER);
+
+        Button botonJugarCarta1 = new Button("jugar Carta 1");
+        Button botonJugarCarta2 = new Button("jugar Carta 2");
+        Button botonJugarCarta3 = new Button("jugar Carta 3");
         verticalMedio.add(contenedorCartaMano1,0,3);
         verticalMedio.add(contenedorCartaMano2,1,3);
         verticalMedio.add(contenedorCartaMano3,2,3);
@@ -141,6 +145,13 @@ public class Aplicacion extends Application {
         verticalMedio.add(contenedorCartaJugador2,2,1);
         verticalMedio.add(contenedorCartaJugador3,1,0);
         verticalMedio.add(contenedorCartaJugador4,0,1);
+
+        verticalMedio.add(botonJugarCarta1,0,4);
+        verticalMedio.setHalignment(botonJugarCarta1, HPos.CENTER);
+        verticalMedio.add(botonJugarCarta2,1,4);
+        verticalMedio.setHalignment(botonJugarCarta2, HPos.CENTER);
+        verticalMedio.add(botonJugarCarta3,2,4);
+        verticalMedio.setHalignment(botonJugarCarta3, HPos.CENTER);
 
         return verticalMedio;
     }
