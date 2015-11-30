@@ -291,7 +291,7 @@ public void actualizarMesa(){
         botonEnvido.setPrefSize(100,50);
         botonEnvido.setAlignment(Pos.CENTER);
         botonEnvido.setOnAction(new HandlerBotonJugadasEnvido(this));
-        if (this.getJuego().manejadorDeTurnos.getManoActual() > 1)
+        if (this.getJuego().manejadorDeTurnos.getManoActual() > 1 || juego.getPuntosDeEnvidoQuerido() > 0)
             botonEnvido.setDisable(true);
 
 

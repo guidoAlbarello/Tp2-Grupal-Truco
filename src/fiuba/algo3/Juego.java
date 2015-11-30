@@ -26,6 +26,8 @@ public class Juego {
         this.mazoDelJuego = new Mazo();
         this.estadoDeJuego = new EstadoJuegoConFlor(this);//por ahora , se incializa con flor depseus veremos
         this.puntosDeTruco= 1;// si no se quiere o un se va al maso directamente
+        this.puntosDeEnvidoNoQuerido = 0;
+        this.puntosDeEnvidoQuerido = 0;
     }
 
     public int getPuntosDeTruco(){
@@ -130,5 +132,8 @@ public class Juego {
         this.puntosDeTruco = 1;
         this.puntosDeEnvidoQuerido = 0;
         this.puntosDeEnvidoNoQuerido = 0;
+    }
+    public int getPuntosDeEnvidoQuerido(){
+        return this.puntosDeEnvidoQuerido;
     }
 }
