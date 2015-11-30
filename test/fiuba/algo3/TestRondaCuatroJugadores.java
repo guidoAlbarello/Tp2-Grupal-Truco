@@ -12,8 +12,6 @@ import org.junit.Test;
  */
 public class TestRondaCuatroJugadores {
     private Juego juego;
-    private Equipo equipo1;
-    private Equipo equipo2;
     private Jugador jugador1,jugador2,jugador3,jugador4;
     private PaloEspada paloEspada;
     private PaloBasto paloBasto;

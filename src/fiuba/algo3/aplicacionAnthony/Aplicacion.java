@@ -95,10 +95,10 @@ public class Aplicacion extends Application {
         direccionCarta = "imagenes/"+carta.getValorDeCarta()+carta.getPaloDeCarta().getNombre()+".jpg";
         Image cartaMano3 = new Image(direccionCarta);
 
-        Image cartaJugador1 = new Image("imagenes/1Copa.jpg");
-        Image cartaJugador2 = new Image("imagenes/2Espada.jpg");
-        Image cartaJugador3 = new Image("imagenes/2Oro.jpg");
-        Image cartaJugador4 = new Image("imagenes/2Copa.jpg");
+        Image cartaJugador1 = new Image("imagenes/huskar.jpg");
+        Image cartaJugador2 = new Image("imagenes/huskar.jpg");
+        Image cartaJugador3 = new Image("imagenes/huskar.jpg");
+        Image cartaJugador4 = new Image("imagenes/huskar.jpg");
 
         ImageView contenedorCartaMano1 = new ImageView(cartaMano1);
         contenedorCartaMano1.setFitHeight(90);
