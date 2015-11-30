@@ -127,7 +127,7 @@ public class Juego {
     }
 
     public void inicializarPuntosParaRonda(){
-        this.puntosDeTruco = 0;
+        this.puntosDeTruco = 1;
         this.puntosDeEnvidoQuerido = 0;
         this.puntosDeEnvidoNoQuerido = 0;
     }

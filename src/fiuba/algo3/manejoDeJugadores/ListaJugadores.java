@@ -108,6 +108,7 @@ public class ListaJugadores {
         }
     }
 
+
     public boolean hayGanador(Jugador emparde) {
         NodoJugador nodoActual = this.primero;
         Jugador jugadorActual = nodoActual.getJugador();
@@ -140,4 +141,10 @@ public class ListaJugadores {
         }
     }
 
+    public void reiniciarManos() {
+        primero.getJugador().getMano().reiniciarMano();
+        primero.getSiguiente().getJugador().getMano().reiniciarMano();
+        ultimo.getAnterior().getJugador().getMano().reiniciarMano();
+        ultimo.getJugador().getMano().reiniciarMano();
+    }
 }

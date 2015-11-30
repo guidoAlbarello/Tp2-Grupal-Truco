@@ -1,10 +1,8 @@
 package fiuba.algo3.aplicacionAnthony;
 
 
-import fiuba.algo3.Eventos.HandlerBotonEnvido;
-import fiuba.algo3.Eventos.HandlerBotonFlor;
-import fiuba.algo3.Eventos.HandlerBotonTruco;
-import fiuba.algo3.Eventos.HandlerBotonVolver;
+import fiuba.algo3.CartaJugada;
+import fiuba.algo3.Eventos.*;
 import fiuba.algo3.Juego;
 import fiuba.algo3.ModeladoDeCarta.Carta;
 import fiuba.algo3.manejoDeJugadores.Jugador;
@@ -22,6 +20,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 
+import java.util.Iterator;
 import java.util.List;
 
 
@@ -30,7 +29,15 @@ import java.util.List;
  */
 public class Aplicacion extends Application {
     private BorderPane panel;
+    private ImageView contenedorCartaJugador1, contenedorCartaJugador2,
+            contenedorCartaJugador3,contenedorCartaJugador4;
+    private Button botonJugarCarta1,botonJugarCarta2,botonJugarCarta3;
     private Juego juego;
+    public Aplicacion(){
+        this.juego = this.inicializarJuego();
+    }
+
+
 
     public static void main(String[] args){
         launch(args);
@@ -38,7 +45,7 @@ public class Aplicacion extends Application {
 
     @Override
     public void start(Stage stage){
-        juego = this.inicializarJuego();
+
         stage.setTitle("Truco- Algoritmos y programacion 3");
         panel = new BorderPane();
         panel.setRight(this.contenedorDeJugadas());
@@ -55,7 +62,6 @@ public class Aplicacion extends Application {
 
 
     public GridPane cuadriculaDeJuego(){
-        Jugador jugadorConTurno = juego.manejadorDeTurnos.getJugadorConTurnoActual();
         GridPane verticalMedio = new GridPane();
         verticalMedio.setStyle("-fx-background-color: #009900");
         ColumnConstraints columna0 = new ColumnConstraints(150,150,150);
@@ -65,7 +71,7 @@ public class Aplicacion extends Application {
         RowConstraints fila1 = new RowConstraints(150,150,150);
         RowConstraints fila2 = new RowConstraints(150,150,150);
         RowConstraints fila3 = new RowConstraints(150,150,150);
-        RowConstraints filaMano = new RowConstraints(50,50,50);
+        RowConstraints filaMano = new RowConstraints(40,40,40);
         verticalMedio.getColumnConstraints().add(0,columna0);
         verticalMedio.getColumnConstraints().add(1,columna1);
         verticalMedio.getColumnConstraints().add(2,columna2);
@@ -100,6 +106,7 @@ public class Aplicacion extends Application {
         Image cartaJugador3 = new Image("imagenes/huskar.jpg");
         Image cartaJugador4 = new Image("imagenes/huskar.jpg");
 
+
         ImageView contenedorCartaMano1 = new ImageView(cartaMano1);
         contenedorCartaMano1.setFitHeight(90);
         contenedorCartaMano1.setFitWidth(65);
@@ -115,29 +122,32 @@ public class Aplicacion extends Application {
         contenedorCartaMano3.setFitWidth(65);
         verticalMedio.setHalignment(contenedorCartaMano3, HPos.CENTER);
 
-        ImageView contenedorCartaJugador1 = new ImageView(cartaJugador1);
+        contenedorCartaJugador1 = new ImageView(cartaJugador1);
         contenedorCartaJugador1.setFitHeight(90);
         contenedorCartaJugador1.setFitWidth(65);
         verticalMedio.setHalignment(contenedorCartaJugador1, HPos.CENTER);
 
-        ImageView contenedorCartaJugador2 = new ImageView(cartaJugador2);
+        contenedorCartaJugador2 = new ImageView(cartaJugador2);
         contenedorCartaJugador2.setFitHeight(90);
         contenedorCartaJugador2.setFitWidth(65);
         verticalMedio.setHalignment(contenedorCartaJugador2, HPos.CENTER);
 
-        ImageView contenedorCartaJugador3 = new ImageView(cartaJugador3);
+        contenedorCartaJugador3 = new ImageView(cartaJugador3);
         contenedorCartaJugador3.setFitHeight(90);
         contenedorCartaJugador3.setFitWidth(65);
         verticalMedio.setHalignment(contenedorCartaJugador3, HPos.CENTER);
 
-        ImageView contenedorCartaJugador4 = new ImageView(cartaJugador4);
+        contenedorCartaJugador4 = new ImageView(cartaJugador4);
         contenedorCartaJugador4.setFitHeight(90);
         contenedorCartaJugador4.setFitWidth(65);
         verticalMedio.setHalignment(contenedorCartaJugador4, HPos.CENTER);
 
-        Button botonJugarCarta1 = new Button("jugar Carta 1");
-        Button botonJugarCarta2 = new Button("jugar Carta 2");
-        Button botonJugarCarta3 = new Button("jugar Carta 3");
+        botonJugarCarta1 = new Button("jugar Carta 1");
+        botonJugarCarta1.setOnAction(new HandlerBotonJugarCarta1(this));
+        botonJugarCarta2 = new Button("jugar Carta 2");
+        botonJugarCarta2.setOnAction(new HandlerBotonJugarCarta2(this));
+        botonJugarCarta3 = new Button("jugar Carta 3");
+        botonJugarCarta3.setOnAction(new HandlerBotonJugarCarta3(this));
         verticalMedio.add(contenedorCartaMano1,0,3);
         verticalMedio.add(contenedorCartaMano2,1,3);
         verticalMedio.add(contenedorCartaMano3,2,3);
@@ -153,8 +163,16 @@ public class Aplicacion extends Application {
         verticalMedio.add(botonJugarCarta3,2,4);
         verticalMedio.setHalignment(botonJugarCarta3, HPos.CENTER);
 
+        this.actualizarBotonesCartas();
+
+        //contenedorCartaJugador1.setImage(new Image("imagenes/naipeDota.jpg"));
+
         return verticalMedio;
     }
+
+public void actualizarMesa(){
+
+}
 
     public VBox contenedorDeJugadasEnvido(){
         Button botonEnvido = new Button("Envido");
@@ -264,23 +282,21 @@ public class Aplicacion extends Application {
 
     public VBox contenedorEstadoDeJuego(){
         // label Jugador en turno
-        Label jugadorEnTurno = new Label("jugador en turno");
+        Label jugadorEnTurno = new Label(juego.manejadorDeTurnos.getJugadorConTurnoActual().getNombre());
         jugadorEnTurno.setFont(new Font("Comic",10));
 
         // label puntajede jugador en turno
-        Label puntajeDeJugadorEnTurno = new Label("puntaje de jugadoor en turno");
+        Label puntajeDeJugadorEnTurno = new Label(""+juego.manejadorDeTurnos.getJugadores().getJugadorEnPosicion(1).getEquipo().getPuntaje());
         puntajeDeJugadorEnTurno.setFont(new Font("Comic",10));
 
         //label puntaje del juego
-        Label puntajeDeJuego = new Label("puntaje del juego");
+        Label puntajeDeJuego = new Label(""+juego.manejadorDeTurnos.getJugadores().getJugadorEnPosicion(0).getEquipo().getPuntaje());
         puntajeDeJuego.setFont(new Font("Comic",10));
 
         // lable manos ganadas por equipo
-        Label manosGanadasPorRonda = new Label(" manos ganadas por ronda");
+        Label manosGanadasPorRonda = new Label(""+juego.manejadorDeTurnos.getManoActual());
         manosGanadasPorRonda.setFont(new Font("Comic",10));
 
-        // contenedor vertical de botones Jugadas
-        VBox contenedorDeJugadas = this.contenedorDeJugadas();
 
         // contenedor vertical donde se muestra el estado del juego
         VBox contenedorDeEstadoDeJuego = new VBox(jugadorEnTurno,puntajeDeJugadorEnTurno,puntajeDeJuego,manosGanadasPorRonda);
@@ -316,5 +332,29 @@ public class Aplicacion extends Application {
 
     public BorderPane getBorderPane() {
         return this.panel;
+    }
+
+    public Juego getJuego(){
+        return this.juego;
+    }
+
+    public ImageView getContenedorCartaJugador1() {
+        return contenedorCartaJugador1;
+    }
+
+    public void actualizarBotonesCartas(){
+        List<Integer> cartasJugadas = juego.manejadorDeTurnos.getJugadorConTurnoActual().getMano().getIndicesDeCartasJugadas();
+        if (cartasJugadas.contains(0))
+            botonJugarCarta1.setVisible(false);
+        else
+            botonJugarCarta1.setVisible(true);
+        if (cartasJugadas.contains(1))
+            botonJugarCarta2.setVisible(false);
+        else
+            botonJugarCarta2.setVisible(true);
+        if (cartasJugadas.contains(2))
+            botonJugarCarta3.setVisible(false);
+        else
+            botonJugarCarta3.setVisible(true);
     }
 }

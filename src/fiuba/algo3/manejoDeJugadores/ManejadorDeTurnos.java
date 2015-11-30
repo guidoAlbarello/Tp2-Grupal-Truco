@@ -65,9 +65,10 @@ public class ManejadorDeTurnos {
     public void reiniciarRonda(){
         //SI TERMINO LA RONDA
         this.jugadores.reiniciarManosGanadasDeTodosLosJugadores();
-        this.juego.repartirCartasAJugadores();
         this.pasarMano();
+        this.jugadores.reiniciarManos();
         this.juego.setEstadoDeJuego(new EstadoJuegoConFlor(juego));
+        this.juego.repartirCartasAJugadores();
         this.juego.inicializarPuntosParaRonda();
     }
 
@@ -136,6 +137,9 @@ public class ManejadorDeTurnos {
     public void setPrimeroQueCantoTruco(Jugador primeroQueCantoTruco){ this.primeroQueCantoTruco = jugadores.buscarNodoJugadorPorJugador(primeroQueCantoTruco);}
 
     public NodoJugador getPrimeroQueCantoTruco(){return primeroQueCantoTruco;}
+    public int getManoActual(){
+        return this.manoActual;
+    }
 }
 
 

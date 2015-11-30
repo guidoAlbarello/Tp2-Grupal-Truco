@@ -92,8 +92,8 @@ public class Mano {
     }
 
     public void reiniciarMano(){
-        this.indicesDeCartasJugadas = new ArrayList<Integer>();
-        this.cartasEnLaMano = new ArrayList<Carta>();
+        this.indicesDeCartasJugadas.clear();
+        this.cartasEnLaMano.clear();
     }
 
     public void reiniciarIndicesDeCartasTiradas(){
