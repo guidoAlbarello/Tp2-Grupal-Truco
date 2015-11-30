@@ -1,6 +1,7 @@
 package fiuba.algo3.aplicacionAnthony;
 
 
+import fiuba.algo3.AppFX.HandlerMenuOpciones;
 import fiuba.algo3.Eventos.HandlerBotonNoQuiero;
 import fiuba.algo3.Eventos.HandlerBotonQuiero;
 import fiuba.algo3.Eventos.*;
@@ -68,6 +69,7 @@ public class Aplicacion extends Application {
         Menu menuDeArchivo = new Menu("Archivo");
         MenuItem nuevoJuegoItemMenu = new MenuItem("Nuevo Juego");
         MenuItem opcionesItemMenu = new MenuItem("Opciones");
+        opcionesItemMenu.setOnAction(new HandlerMenuOpciones(this));
         MenuItem salirItemMenu = new MenuItem("Salir");
         salirItemMenu.setOnAction(actionEvent-> Platform.exit());
 
