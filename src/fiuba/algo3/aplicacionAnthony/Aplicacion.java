@@ -1,6 +1,8 @@
 package fiuba.algo3.aplicacionAnthony;
 
 
+import fiuba.algo3.Eventos.HandlerBotonNoQuiero;
+import fiuba.algo3.Eventos.HandlerBotonQuiero;
 import fiuba.algo3.Eventos.*;
 import fiuba.algo3.Juego;
 import fiuba.algo3.ModeladoDeCarta.Carta;
@@ -268,6 +270,22 @@ public void actualizarMesa(){
     public VBox contenedorDeJugadas(){
 
 
+        Label textoJugadas = new Label("Jugadas\nposibles: ");
+        textoJugadas.setFont(Font.font(null, FontWeight.BOLD, 15));
+        textoJugadas.setStyle("-fx-text-fill: #FFFFFF");
+
+        Label textoEspacio = new Label();
+
+        Button botonQuiero = new Button("Quiero");
+        botonQuiero.setPrefSize(100,50);
+        botonQuiero.setAlignment(Pos.CENTER);
+        botonQuiero.setOnAction(new HandlerBotonQuiero(this));
+
+        Button botonNoQuiero = new Button("No quiero");
+        botonNoQuiero.setPrefSize(100, 50);
+        botonNoQuiero.setAlignment(Pos.CENTER);
+        botonNoQuiero.setOnAction(new HandlerBotonNoQuiero(this));
+
         Button botonEnvido = new Button("Envido");
         botonEnvido.setPrefSize(100,50);
         botonEnvido.setAlignment(Pos.CENTER);
@@ -289,7 +307,7 @@ public void actualizarMesa(){
         botonFlor.setAlignment(Pos.CENTER);
         botonFlor.setOnAction(new HandlerBotonJugadasFlor(this));
 
-        VBox contenedorDeJugadas = new VBox(botonEnvido,botonTruco,botonFlor,botonAlMazo);
+        VBox contenedorDeJugadas = new VBox(textoJugadas,botonEnvido,botonTruco,botonFlor,botonAlMazo,textoEspacio,botonQuiero,botonNoQuiero);
         contenedorDeJugadas.setPrefSize(150,150);
         contenedorDeJugadas.setStyle("-fx-background-image: url('imagenes/texturaMesa.jpg')");
         contenedorDeJugadas.setAlignment(Pos.CENTER);
