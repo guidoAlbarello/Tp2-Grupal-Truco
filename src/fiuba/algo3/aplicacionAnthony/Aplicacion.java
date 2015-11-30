@@ -8,20 +8,18 @@ import fiuba.algo3.Juego;
 import fiuba.algo3.ModeladoDeCarta.Carta;
 import fiuba.algo3.manejoDeJugadores.Jugador;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.ContentDisplay;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-
 
 import java.util.List;
 
@@ -53,6 +51,7 @@ public class Aplicacion extends Application {
         panel.setRight(this.contenedorDeJugadas());
         panel.setCenter(this.cuadriculaDeJuego());
         panel.setLeft(this.contenedorEstadoDeJuego());
+        panel.setTop(this.crearMenuDeVentana(stage));
 
         stage.setWidth(770);
         stage.setHeight(660);
@@ -60,6 +59,28 @@ public class Aplicacion extends Application {
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
+    }
+
+    private MenuBar crearMenuDeVentana(Stage stage) {
+        MenuBar barraDeMenu = new MenuBar();
+        barraDeMenu.prefWidthProperty().bind(stage.widthProperty());
+
+        Menu menuDeArchivo = new Menu("Archivo");
+        MenuItem nuevoJuegoItemMenu = new MenuItem("Nuevo Juego");
+        MenuItem opcionesItemMenu = new MenuItem("Opciones");
+        MenuItem salirItemMenu = new MenuItem("Salir");
+        salirItemMenu.setOnAction(actionEvent-> Platform.exit());
+
+        menuDeArchivo.getItems().addAll(nuevoJuegoItemMenu, opcionesItemMenu, new SeparatorMenuItem(), salirItemMenu);
+
+        Menu menuDeSoporte = new Menu("Ayuda y Soporte");
+        MenuItem valoresDeCartasItemMenu = new MenuItem("Valores de Cartas");
+        MenuItem creditosItemMenu = new MenuItem("Creditos..");
+
+        menuDeSoporte.getItems().addAll(valoresDeCartasItemMenu, creditosItemMenu);
+
+        barraDeMenu.getMenus().addAll(menuDeArchivo, menuDeSoporte);
+        return barraDeMenu;
     }
 
 
