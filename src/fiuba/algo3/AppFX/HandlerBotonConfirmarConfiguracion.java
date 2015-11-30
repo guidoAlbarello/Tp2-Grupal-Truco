@@ -25,8 +25,14 @@ public class HandlerBotonConfirmarConfiguracion implements EventHandler<ActionEv
 
     @Override
     public void handle(ActionEvent event) {
-        if (selector.getSelectionModel().getSelectedIndex()==1){
-            this.aplicacion.panel.setCenter(this.aplicacion.inicializarMesaParaNuevaPartida());
+        //if (selector.getSelectionModel().getSelectedIndex()==1){
+        this.aplicacion.generarContenedoresSegunCantidadDeJugadores(selector.getSelectionModel().getSelectedIndex());
+        this.aplicacion.panel.setCenter(this.aplicacion.nombrar);
+
+
+
+            //this.aplicacion.panel.setCenter(this.aplicacion.inicializarMesaParaNuevaPartida());
+
         }
-    }
 }
+

@@ -1,5 +1,6 @@
 package fiuba.algo3.AppFX;
 
+import fiuba.algo3.AppFX.beta.BetaTestVentanas;
 import fiuba.algo3.manejoDeJugadores.Jugador;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -7,22 +8,24 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
  * Created by Fechee on 28/11/2015.
  */
 
-/*
+
 public class HandlerBotonConfirmarJugadores implements EventHandler<ActionEvent> {
 
-    public JuegoTruco juego;
+    public BetaTestVentanas aplicacion;
     public List<TextField> textos = new ArrayList<TextField>();
     public List<String> nombres = new ArrayList<String>();
+    public LinkedList<Jugador> jugadores = new LinkedList<Jugador>();
 
 
-    public HandlerBotonConfirmarJugadores(List<HBox> contenedores, JuegoTruco juego){
-        this.juego=juego;
+    public HandlerBotonConfirmarJugadores(List<HBox> contenedores, BetaTestVentanas juego){
+        this.aplicacion=juego;
         for (HBox contenedor : contenedores){
             TextField texto = ((TextField) contenedor.getChildren().get(1));
             textos.add(texto);
@@ -41,25 +44,14 @@ public class HandlerBotonConfirmarJugadores implements EventHandler<ActionEvent>
     @Override
     public void handle(ActionEvent event) {
         setNombres();
-        int tamanio = nombres.size();
-        if (tamanio%2==0 & tamanio>0){
-            for (String nombre : nombres){
-                Jugador nuevo = new Jugador(nombre);
-                nuevo.setJuego(this.juego.truco);
-                this.juego.truco.agregarJugador(nuevo);
-            }
-            this.juego.truco.configurarManejadorDeTurnos();
-            this.juego.truco.repartirCartasAJugadores();
-            this.juego.generarMesaInicialJuego(tamanio);
-            this.juego.mostrarMesa();
-            this.juego.mostrarCartasParaJugador();
+        for (String nombre : nombres){
+            Jugador nuevo = new Jugador(nombre);
+            this.jugadores.addLast(nuevo);
         }
-
+        this.aplicacion.inicializarJuego(this.jugadores);
+        this.aplicacion.panel.setCenter(this.aplicacion.inicializarMesaParaNuevaPartida());
+        this.aplicacion.panel.setLeft(this.aplicacion.contenedorEstadoDeJuego());
     }
 
 
-
-
-
 }
-*/

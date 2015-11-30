@@ -2,6 +2,7 @@ package fiuba.algo3.AppFX.beta;
 
 
 import fiuba.algo3.AppFX.HandlerBotonConfirmarConfiguracion;
+import fiuba.algo3.AppFX.HandlerBotonConfirmarJugadores;
 import fiuba.algo3.AppFX.HandlerNuevaPartida;
 import fiuba.algo3.Juego;
 import fiuba.algo3.ModeladoDeCarta.Carta;
@@ -9,6 +10,8 @@ import fiuba.algo3.manejoDeJugadores.Jugador;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -22,6 +25,7 @@ import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -39,11 +43,11 @@ public class BetaTestVentanas extends Application {
     public Integer manoActual=0;
     public Integer rondaActual=1;
     public GridPane verticalMedio;
-    public VBox configurar;
+    public VBox configurar,nombrar;
 
 
     public BetaTestVentanas(){
-        this.juego = this.inicializarJuego();
+        //this.juego = this.inicializarJuego();
     }
 
 
@@ -63,7 +67,7 @@ public class BetaTestVentanas extends Application {
 
         panel.setCenter(this.generarPanelDeConfiguracion());
 
-        panel.setLeft(this.contenedorEstadoDeJuego());
+        //panel.setLeft(this.contenedorEstadoDeJuego());
         panel.setTop(this.crearMenuDeVentana(stage));
 
         stage.setWidth(770);
@@ -137,7 +141,7 @@ public class BetaTestVentanas extends Application {
 
 
     public GridPane inicializarMesaParaNuevaPartida(){
-        this.juego = inicializarJuego();
+        //this.juego = inicializarJuego();
         verticalMedio = new GridPane();
         verticalMedio.setStyle("-fx-background-color: #009900");
         ColumnConstraints columna0 = new ColumnConstraints(150,150,150);
@@ -228,6 +232,34 @@ public class BetaTestVentanas extends Application {
         botonJugarCarta3.setStyle("-fx-background-image: url('imagenes/texturaMadera2.jpg');-fx-text-fill: #FFCC00");
 
 
+    }
+
+
+
+
+    public List<HBox> generarContenedoresSegunCantidadDeJugadores(Integer opcionSelector){
+        this.nombrar = new VBox();
+        int cantidadJugadores=2;
+        if (opcionSelector==1){cantidadJugadores=4;}
+        ArrayList<HBox> contenedores = new ArrayList<HBox>();
+        for (int i = 0 ; i < cantidadJugadores ; i++) {
+            Label instruccion = new Label("Introduzca nombre del Jugador "+(i+1)+": ");
+            TextField completar = new TextField();
+            HBox contenedor = new HBox(instruccion, completar);
+            contenedor.setSpacing(10);
+            contenedor.setAlignment(Pos.CENTER);
+            contenedores.add(contenedor);
+            nombrar.getChildren().add(contenedor);
+        }
+        nombrar.setAlignment(Pos.TOP_CENTER);
+        nombrar.setSpacing(20);
+
+        Button confirmarPartida = new Button("Comenzar partida");
+        HandlerBotonConfirmarJugadores handler = new HandlerBotonConfirmarJugadores(contenedores,this);
+        confirmarPartida.setOnAction(handler);
+
+        nombrar.getChildren().add(confirmarPartida);
+        return contenedores;
     }
 
 
@@ -433,22 +465,13 @@ public class BetaTestVentanas extends Application {
         return contenedorDeEstadoDeJuego;
     }
 
-    public Juego inicializarJuego() {
-        Juego juego = new Juego();
+    public Juego inicializarJuego(List<Jugador> jugadores) {
+        juego = new Juego();
 
-        Jugador jugador1 = new Jugador("jugador1"),
-                jugador2 = new Jugador("jugador2"),
-                jugador3 = new Jugador("jugador3"),
-                jugador4 = new Jugador("jugador4");
-
-        jugador1.setJuego(juego);
-        juego.agregarJugador(jugador1);
-        jugador2.setJuego(juego);
-        juego.agregarJugador(jugador2);
-        jugador3.setJuego(juego);
-        juego.agregarJugador(jugador3);
-        jugador4.setJuego(juego);
-        juego.agregarJugador(jugador4);
+        for (Jugador jugador : jugadores){
+            jugador.setJuego(juego);
+            juego.agregarJugador(jugador);
+        }
         juego.configurarManejadorDeTurnos();
         juego.repartirCartasAJugadores();
         return juego;
