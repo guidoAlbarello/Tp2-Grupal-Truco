@@ -1,7 +1,6 @@
 package fiuba.algo3.aplicacionAnthony;
 
 
-import fiuba.algo3.CartaJugada;
 import fiuba.algo3.Eventos.*;
 import fiuba.algo3.Juego;
 import fiuba.algo3.ModeladoDeCarta.Carta;
@@ -20,7 +19,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 
-import java.util.Iterator;
 import java.util.List;
 
 
@@ -52,7 +50,7 @@ public class Aplicacion extends Application {
         panel.setCenter(this.cuadriculaDeJuego());
         panel.setLeft(this.contenedorEstadoDeJuego());
 
-        stage.setWidth(785);
+        stage.setWidth(770);
         stage.setHeight(700);
         Scene scene = new Scene(panel);
         stage.setScene(scene);
@@ -83,6 +81,7 @@ public class Aplicacion extends Application {
         verticalMedio.setGridLinesVisible(false);
         Image imagenLogo = new Image("imagenes/truco.jpg");
         ImageView contImage = new ImageView(imagenLogo);
+
         contImage.setFitWidth(140);
         contImage.setFitHeight(140);
 
@@ -106,7 +105,7 @@ public class Aplicacion extends Application {
         Image cartaJugador3 = new Image("imagenes/huskar.jpg");
         Image cartaJugador4 = new Image("imagenes/huskar.jpg");
 
-
+        verticalMedio.setHalignment(contImage, HPos.CENTER);
         ImageView contenedorCartaMano1 = new ImageView(cartaMano1);
         contenedorCartaMano1.setFitHeight(90);
         contenedorCartaMano1.setFitWidth(65);
@@ -178,14 +177,17 @@ public void actualizarMesa(){
         Button botonEnvido = new Button("Envido");
         botonEnvido.setPrefSize(100,50);
         botonEnvido.setAlignment(Pos.CENTER);
+        botonEnvido.setOnAction(new HandlerBotonEnvido(this));
 
         Button botonRealEnvido = new Button("Real Envido");
         botonRealEnvido.setPrefSize(100,50);
         botonRealEnvido.setAlignment(Pos.CENTER);
+        botonRealEnvido.setOnAction(new HandlerBotonRealEnvido(this));
 
         Button botonFaltaEnvido = new Button("Falta Envido");
         botonFaltaEnvido.setPrefSize(100,50);
         botonFaltaEnvido.setAlignment(Pos.CENTER);
+        botonFaltaEnvido.setOnAction(new HandlerBotonFaltaEnvido(this));
 
         Button botonVolver = new Button("volver");
         botonVolver.setPrefSize(100,50);
@@ -205,14 +207,17 @@ public void actualizarMesa(){
         Button botonTruco = new Button("Truco");
         botonTruco.setPrefSize(100,50);
         botonTruco.setAlignment(Pos.CENTER);
+        botonTruco.setOnAction(new HandlerBotonTruco(this));
 
         Button botonRetruco = new Button("Retruco");
         botonRetruco.setPrefSize(100,50);
         botonRetruco.setAlignment(Pos.CENTER);
+        botonRetruco.setOnAction(new HandlerBotonRetruco(this));
 
         Button botonValeCuatro = new Button("Vale cuatro");
         botonValeCuatro.setPrefSize(100,50);
         botonValeCuatro.setAlignment(Pos.CENTER);
+        botonValeCuatro.setOnAction(new HandlerBotonValeCuatro(this));
 
         Button botonVolver = new Button("volver");
         botonVolver.setPrefSize(100,50);
@@ -255,21 +260,22 @@ public void actualizarMesa(){
         Button botonEnvido = new Button("Envido");
         botonEnvido.setPrefSize(100,50);
         botonEnvido.setAlignment(Pos.CENTER);
-        botonEnvido.setOnAction(new HandlerBotonEnvido(this));
+        botonEnvido.setOnAction(new HandlerBotonJugadasEnvido(this));
 
         Button botonAlMazo = new Button("mazo");
         botonAlMazo.setPrefSize(100,50);
         botonAlMazo.setAlignment(Pos.CENTER);
+        botonAlMazo.setOnAction(new HandlerBotonMazo(this));
 
         Button botonTruco = new Button("Truco");
         botonTruco.setPrefSize(100,50);
         botonTruco.setAlignment(Pos.CENTER);
-        botonTruco.setOnAction(new HandlerBotonTruco(this));
+        botonTruco.setOnAction(new HandlerBotonJugadasTruco(this));
 
         Button botonFlor = new Button("Flor");
         botonFlor.setPrefSize(100,50);
         botonFlor.setAlignment(Pos.CENTER);
-        botonFlor.setOnAction(new HandlerBotonFlor(this));
+        botonFlor.setOnAction(new HandlerBotonJugadasFlor(this));
 
         VBox contenedorDeJugadas = new VBox(botonEnvido,botonTruco,botonFlor,botonAlMazo);
         contenedorDeJugadas.setPrefSize(150,150);
@@ -282,24 +288,27 @@ public void actualizarMesa(){
 
     public VBox contenedorEstadoDeJuego(){
         // label Jugador en turno
-        Label jugadorEnTurno = new Label(juego.manejadorDeTurnos.getJugadorConTurnoActual().getNombre());
-        jugadorEnTurno.setFont(new Font("Comic",10));
+        Label jugadorEnTurno = new Label("Turno actual:\n"+"    "+juego.manejadorDeTurnos.getJugadorConTurnoActual().getNombre());
+        jugadorEnTurno.setFont(new Font("Comic",15));
 
         // label puntajede jugador en turno
-        Label puntajeDeJugadorEnTurno = new Label(""+juego.manejadorDeTurnos.getJugadores().getJugadorEnPosicion(1).getEquipo().getPuntaje());
-        puntajeDeJugadorEnTurno.setFont(new Font("Comic",10));
+        Label puntajeDeJugadorEnTurno = new Label("Puntaje Equipo1:\n"+"            "+juego.manejadorDeTurnos.getJugadores().getJugadorEnPosicion(0).getEquipo().getPuntaje());
+        puntajeDeJugadorEnTurno.setFont(new Font("Comic",15));
 
         //label puntaje del juego
-        Label puntajeDeJuego = new Label(""+juego.manejadorDeTurnos.getJugadores().getJugadorEnPosicion(0).getEquipo().getPuntaje());
-        puntajeDeJuego.setFont(new Font("Comic",10));
+        Label puntajeDeJuego = new Label("Puntaje Equipo2:\n"+"            "+juego.manejadorDeTurnos.getJugadores().getJugadorEnPosicion(1).getEquipo().getPuntaje());
+        puntajeDeJuego.setFont(new Font("Comic",15));
 
         // lable manos ganadas por equipo
-        Label manosGanadasPorRonda = new Label(""+juego.manejadorDeTurnos.getManoActual());
-        manosGanadasPorRonda.setFont(new Font("Comic",10));
+        Label manosGanadasPorRonda = new Label("Mano Actual:\n "+"        "+juego.manejadorDeTurnos.getManoActual());
+        manosGanadasPorRonda.setFont(new Font("Comic",15));
+
+        Label numeroDeRonda = new Label("Ronda Actual:\n"+"         "+juego.manejadorDeTurnos.getRondaActual());
+        numeroDeRonda.setFont(new Font("Comic",15));
 
 
         // contenedor vertical donde se muestra el estado del juego
-        VBox contenedorDeEstadoDeJuego = new VBox(jugadorEnTurno,puntajeDeJugadorEnTurno,puntajeDeJuego,manosGanadasPorRonda);
+        VBox contenedorDeEstadoDeJuego = new VBox(jugadorEnTurno,puntajeDeJugadorEnTurno,puntajeDeJuego,manosGanadasPorRonda,numeroDeRonda);
         contenedorDeEstadoDeJuego.setPrefSize(150, 150);
         contenedorDeEstadoDeJuego.setStyle("-fx-background-color: #FF0000");
         contenedorDeEstadoDeJuego.setAlignment(Pos.CENTER);

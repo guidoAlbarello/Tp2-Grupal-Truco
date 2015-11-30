@@ -88,7 +88,8 @@ public class EstadoJuegoConFlor implements EstadoDeJuego {
 
     @Override
     public void irseAlMaso() {
-
+        this.juego.manejadorDeTurnos.pasarTurnoActual();
+        this.juego.seFueronAlMaso();
     }
 
     @Override

@@ -7,9 +7,9 @@ import javafx.event.EventHandler;
 /**
  * Created by anthony on 30/11/2015.
  */
-public class HandlerBotonTruco implements EventHandler<ActionEvent> {
+public class HandlerBotonRetruco implements EventHandler<ActionEvent> {
     private Aplicacion aplicacion;
-    public HandlerBotonTruco(Aplicacion aplicacion) {
+    public HandlerBotonRetruco(Aplicacion aplicacion) {
         this.aplicacion = aplicacion;
     }
 
