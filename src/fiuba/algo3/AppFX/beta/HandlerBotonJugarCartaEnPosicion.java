@@ -5,6 +5,7 @@ import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.image.Image;
 
+
 /**
  * Created by anthony on 29/11/2015.
  */
@@ -24,6 +25,8 @@ public class HandlerBotonJugarCartaEnPosicion implements EventHandler {
     public void handle(Event event) {
         aplicacion.getContenedorCartaJugador(this.aplicacion.getJuego().manejadorDeTurnos.getPosicionDelJugadorConTurnoActual()).setImage(this.imagen);
 
+        //pausa
+
         aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().jugarCartaEnPosicion(this.posicion);
         verificarLimpiarCartasDeLaMesa();
 
@@ -39,9 +42,18 @@ public class HandlerBotonJugarCartaEnPosicion implements EventHandler {
 
 
 
+
     private void verificarLimpiarCartasDeLaMesa() {
-        if (aplicacion.manoActual != this.aplicacion.getJuego().manejadorDeTurnos.getManoActual()){
-            aplicacion.inicializarImagenesDeCartasEnMesa(aplicacion.verticalMedio);
+        if (aplicacion.manoActual != this.aplicacion.getJuego().manejadorDeTurnos.getManoActual() & (aplicacion.getJuego().manejadorDeTurnos.vecesQueSePasoElTurno == 1 )){
+            if (aplicacion.getJuego().manejadorDeTurnos.vecesQueSePasoElTurno == 1 & (aplicacion.rondaActual == this.aplicacion.getJuego().manejadorDeTurnos.getRondaActual()) ) {
+                aplicacion.inicializarImagenesDeCartasEnMesa(this.aplicacion.getJuego().manejadorDeTurnos.getNodoJugadorConTurnoActual().getAnterior().getPosicion() + 1, imagen);
+            }else if (aplicacion.getJuego().manejadorDeTurnos.vecesQueSePasoElTurno == 1 & aplicacion.rondaActual != this.aplicacion.getJuego().manejadorDeTurnos.getRondaActual()){
+                aplicacion.inicializarImagenesDeCartasEnMesa(5, null);
+                aplicacion.inicializarImagenesDeCartasEnMesa(this.aplicacion.getJuego().manejadorDeTurnos.getNodoJugadorConTurnoActual().getAnterior().getPosicion() + 1, imagen);
+            }
+
+
+
 
             aplicacion.manoActual = this.aplicacion.getJuego().manejadorDeTurnos.getManoActual();
         }

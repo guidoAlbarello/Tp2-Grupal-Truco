@@ -9,10 +9,12 @@ import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.ContentDisplay;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -22,17 +24,18 @@ import java.util.List;
 
 
 /**
- * Created by anthony on 29/11/2015.
+ * Created by Fechee on 29/11/2015.
  */
 public class BetaTestVentanas extends Application {
     private BorderPane panel;
     private ImageView contenedorCartaJugador1, contenedorCartaJugador2,
             contenedorCartaJugador3,contenedorCartaJugador4;
 
-    private ImageView contenedorCartaMano1,contenedorCartaMano2,contenedorCartaMano3;
+    private boolean inicializado=false;
     private Button botonJugarCarta1,botonJugarCarta2,botonJugarCarta3;
     private Juego juego;
     public Integer manoActual=0;
+    public Integer rondaActual=1;
     public GridPane verticalMedio;
 
 
@@ -52,7 +55,7 @@ public class BetaTestVentanas extends Application {
         stage.setTitle("Truco- Algoritmos y programacion 3");
         panel = new BorderPane();
         //panel.setRight(this.contenedorDeJugadas());
-        panel.setCenter(this.cuadriculaDeJuego());
+        panel.setCenter(this.inicializarMesaParaNuevaPartida());
         panel.setLeft(this.contenedorEstadoDeJuego());
 
         stage.setWidth(770);
@@ -64,8 +67,8 @@ public class BetaTestVentanas extends Application {
     }
 
 
-    public GridPane cuadriculaDeJuego(){
-        GridPane verticalMedio = new GridPane();
+    public GridPane inicializarMesaParaNuevaPartida(){
+        verticalMedio = new GridPane();
         verticalMedio.setStyle("-fx-background-color: #009900");
         ColumnConstraints columna0 = new ColumnConstraints(150,150,150);
         ColumnConstraints columna1 = new ColumnConstraints(150,150,150);
@@ -74,7 +77,6 @@ public class BetaTestVentanas extends Application {
         RowConstraints fila1 = new RowConstraints(150,150,150);
         RowConstraints fila2 = new RowConstraints(150,150,150);
         RowConstraints fila3 = new RowConstraints(150,150,150);
-        RowConstraints filaMano = new RowConstraints(40,40,40);
         verticalMedio.getColumnConstraints().add(0,columna0);
         verticalMedio.getColumnConstraints().add(1,columna1);
         verticalMedio.getColumnConstraints().add(2,columna2);
@@ -82,9 +84,9 @@ public class BetaTestVentanas extends Application {
         verticalMedio.getRowConstraints().add(1,fila1);
         verticalMedio.getRowConstraints().add(2,fila2);
         verticalMedio.getRowConstraints().add(3,fila3) ;
-        verticalMedio.getRowConstraints().add(4,filaMano);
         verticalMedio.setGridLinesVisible(false);
-        Image imagenLogo = new Image("imagenes/truco.jpg");
+        verticalMedio.setStyle("-fx-background-image: url('imagenes/texturaMadera2.jpg')");
+        Image imagenLogo = new Image("imagenes/logo2.jpg");
         ImageView contImage = new ImageView(imagenLogo);
 
         contImage.setFitWidth(140);
@@ -100,7 +102,7 @@ public class BetaTestVentanas extends Application {
 
         //imagenes de cartas en mesa
         if (manoActual != this.juego.manejadorDeTurnos.getManoActual()){
-            inicializarImagenesDeCartasEnMesa(verticalMedio);
+            inicializarImagenesDeCartasEnMesa(5,null);
             manoActual = this.juego.manejadorDeTurnos.getManoActual();
         }
 
@@ -115,80 +117,62 @@ public class BetaTestVentanas extends Application {
         List<Carta> cartasMano = juego.manejadorDeTurnos.getJugadorConTurnoActual().getMano().getCartasEnMano();
         Carta carta = cartasMano.get(0);
         String direccionCarta = "imagenes/"+carta.getValorDeCarta()+carta.getPaloDeCarta().getNombre()+".jpg";
-        Image cartaMano1 = new Image(direccionCarta);
+        Image imagenCarta1 = new Image(direccionCarta);
+        ImageView iv1 = new ImageView(imagenCarta1);
+        iv1.setFitHeight(130);
+        iv1.setFitWidth(90);
+        if (!inicializado){botonJugarCarta1 = new Button("Jugar carta 1");}
+        botonJugarCarta1.setFont(Font.font(null, FontWeight.BOLD, 15));
+        botonJugarCarta1.setGraphic(iv1);
+        botonJugarCarta1.setDefaultButton(true);
+        botonJugarCarta1.setContentDisplay(ContentDisplay.TOP);
+        botonJugarCarta1.setOnAction(new HandlerBotonJugarCartaEnPosicion(0,this,imagenCarta1));
+        botonJugarCarta1.setStyle("-fx-background-image: url('imagenes/texturaMadera2.jpg');-fx-text-fill: #FFCC00");
+
+
         carta = cartasMano.get(1);
         direccionCarta = "imagenes/"+carta.getValorDeCarta()+carta.getPaloDeCarta().getNombre()+".jpg";
-        Image cartaMano2 = new Image(direccionCarta);
+        Image imagenCarta2 = new Image(direccionCarta);
+        ImageView iv2 = new ImageView(imagenCarta2);
+        iv2.setFitWidth(90);
+        iv2.setFitHeight(130);
+        if (!inicializado){botonJugarCarta2 = new Button("Jugar carta 2");}
+        botonJugarCarta2.setFont(Font.font(null, FontWeight.BOLD, 15));
+        botonJugarCarta2.setGraphic(iv2);
+        botonJugarCarta2.setDefaultButton(true);
+        botonJugarCarta2.setContentDisplay(ContentDisplay.TOP);
+        botonJugarCarta2.setOnAction(new HandlerBotonJugarCartaEnPosicion(1,this,imagenCarta2));
+        botonJugarCarta2.setStyle("-fx-background-image: url('imagenes/texturaMadera2.jpg');-fx-text-fill: #FFCC00");
+
         carta = cartasMano.get(2);
         direccionCarta = "imagenes/"+carta.getValorDeCarta()+carta.getPaloDeCarta().getNombre()+".jpg";
-        Image cartaMano3 = new Image(direccionCarta);
+        Image imagenCarta3 = new Image(direccionCarta);
+        ImageView iv3 = new ImageView(imagenCarta3);
+        iv3.setFitHeight(130);
+        iv3.setFitWidth(90);
+        if (!inicializado){botonJugarCarta3 = new Button("Jugar carta 3"); inicializado=true;}
+        botonJugarCarta3.setFont(Font.font(null, FontWeight.BOLD, 15));
+        botonJugarCarta3.setGraphic(iv3);
+        botonJugarCarta3.setDefaultButton(true);
+        botonJugarCarta3.setContentDisplay(ContentDisplay.TOP);
+        botonJugarCarta3.setOnAction(new HandlerBotonJugarCartaEnPosicion(2,this,imagenCarta3));
+        botonJugarCarta3.setStyle("-fx-background-image: url('imagenes/texturaMadera2.jpg');-fx-text-fill: #FFCC00");
 
-
-        contenedorCartaMano1.setImage(cartaMano1);
-        contenedorCartaMano2.setImage(cartaMano2);
-        contenedorCartaMano3.setImage(cartaMano3);
-
-        botonJugarCarta1.setOnAction(new HandlerBotonJugarCartaEnPosicion(0,this,contenedorCartaMano1.getImage()));
-        botonJugarCarta2.setOnAction(new HandlerBotonJugarCartaEnPosicion(1,this,contenedorCartaMano2.getImage()));
-        botonJugarCarta3.setOnAction(new HandlerBotonJugarCartaEnPosicion(2,this,contenedorCartaMano3.getImage()));
 
     }
 
 
 
     public void inicializarCartasEnMano(GridPane verticalMedio) {
-        List<Carta> cartasMano = juego.manejadorDeTurnos.getJugadorConTurnoActual().getMano().getCartasEnMano();
-        Carta carta = cartasMano.get(0);
-        String direccionCarta = "imagenes/"+carta.getValorDeCarta()+carta.getPaloDeCarta().getNombre()+".jpg";
-        Image cartaMano1 = new Image(direccionCarta);
-        carta = cartasMano.get(1);
-        direccionCarta = "imagenes/"+carta.getValorDeCarta()+carta.getPaloDeCarta().getNombre()+".jpg";
-        Image cartaMano2 = new Image(direccionCarta);
-        carta = cartasMano.get(2);
-        direccionCarta = "imagenes/"+carta.getValorDeCarta()+carta.getPaloDeCarta().getNombre()+".jpg";
-        Image cartaMano3 = new Image(direccionCarta);
+        actualizarCartasEnManoParaJugadorActual();
 
-
-        contenedorCartaMano1 = new ImageView(cartaMano1);
-        contenedorCartaMano1.setFitHeight(90);
-        contenedorCartaMano1.setFitWidth(65);
-        verticalMedio.setHalignment(contenedorCartaMano1, HPos.CENTER);
-
-        contenedorCartaMano2 = new ImageView(cartaMano2);
-        contenedorCartaMano2.setFitHeight(90);
-        contenedorCartaMano2.setFitWidth(65);
-        verticalMedio.setHalignment(contenedorCartaMano2, HPos.CENTER);
-
-        contenedorCartaMano3 = new ImageView(cartaMano3);
-        contenedorCartaMano3.setFitHeight(90);
-        contenedorCartaMano3.setFitWidth(65);
-        verticalMedio.setHalignment(contenedorCartaMano3, HPos.CENTER);
-
-
-
-
-        botonJugarCarta1 = new Button("Jugar carta 1");
-        botonJugarCarta1.setOnAction(new HandlerBotonJugarCartaEnPosicion(0,this,contenedorCartaMano1.getImage()));
-        botonJugarCarta2 = new Button("Jugar carta 2");
-        botonJugarCarta2.setOnAction(new HandlerBotonJugarCartaEnPosicion(1,this,contenedorCartaMano2.getImage()));
-        botonJugarCarta3 = new Button("Jugar carta 3");
-        botonJugarCarta3.setOnAction(new HandlerBotonJugarCartaEnPosicion(2,this,contenedorCartaMano3.getImage()));
-        verticalMedio.add(contenedorCartaMano1,0,3);
-        verticalMedio.add(contenedorCartaMano2,1,3);
-        verticalMedio.add(contenedorCartaMano3,2,3);
-
-
-        verticalMedio.add(botonJugarCarta1,0,4);
-        verticalMedio.setHalignment(botonJugarCarta1, HPos.CENTER);
-        verticalMedio.add(botonJugarCarta2,1,4);
-        verticalMedio.setHalignment(botonJugarCarta2, HPos.CENTER);
-        verticalMedio.add(botonJugarCarta3,2,4);
-        verticalMedio.setHalignment(botonJugarCarta3, HPos.CENTER);
-
-
+        verticalMedio.add(botonJugarCarta1,0,3);
+        verticalMedio.add(botonJugarCarta2,1,3);
+        verticalMedio.add(botonJugarCarta3,2,3);
     }
 
-    public void inicializarImagenesDeCartasEnMesa(GridPane verticalMedio) {
+    public void inicializarImagenesDeCartasEnMesa(Integer posicion,Image imagen) {
+
         Image cartaJugador1 = new Image("imagenes/huskar.jpg");
         Image cartaJugador2 = new Image("imagenes/huskar.jpg");
         Image cartaJugador3 = new Image("imagenes/huskar.jpg");
@@ -198,21 +182,26 @@ public class BetaTestVentanas extends Application {
         contenedorCartaJugador1.setFitHeight(90);
         contenedorCartaJugador1.setFitWidth(65);
         verticalMedio.setHalignment(contenedorCartaJugador1, HPos.CENTER);
+        if (posicion==1) {contenedorCartaJugador1.setImage(imagen);}
 
         contenedorCartaJugador2 = new ImageView(cartaJugador2);
         contenedorCartaJugador2.setFitHeight(90);
         contenedorCartaJugador2.setFitWidth(65);
         verticalMedio.setHalignment(contenedorCartaJugador2, HPos.CENTER);
+        if (posicion==2) {contenedorCartaJugador2.setImage(imagen);}
 
         contenedorCartaJugador3 = new ImageView(cartaJugador3);
         contenedorCartaJugador3.setFitHeight(90);
         contenedorCartaJugador3.setFitWidth(65);
         verticalMedio.setHalignment(contenedorCartaJugador3, HPos.CENTER);
+        if (posicion==3) {contenedorCartaJugador3.setImage(imagen);}
 
         contenedorCartaJugador4 = new ImageView(cartaJugador4);
         contenedorCartaJugador4.setFitHeight(90);
         contenedorCartaJugador4.setFitWidth(65);
         verticalMedio.setHalignment(contenedorCartaJugador4, HPos.CENTER);
+        if (posicion==4) {contenedorCartaJugador4.setImage(imagen);}
+
         verticalMedio.add(contenedorCartaJugador1,1,2);
         verticalMedio.add(contenedorCartaJugador2,2,1);
         verticalMedio.add(contenedorCartaJugador3,1,0);
