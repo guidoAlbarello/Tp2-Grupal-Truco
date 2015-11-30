@@ -140,6 +140,9 @@ public class ManejadorDeTurnos {
     public int getManoActual(){
         return this.manoActual;
     }
+
+
+    public int getPosicionDelJugadorConTurnoActual(){return this.getNodoJugadorConTurnoActual().getPosicion();}
 }
 
 

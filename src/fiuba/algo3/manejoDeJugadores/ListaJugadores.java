@@ -79,6 +79,7 @@ public class ListaJugadores {
             nuevo.setSiguiente(primero);
             ultimo = nuevo;
         }
+        nuevo.setPosicion(tamanio);
         tamanio++;
         configurarEquipoParaUnJugador(jugador);
     }

@@ -7,6 +7,7 @@ public class NodoJugador {
     private NodoJugador siguiente;
     private NodoJugador anterior;
     private Jugador jugador;
+    private Integer posicion;
 
     public NodoJugador(Jugador jugadorEnRonda) {
         siguiente = null;
@@ -36,4 +37,11 @@ public class NodoJugador {
         return this.jugador;
     }
 
+    public void setPosicion(int posicion) {
+        this.posicion = posicion;
+    }
+
+    public Integer getPosicion(){
+        return this.posicion;
+    }
 }
