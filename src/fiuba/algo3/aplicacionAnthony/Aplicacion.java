@@ -71,7 +71,7 @@ public class Aplicacion extends Application {
         MenuItem opcionesItemMenu = new MenuItem("Opciones");
         opcionesItemMenu.setOnAction(new HandlerMenuOpciones(this));
         MenuItem salirItemMenu = new MenuItem("Salir");
-        salirItemMenu.setOnAction(actionEvent-> Platform.exit());
+        //salirItemMenu.setOnAction(actionEvent->Platform.exit());
 
         menuDeArchivo.getItems().addAll(nuevoJuegoItemMenu, opcionesItemMenu, new SeparatorMenuItem(), salirItemMenu);
 
