@@ -80,7 +80,7 @@ public class Aplicacion extends Application {
         verticalMedio.getRowConstraints().add(3,fila3) ;
         verticalMedio.setGridLinesVisible(false);
         verticalMedio.setStyle("-fx-background-image: url('imagenes/texturaMadera2.jpg')");
-        Image imagenLogo = new Image("imagenes/truco.jpg");
+        Image imagenLogo = new Image("imagenes/logo2.jpg");
         ImageView contImage = new ImageView(imagenLogo);
 
         contImage.setFitWidth(140);
