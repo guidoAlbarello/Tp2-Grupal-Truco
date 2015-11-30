@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1238cf56-d150-4931-840d-466c49e8cba7" name="Default" comment="Actualice la vista beta">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/AppFX/HandlerBotonConfirmarConfiguracion.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/AppFX/HandlerBotonConfirmarConfiguracion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/AppFX/HandlerNuevaPartida.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/AppFX/HandlerNuevaPartida.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/AppFX/beta/BetaTestVentanas.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/AppFX/beta/BetaTestVentanas.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/aplicacionAnthony/Aplicacion.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/aplicacionAnthony/Aplicacion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/AppFX/HandlerBotonConfirmarJugadores.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/AppFX/HandlerBotonConfirmarJugadores.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerBotonConfirmarConfiguracion.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerBotonConfirmarConfiguracion.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerBotonConfirmarJugadores.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerBotonConfirmarJugadores.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/BetaTestVentanas.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/BetaTestVentanas.java" />
     </list>
     <ignored path="Tp2-Grupal-Truco.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BetaTestVentanas.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BetaTestVentanas.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/BetaTestVentanas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4588816">
-              <caret line="449" column="26" selection-start-line="449" selection-start-column="26" selection-end-line="449" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="458" column="52" selection-start-line="458" selection-start-column="52" selection-end-line="458" selection-end-column="52" />
               <folding>
                 <element signature="e#9467#9473#0" expanded="true" />
               </folding>
@@ -43,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HandlerBotonConfirmarJugadores.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HandlerBotonConfirmarJugadores.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerBotonConfirmarJugadores.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="79" selection-start-line="52" selection-start-column="79" selection-end-line="52" selection-end-column="79" />
+            <state vertical-scroll-proportion="0.2236842">
+              <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
               <folding>
                 <element signature="e#562#573#0" expanded="true" />
                 <element signature="e#624#632#0" expanded="true" />
@@ -122,8 +117,8 @@
         <option value="$PROJECT_DIR$/src/fiuba/algo3/aplicacionAnthony/Aplicacion.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerMenuOpciones.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerBotonConfirmarConfiguracion.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerBotonConfirmarJugadores.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/BetaTestVentanas.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerBotonConfirmarJugadores.java" />
       </list>
     </option>
   </component>
@@ -187,24 +182,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="algo3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tp2-Grupal-Truco" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tp2-Grupal-Truco" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -224,28 +201,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="algo3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tp2-Grupal-Truco" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tp2-Grupal-Truco" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="algo3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manejoDeJugadores" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -294,28 +249,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="beta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tp2-Grupal-Truco" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tp2-Grupal-Truco" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="algo3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aplicacionAnthony" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -727,7 +660,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448924031405</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Actualice la vista beta">
+      <created>1448926310107</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1448926310107</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1189,24 +1128,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerBotonConfirmarJugadores.java">
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/BetaTestVentanas.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="79" selection-start-line="52" selection-start-column="79" selection-end-line="52" selection-end-column="79" />
+          <caret line="458" column="52" selection-start-line="458" selection-start-column="52" selection-end-line="458" selection-end-column="52" />
           <folding>
-            <element signature="e#562#573#0" expanded="true" />
-            <element signature="e#624#632#0" expanded="true" />
-            <element signature="e#693#702#0" expanded="true" />
+            <element signature="e#9467#9473#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/BetaTestVentanas.java">
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerBotonConfirmarJugadores.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4588816">
-          <caret line="449" column="26" selection-start-line="449" selection-start-column="26" selection-end-line="449" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.2236842">
+          <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
           <folding>
-            <element signature="e#9467#9473#0" expanded="true" />
+            <element signature="e#562#573#0" expanded="true" />
+            <element signature="e#624#632#0" expanded="true" />
+            <element signature="e#693#702#0" expanded="true" />
           </folding>
         </state>
       </provider>

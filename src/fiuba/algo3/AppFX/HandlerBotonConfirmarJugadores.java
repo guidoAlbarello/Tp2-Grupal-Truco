@@ -34,8 +34,14 @@ public class HandlerBotonConfirmarJugadores implements EventHandler<ActionEvent>
 
 
     private void setNombres(){
+        int i = 0;
         for (TextField texto : textos){
-            this.nombres.add(texto.getText());
+            i++;
+            String nombreParaAgregar = texto.getText();
+            if (nombreParaAgregar.equals("")){
+                nombreParaAgregar=("Jugador"+i);
+            }
+            this.nombres.add(nombreParaAgregar);
         }
     }
 
