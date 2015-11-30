@@ -16,5 +16,7 @@ public class HandlerBotonFaltaEnvido implements EventHandler {
     @Override
     public void handle(Event event) {
         this.aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
+        aplicacion.getBorderPane().setCenter(aplicacion.cuadriculaDeJuego());
+        aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
     }
 }

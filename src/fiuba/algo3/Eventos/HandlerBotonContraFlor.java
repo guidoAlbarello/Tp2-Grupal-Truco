@@ -7,10 +7,9 @@ import javafx.event.EventHandler;
 /**
  * Created by anthony on 30/11/2015.
  */
-public class HandlerBotonEnvido implements EventHandler {
+public class HandlerBotonContraFlor implements EventHandler {
     private Aplicacion aplicacion;
-
-    public HandlerBotonEnvido(Aplicacion aplicacion){
+    public HandlerBotonContraFlor(Aplicacion aplicacion){
         this.aplicacion = aplicacion;
     }
     @Override

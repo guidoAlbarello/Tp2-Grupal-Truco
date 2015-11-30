@@ -237,10 +237,12 @@ public void actualizarMesa(){
         Button botonContraFlor = new Button("Contra flor");
         botonContraFlor.setPrefSize(100, 50);
         botonContraFlor.setAlignment(Pos.CENTER);
+        botonContraFlor.setOnAction(new HandlerBotonContraFlor(this));
 
         Button botonContraFlorAlResto = new Button("Contra flor al resto");
         botonContraFlorAlResto.setPrefSize(100, 50);
         botonContraFlorAlResto.setAlignment(Pos.CENTER);
+        botonContraFlorAlResto.setOnAction(new HandlerBotonContraFlorAlResto(this));
 
         Button botonVolver = new Button("volver");
         botonVolver.setPrefSize(100,50);

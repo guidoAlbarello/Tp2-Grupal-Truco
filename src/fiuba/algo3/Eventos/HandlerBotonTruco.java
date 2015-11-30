@@ -16,5 +16,7 @@ public class HandlerBotonTruco implements EventHandler<ActionEvent> {
     @Override
     public void handle(ActionEvent event) {
         this.aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
+        aplicacion.getBorderPane().setCenter(aplicacion.cuadriculaDeJuego());
+        aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
     }
 }
