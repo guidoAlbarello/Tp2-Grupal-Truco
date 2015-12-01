@@ -57,6 +57,7 @@ public class HandlerBotonConfirmarJugadores implements EventHandler<ActionEvent>
         this.aplicacion.inicializarJuego(this.jugadores);
         this.aplicacion.panel.setCenter(this.aplicacion.inicializarMesaParaNuevaPartida());
         this.aplicacion.panel.setLeft(this.aplicacion.contenedorEstadoDeJuego());
+        this.aplicacion.panel.setRight(this.aplicacion.contenedorDeJugadas());
     }
 
 

@@ -4,14 +4,13 @@ package fiuba.algo3.AppFX.beta;
 import fiuba.algo3.AppFX.HandlerBotonConfirmarConfiguracion;
 import fiuba.algo3.AppFX.HandlerBotonConfirmarJugadores;
 import fiuba.algo3.AppFX.HandlerNuevaPartida;
+import fiuba.algo3.AppFX.eventosBeta.*;
 import fiuba.algo3.Juego;
 import fiuba.algo3.ModeladoDeCarta.Carta;
 import fiuba.algo3.manejoDeJugadores.Jugador;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -312,27 +311,27 @@ public class BetaTestVentanas extends Application {
     public void actualizarMesa(){
     }
 
-/*
+
     public VBox contenedorDeJugadasEnvido(){
         Button botonEnvido = new Button("Envido");
         botonEnvido.setPrefSize(100,50);
         botonEnvido.setAlignment(Pos.CENTER);
-        botonEnvido.setOnAction(new HandlerBotonEnvido(this));
+        botonEnvido.setOnAction(new HandlerBotonEnvidoBeta(this));
 
         Button botonRealEnvido = new Button("Real Envido");
         botonRealEnvido.setPrefSize(100,50);
         botonRealEnvido.setAlignment(Pos.CENTER);
-        botonRealEnvido.setOnAction(new HandlerBotonRealEnvido(this));
+        botonRealEnvido.setOnAction(new HandlerBotonContraFlorBeta(this));
 
         Button botonFaltaEnvido = new Button("Falta Envido");
         botonFaltaEnvido.setPrefSize(100,50);
         botonFaltaEnvido.setAlignment(Pos.CENTER);
-        botonFaltaEnvido.setOnAction(new HandlerBotonFaltaEnvido(this));
+        botonFaltaEnvido.setOnAction(new HandlerBotonFaltaEnvidoBeta(this));
 
         Button botonVolver = new Button("volver");
         botonVolver.setPrefSize(100,50);
         botonVolver.setAlignment(Pos.CENTER);
-        botonVolver.setOnAction(new HandlerBotonVolver(this));
+        botonVolver.setOnAction(new HandlerBotonVolverBeta(this));
 
         VBox contenedorEnvido = new VBox(botonEnvido,botonRealEnvido,botonFaltaEnvido,botonVolver);
         contenedorEnvido.setPrefSize(150,150);
@@ -343,26 +342,27 @@ public class BetaTestVentanas extends Application {
         return contenedorEnvido;
     }
 
+
     public VBox contenedorDeJugadasTruco(){
         Button botonTruco = new Button("Truco");
         botonTruco.setPrefSize(100,50);
         botonTruco.setAlignment(Pos.CENTER);
-        botonTruco.setOnAction(new HandlerBotonTruco(this));
+        botonTruco.setOnAction(new HandlerBotonTrucoBeta(this));
 
         Button botonRetruco = new Button("Retruco");
         botonRetruco.setPrefSize(100,50);
         botonRetruco.setAlignment(Pos.CENTER);
-        botonRetruco.setOnAction(new HandlerBotonRetruco(this));
+        botonRetruco.setOnAction(new HandlerBotonRetrucoBeta(this));
 
         Button botonValeCuatro = new Button("Vale cuatro");
         botonValeCuatro.setPrefSize(100,50);
         botonValeCuatro.setAlignment(Pos.CENTER);
-        botonValeCuatro.setOnAction(new HandlerBotonValeCuatro(this));
+        botonValeCuatro.setOnAction(new HandlerBotonContraFlorBeta(this));
 
         Button botonVolver = new Button("volver");
         botonVolver.setPrefSize(100,50);
         botonVolver.setAlignment(Pos.CENTER);
-        botonVolver.setOnAction(new HandlerBotonVolver(this));
+        botonVolver.setOnAction(new HandlerBotonVolverBeta(this));
 
         VBox contenedorTruco = new VBox(botonTruco,botonRetruco,botonValeCuatro,botonVolver);
         contenedorTruco.setPrefSize(150, 150);
@@ -373,21 +373,23 @@ public class BetaTestVentanas extends Application {
         return contenedorTruco;
     }
 
+
+
     public VBox contenedorDeJugadasFlor(){
         Button botonContraFlor = new Button("Contra flor");
         botonContraFlor.setPrefSize(100, 50);
         botonContraFlor.setAlignment(Pos.CENTER);
-        botonContraFlor.setOnAction(new HandlerBotonContraFlor(this));
+        botonContraFlor.setOnAction(new HandlerBotonContraFlorBeta(this));
 
         Button botonContraFlorAlResto = new Button("Contra flor al resto");
         botonContraFlorAlResto.setPrefSize(100, 50);
         botonContraFlorAlResto.setAlignment(Pos.CENTER);
-        botonContraFlorAlResto.setOnAction(new HandlerBotonContraFlorAlResto(this));
+        botonContraFlorAlResto.setOnAction(new HandlerBotonContraFlorAlRestoBeta(this));
 
         Button botonVolver = new Button("volver");
         botonVolver.setPrefSize(100,50);
         botonVolver.setAlignment(Pos.CENTER);
-        botonVolver.setOnAction(new HandlerBotonVolver(this));
+        botonVolver.setOnAction(new HandlerBotonVolverBeta(this));
 
         VBox contenedorDeJugadasFlor = new VBox(botonContraFlor,botonContraFlorAlResto,botonVolver);
         contenedorDeJugadasFlor.setPrefSize(150, 150);
@@ -398,36 +400,65 @@ public class BetaTestVentanas extends Application {
         return contenedorDeJugadasFlor;
     }
 
-    public VBox contenedorDeJugadas(){
-        Button botonEnvido = new Button("Envido");
-        botonEnvido.setPrefSize(100,50);
-        botonEnvido.setAlignment(Pos.CENTER);
-        botonEnvido.setOnAction(new HandlerBotonJugadasEnvido(this));
+public VBox contenedorDeJugadas(){
 
-        Button botonAlMazo = new Button("mazo");
-        botonAlMazo.setPrefSize(100,50);
-        botonAlMazo.setAlignment(Pos.CENTER);
-        botonAlMazo.setOnAction(new HandlerBotonMazo(this));
 
-        Button botonTruco = new Button("Truco");
-        botonTruco.setPrefSize(100,50);
-        botonTruco.setAlignment(Pos.CENTER);
-        botonTruco.setOnAction(new HandlerBotonJugadasTruco(this));
+    Label textoJugadas = new Label("Jugadas\nposibles: ");
+    textoJugadas.setFont(Font.font(null, FontWeight.BOLD, 15));
+    textoJugadas.setStyle("-fx-text-fill: #FFFFFF");
 
-        Button botonFlor = new Button("Flor");
-        botonFlor.setPrefSize(100,50);
-        botonFlor.setAlignment(Pos.CENTER);
-        botonFlor.setOnAction(new HandlerBotonJugadasFlor(this));
+    Label textoEspacio = new Label();
 
-        VBox contenedorDeJugadas = new VBox(botonEnvido,botonTruco,botonFlor,botonAlMazo);
-        contenedorDeJugadas.setPrefSize(150,150);
-        contenedorDeJugadas.setStyle("-fx-background-color: #006699");
-        contenedorDeJugadas.setAlignment(Pos.CENTER);
-        contenedorDeJugadas.setSpacing(20);
-        contenedorDeJugadas.setPadding(new Insets(10));
-        return contenedorDeJugadas;
+    Button botonQuiero = new Button("Quiero");
+    botonQuiero.setPrefSize(100,50);
+    botonQuiero.setAlignment(Pos.CENTER);
+    botonQuiero.setOnAction(new HandlerBotonQuieroBeta(this));
+
+    Button botonNoQuiero = new Button("No quiero");
+    botonNoQuiero.setPrefSize(100, 50);
+    botonNoQuiero.setAlignment(Pos.CENTER);
+    botonNoQuiero.setOnAction(new HandlerBotonNoQuieroBeta(this));
+
+
+    Button botonEnvido = new Button("Envido");
+    botonEnvido.setPrefSize(100,50);
+    botonEnvido.setAlignment(Pos.CENTER);
+    botonEnvido.setOnAction(new HandlerBotonJugadasEnvidoBeta(this));
+    if (this.getJuego().manejadorDeTurnos.getManoActual() > 1 || juego.getPuntosDeEnvidoQuerido() > 0)
+        botonEnvido.setDisable(true);
+
+
+    Button botonAlMazo = new Button("mazo");
+    botonAlMazo.setPrefSize(100,50);
+    botonAlMazo.setAlignment(Pos.CENTER);
+    botonAlMazo.setOnAction(new HandlerBotonMazoBeta(this));
+
+    Button botonTruco = new Button("Truco");
+    botonTruco.setPrefSize(100,50);
+    botonTruco.setAlignment(Pos.CENTER);
+    botonTruco.setOnAction(new HandlerBotonJugadasTrucoBeta(this));
+    if(juego.manejadorDeTurnos.getPrimeroQueCantoTruco() != null ){
+        if ((juego.manejadorDeTurnos.getPrimeroQueCantoTruco().getJugador().getEquipo().getNombre())
+                .equals(juego.manejadorDeTurnos.getJugadorConTurnoActual().getEquipo().getNombre()))
+            botonTruco.setDisable(true);
     }
-*/
+    Button botonFlor = new Button("Flor");
+    botonFlor.setPrefSize(100,50);
+    botonFlor.setAlignment(Pos.CENTER);
+    botonFlor.setOnAction(new HandlerBotonJugadasFlorBeta(this));
+    if (!this.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().getMano().hayFlorEnMano())
+        botonFlor.setDisable(true);
+
+    VBox contenedorDeJugadas = new VBox(textoJugadas,botonEnvido,botonTruco,botonFlor,botonAlMazo,textoEspacio,botonQuiero,botonNoQuiero);
+    contenedorDeJugadas.setPrefSize(150,150);
+    contenedorDeJugadas.setStyle("-fx-background-image: url('imagenes/texturaMesa.jpg')");
+    contenedorDeJugadas.setAlignment(Pos.CENTER);
+    contenedorDeJugadas.setSpacing(20);
+    contenedorDeJugadas.setPadding(new Insets(10));
+
+    return contenedorDeJugadas;
+}
+
 
     public VBox contenedorEstadoDeJuego(){
         // label Jugador en turno
