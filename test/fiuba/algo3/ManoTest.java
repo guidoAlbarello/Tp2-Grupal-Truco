@@ -1,11 +1,10 @@
 package fiuba.algo3;
 
-import fiuba.algo3.Excepciones.NoHayFlorEnLaManoError;
-import fiuba.algo3.ModeladoDeCarta.*;
+import fiuba.algo3.Modelo.Excepciones.NoHayFlorEnLaManoError;
+import fiuba.algo3.Modelo.Mano;
+import fiuba.algo3.Modelo.ModeladoDeCarta.*;
 import org.junit.Assert;
 import org.junit.Test;
-
-import java.util.List;
 
 /**
  * Created by Krion on 19/11/2015.

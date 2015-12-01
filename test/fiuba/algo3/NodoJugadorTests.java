@@ -1,7 +1,7 @@
 package fiuba.algo3;
 
-import fiuba.algo3.manejoDeJugadores.Jugador;
-import fiuba.algo3.manejoDeJugadores.NodoJugador;
+import fiuba.algo3.Modelo.manejoDeJugadores.Jugador;
+import fiuba.algo3.Modelo.manejoDeJugadores.NodoJugador;
 import org.junit.Assert;
 import org.junit.Test;
 

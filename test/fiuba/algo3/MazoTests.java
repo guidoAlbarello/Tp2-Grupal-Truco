@@ -1,7 +1,8 @@
 package fiuba.algo3;
 
-import fiuba.algo3.ModeladoDeCarta.*;
-import fiuba.algo3.manejoDeJugadores.Jugador;
+import fiuba.algo3.Modelo.Mazo;
+import fiuba.algo3.Modelo.ModeladoDeCarta.*;
+import fiuba.algo3.Modelo.manejoDeJugadores.Jugador;
 import org.junit.Assert;
 import org.junit.Test;
 

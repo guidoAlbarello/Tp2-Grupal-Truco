@@ -1,7 +1,7 @@
 package fiuba.algo3;
 
-import fiuba.algo3.Excepciones.ValorDeCartaInvalidoError;
-import fiuba.algo3.ModeladoDeCarta.*;
+import fiuba.algo3.Modelo.Excepciones.ValorDeCartaInvalidoError;
+import fiuba.algo3.Modelo.ModeladoDeCarta.*;
 import org.junit.Assert;
 import org.junit.Test;
 

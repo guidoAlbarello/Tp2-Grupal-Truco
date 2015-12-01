@@ -1,14 +1,12 @@
 package fiuba.algo3;
 
-import fiuba.algo3.EstadosDeJuego.EstadoEnvido;
-import fiuba.algo3.EstadosDeJuego.EstadoEnvidoEnvido;
-import fiuba.algo3.ModeladoDeCarta.*;
-import fiuba.algo3.manejoDeJugadores.Equipo;
-import fiuba.algo3.manejoDeJugadores.Jugador;
-import fiuba.algo3.manejoDeJugadores.ListaJugadores;
-import org.junit.Assert;
+import fiuba.algo3.Modelo.Juego;
+import fiuba.algo3.Modelo.Mazo;
+import fiuba.algo3.Modelo.Mesa;
+import fiuba.algo3.Modelo.ModeladoDeCarta.*;
+import fiuba.algo3.Modelo.manejoDeJugadores.Jugador;
+import fiuba.algo3.Modelo.manejoDeJugadores.ListaJugadores;
 import org.junit.Before;
-import org.junit.Test;
 
 /**
  * Created by Fechee on 21/11/2015.

@@ -1,8 +1,8 @@
 package fiuba.algo3;
 
-import fiuba.algo3.EstadosDeJuego.EstadoDeJuego;
-import fiuba.algo3.EstadosDeJuego.EstadoEnvido;
-import fiuba.algo3.EstadosDeJuego.EstadoEnvidoEnvido;
+import fiuba.algo3.Modelo.EstadosDeJuego.EstadoDeJuego;
+import fiuba.algo3.Modelo.EstadosDeJuego.EstadoEnvidoEnvido;
+import fiuba.algo3.Modelo.Juego;
 import org.junit.Before;
 import org.junit.Test;
 
