@@ -73,9 +73,9 @@ public class EstadoRealEnvido implements EstadoDeJuego {
 
     @Override
     public void noQuiero() {
-        juego.noSeQuizoEnvido();
-
         juego.setEstadoDeJuego(new EstadoSinEnvido(juego));
+        juego.manejadorDeTurnos.setJugadorTurnoActual(juego.manejadorDeTurnos.getPrimeroQueCantoEnvido());
+        juego.noSeQuizoEnvido();
     }
 
     @Override

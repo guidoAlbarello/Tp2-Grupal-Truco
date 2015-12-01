@@ -36,20 +36,24 @@ public class EstadoTruco implements EstadoDeJuego {
     public void envido() {
         this.juego.manejadorDeTurnos.setUltimoQueJugoEnvido(juego.manejadorDeTurnos.getJugadorConTurnoActual());
         this.juego.manejadorDeTurnos.setPrimeroQueCantoEnvido(juego.manejadorDeTurnos.getJugadorConTurnoActual());
-        this.juego.setEstadoDeJuego(new EstadoTrucoConEnvido(this.juego));
+        this.juego.setEstadoDeJuego(new EstadoEnvido(this.juego));
         this.juego.manejadorDeTurnos.pasarTurnoActual();
     }
 
     @Override
     public void realEnvido() {
-        throw new NoSeResuelveTrucoError();/* aca en realidad esto no es correcto por que
-        si se puede cantar realEnvido cuando se canto Truco*/
+        this.juego.manejadorDeTurnos.setUltimoQueJugoEnvido(juego.manejadorDeTurnos.getJugadorConTurnoActual());
+        this.juego.manejadorDeTurnos.setPrimeroQueCantoEnvido(juego.manejadorDeTurnos.getJugadorConTurnoActual());
+        this.juego.setEstadoDeJuego(new EstadoRealEnvido(this.juego));
+        this.juego.manejadorDeTurnos.pasarTurnoActual();
     }
 
     @Override
     public void faltaEnvido() {
-        throw new NoSeResuelveTrucoError();/* aca en realidad esto no es correcto por que
-        si se puede cantar faltaEnvido cuando se canto Truco*/
+        this.juego.manejadorDeTurnos.setUltimoQueJugoEnvido(juego.manejadorDeTurnos.getJugadorConTurnoActual());
+        this.juego.manejadorDeTurnos.setPrimeroQueCantoEnvido(juego.manejadorDeTurnos.getJugadorConTurnoActual());
+        this.juego.setEstadoDeJuego(new EstadoFaltaEnvido(this.juego));
+        this.juego.manejadorDeTurnos.pasarTurnoActual();
     }
 
     @Override

@@ -19,17 +19,17 @@ public class EstadoRetruco implements EstadoDeJuego {
 
     @Override
     public void flor() {
-
+        throw new RuntimeException();
     }
 
     @Override
     public void contraFlor() {
-
+        throw new RuntimeException();
     }
 
     @Override
     public void contraFlorAlResto() {
-
+        throw new RuntimeException();
     }
 
     @Override
@@ -86,8 +86,7 @@ public class EstadoRetruco implements EstadoDeJuego {
 
     @Override
     public void jugarCarta(CartaJugada cartaJugada) {
-
-        this.juego.agregarCartaAMesa(cartaJugada);
+        throw new RuntimeException();
     }
 
     @Override

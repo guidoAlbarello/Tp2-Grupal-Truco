@@ -15,62 +15,63 @@ public class EstadoValeCuatroAceptado implements EstadoDeJuego {
 
     @Override
     public void flor() {
-
+        throw new RuntimeException();
     }
 
     @Override
     public void contraFlor() {
-
+        throw new RuntimeException();
     }
 
     @Override
     public void contraFlorAlResto() {
-
+        throw new RuntimeException();
     }
 
     @Override
     public void envido() {
-
+        throw new RuntimeException();
     }
 
     @Override
     public void realEnvido() {
-
+        throw new RuntimeException();
     }
 
     @Override
     public void faltaEnvido() {
-
+        throw new RuntimeException();
     }
 
     @Override
     public void truco() {
-
+        throw new RuntimeException();
     }
 
     @Override
     public void retruco() {
-
+        throw new RuntimeException();
     }
 
     @Override
     public void valeCuatro() {
-
+        throw new RuntimeException();
     }
 
     @Override
     public void quiero() {
-
+        throw new RuntimeException();
     }
 
     @Override
     public void noQuiero() {
-
+        throw new RuntimeException();
     }
 
     @Override
     public void irseAlMaso() {
-
+        this.juego.manejadorDeTurnos.pasarTurnoActual();
+        this.juego.seFueronAlMaso();
     }
 
     @Override

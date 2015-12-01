@@ -57,7 +57,9 @@ public class EstadoFaltaEnvido implements EstadoDeJuego {
 
     @Override
     public void noQuiero() {
-        //resolver
+        juego.setEstadoDeJuego(new EstadoSinEnvido(juego));
+        juego.manejadorDeTurnos.setJugadorTurnoActual(juego.manejadorDeTurnos.getPrimeroQueCantoEnvido());
+        juego.noSeQuizoEnvido();
     }
 
     @Override
