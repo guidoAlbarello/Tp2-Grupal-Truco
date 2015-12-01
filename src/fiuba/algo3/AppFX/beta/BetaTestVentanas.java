@@ -46,7 +46,7 @@ public class BetaTestVentanas extends Application {
     public GridPane verticalMedio;
     public VBox configurar,nombrar;
     private int cantidadJugadores;
-
+    private boolean conFlor;
 
     public BetaTestVentanas(){
         //this.juego = this.inicializarJuego();
@@ -80,6 +80,10 @@ public class BetaTestVentanas extends Application {
         stage.show();
     }
 
+
+    public void setConFlor(Boolean conFlor){this.conFlor = conFlor;}
+
+
     public VBox generarPanelDeConfiguracion(){
 
         configurar = new VBox();
@@ -108,7 +112,7 @@ public class BetaTestVentanas extends Application {
 
         selector.getSelectionModel().selectFirst();
         CheckBox conFlor = new CheckBox("Con Flor");
-        conFlor.setSelected(true);
+        conFlor.setSelected(false);
         conFlor.setStyle("-fx-text-fill: #FFFFFF");
 
         Label titulo = new Label("      Seleccione la cantidad de jugadores y el modo de juego.");
@@ -123,7 +127,7 @@ public class BetaTestVentanas extends Application {
         configNueva.setSpacing(30);
         configurar.getChildren().add(configNueva);
 
-        HandlerBotonConfirmarConfiguracion handler = new HandlerBotonConfirmarConfiguracion(this,selector);
+        HandlerBotonConfirmarConfiguracion handler = new HandlerBotonConfirmarConfiguracion(this,selector,conFlor);
         botonConfirmar.setOnAction(handler);
 
         configurar.getChildren().add(botonConfirmar);
@@ -273,7 +277,12 @@ public class BetaTestVentanas extends Application {
             instruccion.setFont(Font.font(null, FontWeight.BOLD, 15));
             instruccion.setStyle("-fx-text-fill: #FFCC33");
             TextField completar = new TextField();
-            HBox contenedor = new HBox(instruccion, completar);
+            Label instruccion2 = new Label("Es un Jugador Humano: ");
+            instruccion2.setFont(Font.font(null, FontWeight.BOLD, 15));
+            instruccion2.setStyle("-fx-text-fill: #FFCC33");
+            CheckBox esHumano = new CheckBox();
+            esHumano.setSelected(true);
+            HBox contenedor = new HBox(instruccion, completar, instruccion2, esHumano);
             contenedor.setSpacing(10);
             contenedor.setAlignment(Pos.CENTER);
             contenedores.add(contenedor);

@@ -1,9 +1,11 @@
 package fiuba.algo3.AppFX;
 
 import fiuba.algo3.AppFX.beta.BetaTestVentanas;
+import fiuba.algo3.InteligenciaArtificial.JugadorArtificial;
 import fiuba.algo3.manejoDeJugadores.Jugador;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 
@@ -22,13 +24,16 @@ public class HandlerBotonConfirmarJugadores implements EventHandler<ActionEvent>
     public List<TextField> textos = new ArrayList<TextField>();
     public List<String> nombres = new ArrayList<String>();
     public LinkedList<Jugador> jugadores = new LinkedList<Jugador>();
+    public List<CheckBox> jugadoresSonHumanos;
 
 
     public HandlerBotonConfirmarJugadores(List<HBox> contenedores, BetaTestVentanas juego){
         this.aplicacion=juego;
+        this.jugadoresSonHumanos = new ArrayList<>();
         for (HBox contenedor : contenedores){
             TextField texto = ((TextField) contenedor.getChildren().get(1));
             textos.add(texto);
+            jugadoresSonHumanos.add((CheckBox) contenedor.getChildren().get(3));
         }
     }
 
@@ -50,9 +55,16 @@ public class HandlerBotonConfirmarJugadores implements EventHandler<ActionEvent>
     @Override
     public void handle(ActionEvent event) {
         setNombres();
+        int contador = 0;
         for (String nombre : nombres){
-            Jugador nuevo = new Jugador(nombre);
-            this.jugadores.addLast(nuevo);
+            if(jugadoresSonHumanos.get(contador).isSelected()) {
+                Jugador nuevoJugador = new Jugador(nombre);
+                this.jugadores.addLast(nuevoJugador);
+            } else{
+                JugadorArtificial nuevoJugador = new JugadorArtificial(nombre);
+                this.jugadores.addLast(nuevoJugador);
+            }
+            contador++;
         }
         this.aplicacion.inicializarJuego(this.jugadores);
         this.aplicacion.panel.setCenter(this.aplicacion.inicializarMesaParaNuevaPartida());
