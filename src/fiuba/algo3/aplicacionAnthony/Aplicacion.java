@@ -7,6 +7,7 @@ import fiuba.algo3.Eventos.HandlerBotonQuiero;
 import fiuba.algo3.Eventos.*;
 import fiuba.algo3.Juego;
 import fiuba.algo3.ModeladoDeCarta.Carta;
+import fiuba.algo3.Excepciones.NoEsUnJugadorArtificialError;
 import fiuba.algo3.manejoDeJugadores.Jugador;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -136,7 +137,11 @@ public class Aplicacion extends Application {
             instruccion.setFont(Font.font(null, FontWeight.BOLD, 15));
             instruccion.setStyle("-fx-text-fill: #FFCC33");
             TextField completar = new TextField();
-            HBox contenedor = new HBox(instruccion, completar);
+            Label instruccion2 = new Label("Es un Jugador Humano: ");
+            instruccion2.setFont(Font.font(null, FontWeight.BOLD, 15));
+            instruccion2.setStyle("-fx-text-fill: #FFCC33");
+            CheckBox esHumano = new CheckBox();
+            HBox contenedor = new HBox(instruccion, completar, instruccion2, esHumano);
             contenedor.setSpacing(10);
             contenedor.setAlignment(Pos.CENTER);
             contenedores.add(contenedor);
@@ -211,7 +216,7 @@ public class Aplicacion extends Application {
         // imagenes de cartas
         List<Carta> cartasMano = juego.manejadorDeTurnos.getJugadorConTurnoActual().getMano().getCartasEnMano();
         Carta carta = cartasMano.get(0);
-        String direccionCarta = "imagenes/"+carta.getValorDeCarta()+carta.getPaloDeCarta().getNombre()+".jpg";
+        String direccionCarta = "imagenes/" + carta.getValorDeCarta() + carta.getPaloDeCarta().getNombre() + ".jpg";
         Image imagenCarta1 = new Image(direccionCarta);
         iv1 = new ImageView(imagenCarta1);
         iv1.setFitHeight(130);
@@ -226,7 +231,7 @@ public class Aplicacion extends Application {
 
 
         carta = cartasMano.get(1);
-        direccionCarta = "imagenes/"+carta.getValorDeCarta()+carta.getPaloDeCarta().getNombre()+".jpg";
+        direccionCarta = "imagenes/" + carta.getValorDeCarta() + carta.getPaloDeCarta().getNombre() + ".jpg";
         Image imagenCarta2 = new Image(direccionCarta);
         iv2 = new ImageView(imagenCarta2);
         iv2.setFitWidth(90);
@@ -240,7 +245,7 @@ public class Aplicacion extends Application {
         botonCarta2.setStyle("-fx-background-image: url('imagenes/texturaMadera2.jpg');-fx-text-fill: #FFCC00");
 
         carta = cartasMano.get(2);
-        direccionCarta = "imagenes/"+carta.getValorDeCarta()+carta.getPaloDeCarta().getNombre()+".jpg";
+        direccionCarta = "imagenes/" + carta.getValorDeCarta() + carta.getPaloDeCarta().getNombre() + ".jpg";
         Image imagenCarta3 = new Image(direccionCarta);
         iv3 = new ImageView(imagenCarta3);
         iv3.setFitHeight(130);
@@ -253,15 +258,12 @@ public class Aplicacion extends Application {
         botonCarta3.setOnAction(new HandlerBotonJugarCarta3(this));
         botonCarta3.setStyle("-fx-background-image: url('imagenes/texturaMadera2.jpg');-fx-text-fill: #FFCC00");
 
-
-
-        verticalMedio.add(botonCarta1,0,3);
-        verticalMedio.setHalignment(botonCarta1,HPos.CENTER);
-        verticalMedio.add(botonCarta2,1,3);
-        verticalMedio.setHalignment(botonCarta2,HPos.CENTER);
-        verticalMedio.add(botonCarta3,2,3);
-        verticalMedio.setHalignment(botonCarta3,HPos.CENTER);
-
+        verticalMedio.add(botonCarta1, 0, 3);
+        verticalMedio.setHalignment(botonCarta1, HPos.CENTER);
+        verticalMedio.add(botonCarta2, 1, 3);
+        verticalMedio.setHalignment(botonCarta2, HPos.CENTER);
+        verticalMedio.add(botonCarta3, 2, 3);
+        verticalMedio.setHalignment(botonCarta3, HPos.CENTER);
 
         this.inicializarMesa();
         this.actualizarBotonesCartas();
@@ -485,6 +487,7 @@ public void inicializarMesa(){
 
         for (Jugador jugador : jugadores){
             jugador.setJuego(juego);
+            jugador.inicializarCerebroJugador(); //esto es lo otro feo
             juego.agregarJugador(jugador);
         }
         juego.configurarManejadorDeTurnos();

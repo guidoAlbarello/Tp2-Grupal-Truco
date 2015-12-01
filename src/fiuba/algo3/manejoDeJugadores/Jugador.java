@@ -1,6 +1,7 @@
 package fiuba.algo3.manejoDeJugadores;
 
 import fiuba.algo3.CartaJugada;
+import fiuba.algo3.Excepciones.NoEsUnJugadorArtificialError;
 import fiuba.algo3.Juego;
 import fiuba.algo3.Mano;
 import fiuba.algo3.ModeladoDeCarta.Carta;
@@ -53,6 +54,10 @@ public class Jugador {
         this.juego.jugarCarta(new CartaJugada(this.manoDelJugador.jugarCarta(indiceDeLaCarta),this));
     }
 
+    public void hacerJugada(){
+        throw new NoEsUnJugadorArtificialError();
+    }
+
     public void truco() {
         this.juego.seCantaTruco();
     }
@@ -84,6 +89,10 @@ public class Jugador {
 
     public Juego getJuego() {
         return juego;
+    }
+
+    public void inicializarCerebroJugador() {
+
     }
 }
 

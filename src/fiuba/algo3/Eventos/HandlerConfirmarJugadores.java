@@ -1,11 +1,13 @@
 package fiuba.algo3.Eventos;
 
 import fiuba.algo3.AppFX.beta.BetaTestVentanas;
+import fiuba.algo3.InteligenciaArtificial.JugadorArtificial;
 import fiuba.algo3.aplicacionAnthony.Aplicacion;
 import fiuba.algo3.manejoDeJugadores.Jugador;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 
@@ -20,12 +22,15 @@ public class HandlerConfirmarJugadores implements EventHandler{
     public Aplicacion aplicacion;
     public List<TextField> textos = new ArrayList<TextField>();
     public List<String> nombres = new ArrayList<String>();
+    public List<CheckBox> jugadoresSonHumanos;
     public LinkedList<Jugador> jugadores = new LinkedList<Jugador>();
     public HandlerConfirmarJugadores(ArrayList<HBox> contenedores, Aplicacion aplicacion) {
         this.aplicacion=aplicacion;
+        this.jugadoresSonHumanos = new ArrayList<>();
         for (HBox contenedor : contenedores){
             TextField texto = ((TextField) contenedor.getChildren().get(1));
             textos.add(texto);
+            jugadoresSonHumanos.add((CheckBox) contenedor.getChildren().get(3));
         }
     }
 
@@ -48,10 +53,18 @@ public class HandlerConfirmarJugadores implements EventHandler{
     @Override
     public void handle(Event event) {
         setNombres();
+        int contador = 0;
         for (String nombre : nombres){
-            Jugador nuevo = new Jugador(nombre);
-            this.jugadores.addLast(nuevo);
+            if(jugadoresSonHumanos.get(contador).isSelected()) {
+                Jugador nuevoJugador = new Jugador(nombre);
+                this.jugadores.addLast(nuevoJugador);
+            } else{
+                JugadorArtificial nuevoJugador = new JugadorArtificial(nombre);
+                this.jugadores.addLast(nuevoJugador);
+            }
+            contador++;
         }
+
         this.aplicacion.inicializarJuego(this.jugadores);
         this.aplicacion.getBorderPane().setCenter(this.aplicacion.cuadriculaDeJuego());
         this.aplicacion.getBorderPane().setLeft(this.aplicacion.contenedorEstadoDeJuego());

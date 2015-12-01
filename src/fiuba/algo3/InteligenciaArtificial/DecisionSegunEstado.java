@@ -1,6 +1,7 @@
 package fiuba.algo3.InteligenciaArtificial;
 
 import fiuba.algo3.EstadosDeJuego.*;
+import fiuba.algo3.Excepciones.NoHayFlorEnLaManoError;
 import fiuba.algo3.Mesa;
 import fiuba.algo3.manejoDeJugadores.Jugador;
 
@@ -162,7 +163,14 @@ public class DecisionSegunEstado {
         }
 
         private boolean elegirSiCantaFlor() {
-                return (unJugadorMaquina.getMano().calcularFlor() != 0 && factorDeAzar2EstaEnElRangoDe(50, 100));
+                boolean resultadoCantarFlor;
+                try{
+                        unJugadorMaquina.getMano().calcularFlor();
+                        resultadoCantarFlor = true;
+                } catch(NoHayFlorEnLaManoError e){
+                        resultadoCantarFlor = false;
+                }
+                return (resultadoCantarFlor && factorDeAzar2EstaEnElRangoDe(50, 100));
         }
 
         private boolean elegirSiQuiereEnvido() {

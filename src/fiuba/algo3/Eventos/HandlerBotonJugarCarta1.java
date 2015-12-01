@@ -1,5 +1,6 @@
 package fiuba.algo3.Eventos;
 
+import fiuba.algo3.Excepciones.NoEsUnJugadorArtificialError;
 import fiuba.algo3.ModeladoDeCarta.Carta;
 import fiuba.algo3.aplicacionAnthony.Aplicacion;
 import javafx.event.Event;
@@ -28,7 +29,6 @@ public class HandlerBotonJugarCarta1 implements EventHandler {
             JOptionPane.showMessageDialog(null, "No se puede jugar carta falta aceptar canto",
                     "JUGADA INVALIDA", JOptionPane.WARNING_MESSAGE);
         }
-
 
     }
 }

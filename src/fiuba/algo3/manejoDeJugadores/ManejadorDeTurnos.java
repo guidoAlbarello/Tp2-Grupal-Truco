@@ -1,6 +1,7 @@
 package fiuba.algo3.manejoDeJugadores;
 
 import fiuba.algo3.EstadosDeJuego.EstadoJuegoConFlor;
+import fiuba.algo3.Excepciones.NoEsUnJugadorArtificialError;
 import fiuba.algo3.Juego;
 import fiuba.algo3.Mesa;
 
@@ -60,6 +61,9 @@ public class ManejadorDeTurnos {
 
     public void pasarTurnoActual(){//c Anthony : cre este metodo por q no me  sirve de que pasa el turno pase el tunro y a la vez calcule cosas
         this.turnoActual = this.turnoActual.getSiguiente();
+        try{
+           this.getJugadorConTurnoActual().hacerJugada();
+        }catch(NoEsUnJugadorArtificialError e ) {   }                                                //Esto es lo medio feo q decia
     }
 
     public void reiniciarRonda(){
