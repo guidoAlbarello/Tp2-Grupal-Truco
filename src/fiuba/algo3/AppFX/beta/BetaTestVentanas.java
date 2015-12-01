@@ -5,6 +5,7 @@ import fiuba.algo3.AppFX.HandlerBotonConfirmarConfiguracion;
 import fiuba.algo3.AppFX.HandlerBotonConfirmarJugadores;
 import fiuba.algo3.AppFX.HandlerNuevaPartida;
 import fiuba.algo3.AppFX.eventosBeta.*;
+import fiuba.algo3.Eventos.HandlerBotonRealEnvido;
 import fiuba.algo3.Juego;
 import fiuba.algo3.ModeladoDeCarta.Carta;
 import fiuba.algo3.manejoDeJugadores.Jugador;
@@ -45,6 +46,7 @@ public class BetaTestVentanas extends Application {
     public VBox configurar,nombrar;
     private int cantidadJugadores;
     private boolean conFlor;
+    private boolean envidoJugado = false;
 
     public BetaTestVentanas(){
         //this.juego = this.inicializarJuego();
@@ -409,7 +411,7 @@ public class BetaTestVentanas extends Application {
         Button botonRealEnvido = new Button("Real Envido");
         botonRealEnvido.setPrefSize(100,50);
         botonRealEnvido.setAlignment(Pos.CENTER);
-        botonRealEnvido.setOnAction(new HandlerBotonContraFlorBeta(this));
+        botonRealEnvido.setOnAction(new HandlerBotonRealEnvidoBeta(this));
 
         Button botonFaltaEnvido = new Button("Falta Envido");
         botonFaltaEnvido.setPrefSize(100,50);
@@ -512,7 +514,7 @@ public VBox contenedorDeJugadas(){
     botonEnvido.setPrefSize(100,50);
     botonEnvido.setAlignment(Pos.CENTER);
     botonEnvido.setOnAction(new HandlerBotonJugadasEnvidoBeta(this));
-    if (this.getJuego().manejadorDeTurnos.getManoActual() > 1 || juego.getPuntosDeEnvidoQuerido() > 0)
+    if (this.getJuego().manejadorDeTurnos.getManoActual() > 1 || envidoJugado )
         botonEnvido.setDisable(true);
 
 
@@ -627,4 +629,5 @@ public VBox contenedorDeJugadas(){
         else
             botonJugarCarta3.setVisible(true);
     }
+
 }

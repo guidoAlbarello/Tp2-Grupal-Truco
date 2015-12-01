@@ -5,6 +5,8 @@ import fiuba.algo3.aplicacionAnthony.Aplicacion;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
+import javax.swing.*;
+
 /**
  * Created by anthony on 30/11/2015.
  */
@@ -16,7 +18,12 @@ public class HandlerBotonNoQuieroBeta implements EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent event) {
-        aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().noQuiero();
+        try {
+            aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().noQuiero();
+        }catch (RuntimeException e){
+            JOptionPane.showMessageDialog(null, "no se canto ninguna jugada",
+                    "JUGADA INVALIDA", JOptionPane.WARNING_MESSAGE);
+        }
         aplicacion.actualizarCartasEnManoParaJugadorActual();
         aplicacion.actualizarBotonesCartas();
         //aplicacion.getBorderPane().setCenter(aplicacion.cuadriculaDeJuego());

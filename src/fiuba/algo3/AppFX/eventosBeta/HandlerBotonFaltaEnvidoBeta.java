@@ -5,6 +5,8 @@ import fiuba.algo3.aplicacionAnthony.Aplicacion;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 
+import javax.swing.*;
+
 /**
  * Created by anthony on 30/11/2015.
  */
@@ -16,11 +18,17 @@ public class HandlerBotonFaltaEnvidoBeta implements EventHandler {
 
     @Override
     public void handle(Event event) {
-        aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().faltaEnvido();
-        aplicacion.actualizarCartasEnManoParaJugadorActual();
-        aplicacion.actualizarBotonesCartas();
-        aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
-        //aplicacion.getBorderPane().setCenter(aplicacion.cuadriculaDeJuego());
-        aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
+        try {
+            aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().faltaEnvido();
+        }catch(RuntimeException e){
+            JOptionPane.showMessageDialog(null, "No se puede jugar FaltaEnvido",
+                    "JUGADA INVALIDA", JOptionPane.WARNING_MESSAGE);
+        }
+            aplicacion.actualizarCartasEnManoParaJugadorActual();
+            aplicacion.actualizarBotonesCartas();
+            aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
+            //aplicacion.getBorderPane().setCenter(aplicacion.cuadriculaDeJuego());
+            aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
     }
+
 }

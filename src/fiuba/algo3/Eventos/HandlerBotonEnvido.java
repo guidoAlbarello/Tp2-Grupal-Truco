@@ -29,6 +29,7 @@ public class HandlerBotonEnvido implements EventHandler {
     @Override
     public void handle(Event event) {
         try {
+
             aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().envido();
             aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
             aplicacion.getBorderPane().setCenter(aplicacion.cuadriculaDeJuego());

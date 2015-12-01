@@ -4,6 +4,11 @@ import fiuba.algo3.AppFX.beta.BetaTestVentanas;
 import fiuba.algo3.aplicacionAnthony.Aplicacion;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * Created by anthony on 30/11/2015.
@@ -16,7 +21,13 @@ public class HandlerBotonQuieroBeta implements EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent event) {
-        aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().quiero();
+        try {
+            aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().quiero();
+        }catch (RuntimeException e){
+            JOptionPane mensajeError = new JOptionPane();
+            mensajeError.showMessageDialog(null,"no hay cantos en juego",
+                    "JUGADA INVALIDA",JOptionPane.ERROR_MESSAGE);
+        }
         aplicacion.actualizarCartasEnManoParaJugadorActual();
         aplicacion.actualizarBotonesCartas();
         //aplicacion.getBorderPane().setCenter(aplicacion.cuadriculaDeJuego());

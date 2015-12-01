@@ -17,6 +17,7 @@ public class HandlerBotonMazoBeta implements EventHandler {
     public void handle(Event event) {
         this.aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().meVoyAlMaso();
         this.aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
+        aplicacion.actualizarCartasEnManoParaJugadorActual();
         //aplicacion.getBorderPane().setCenter(aplicacion.cuadriculaDeJuego());
         aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
     }

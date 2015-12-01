@@ -5,6 +5,8 @@ import fiuba.algo3.aplicacionAnthony.Aplicacion;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
+import javax.swing.*;
+
 /**
  * Created by anthony on 30/11/2015.
  */
@@ -16,7 +18,12 @@ public class HandlerBotonValeCuatroBeta implements EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent event) {
-        aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().valeCuatro();
+        try {
+            aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().valeCuatro();
+        }catch (RuntimeException e){
+            JOptionPane.showMessageDialog(null, "No se puede jugar ValeCuatro",
+                    "JUGADA INVALIDA", JOptionPane.ERROR_MESSAGE);
+        }
         aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
         //aplicacion.getBorderPane().setCenter(aplicacion.cuadriculaDeJuego());
         aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());

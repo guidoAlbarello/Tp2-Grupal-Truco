@@ -5,6 +5,8 @@ import fiuba.algo3.aplicacionAnthony.Aplicacion;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
+import javax.swing.*;
+
 /**
  * Created by anthony on 30/11/2015.
  */
@@ -16,7 +18,12 @@ public class HandlerBotonTrucoBeta implements EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent event) {
-        aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().truco();
+        try {
+            aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().truco();
+        }catch (RuntimeException e){
+            JOptionPane.showMessageDialog(null, "No se puede jugar Truco",
+                    "JUGADA INVALIDA", JOptionPane.WARNING_MESSAGE);
+        }
         aplicacion.actualizarCartasEnManoParaJugadorActual();
         aplicacion.actualizarBotonesCartas();
         aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());

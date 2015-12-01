@@ -5,6 +5,8 @@ import fiuba.algo3.aplicacionAnthony.Aplicacion;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 
+import javax.swing.*;
+
 /**
  * Created by anthony on 30/11/2015.
  */
@@ -16,7 +18,12 @@ public class HandlerBotonEnvidoBeta implements EventHandler {
     }
     @Override
     public void handle(Event event) {
-        aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().envido();
+        try {
+            aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().envido();
+        }catch (RuntimeException e){
+            JOptionPane.showMessageDialog(null, "No se puede jugar Envido",
+                    "JUGADA INVALIDA", JOptionPane.WARNING_MESSAGE);
+        }
         aplicacion.actualizarCartasEnManoParaJugadorActual();
         aplicacion.actualizarBotonesCartas();
         aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
