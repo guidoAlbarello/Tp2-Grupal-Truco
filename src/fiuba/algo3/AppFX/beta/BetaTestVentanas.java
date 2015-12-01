@@ -143,7 +143,7 @@ public class BetaTestVentanas extends Application {
         nuevoJuegoItemMenu.setOnAction(new HandlerNuevaPartida(this));
         MenuItem opcionesItemMenu = new MenuItem("Opciones");
         MenuItem salirItemMenu = new MenuItem("Salir");
-        salirItemMenu.setOnAction(actionEvent-> Platform.exit());
+       // salirItemMenu.setOnAction(actionEvent-> Platform.exit());
 
         menuDeArchivo.getItems().addAll(nuevoJuegoItemMenu, opcionesItemMenu, new SeparatorMenuItem(), salirItemMenu);
 
