@@ -8,14 +8,15 @@ import fiuba.algo3.manejoDeJugadores.Jugador;
 /**
  * Created by anthony on 01/12/2015.
  */
-public class TrucoConRealEnvido implements EstadoDeJuego {
+public class EstadoTrucoConEnvidoEnvido implements EstadoDeJuego {
+    private int puntosDeEstado = 4;
     private Juego juego;
-    private int puntosDeEstado = 3;
-    public TrucoConRealEnvido(Juego juego){
+    public EstadoTrucoConEnvidoEnvido(Juego juego){
         this.juego = juego;
         this.juego.sumarPuntosEnvidoNoQuerido();
         this.juego.sumarPuntosEnvidoSiQuerido(this.puntosDeEstado);
     }
+
     @Override
     public void flor() {
 
@@ -38,13 +39,16 @@ public class TrucoConRealEnvido implements EstadoDeJuego {
 
     @Override
     public void realEnvido() {
-
+        Jugador jugadorActual = juego.manejadorDeTurnos.getJugadorConTurnoActual();
+        this.juego.setEstadoDeJuego(new EstadoTrucoConRealEnvido(this.juego));
+        this.juego.manejadorDeTurnos.setJugadorTurnoActual(juego.manejadorDeTurnos.getJugadorQueCantoEnvido());
+        this.juego.manejadorDeTurnos.setUltimoQueJugoEnvido(jugadorActual);
     }
 
     @Override
     public void faltaEnvido() {
         Jugador jugadorActual = juego.manejadorDeTurnos.getJugadorConTurnoActual();
-        this.juego.setEstadoDeJuego(new TrucoConFaltaEnvido(this.juego));
+        this.juego.setEstadoDeJuego(new EstadoTrucoConFaltaEnvido(this.juego));
         this.juego.manejadorDeTurnos.setJugadorTurnoActual(juego.manejadorDeTurnos.getJugadorQueCantoEnvido());
         this.juego.manejadorDeTurnos.setUltimoQueJugoEnvido(jugadorActual);
     }

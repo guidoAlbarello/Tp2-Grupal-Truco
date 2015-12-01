@@ -1,7 +1,6 @@
 package fiuba.algo3.EstadosDeJuego;
 
 import fiuba.algo3.CartaJugada;
-import fiuba.algo3.EstadosDeJuego.EstadoDeJuego;
 import fiuba.algo3.InteligenciaArtificial.DecisionSegunEstado;
 import fiuba.algo3.Juego;
 import fiuba.algo3.manejoDeJugadores.Jugador;
@@ -37,7 +36,7 @@ public class EstadoTrucoConEnvido implements EstadoDeJuego {
     @Override
     public void envido() {
         Jugador jugadorActual = juego.manejadorDeTurnos.getJugadorConTurnoActual();
-        this.juego.setEstadoDeJuego(new TrucoConEnvidoEnvido(this.juego));
+        this.juego.setEstadoDeJuego(new EstadoTrucoConEnvidoEnvido(this.juego));
         this.juego.manejadorDeTurnos.setJugadorTurnoActual(juego.manejadorDeTurnos.getJugadorQueCantoEnvido());
         this.juego.manejadorDeTurnos.setUltimoQueJugoEnvido(jugadorActual);
     }
@@ -45,7 +44,7 @@ public class EstadoTrucoConEnvido implements EstadoDeJuego {
     @Override
     public void realEnvido() {
         Jugador jugadorActual = juego.manejadorDeTurnos.getJugadorConTurnoActual();
-        this.juego.setEstadoDeJuego(new TrucoConRealEnvido(this.juego));
+        this.juego.setEstadoDeJuego(new EstadoTrucoConRealEnvido(this.juego));
         this.juego.manejadorDeTurnos.setJugadorTurnoActual(juego.manejadorDeTurnos.getJugadorQueCantoEnvido());
         this.juego.manejadorDeTurnos.setUltimoQueJugoEnvido(jugadorActual);
     }
@@ -53,7 +52,7 @@ public class EstadoTrucoConEnvido implements EstadoDeJuego {
     @Override
     public void faltaEnvido() {
         Jugador jugadorActual = juego.manejadorDeTurnos.getJugadorConTurnoActual();
-        this.juego.setEstadoDeJuego(new TrucoConFaltaEnvido(this.juego));
+        this.juego.setEstadoDeJuego(new EstadoTrucoConFaltaEnvido(this.juego));
         this.juego.manejadorDeTurnos.setJugadorTurnoActual(juego.manejadorDeTurnos.getJugadorQueCantoEnvido());
         this.juego.manejadorDeTurnos.setUltimoQueJugoEnvido(jugadorActual);
     }

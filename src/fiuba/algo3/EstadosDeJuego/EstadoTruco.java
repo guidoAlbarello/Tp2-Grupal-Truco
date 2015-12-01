@@ -44,7 +44,7 @@ public class EstadoTruco implements EstadoDeJuego {
     public void realEnvido() {
         this.juego.manejadorDeTurnos.setUltimoQueJugoEnvido(juego.manejadorDeTurnos.getJugadorConTurnoActual());
         this.juego.manejadorDeTurnos.setPrimeroQueCantoEnvido(juego.manejadorDeTurnos.getJugadorConTurnoActual());
-        this.juego.setEstadoDeJuego(new TrucoConRealEnvido(this.juego));
+        this.juego.setEstadoDeJuego(new EstadoTrucoConRealEnvido(this.juego));
         this.juego.manejadorDeTurnos.setJugadorTurnoActual(juego.manejadorDeTurnos.getPrimeroQueCantoTruco());
     }
 
@@ -52,7 +52,7 @@ public class EstadoTruco implements EstadoDeJuego {
     public void faltaEnvido() {
         this.juego.manejadorDeTurnos.setUltimoQueJugoEnvido(juego.manejadorDeTurnos.getJugadorConTurnoActual());
         this.juego.manejadorDeTurnos.setPrimeroQueCantoEnvido(juego.manejadorDeTurnos.getJugadorConTurnoActual());
-        this.juego.setEstadoDeJuego(new TrucoConFaltaEnvido(this.juego));
+        this.juego.setEstadoDeJuego(new EstadoTrucoConFaltaEnvido(this.juego));
         this.juego.manejadorDeTurnos.setJugadorTurnoActual(juego.manejadorDeTurnos.getPrimeroQueCantoTruco());
     }
 

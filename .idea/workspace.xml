@@ -2,30 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5334ebf3-7293-44c8-b7c0-2cb6955c173e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/imagenes/doh.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/imagenes/doh2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/TrucoConEnvidoEnvido.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/TrucoConFaltaEnvido.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/TrucoConRealEnvido.java" />
-      <change type="MODIFICATION" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\out\production\Tp2-Grupal-Truco\fiuba\algo3\AppFX\beta\BetaTestVentanas.class" afterPath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\out\production\Tp2-Grupal-Truco\fiuba\algo3\AppFX\beta\BetaTestVentanas.class" />
+      <change type="MOVED" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\src\fiuba\algo3\EstadosDeJuego\TrucoConEnvidoEnvido.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTrucoConEnvidoEnvido.java" />
+      <change type="MOVED" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\src\fiuba\algo3\EstadosDeJuego\TrucoConFaltaEnvido.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTrucoConFaltaEnvido.java" />
+      <change type="MOVED" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\src\fiuba\algo3\EstadosDeJuego\TrucoConRealEnvido.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTrucoConRealEnvido.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/EstadosDeJuego/EstadoTruco.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/EstadosDeJuego/EstadoTruco.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/EstadosDeJuego/EstadoTrucoConEnvido.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/EstadosDeJuego/EstadoTrucoConEnvido.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/Eventos/HandlerBotonEnvido.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/Eventos/HandlerBotonEnvido.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/Eventos/HandlerBotonJugarCarta1.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/Eventos/HandlerBotonJugarCarta1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/AppFX/beta/HandlerBotonJugarCartaEnPosicion.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/AppFX/beta/HandlerBotonJugarCartaEnPosicion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/BetaTestVentanas.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/BetaTestVentanas.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTruco.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTruco.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTrucoConEnvido.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTrucoConEnvido.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonEnvido.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonEnvido.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonEnvidoBeta.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonEnvidoBeta.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonFaltaEnvidoBeta.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonFaltaEnvidoBeta.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonMazoBeta.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonMazoBeta.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonNoQuieroBeta.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonNoQuieroBeta.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonQuieroBeta.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonQuieroBeta.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonRealEnvidoBeta.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonRealEnvidoBeta.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonRetrucoBeta.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonRetrucoBeta.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonTrucoBeta.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonTrucoBeta.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonValeCuatroBeta.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonValeCuatroBeta.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Tp2-Grupal-Truco.iws" />
@@ -48,11 +34,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BetaTestVentanas.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BetaTestVentanas.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/BetaTestVentanas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.375">
+            <state vertical-scroll-proportion="0.0">
               <caret line="410" column="59" selection-start-line="410" selection-start-column="59" selection-end-line="410" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HandlerBotonEnvido.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonEnvido.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.29166666">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -62,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTrucoConEnvido.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -78,8 +74,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TrucoConEnvidoEnvido.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/TrucoConEnvidoEnvido.java">
+      <file leaf-file-name="EstadoTrucoConEnvidoEnvido.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTrucoConEnvidoEnvido.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="52" column="75" selection-start-line="52" selection-start-column="75" selection-end-line="52" selection-end-column="75" />
@@ -90,8 +86,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TrucoConRealEnvido.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/TrucoConRealEnvido.java">
+      <file leaf-file-name="EstadoTrucoConRealEnvido.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTrucoConRealEnvido.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="48" column="75" selection-start-line="48" selection-start-column="75" selection-end-line="48" selection-end-column="75" />
@@ -112,18 +108,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EstadoEnvido.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoEnvido.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="59" column="75" selection-start-line="56" selection-start-column="7" selection-end-line="59" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TrucoConFaltaEnvido.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/TrucoConFaltaEnvido.java">
+      <file leaf-file-name="EstadoTrucoConFaltaEnvido.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTrucoConFaltaEnvido.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="65" column="62" selection-start-line="65" selection-start-column="62" selection-end-line="65" selection-end-column="62" />
@@ -702,12 +688,18 @@
       <option name="project" value="LOCAL" />
       <updated>1448988762008</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="se arreglo el tema del truco con envido y tbm si par aun truco se canta&#10;un real envido y lo mismo con falta envido">
+      <created>1449011303039</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1449011303039</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1378" height="780" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -720,7 +712,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3271605" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30349013" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30349013" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -749,7 +741,8 @@
     <MESSAGE value="Le saque el lambda a la beta, que hacia fallar jenkins.&#10;Ademas se agrego la posibilidad de que en la mesa, hayan 2 jugadores." />
     <MESSAGE value="Actualice el handler para tirar carta, que no actualizaba el panel de jugadas correctamente," />
     <MESSAGE value="Actualice los handlers de la beta y la ventana de configuracion de juego." />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualice los handlers de la beta y la ventana de configuracion de juego." />
+    <MESSAGE value="se arreglo el tema del truco con envido y tbm si par aun truco se canta&#10;un real envido y lo mismo con falta envido" />
+    <option name="LAST_COMMIT_MESSAGE" value="se arreglo el tema del truco con envido y tbm si par aun truco se canta&#10;un real envido y lo mismo con falta envido" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -966,14 +959,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonEnvido.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/HandlerBotonJugarCartaEnPosicion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1014,7 +999,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/TrucoConRealEnvido.java">
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTrucoConRealEnvido.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="48" column="75" selection-start-line="48" selection-start-column="75" selection-end-line="48" selection-end-column="75" />
@@ -1024,7 +1009,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/TrucoConFaltaEnvido.java">
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTrucoConFaltaEnvido.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="65" column="62" selection-start-line="65" selection-start-column="62" selection-end-line="65" selection-end-column="62" />
@@ -1034,7 +1019,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/TrucoConEnvidoEnvido.java">
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTrucoConEnvidoEnvido.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="52" column="75" selection-start-line="52" selection-start-column="75" selection-end-line="52" selection-end-column="75" />
@@ -1055,7 +1040,7 @@
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoTrucoConEnvido.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1086,8 +1071,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/BetaTestVentanas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.375">
+        <state vertical-scroll-proportion="0.0">
           <caret line="410" column="59" selection-start-line="410" selection-start-column="59" selection-end-line="410" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonEnvido.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29166666">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -7,9 +7,9 @@ import fiuba.algo3.Juego;
 /**
  * Created by anthony on 01/12/2015.
  */
-public class TrucoConFaltaEnvido implements EstadoDeJuego {
+public class EstadoTrucoConFaltaEnvido implements EstadoDeJuego {
     private Juego juego;
-    public TrucoConFaltaEnvido(Juego juego){
+    public EstadoTrucoConFaltaEnvido(Juego juego){
         this.juego = juego;
         this.juego.sumarPuntosEnvidoNoQuerido();
     }
