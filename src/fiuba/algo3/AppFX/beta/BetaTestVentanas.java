@@ -5,13 +5,10 @@ import fiuba.algo3.AppFX.HandlerBotonConfirmarConfiguracion;
 import fiuba.algo3.AppFX.HandlerBotonConfirmarJugadores;
 import fiuba.algo3.AppFX.HandlerNuevaPartida;
 import fiuba.algo3.AppFX.eventosBeta.*;
-import fiuba.algo3.Eventos.HandlerConfirmarConfiguracion;
-import fiuba.algo3.Eventos.HandlerConfirmarJugadores;
 import fiuba.algo3.Juego;
 import fiuba.algo3.ModeladoDeCarta.Carta;
 import fiuba.algo3.manejoDeJugadores.Jugador;
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
@@ -21,6 +18,7 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
@@ -35,8 +33,8 @@ import java.util.List;
  */
 public class BetaTestVentanas extends Application {
     public BorderPane panel;
-    private ImageView contenedorCartaJugador1, contenedorCartaJugador2,
-            contenedorCartaJugador3,contenedorCartaJugador4;
+    private ImageView cartaEnMesaJugador1, cartaEnMesaJugador2,
+            cartaEnMesaJugador3, cartaEnMesaJugador4;
 
     private boolean inicializado=false;
     private Button botonJugarCarta1,botonJugarCarta2,botonJugarCarta3;
@@ -202,7 +200,7 @@ public class BetaTestVentanas extends Application {
         inicializarImagenesDeCartasEnMesa(5,null);
 
 
-        //contenedorCartaJugador1.setImage(new Image("imagenes/naipeDota.jpg"));
+        //cartaEnMesaJugador1.setImage(new Image("imagenes/naipeDota.jpg"));
 
         this.verticalMedio = verticalMedio;
         return verticalMedio;
@@ -315,16 +313,26 @@ public class BetaTestVentanas extends Application {
         if (this.cantidadJugadores == 2) {
             Image cartaJugador1 = new Image("imagenes/huskar.jpg");
             Image cartaJugador2 = new Image("imagenes/huskar.jpg");
-            contenedorCartaJugador1 = new ImageView(cartaJugador1);
-            contenedorCartaJugador1.setFitHeight(90);
-            contenedorCartaJugador1.setFitWidth(65);
+            cartaEnMesaJugador1 = new ImageView(cartaJugador1);
+            cartaEnMesaJugador1.setFitHeight(90);
+            cartaEnMesaJugador1.setFitWidth(65);
+            Label nombreDelJugador1 = new Label(this.juego.getJugadores().getJugadorEnPosicion(0).getNombre());
+            nombreDelJugador1.setFont(new Font("Arial", 15));
+            nombreDelJugador1.setTextFill(Color.ANTIQUEWHITE);
+            VBox contenedorCartaJugador1 = new VBox(nombreDelJugador1,cartaEnMesaJugador1);
+            contenedorCartaJugador1.setAlignment(Pos.CENTER);
             verticalMedio.setHalignment(contenedorCartaJugador1, HPos.CENTER);
-            if (posicion == 1) {                contenedorCartaJugador1.setImage(imagen);            }
-            contenedorCartaJugador2 = new ImageView(cartaJugador2);
-            contenedorCartaJugador2.setFitHeight(90);
-            contenedorCartaJugador2.setFitWidth(65);
+            if (posicion == 1) {                cartaEnMesaJugador1.setImage(imagen);            }
+            cartaEnMesaJugador2 = new ImageView(cartaJugador2);
+            cartaEnMesaJugador2.setFitHeight(90);
+            cartaEnMesaJugador2.setFitWidth(65);
+            Label nombreDelJugador2 = new Label(this.juego.getJugadores().getJugadorEnPosicion(1).getNombre());
+            nombreDelJugador2.setFont(new Font("Arial", 15));
+            nombreDelJugador2.setTextFill(Color.ANTIQUEWHITE);
+            VBox contenedorCartaJugador2 = new VBox(nombreDelJugador2,cartaEnMesaJugador2);
+            contenedorCartaJugador2.setAlignment(Pos.CENTER);
             verticalMedio.setHalignment(contenedorCartaJugador2, HPos.CENTER);
-            if (posicion == 2) {                contenedorCartaJugador2.setImage(imagen);}
+            if (posicion == 2) {                cartaEnMesaJugador2.setImage(imagen);}
             verticalMedio.add(contenedorCartaJugador1,1,2);
             verticalMedio.add(contenedorCartaJugador2,1,0);
 
@@ -336,30 +344,50 @@ public class BetaTestVentanas extends Application {
             Image cartaJugador3 = new Image("imagenes/huskar.jpg");
             Image cartaJugador4 = new Image("imagenes/huskar.jpg");
 
-            contenedorCartaJugador1 = new ImageView(cartaJugador1);
-            contenedorCartaJugador1.setFitHeight(90);
-            contenedorCartaJugador1.setFitWidth(65);
+            cartaEnMesaJugador1 = new ImageView(cartaJugador1);
+            cartaEnMesaJugador1.setFitHeight(90);
+            cartaEnMesaJugador1.setFitWidth(65);
+            Label nombreDelJugador1 = new Label(this.juego.getJugadores().getJugadorEnPosicion(0).getNombre());
+            nombreDelJugador1.setFont(new Font("Arial", 15));
+            nombreDelJugador1.setTextFill(Color.ANTIQUEWHITE);
+            VBox contenedorCartaJugador1 = new VBox(nombreDelJugador1,cartaEnMesaJugador1);
+            contenedorCartaJugador1.setAlignment(Pos.CENTER);
             verticalMedio.setHalignment(contenedorCartaJugador1, HPos.CENTER);
-            if (posicion == 1) {                contenedorCartaJugador1.setImage(imagen);            }
+            if (posicion == 1) {                cartaEnMesaJugador1.setImage(imagen);            }
 
 
-            contenedorCartaJugador2 = new ImageView(cartaJugador2);
-            contenedorCartaJugador2.setFitHeight(90);
-            contenedorCartaJugador2.setFitWidth(65);
+            cartaEnMesaJugador2 = new ImageView(cartaJugador2);
+            cartaEnMesaJugador2.setFitHeight(90);
+            cartaEnMesaJugador2.setFitWidth(65);
+            Label nombreDelJugador2 = new Label(this.juego.getJugadores().getJugadorEnPosicion(1).getNombre());
+            nombreDelJugador2.setFont(new Font("Arial", 15));
+            nombreDelJugador2.setTextFill(Color.ANTIQUEWHITE);
+            VBox contenedorCartaJugador2 = new VBox(nombreDelJugador2,cartaEnMesaJugador2);
+            contenedorCartaJugador2.setAlignment(Pos.CENTER);
             verticalMedio.setHalignment(contenedorCartaJugador2, HPos.CENTER);
-            if (posicion == 2) {                contenedorCartaJugador2.setImage(imagen);            }
+            if (posicion == 2) {                cartaEnMesaJugador2.setImage(imagen);            }
 
-            contenedorCartaJugador3 = new ImageView(cartaJugador3);
-            contenedorCartaJugador3.setFitHeight(90);
-            contenedorCartaJugador3.setFitWidth(65);
+            cartaEnMesaJugador3 = new ImageView(cartaJugador3);
+            cartaEnMesaJugador3.setFitHeight(90);
+            cartaEnMesaJugador3.setFitWidth(65);
+            Label nombreDelJugador3 = new Label(this.juego.getJugadores().getJugadorEnPosicion(2).getNombre());
+            nombreDelJugador3.setFont(new Font("Arial", 15));
+            nombreDelJugador3.setTextFill(Color.ANTIQUEWHITE);
+            VBox contenedorCartaJugador3 = new VBox(nombreDelJugador3,cartaEnMesaJugador3);
+            contenedorCartaJugador3.setAlignment(Pos.CENTER);
             verticalMedio.setHalignment(contenedorCartaJugador3, HPos.CENTER);
-            if (posicion == 3) {                contenedorCartaJugador3.setImage(imagen);            }
+            if (posicion == 3) {                cartaEnMesaJugador3.setImage(imagen);            }
 
-            contenedorCartaJugador4 = new ImageView(cartaJugador4);
-            contenedorCartaJugador4.setFitHeight(90);
-            contenedorCartaJugador4.setFitWidth(65);
+            cartaEnMesaJugador4 = new ImageView(cartaJugador4);
+            cartaEnMesaJugador4.setFitHeight(90);
+            cartaEnMesaJugador4.setFitWidth(65);
+            Label nombreDelJugador4 = new Label(this.juego.getJugadores().getJugadorEnPosicion(3).getNombre());
+            nombreDelJugador4.setFont(new Font("Arial", 15));
+            nombreDelJugador4.setTextFill(Color.ANTIQUEWHITE);
+            VBox contenedorCartaJugador4 = new VBox(nombreDelJugador4,cartaEnMesaJugador4);
+            contenedorCartaJugador4.setAlignment(Pos.CENTER);
             verticalMedio.setHalignment(contenedorCartaJugador4, HPos.CENTER);
-            if (posicion == 4) {                contenedorCartaJugador4.setImage(imagen);            }
+            if (posicion == 4) {                cartaEnMesaJugador4.setImage(imagen);            }
 
 
             verticalMedio.add(contenedorCartaJugador1, 1, 2);
@@ -577,11 +605,11 @@ public VBox contenedorDeJugadas(){
         return this.juego;
     }
 
-    public ImageView getContenedorCartaJugador(int pos) {
-        if (pos==0)    return contenedorCartaJugador1;
-        if (pos==1)    return contenedorCartaJugador2;
-        if (pos==2)    return contenedorCartaJugador3;
-        else return contenedorCartaJugador4;
+    public ImageView getCartaEnMesaDelJugadorEnPosicion(int pos) {
+        if (pos==0)    return cartaEnMesaJugador1;
+        if (pos==1)    return cartaEnMesaJugador2;
+        if (pos==2)    return cartaEnMesaJugador3;
+        else return cartaEnMesaJugador4;
     }
 
     public void actualizarBotonesCartas(){

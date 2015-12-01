@@ -1,6 +1,5 @@
 package fiuba.algo3.AppFX.beta;
 
-import fiuba.algo3.AppFX.beta.BetaTestVentanas;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.image.Image;
@@ -24,7 +23,7 @@ public class HandlerBotonJugarCartaEnPosicion implements EventHandler {
     @Override
     public void handle(Event event) {
 
-        aplicacion.getContenedorCartaJugador(this.aplicacion.getJuego().manejadorDeTurnos.getPosicionDelJugadorConTurnoActual()).setImage(this.imagen);
+        aplicacion.getCartaEnMesaDelJugadorEnPosicion(this.aplicacion.getJuego().manejadorDeTurnos.getPosicionDelJugadorConTurnoActual()).setImage(this.imagen);
 
         //pausa
 
