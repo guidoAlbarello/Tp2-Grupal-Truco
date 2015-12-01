@@ -5,6 +5,8 @@ import fiuba.algo3.AppFX.HandlerBotonConfirmarConfiguracion;
 import fiuba.algo3.AppFX.HandlerBotonConfirmarJugadores;
 import fiuba.algo3.AppFX.HandlerNuevaPartida;
 import fiuba.algo3.AppFX.eventosBeta.*;
+import fiuba.algo3.Eventos.HandlerConfirmarConfiguracion;
+import fiuba.algo3.Eventos.HandlerConfirmarJugadores;
 import fiuba.algo3.Juego;
 import fiuba.algo3.ModeladoDeCarta.Carta;
 import fiuba.algo3.manejoDeJugadores.Jugador;
@@ -81,22 +83,38 @@ public class BetaTestVentanas extends Application {
 
         configurar = new VBox();
         configurar.setSpacing(40);
+        Image logo = new Image("imagenes/truco.jpg");
+        ImageView contLogo = new ImageView(logo);
+        contLogo.setFitHeight(280);
+        contLogo.setFitWidth(350);
+        configurar.getChildren().add(contLogo);
 
         Label bienvenida = new Label("Bienvenido al Truco!");
-        bienvenida.setFont(Font.font ("Verdana", 28));
+        bienvenida.setFont(Font.font(null, FontWeight.BOLD, 28));
+        bienvenida.setStyle("-fx-text-fill: #FFFFFF");
+
         configurar.getChildren().add(bienvenida);
 
         Button botonConfirmar = new Button();
         botonConfirmar.setText("Confirmar");
 
 
+
         ChoiceBox selector = new ChoiceBox(FXCollections.observableArrayList("2 Jugadores", "4 Jugadores"));
-        selector.setTooltip((new Tooltip("Seleccione la cantidad de jugadores.")));
+        Tooltip textoChek = new Tooltip("Seleccione la cantidad de jugadores.");
+        selector.setTooltip((textoChek));
+        selector.getTooltip().setStyle("-fx-text-fill: #FFFFFF");
+
         selector.getSelectionModel().selectFirst();
         CheckBox conFlor = new CheckBox("Con Flor");
         conFlor.setSelected(true);
+        conFlor.setStyle("-fx-text-fill: #FFFFFF");
 
-        configurar.getChildren().add(new Label("      Seleccione la cantidad de jugadores y el modo de juego."));
+        Label titulo = new Label("      Seleccione la cantidad de jugadores y el modo de juego.");
+        titulo.setFont(Font.font(null, FontWeight.BOLD, 15));
+        titulo.setStyle("-fx-text-fill: #FFFFFF");
+        configurar.getChildren().add(titulo);
+
 
 
         HBox configNueva = new HBox(selector,conFlor);
@@ -110,6 +128,7 @@ public class BetaTestVentanas extends Application {
         configurar.getChildren().add(botonConfirmar);
 
         configurar.setAlignment(Pos.CENTER);
+        configurar.setStyle("-fx-background-image: url('imagenes/texturaMadera2.jpg')");
         return configurar;
     }
 
@@ -238,11 +257,20 @@ public class BetaTestVentanas extends Application {
 
     public List<HBox> generarContenedoresSegunCantidadDeJugadores(Integer opcionSelector){
         this.nombrar = new VBox();
+        Label espacio = new Label();
+        nombrar.getChildren().add(espacio);
+        Image imagen = new Image("imagenes/i.jpg");
+        ImageView cont = new ImageView(imagen);
+        cont.setFitWidth(300);
+        cont.setFitHeight(300);
+        nombrar.getChildren().add(cont);
         int cantidadJugadores=2;
         if (opcionSelector==1){cantidadJugadores=4;}
         ArrayList<HBox> contenedores = new ArrayList<HBox>();
         for (int i = 0 ; i < cantidadJugadores ; i++) {
             Label instruccion = new Label("Introduzca nombre del Jugador "+(i+1)+": ");
+            instruccion.setFont(Font.font(null, FontWeight.BOLD, 15));
+            instruccion.setStyle("-fx-text-fill: #FFCC33");
             TextField completar = new TextField();
             HBox contenedor = new HBox(instruccion, completar);
             contenedor.setSpacing(10);
@@ -255,9 +283,10 @@ public class BetaTestVentanas extends Application {
 
         Button confirmarPartida = new Button("Comenzar partida");
         HandlerBotonConfirmarJugadores handler = new HandlerBotonConfirmarJugadores(contenedores,this);
-        confirmarPartida.setOnAction(handler);
+        confirmarPartida.setOnAction( handler);
 
         nombrar.getChildren().add(confirmarPartida);
+        nombrar.setStyle("-fx-background-image: url('imagenes/texturamesa.jpg')");
         return contenedores;
     }
 
