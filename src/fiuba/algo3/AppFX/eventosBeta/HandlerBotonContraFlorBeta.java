@@ -16,6 +16,8 @@ public class HandlerBotonContraFlorBeta implements EventHandler {
     @Override
     public void handle(Event event) {
         this.aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
+        aplicacion.actualizarCartasEnManoParaJugadorActual();
+        aplicacion.actualizarBotonesCartas();
         //aplicacion.getBorderPane().setCenter(aplicacion.cuadriculaDeJuego());
         aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
     }

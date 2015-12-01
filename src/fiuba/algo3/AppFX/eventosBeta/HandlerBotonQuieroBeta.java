@@ -17,6 +17,8 @@ public class HandlerBotonQuieroBeta implements EventHandler<ActionEvent> {
     @Override
     public void handle(ActionEvent event) {
         aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().quiero();
+        aplicacion.actualizarCartasEnManoParaJugadorActual();
+        aplicacion.actualizarBotonesCartas();
         //aplicacion.getBorderPane().setCenter(aplicacion.cuadriculaDeJuego());
         aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
         aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());

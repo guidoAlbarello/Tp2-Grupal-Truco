@@ -17,6 +17,8 @@ public class HandlerBotonTrucoBeta implements EventHandler<ActionEvent> {
     @Override
     public void handle(ActionEvent event) {
         aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().truco();
+        aplicacion.actualizarCartasEnManoParaJugadorActual();
+        aplicacion.actualizarBotonesCartas();
         aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
         //aplicacion.getBorderPane().setCenter(aplicacion.cuadriculaDeJuego());
         aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
