@@ -30,6 +30,20 @@ public class Juego {
         this.puntosDeEnvidoQuerido = 0;
     }
 
+    public Juego(Boolean conflor) {
+        this.mesaDelJuego = new Mesa();
+        this.listaDeJugadores = new ListaJugadores();
+        this.configurarManejadorDeTurnos();
+        this.mazoDelJuego = new Mazo();
+        if (conflor)
+            this.estadoDeJuego = new EstadoJuegoConFlor(this);
+        else
+            this.estadoDeJuego = new EstadoJuegoSinFlor(this);//por ahora , se incializa con flor depseus veremos
+        this.puntosDeTruco= 1;// si no se quiere o un se va al maso directamente
+        this.puntosDeEnvidoNoQuerido = 0;
+        this.puntosDeEnvidoQuerido = 0;
+    }
+
     public int getPuntosDeTruco(){
         return this.puntosDeTruco;
     }
