@@ -23,6 +23,7 @@ public class HandlerBotonJugarCartaEnPosicion implements EventHandler {
 
     @Override
     public void handle(Event event) {
+
         aplicacion.getContenedorCartaJugador(this.aplicacion.getJuego().manejadorDeTurnos.getPosicionDelJugadorConTurnoActual()).setImage(this.imagen);
 
         //pausa
@@ -36,6 +37,7 @@ public class HandlerBotonJugarCartaEnPosicion implements EventHandler {
 
 
         aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
+        aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
 
     }
 
