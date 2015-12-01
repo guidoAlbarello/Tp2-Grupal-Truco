@@ -15,6 +15,7 @@ public class HandlerBotonJugadasFlor implements EventHandler {
     }
     @Override
     public void handle(Event event) {
+
         this.aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadasFlor());
     }
 }
