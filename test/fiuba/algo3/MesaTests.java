@@ -1,8 +1,8 @@
 package fiuba.algo3;
 
-import fiuba.algo3.Modelo.Juego;
-import fiuba.algo3.Modelo.Mazo;
-import fiuba.algo3.Modelo.Mesa;
+import fiuba.algo3.Modelo.Juego.Juego;
+import fiuba.algo3.Modelo.Juego.Mazo;
+import fiuba.algo3.Modelo.Juego.Mesa;
 import fiuba.algo3.Modelo.ModeladoDeCarta.*;
 import fiuba.algo3.Modelo.manejoDeJugadores.Jugador;
 import fiuba.algo3.Modelo.manejoDeJugadores.ListaJugadores;

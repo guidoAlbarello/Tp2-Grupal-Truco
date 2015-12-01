@@ -1,7 +1,7 @@
 package fiuba.algo3.Modelo.InteligenciaArtificial;
 
 import fiuba.algo3.Modelo.EstadosDeJuego.EstadoDeJuego;
-import fiuba.algo3.Modelo.Mesa;
+import fiuba.algo3.Modelo.Juego.Mesa;
 
 /**
  * Created by Krion on 30/11/2015.

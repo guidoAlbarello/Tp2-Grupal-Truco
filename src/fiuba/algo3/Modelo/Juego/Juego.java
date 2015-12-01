@@ -1,4 +1,4 @@
-package fiuba.algo3.Modelo;
+package fiuba.algo3.Modelo.Juego;
 
 import fiuba.algo3.Modelo.EstadosDeJuego.*;
 import fiuba.algo3.Modelo.ModeladoDeCarta.CartaJugada;

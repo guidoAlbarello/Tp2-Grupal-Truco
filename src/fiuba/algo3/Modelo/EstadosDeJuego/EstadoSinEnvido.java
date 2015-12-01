@@ -5,7 +5,7 @@ import fiuba.algo3.Modelo.Excepciones.JugadaNoValidaError;
 import fiuba.algo3.Modelo.Excepciones.NoSeJugoTruco;
 import fiuba.algo3.Modelo.Excepciones.YaSeJugoEnvidoError;
 import fiuba.algo3.Modelo.InteligenciaArtificial.DecisionSegunEstado;
-import fiuba.algo3.Modelo.Juego;
+import fiuba.algo3.Modelo.Juego.Juego;
 
 /**
  * Created by anthony on 22/11/2015.

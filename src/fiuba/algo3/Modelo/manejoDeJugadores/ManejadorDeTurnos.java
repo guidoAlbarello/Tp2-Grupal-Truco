@@ -2,8 +2,8 @@ package fiuba.algo3.Modelo.manejoDeJugadores;
 
 import fiuba.algo3.Modelo.EstadosDeJuego.EstadoJuegoConFlor;
 import fiuba.algo3.Modelo.Excepciones.NoEsUnJugadorArtificialError;
-import fiuba.algo3.Modelo.Juego;
-import fiuba.algo3.Modelo.Mesa;
+import fiuba.algo3.Modelo.Juego.Juego;
+import fiuba.algo3.Modelo.Juego.Mesa;
 
 /**
  * Created by Fechee on 18/11/2015.

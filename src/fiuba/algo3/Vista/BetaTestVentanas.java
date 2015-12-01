@@ -5,7 +5,7 @@ import fiuba.algo3.Controles.HandlerBotonConfirmarConfiguracion;
 import fiuba.algo3.Controles.HandlerBotonConfirmarJugadores;
 import fiuba.algo3.Controles.HandlerNuevaPartida;
 import fiuba.algo3.Controles.*;
-import fiuba.algo3.Modelo.Juego;
+import fiuba.algo3.Modelo.Juego.Juego;
 import fiuba.algo3.Modelo.ModeladoDeCarta.Carta;
 import fiuba.algo3.Modelo.manejoDeJugadores.Jugador;
 import javafx.application.Application;

@@ -4,7 +4,7 @@ import fiuba.algo3.Modelo.ModeladoDeCarta.CartaJugada;
 import fiuba.algo3.Modelo.Excepciones.NoHayFlorEnManoError;
 import fiuba.algo3.Modelo.Excepciones.NoSeCantoFlorError;
 import fiuba.algo3.Modelo.InteligenciaArtificial.DecisionSegunEstado;
-import fiuba.algo3.Modelo.Juego;
+import fiuba.algo3.Modelo.Juego.Juego;
 import fiuba.algo3.Modelo.Excepciones.JugadaInvalidaPrimeraManoError;
 
 /**

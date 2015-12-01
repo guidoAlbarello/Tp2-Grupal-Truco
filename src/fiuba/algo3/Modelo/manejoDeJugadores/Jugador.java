@@ -2,8 +2,8 @@ package fiuba.algo3.Modelo.manejoDeJugadores;
 
 import fiuba.algo3.Modelo.ModeladoDeCarta.CartaJugada;
 import fiuba.algo3.Modelo.Excepciones.NoEsUnJugadorArtificialError;
-import fiuba.algo3.Modelo.Juego;
-import fiuba.algo3.Modelo.Mano;
+import fiuba.algo3.Modelo.Juego.Juego;
+import fiuba.algo3.Modelo.Juego.Mano;
 import fiuba.algo3.Modelo.ModeladoDeCarta.Carta;
 
 /**

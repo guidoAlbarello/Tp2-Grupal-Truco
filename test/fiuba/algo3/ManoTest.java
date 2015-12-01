@@ -1,7 +1,7 @@
 package fiuba.algo3;
 
 import fiuba.algo3.Modelo.Excepciones.NoHayFlorEnLaManoError;
-import fiuba.algo3.Modelo.Mano;
+import fiuba.algo3.Modelo.Juego.Mano;
 import fiuba.algo3.Modelo.ModeladoDeCarta.*;
 import org.junit.Assert;
 import org.junit.Test;

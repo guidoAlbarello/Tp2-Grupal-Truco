@@ -1,7 +1,7 @@
 package fiuba.algo3.Modelo.InteligenciaArtificial;
 
 import fiuba.algo3.Modelo.Excepciones.NoHayFlorEnLaManoError;
-import fiuba.algo3.Modelo.Mesa;
+import fiuba.algo3.Modelo.Juego.Mesa;
 
 import java.util.Random;
 
