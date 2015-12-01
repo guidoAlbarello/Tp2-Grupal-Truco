@@ -9,7 +9,7 @@ import fiuba.algo3.Juego;
 import fiuba.algo3.ModeladoDeCarta.Carta;
 import fiuba.algo3.manejoDeJugadores.Jugador;
 import javafx.application.Application;
-import javafx.application.Platform;
+import javafx.collections.FXCollections;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -22,6 +22,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -34,11 +35,8 @@ public class Aplicacion extends Application {
             contenedorCartaJugador3,contenedorCartaJugador4;
     private Button botonCarta1,botonCarta2,botonCarta3;
     private Juego juego;
-    public Aplicacion(){
-        this.juego = this.inicializarJuego();
-    }
-
-
+    public VBox configurar,nombrar;
+    private Boolean conflor;
 
     public static void main(String[] args){
         launch(args);
@@ -49,9 +47,13 @@ public class Aplicacion extends Application {
 
         stage.setTitle("Truco- Algoritmos y programacion 3");
         panel = new BorderPane();
+        /*
         panel.setRight(this.contenedorDeJugadas());
         panel.setCenter(this.cuadriculaDeJuego());
         panel.setLeft(this.contenedorEstadoDeJuego());
+        panel.setTop(this.crearMenuDeVentana(stage));*/
+        panel.setCenter(this.generarPanelDeConfiguracion());
+
         panel.setTop(this.crearMenuDeVentana(stage));
 
         stage.setWidth(770);
@@ -62,12 +64,76 @@ public class Aplicacion extends Application {
         stage.show();
     }
 
+    public void setConFlor(Boolean conFlor){this.conflor = conFlor;}
+    public VBox generarPanelDeConfiguracion(){
+
+        configurar = new VBox();
+        configurar.setSpacing(40);
+
+        Label bienvenida = new Label("Bienvenido al Truco!");
+        bienvenida.setFont(Font.font ("Verdana", 28));
+        configurar.getChildren().add(bienvenida);
+
+        Button botonConfirmar = new Button();
+        botonConfirmar.setText("Confirmar");
+
+
+        ChoiceBox selector = new ChoiceBox(FXCollections.observableArrayList("2 Jugadores", "4 Jugadores"));
+        selector.setTooltip((new Tooltip("Seleccione la cantidad de jugadores.")));
+        selector.getSelectionModel().selectFirst();
+        CheckBox conFlor = new CheckBox("Con Flor");
+        conFlor.setSelected(true);
+
+        configurar.getChildren().add(new Label("      Seleccione la cantidad de jugadores y el modo de juego."));
+
+
+        HBox configNueva = new HBox(selector,conFlor);
+        configNueva.setAlignment(Pos.CENTER);
+        configNueva.setSpacing(30);
+        configurar.getChildren().add(configNueva);
+
+        HandlerConfirmarConfiguracion handler = new HandlerConfirmarConfiguracion(this,selector,conFlor);
+        botonConfirmar.setOnAction(handler);
+
+        configurar.getChildren().add(botonConfirmar);
+
+        configurar.setAlignment(Pos.CENTER);
+        return configurar;
+    }
+
+    public List<HBox> generarContenedoresSegunCantidadDeJugadores(Integer opcionSelector){
+        this.nombrar = new VBox();
+        int cantidadJugadores=2;
+        if (opcionSelector==1){cantidadJugadores=4;}
+        ArrayList<HBox> contenedores = new ArrayList<HBox>();
+        for (int i = 0 ; i < cantidadJugadores ; i++) {
+            Label instruccion = new Label("Introduzca nombre del Jugador "+(i+1)+": ");
+            TextField completar = new TextField();
+            HBox contenedor = new HBox(instruccion, completar);
+            contenedor.setSpacing(10);
+            contenedor.setAlignment(Pos.CENTER);
+            contenedores.add(contenedor);
+            nombrar.getChildren().add(contenedor);
+        }
+        nombrar.setAlignment(Pos.TOP_CENTER);
+        nombrar.setSpacing(20);
+
+        Button confirmarPartida = new Button("Comenzar partida");
+        HandlerConfirmarJugadores handler = new HandlerConfirmarJugadores(contenedores,this);
+        confirmarPartida.setOnAction( handler);
+
+        nombrar.getChildren().add(confirmarPartida);
+        return contenedores;
+    }
+
+
     private MenuBar crearMenuDeVentana(Stage stage) {
         MenuBar barraDeMenu = new MenuBar();
         barraDeMenu.prefWidthProperty().bind(stage.widthProperty());
 
         Menu menuDeArchivo = new Menu("Archivo");
         MenuItem nuevoJuegoItemMenu = new MenuItem("Nuevo Juego");
+        nuevoJuegoItemMenu.setOnAction(new HandlerNuevoJuego(this));
         MenuItem opcionesItemMenu = new MenuItem("Opciones");
         opcionesItemMenu.setOnAction(new HandlerMenuOpciones(this));
         MenuItem salirItemMenu = new MenuItem("Salir");
@@ -314,7 +380,7 @@ public void actualizarMesa(){
         botonEnvido.setPrefSize(100,50);
         botonEnvido.setAlignment(Pos.CENTER);
         botonEnvido.setOnAction(new HandlerBotonJugadasEnvido(this));
-        if (this.getJuego().manejadorDeTurnos.getManoActual() > 1 || juego.getPuntosDeEnvidoQuerido() > 0)
+        if (this.getJuego().manejadorDeTurnos.getManoActual() > 1 )
             botonEnvido.setDisable(true);
 
 
@@ -385,22 +451,13 @@ public void actualizarMesa(){
         return contenedorDeEstadoDeJuego;
     }
 
-    public Juego inicializarJuego() {
-        Juego juego = new Juego();
+    public Juego inicializarJuego(List<Jugador> jugadores) {
+        juego = new Juego(conflor);
 
-        Jugador jugador1 = new Jugador("jugador1"),
-                jugador2 = new Jugador("jugador2"),
-                jugador3 = new Jugador("jugador3"),
-                jugador4 = new Jugador("jugador4");
-
-        jugador1.setJuego(juego);
-        juego.agregarJugador(jugador1);
-        jugador2.setJuego(juego);
-        juego.agregarJugador(jugador2);
-        jugador3.setJuego(juego);
-        juego.agregarJugador(jugador3);
-        jugador4.setJuego(juego);
-        juego.agregarJugador(jugador4);
+        for (Jugador jugador : jugadores){
+            jugador.setJuego(juego);
+            juego.agregarJugador(jugador);
+        }
         juego.configurarManejadorDeTurnos();
         juego.repartirCartasAJugadores();
         return juego;

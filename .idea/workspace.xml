@@ -2,26 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1238cf56-d150-4931-840d-466c49e8cba7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonContraFlorAlRestoBeta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonContraFlorBeta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonEnvidoBeta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonFaltaEnvidoBeta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonJugadasEnvidoBeta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonJugadasFlorBeta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonJugadasTrucoBeta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonMazoBeta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonNoQuieroBeta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonQuieroBeta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonRealEnvidoBeta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonRetrucoBeta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonTrucoBeta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonValeCuatroBeta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonVolverBeta.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/AppFX/HandlerBotonConfirmarJugadores.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/AppFX/HandlerBotonConfirmarJugadores.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/AppFX/beta/BetaTestVentanas.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/AppFX/beta/BetaTestVentanas.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerConfirmarConfiguracion.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerConfirmarJugadores.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerNuevoJuego.java" />
+      <change type="DELETED" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\out\production\Tp2-Grupal-Truco\fiuba\algo3\AppFX\HandlerBotonTirarCarta.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\out\production\Tp2-Grupal-Truco\fiuba\algo3\AppFX\JuegoTruco$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\out\production\Tp2-Grupal-Truco\fiuba\algo3\AppFX\JuegoTruco$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\anthony\Desktop\Nueva carpeta\Tp2-Grupal-Truco\out\production\Tp2-Grupal-Truco\fiuba\algo3\AppFX\JuegoTruco.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/aplicacionAnthony/Aplicacion.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/aplicacionAnthony/Aplicacion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/Juego.class" afterPath="$PROJECT_DIR$/out/production/Tp2-Grupal-Truco/fiuba/algo3/Juego.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/aplicacionAnthony/Aplicacion.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/aplicacionAnthony/Aplicacion.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Juego.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Juego.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerBotonConfirmarJugadores.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerBotonConfirmarJugadores.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/BetaTestVentanas.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/BetaTestVentanas.java" />
     </list>
     <ignored path="Tp2-Grupal-Truco.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,121 +34,136 @@
     <favorites_list name="Tp2-Grupal-Truco" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file leaf-file-name="BetaTestVentanas.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/BetaTestVentanas.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="318" column="58" selection-start-line="318" selection-start-column="58" selection-end-line="318" selection-end-column="58" />
+              <caret line="256" column="53" selection-start-line="256" selection-start-column="53" selection-end-line="256" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#9440#9446#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HandlerBotonMazoBeta.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonMazoBeta.java">
+      <file leaf-file-name="Aplicacion.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/aplicacionAnthony/Aplicacion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.083129585">
+              <caret line="453" column="17" selection-start-line="453" selection-start-column="17" selection-end-line="453" selection-end-column="17" />
               <folding>
-                <element signature="e#405#406#0" expanded="true" />
-                <element signature="e#449#450#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#20149#20150#0" expanded="true" />
+                <element signature="e#20182#20183#0" expanded="true" />
+                <element signature="e#20212#20213#0" expanded="true" />
+                <element signature="e#20245#20246#0" expanded="true" />
+                <element signature="e#20298#20299#0" expanded="true" />
+                <element signature="e#20344#20345#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HandlerBotonNoQuieroBeta.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonNoQuieroBeta.java">
+      <file leaf-file-name="Juego.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Juego.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+              <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HandlerBotonQuieroBeta.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonQuieroBeta.java">
+      <file leaf-file-name="HandlerConfirmarJugadores.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerConfirmarJugadores.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+              <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
               <folding>
-                <element signature="e#429#430#0" expanded="true" />
-                <element signature="e#473#474#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#613#624#0" expanded="true" />
+                <element signature="e#675#683#0" expanded="true" />
+                <element signature="e#744#753#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HandlerBotonRealEnvidoBeta.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonRealEnvidoBeta.java">
+      <file leaf-file-name="HandlerBotonVolver.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonVolver.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HandlerBotonRetrucoBeta.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonRetrucoBeta.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
-                <element signature="e#431#432#0" expanded="true" />
-                <element signature="e#475#476#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#333#334#0" expanded="false" />
+                <element signature="e#377#378#0" expanded="false" />
+                <element signature="e#429#430#0" expanded="false" />
+                <element signature="e#519#520#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HandlerBotonTrucoBeta.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonTrucoBeta.java">
+      <file leaf-file-name="HandlerConfirmarConfiguracion.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerConfirmarConfiguracion.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HandlerBotonValeCuatroBeta.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonValeCuatroBeta.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+              <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
               <folding>
-                <element signature="e#437#438#0" expanded="true" />
-                <element signature="e#481#482#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HandlerBotonConfirmarConfiguracion.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerBotonConfirmarConfiguracion.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HandlerBotonConfirmarJugadores.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HandlerBotonConfirmarJugadores.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerBotonConfirmarJugadores.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.72039473">
-              <caret line="59" column="76" selection-start-line="59" selection-start-column="76" selection-end-line="59" selection-end-column="76" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
               <folding>
                 <element signature="e#562#573#0" expanded="true" />
                 <element signature="e#624#632#0" expanded="true" />
                 <element signature="e#693#702#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HandlerMenuOpciones.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerMenuOpciones.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HandlerNuevaPartida.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerNuevaPartida.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="87" />
+              <folding>
+                <element signature="e#515#516#0" expanded="true" />
+                <element signature="e#552#553#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HandlerNuevoJuego.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerNuevoJuego.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="97" selection-start-line="17" selection-start-column="97" selection-end-line="17" selection-end-column="97" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#330#331#0" expanded="true" />
+                <element signature="e#374#375#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -186,12 +193,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/Jugador.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/Juego.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoDeJuego.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoEnvido.java" />
-        <option value="$PROJECT_DIR$/test/fiuba/algo3/EstadosDeJuego/EstadoEnvidoEnvidoTest.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoEnvidoEnvido.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoFaltaEnvido.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoFlor.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoJuegoConFlor.java" />
@@ -214,9 +215,7 @@
         <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/HandlerBotonJugarCartaEnPosicion.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/manejoDeJugadores/ManejadorDeTurnos.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/HandlerMenuOpciones.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/aplicacionAnthony/Aplicacion.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerMenuOpciones.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerBotonConfirmarConfiguracion.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonContraFlor.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/Eventos/HandlerBotonContraFlorAlRestoBeta.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/Eventos/HandlerBotonContraFlorBeta.java" />
@@ -228,8 +227,6 @@
         <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonJugadasFlorBeta.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonJugadasTrucoBeta.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonVolverBeta.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/BetaTestVentanas.java" />
-        <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonMazoBeta.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonNoQuieroBeta.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonQuieroBeta.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonRealEnvidoBeta.java" />
@@ -237,14 +234,27 @@
         <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonTrucoBeta.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonValeCuatroBeta.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerBotonConfirmarJugadores.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonMazoBeta.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/BetaTestVentanas.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerBotonConfirmarConfiguracion.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerConfirmarConfiguracion1.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/aplicacionAnthony/HandlerNuevoJuego.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/aplicacionAnthony/HandlerConfirmarJugadores.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerNuevoJuego.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerConfirmarConfiguracion.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/aplicacionAnthony/Aplicacion.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/Juego.java" />
       </list>
     </option>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1378" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -267,13 +277,11 @@
       <autoscrollToSource />
       <autoscrollFromSource />
       <sortByType />
-      <manualOrder />
-      <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -342,7 +350,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AppFX" />
+              <option name="myItemId" value="Eventos" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -365,10 +373,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="AppFX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eventosBeta" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -434,6 +438,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="fiuba.algo3.aplicacionAnthony" />
       <recent name="fiuba.algo3.AppFX.beta" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -446,7 +451,7 @@
       <recent name="fiuba.algo3.EstadosDeJuego" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BetaTestVentanas">
+  <component name="RunManager" selected="Application.Aplicacion">
     <configuration default="false" name="Aplicacion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -563,15 +568,6 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
-      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
-      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
-      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
-      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
-      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
-      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -593,15 +589,6 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
-      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
-      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
-      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
-      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
-      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
-      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -663,58 +650,8 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SCRATCH_FILE_ID" value="0" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Tp2-Grupal-Truco" />
       <envs />
       <method />
     </configuration>
@@ -754,34 +691,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
     <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.Aplicacion" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.lalal.testlala" />
@@ -790,9 +699,9 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.BetaTestVentanas" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.fiuba.algo3 in Tp2-Grupal-Truco" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Aplicacion" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Aplicacion" />
+        <item index="1" class="java.lang.String" itemvalue="Application.BetaTestVentanas" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.fiuba.algo3 in Tp2-Grupal-Truco" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.lalal.testlala" />
       </list>
     </recent_temporary>
@@ -842,32 +751,32 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1378" height="780" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32769555" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2484375" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32561728" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28907436" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980973" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -898,41 +807,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoDeJuego.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5802048">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoDeJuego.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoEnvido.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="106" column="45" selection-start-line="106" selection-start-column="45" selection-end-line="106" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoEnvidoEnvido.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="101" column="61" selection-start-line="101" selection-start-column="61" selection-end-line="101" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoFaltaEnvido.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="60" selection-start-line="78" selection-start-column="60" selection-end-line="78" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/EstadosDeJuego/EstadoFlor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1035,15 +909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="136" column="30" selection-start-line="136" selection-start-column="30" selection-end-line="136" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#655#656#0" expanded="false" />
-            <element signature="e#704#705#0" expanded="false" />
-            <element signature="e#3168#3169#0" expanded="false" />
-            <element signature="e#3219#3220#0" expanded="false" />
-            <element signature="e#3714#3715#0" expanded="false" />
-            <element signature="e#3764#3765#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1079,19 +944,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Juego.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerBotonTirarCarta.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1099,25 +955,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39144737">
           <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerNuevaPartida.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30756578">
-          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
-          <folding>
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#552#553#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerMenuOpciones.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19572368">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1131,26 +968,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/HandlerBotonJugarCartaEnPosicion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="50" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonContraFlor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14814815">
           <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/aplicacionAnthony/Aplicacion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="349" column="5" selection-start-line="292" selection-start-column="4" selection-end-line="349" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1160,16 +981,6 @@
         <state vertical-scroll-proportion="0.24074075">
           <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonContraFlorAlRestoBeta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2962963">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1220,28 +1031,6 @@
         <state vertical-scroll-proportion="0.2037037">
           <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/BetaTestVentanas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="318" column="58" selection-start-line="318" selection-start-column="58" selection-end-line="318" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#9440#9446#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonMazoBeta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-          <folding>
-            <element signature="e#405#406#0" expanded="true" />
-            <element signature="e#449#450#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1296,28 +1085,164 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
           <folding>
-            <element signature="e#437#438#0" expanded="true" />
-            <element signature="e#481#482#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="false" />
+            <element signature="e#481#482#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonMazoBeta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/eventosBeta/HandlerBotonContraFlorAlRestoBeta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonJugarCarta1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/HandlerBotonJugarCartaEnPosicion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="50" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerBotonConfirmarConfiguracion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerBotonVolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#333#334#0" expanded="false" />
+            <element signature="e#377#378#0" expanded="false" />
+            <element signature="e#429#430#0" expanded="false" />
+            <element signature="e#519#520#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerMenuOpciones.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerNuevaPartida.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="87" />
+          <folding>
+            <element signature="e#515#516#0" expanded="true" />
+            <element signature="e#552#553#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/beta/BetaTestVentanas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="256" column="53" selection-start-line="256" selection-start-column="53" selection-end-line="256" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/AppFX/HandlerBotonConfirmarJugadores.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72039473">
-          <caret line="59" column="76" selection-start-line="59" selection-start-column="76" selection-end-line="59" selection-end-column="76" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
           <folding>
             <element signature="e#562#573#0" expanded="true" />
             <element signature="e#624#632#0" expanded="true" />
             <element signature="e#693#702#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerNuevoJuego.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="97" selection-start-line="17" selection-start-column="97" selection-end-line="17" selection-end-column="97" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#330#331#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerConfirmarConfiguracion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Juego.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Eventos/HandlerConfirmarJugadores.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#613#624#0" expanded="true" />
+            <element signature="e#675#683#0" expanded="true" />
+            <element signature="e#744#753#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/aplicacionAnthony/Aplicacion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.083129585">
+          <caret line="453" column="17" selection-start-line="453" selection-start-column="17" selection-end-line="453" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#20149#20150#0" expanded="true" />
+            <element signature="e#20182#20183#0" expanded="true" />
+            <element signature="e#20212#20213#0" expanded="true" />
+            <element signature="e#20245#20246#0" expanded="true" />
+            <element signature="e#20298#20299#0" expanded="true" />
+            <element signature="e#20344#20345#0" expanded="true" />
           </folding>
         </state>
       </provider>
