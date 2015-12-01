@@ -19,22 +19,22 @@ public class EstadoTrucoConEnvidoEnvido implements EstadoDeJuego {
 
     @Override
     public void flor() {
-
+        throw new RuntimeException();
     }
 
     @Override
     public void contraFlor() {
-
+        throw new RuntimeException();
     }
 
     @Override
     public void contraFlorAlResto() {
-
+        throw new RuntimeException();
     }
 
     @Override
     public void envido() {
-
+        throw new RuntimeException();
     }
 
     @Override

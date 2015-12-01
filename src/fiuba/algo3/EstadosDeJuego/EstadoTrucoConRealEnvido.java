@@ -18,27 +18,27 @@ public class EstadoTrucoConRealEnvido implements EstadoDeJuego {
     }
     @Override
     public void flor() {
-
+        throw new RuntimeException();
     }
 
     @Override
     public void contraFlor() {
-
+        throw new RuntimeException();
     }
 
     @Override
     public void contraFlorAlResto() {
-
+        throw new RuntimeException();
     }
 
     @Override
     public void envido() {
-
+        throw new RuntimeException();
     }
 
     @Override
     public void realEnvido() {
-
+        throw new RuntimeException();
     }
 
     @Override
@@ -51,17 +51,17 @@ public class EstadoTrucoConRealEnvido implements EstadoDeJuego {
 
     @Override
     public void truco() {
-
+        throw new RuntimeException();
     }
 
     @Override
     public void retruco() {
-
+        throw new RuntimeException();
     }
 
     @Override
     public void valeCuatro() {
-
+        throw new RuntimeException();
     }
 
     @Override
@@ -83,7 +83,7 @@ public class EstadoTrucoConRealEnvido implements EstadoDeJuego {
 
     @Override
     public void irseAlMaso() {
-
+        throw new RuntimeException();
     }
 
     @Override
@@ -93,7 +93,7 @@ public class EstadoTrucoConRealEnvido implements EstadoDeJuego {
 
     @Override
     public void jugarCarta(CartaJugada cartaJugada) {
-
+        throw new RuntimeException();
     }
 
     @Override
