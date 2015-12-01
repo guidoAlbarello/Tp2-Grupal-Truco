@@ -31,11 +31,12 @@ import java.util.List;
  */
 public class Aplicacion extends Application {
     private BorderPane panel;
-    private ImageView contenedorCartaJugador1, contenedorCartaJugador2,
-            contenedorCartaJugador3,contenedorCartaJugador4;
+    public ImageView contenedorCartaJugador1, contenedorCartaJugador2,
+            contenedorCartaJugador3,contenedorCartaJugador4,iv1,iv2,iv3;
     private Button botonCarta1,botonCarta2,botonCarta3;
     private Juego juego;
     public VBox configurar,nombrar;
+    public GridPane verticalMedio;
     private Boolean conflor;
 
     public static void main(String[] args){
@@ -69,22 +70,38 @@ public class Aplicacion extends Application {
 
         configurar = new VBox();
         configurar.setSpacing(40);
+        Image logo = new Image("imagenes/truco.jpg");
+        ImageView contLogo = new ImageView(logo);
+        contLogo.setFitHeight(280);
+        contLogo.setFitWidth(350);
+        configurar.getChildren().add(contLogo);
 
         Label bienvenida = new Label("Bienvenido al Truco!");
-        bienvenida.setFont(Font.font ("Verdana", 28));
+        bienvenida.setFont(Font.font(null, FontWeight.BOLD, 28));
+        bienvenida.setStyle("-fx-text-fill: #FFFFFF");
+
         configurar.getChildren().add(bienvenida);
 
         Button botonConfirmar = new Button();
         botonConfirmar.setText("Confirmar");
 
 
+
         ChoiceBox selector = new ChoiceBox(FXCollections.observableArrayList("2 Jugadores", "4 Jugadores"));
-        selector.setTooltip((new Tooltip("Seleccione la cantidad de jugadores.")));
+        Tooltip textoChek = new Tooltip("Seleccione la cantidad de jugadores.");
+        selector.setTooltip((textoChek));
+        selector.getTooltip().setStyle("-fx-text-fill: #FFFFFF");
+
         selector.getSelectionModel().selectFirst();
         CheckBox conFlor = new CheckBox("Con Flor");
         conFlor.setSelected(true);
+        conFlor.setStyle("-fx-text-fill: #FFFFFF");
 
-        configurar.getChildren().add(new Label("      Seleccione la cantidad de jugadores y el modo de juego."));
+        Label titulo = new Label("      Seleccione la cantidad de jugadores y el modo de juego.");
+        titulo.setFont(Font.font(null, FontWeight.BOLD, 15));
+        titulo.setStyle("-fx-text-fill: #FFFFFF");
+        configurar.getChildren().add(titulo);
+
 
 
         HBox configNueva = new HBox(selector,conFlor);
@@ -98,16 +115,26 @@ public class Aplicacion extends Application {
         configurar.getChildren().add(botonConfirmar);
 
         configurar.setAlignment(Pos.CENTER);
+        configurar.setStyle("-fx-background-image: url('imagenes/texturaMadera2.jpg')");
         return configurar;
     }
 
     public List<HBox> generarContenedoresSegunCantidadDeJugadores(Integer opcionSelector){
         this.nombrar = new VBox();
+        Label espacio = new Label();
+        nombrar.getChildren().add(espacio);
+        Image imagen = new Image("imagenes/i.jpg");
+        ImageView cont = new ImageView(imagen);
+        cont.setFitWidth(300);
+        cont.setFitHeight(300);
+        nombrar.getChildren().add(cont);
         int cantidadJugadores=2;
         if (opcionSelector==1){cantidadJugadores=4;}
         ArrayList<HBox> contenedores = new ArrayList<HBox>();
         for (int i = 0 ; i < cantidadJugadores ; i++) {
             Label instruccion = new Label("Introduzca nombre del Jugador "+(i+1)+": ");
+            instruccion.setFont(Font.font(null, FontWeight.BOLD, 15));
+            instruccion.setStyle("-fx-text-fill: #FFCC33");
             TextField completar = new TextField();
             HBox contenedor = new HBox(instruccion, completar);
             contenedor.setSpacing(10);
@@ -123,6 +150,7 @@ public class Aplicacion extends Application {
         confirmarPartida.setOnAction( handler);
 
         nombrar.getChildren().add(confirmarPartida);
+        nombrar.setStyle("-fx-background-image: url('imagenes/texturamesa.jpg')");
         return contenedores;
     }
 
@@ -153,7 +181,7 @@ public class Aplicacion extends Application {
 
 
     public GridPane cuadriculaDeJuego(){
-        GridPane verticalMedio = new GridPane();
+        verticalMedio = new GridPane();
         verticalMedio.setStyle("-fx-background-color: #009900");
         ColumnConstraints columna0 = new ColumnConstraints(150,150,150);
         ColumnConstraints columna1 = new ColumnConstraints(150,150,150);
@@ -185,7 +213,7 @@ public class Aplicacion extends Application {
         Carta carta = cartasMano.get(0);
         String direccionCarta = "imagenes/"+carta.getValorDeCarta()+carta.getPaloDeCarta().getNombre()+".jpg";
         Image imagenCarta1 = new Image(direccionCarta);
-        ImageView iv1 = new ImageView(imagenCarta1);
+        iv1 = new ImageView(imagenCarta1);
         iv1.setFitHeight(130);
         iv1.setFitWidth(90);
         botonCarta1 = new Button("jugar Carta 1");
@@ -200,7 +228,7 @@ public class Aplicacion extends Application {
         carta = cartasMano.get(1);
         direccionCarta = "imagenes/"+carta.getValorDeCarta()+carta.getPaloDeCarta().getNombre()+".jpg";
         Image imagenCarta2 = new Image(direccionCarta);
-        ImageView iv2 = new ImageView(imagenCarta2);
+        iv2 = new ImageView(imagenCarta2);
         iv2.setFitWidth(90);
         iv2.setFitHeight(130);
         botonCarta2 = new Button("jugar Carta 2");
@@ -214,7 +242,7 @@ public class Aplicacion extends Application {
         carta = cartasMano.get(2);
         direccionCarta = "imagenes/"+carta.getValorDeCarta()+carta.getPaloDeCarta().getNombre()+".jpg";
         Image imagenCarta3 = new Image(direccionCarta);
-        ImageView iv3 = new ImageView(imagenCarta3);
+        iv3 = new ImageView(imagenCarta3);
         iv3.setFitHeight(130);
         iv3.setFitWidth(90);
         botonCarta3 = new Button("jugar Carta 3");
@@ -225,31 +253,7 @@ public class Aplicacion extends Application {
         botonCarta3.setOnAction(new HandlerBotonJugarCarta3(this));
         botonCarta3.setStyle("-fx-background-image: url('imagenes/texturaMadera2.jpg');-fx-text-fill: #FFCC00");
 
-        Image cartaJugador1 = new Image("imagenes/huskar.jpg");
-        Image cartaJugador2 = new Image("imagenes/huskar.jpg");
-        Image cartaJugador3 = new Image("imagenes/huskar.jpg");
-        Image cartaJugador4 = new Image("imagenes/huskar.jpg");
 
-
-        contenedorCartaJugador1 = new ImageView(cartaJugador1);
-        contenedorCartaJugador1.setFitHeight(90);
-        contenedorCartaJugador1.setFitWidth(65);
-        verticalMedio.setHalignment(contenedorCartaJugador1, HPos.CENTER);
-
-        contenedorCartaJugador2 = new ImageView(cartaJugador2);
-        contenedorCartaJugador2.setFitHeight(90);
-        contenedorCartaJugador2.setFitWidth(65);
-        verticalMedio.setHalignment(contenedorCartaJugador2, HPos.CENTER);
-
-        contenedorCartaJugador3 = new ImageView(cartaJugador3);
-        contenedorCartaJugador3.setFitHeight(90);
-        contenedorCartaJugador3.setFitWidth(65);
-        verticalMedio.setHalignment(contenedorCartaJugador3, HPos.CENTER);
-
-        contenedorCartaJugador4 = new ImageView(cartaJugador4);
-        contenedorCartaJugador4.setFitHeight(90);
-        contenedorCartaJugador4.setFitWidth(65);
-        verticalMedio.setHalignment(contenedorCartaJugador4, HPos.CENTER);
 
         verticalMedio.add(botonCarta1,0,3);
         verticalMedio.setHalignment(botonCarta1,HPos.CENTER);
@@ -257,18 +261,43 @@ public class Aplicacion extends Application {
         verticalMedio.setHalignment(botonCarta2,HPos.CENTER);
         verticalMedio.add(botonCarta3,2,3);
         verticalMedio.setHalignment(botonCarta3,HPos.CENTER);
-        verticalMedio.add(contenedorCartaJugador1,1,2);
-        verticalMedio.add(contenedorCartaJugador2,2,1);
-        verticalMedio.add(contenedorCartaJugador3,1,0);
-        verticalMedio.add(contenedorCartaJugador4,0,1);
 
 
+        this.inicializarMesa();
         this.actualizarBotonesCartas();
         return verticalMedio;
     }
 
-public void actualizarMesa(){
+public void inicializarMesa(){
+    Image cartaJugador1 = new Image("imagenes/huskar.jpg");
+    Image cartaJugador2 = new Image("imagenes/huskar.jpg");
+    Image cartaJugador3 = new Image("imagenes/huskar.jpg");
+    Image cartaJugador4 = new Image("imagenes/huskar.jpg");
 
+
+    contenedorCartaJugador1 = new ImageView(cartaJugador1);
+    contenedorCartaJugador1.setFitHeight(90);
+    contenedorCartaJugador1.setFitWidth(65);
+    verticalMedio.setHalignment(contenedorCartaJugador1, HPos.CENTER);
+
+    contenedorCartaJugador2 = new ImageView(cartaJugador2);
+    contenedorCartaJugador2.setFitHeight(90);
+    contenedorCartaJugador2.setFitWidth(65);
+    verticalMedio.setHalignment(contenedorCartaJugador2, HPos.CENTER);
+
+    contenedorCartaJugador3 = new ImageView(cartaJugador3);
+    contenedorCartaJugador3.setFitHeight(90);
+    contenedorCartaJugador3.setFitWidth(65);
+    verticalMedio.setHalignment(contenedorCartaJugador3, HPos.CENTER);
+
+    contenedorCartaJugador4 = new ImageView(cartaJugador4);
+    contenedorCartaJugador4.setFitHeight(90);
+    contenedorCartaJugador4.setFitWidth(65);
+    verticalMedio.setHalignment(contenedorCartaJugador4, HPos.CENTER);
+    verticalMedio.add(contenedorCartaJugador1,1,2);
+    verticalMedio.add(contenedorCartaJugador2,2,1);
+    verticalMedio.add(contenedorCartaJugador3,1,0);
+    verticalMedio.add(contenedorCartaJugador4,0,1);
 }
 
     public VBox contenedorDeJugadasEnvido(){
