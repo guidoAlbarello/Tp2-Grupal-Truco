@@ -13,12 +13,14 @@ public class DecisionSegunEstado {
         private JugadorArtificial unJugadorMaquina;
         private Mesa mesaDeJuego;
         private int factorDeAzar;
+        private int factorDeAzar2;
 
         public DecisionSegunEstado(JugadorArtificial unJugador, Mesa unaMesa){
                 this.unJugadorMaquina = unJugador;
                 this.mesaDeJuego = unaMesa;
                 Random rand = new Random();
-                this.factorDeAzar = rand.nextInt((100) + 1);
+                this.factorDeAzar = rand.nextInt(100) + 1;
+                this.factorDeAzar2 = rand.nextInt(200) + 1;
         }
 
         public void elegirJugadaEstadoTruco(){
@@ -156,63 +158,70 @@ public class DecisionSegunEstado {
         public void elegirJugadaEstadoTrucoSinEnvido() {}
 
         private boolean elegirSiCantarReTruco() {
-                return (unJugadorMaquina.getEquipo().getManosGanadas() >=1 || estaEnElRangoDe(78,100));
+                return ((unJugadorMaquina.getEquipo().getManosGanadas() >=1 && factorDeAzar2EstaEnElRangoDe(140, 200)) || factorDeAzarEstaEnElRangoDe(78, 100));
         }
 
         private boolean elegirSiCantaFlor() {
-                return (unJugadorMaquina.getMano().calcularFlor() != 0);
+                return (unJugadorMaquina.getMano().calcularFlor() != 0 && factorDeAzar2EstaEnElRangoDe(50, 100));
         }
 
         private boolean elegirSiQuiereEnvido() {
-                return (unJugadorMaquina.getMano().obtenerEnvido().getValorEnvido() >= 23 || estaEnElRangoDe(80,100));
+                return ((unJugadorMaquina.getMano().obtenerEnvido().getValorEnvido() >= 23 && factorDeAzar2EstaEnElRangoDe(80, 200)) || factorDeAzarEstaEnElRangoDe(80,100));
         }
 
         private boolean elegirSiCantaRealEnvido() {
-                return (unJugadorMaquina.getMano().obtenerEnvido().getValorEnvido() >= 29 || estaEnElRangoDe(85,100));
+                return ((unJugadorMaquina.getMano().obtenerEnvido().getValorEnvido() >= 29 && factorDeAzar2EstaEnElRangoDe(70, 200)) || factorDeAzarEstaEnElRangoDe(85,100));
         }
 
         private boolean elegirSiQuiereFaltaEnvido() {
-                return (unJugadorMaquina.getMano().obtenerEnvido().getValorEnvido() >= 32 || estaEnElRangoDe(97,100));
+                return ((unJugadorMaquina.getMano().obtenerEnvido().getValorEnvido() >= 32 && factorDeAzar2EstaEnElRangoDe(105, 200) ) || factorDeAzarEstaEnElRangoDe(97,100));
         }
         
         private boolean elegirSiQuiereRealEnvido() {
-                return (unJugadorMaquina.getMano().obtenerEnvido().getValorEnvido() >= 29 || estaEnElRangoDe(85,100));
+                return ((unJugadorMaquina.getMano().obtenerEnvido().getValorEnvido() >= 29 && factorDeAzar2EstaEnElRangoDe(90, 200)) || factorDeAzarEstaEnElRangoDe(85,100));
         }
 
         private boolean elegirSiCantaFaltaEnvido() {
-                return (unJugadorMaquina.getMano().obtenerEnvido().getValorEnvido() >= 32 || estaEnElRangoDe(97,100));
+                return ((unJugadorMaquina.getMano().obtenerEnvido().getValorEnvido() >= 32 && factorDeAzar2EstaEnElRangoDe(90,200)) || factorDeAzarEstaEnElRangoDe(97,100));
         }
 
         private boolean elegirSiCantaEnvidoEnvido() {
-                return (unJugadorMaquina.getMano().obtenerEnvido().getValorEnvido() >= 27 || estaEnElRangoDe(83,100));
+                return ((unJugadorMaquina.getMano().obtenerEnvido().getValorEnvido() >= 27 && factorDeAzar2EstaEnElRangoDe(110,200)) || factorDeAzarEstaEnElRangoDe(83,100));
         }
 
         private boolean elegirSiQuiereValeCuatro() {
-                return (unJugadorMaquina.getEquipo().getManosGanadas() >=1 || estaEnElRangoDe(80,100));
+                return ((unJugadorMaquina.getEquipo().getManosGanadas() >=1 && factorDeAzar2EstaEnElRangoDe(80,200)) || factorDeAzarEstaEnElRangoDe(80,100));
         }
 
         private boolean elegirSiQuiereReTruco() {
-                return (unJugadorMaquina.getEquipo().getManosGanadas() >=1 || estaEnElRangoDe(75,100));
+                return ((unJugadorMaquina.getEquipo().getManosGanadas() >=1 && factorDeAzar2EstaEnElRangoDe(110,200)) || factorDeAzarEstaEnElRangoDe(75,100));
         }
 
         private boolean elegirSiCantaValeCuatro() {
-                return (unJugadorMaquina.getEquipo().getManosGanadas() >=1 || estaEnElRangoDe(72,100));
+                return ((unJugadorMaquina.getEquipo().getManosGanadas() >=1 && factorDeAzar2EstaEnElRangoDe(110,200)) || factorDeAzarEstaEnElRangoDe(72,100));
         }
 
         private boolean elegirSiQuiereTruco() {
-                return (unJugadorMaquina.getEquipo().getManosGanadas() >=1 || estaEnElRangoDe(70,100));
+                return ((unJugadorMaquina.getEquipo().getManosGanadas() >=1 && factorDeAzar2EstaEnElRangoDe(100,200)) || factorDeAzarEstaEnElRangoDe(70,100));
         }
 
         private boolean elegirSiCantaReTruco() {
-                return (unJugadorMaquina.getEquipo().getManosGanadas() >=1 || estaEnElRangoDe(80,100));
+                return ((unJugadorMaquina.getEquipo().getManosGanadas() >=1 && factorDeAzar2EstaEnElRangoDe(110,200)) || factorDeAzarEstaEnElRangoDe(80,100));
         }
 
         private boolean elegirSiCantaEnvido() {
-                return (unJugadorMaquina.getMano().obtenerEnvido().getValorEnvido() >= 24 || estaEnElRangoDe(65,100));
+                return ((unJugadorMaquina.getMano().obtenerEnvido().getValorEnvido() >= 24 && factorDeAzar2EstaEnElRangoDe(115,200)) || factorDeAzarEstaEnElRangoDe(65,100));
         }
 
-        public boolean estaEnElRangoDe(final int MINIMO, final int MAXIMO){
+        public boolean factorDeAzarEstaEnElRangoDe(final int MINIMO, final int MAXIMO){
                 if(factorDeAzar >= MINIMO && factorDeAzar <= MAXIMO)
+                        return true;
+                else
+                        return false;
+        }
+
+        public boolean factorDeAzar2EstaEnElRangoDe(final int MINIMO, final int MAXIMO){
+                if(factorDeAzar2 >= MINIMO && factorDeAzar2 <= MAXIMO)
                         return true;
                 else
                         return false;

@@ -26,7 +26,7 @@ public class JugadorArtificial extends Jugador{
     public void elegirCarta(int factorDeAzar) {
         Jugador jugadorQueJugoLaCartaMasAlta = this.getJuego().getMesaDelJuego().getCartaGanadora().getJugador();
         int indiceCartaAJugar;
-        if(this.esDelMismoEquipoQue(jugadorQueJugoLaCartaMasAlta) ||factorDeAzar < 33)
+        if((this.esDelMismoEquipoQue(jugadorQueJugoLaCartaMasAlta) && factorDeAzar > 90) || factorDeAzar < 33)
             indiceCartaAJugar = this.getMano().getIndiceCartaMasBaja();
         else
             indiceCartaAJugar = this.getMano().getIndiceCartaMasAlta();
