@@ -6,6 +6,7 @@ import fiuba.algo3.Modelo.Excepciones.NoSeCantoFlorError;
 import fiuba.algo3.Modelo.InteligenciaArtificial.DecisionSegunEstado;
 import fiuba.algo3.Modelo.Juego.Juego;
 import fiuba.algo3.Modelo.Excepciones.JugadaInvalidaPrimeraManoError;
+import fiuba.algo3.Modelo.manejoDeJugadores.Jugador;
 
 /**
  * Created by anthony on 18/11/2015.
@@ -19,9 +20,22 @@ public class EstadoJuegoConFlor implements EstadoDeJuego {
 
     @Override
     public void flor() {
-        if (this.juego.manejadorDeTurnos.getJugadorConTurnoActual().getMano().hayFlorEnMano())
-            this.juego.setEstadoDeJuego(new EstadoFlor(juego));
+        Jugador jugadorAnterior = juego.manejadorDeTurnos.getJugadorAnteriorAlTurnoActual();
+        Jugador jugadorActual = juego.manejadorDeTurnos.getJugadorConTurnoActual();
+        Jugador jugadorPosterior = juego.manejadorDeTurnos.getJugadorSiguienteAlTurnoActual();
+
+        if (jugadorActual.getMano().hayFlorEnMano() && !(jugadorAnterior.getMano().hayFlorEnMano() || jugadorPosterior.getMano().hayFlorEnMano())) {
+            this.juego.manejadorDeTurnos.getJugadorConTurnoActual().getEquipo().sumarPuntos(3);
+            this.juego.setEstadoDeJuego(new EstadoSinEnvido(juego));
+        }
         else
+        if (jugadorActual.getMano().hayFlorEnMano() && (jugadorAnterior.getMano().hayFlorEnMano() || jugadorPosterior.getMano().hayFlorEnMano())){
+            this.juego.manejadorDeTurnos.setUltimoQueJugoEnvido(juego.manejadorDeTurnos.getJugadorConTurnoActual());
+            this.juego.manejadorDeTurnos.setPrimeroQueCantoEnvido(juego.manejadorDeTurnos.getJugadorConTurnoActual());
+            this.juego.setEstadoDeJuego(new EstadoFlor(this.juego));
+            this.juego.manejadorDeTurnos.pasarTurnoActual();
+
+        }else
             throw new NoHayFlorEnManoError();
     }
 

@@ -132,6 +132,18 @@ public class Juego {
             return jugador2;
     }
 
+    public Jugador getGanadorDeFlor(){
+        Jugador jugador1 = listaDeJugadores.getPrimero().getJugador().getEquipo().jugadorConFlorMayorEnEquipo();
+        Jugador jugador2 = listaDeJugadores.getPrimero().getSiguiente().getJugador().getEquipo().jugadorConFlorMayorEnEquipo();
+        int tantosJugador1 = jugador1.getMano().calcularFlor();
+        int tantosJugador2 = jugador2.getMano().calcularFlor();
+        if (tantosJugador1 == tantosJugador2)
+            return this.manejadorDeTurnos.getJugadorQueEsMano();
+        if (tantosJugador1 > tantosJugador2)
+            return jugador1;
+        else
+            return jugador2;
+    }
     public void agregarCartaAMesa(CartaJugada cartaJugada) {
         this.mesaDelJuego.agregarCartaALsitaDeCartasJugadas(cartaJugada);
     }
@@ -173,4 +185,7 @@ public class Juego {
         return hayGanador;
     }
 
+    public void seCantaFlor() {
+        estadoDeJuego.flor();
+    }
 }

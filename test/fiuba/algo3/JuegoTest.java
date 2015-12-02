@@ -367,4 +367,21 @@ public class JuegoTest {
 
         Assert.assertEquals(30,jugador2.getEquipo().getPuntaje());
     }
+
+    @Test
+    public void seCantaFlorySiElOtroNoTieneSeSuma3PuntosSinPasarElTurno(){
+
+        jugador1.recibirCarta(new Carta(11,paloOro));  //carta en posicion 0
+        jugador1.recibirCarta(new Carta(5, paloOro)); //carta en posicion 1
+        jugador1.recibirCarta(new Carta(6, paloOro));  //carta en posicion 2
+
+        jugador2.recibirCarta(new Carta(11, paloBasto));   //carta en posicion 0
+        jugador2.recibirCarta(new Carta(6, paloOro));      //carta en posicion 1
+        jugador2.recibirCarta(new Carta(3, paloOro));   //carta en posicion 2
+
+        jugador1.flor();
+
+        Assert.assertEquals(3,jugador1.getEquipo().getPuntaje());
+        Assert.assertEquals(juego.manejadorDeTurnos.getJugadorConTurnoActual().getNombre(),"jugador1");
+    }
 }

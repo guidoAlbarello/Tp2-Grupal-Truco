@@ -46,8 +46,7 @@ public class BetaTestVentanas extends Application {
     public VBox configurar,nombrar;
     public VBox pantallaGanador = new VBox();
     private int cantidadJugadores;
-    private boolean conFlor;
-    private boolean envidoJugado = false;
+    public boolean conFlor;
     public Stage elStage;
     public boolean hayIA = false;
 
@@ -525,7 +524,7 @@ public VBox contenedorDeJugadas(){
     botonEnvido.setPrefSize(100,50);
     botonEnvido.setAlignment(Pos.CENTER);
     botonEnvido.setOnAction(new HandlerBotonJugadasEnvidoBeta(this));
-    if (this.getJuego().manejadorDeTurnos.getManoActual() > 1 || envidoJugado )
+    if (this.getJuego().manejadorDeTurnos.getManoActual() > 1 || getJuego().getEstadoDeJuego().puntosSiSeQuiere() == 20)
         botonEnvido.setDisable(true);
 
 
@@ -547,7 +546,8 @@ public VBox contenedorDeJugadas(){
     botonFlor.setPrefSize(100,50);
     botonFlor.setAlignment(Pos.CENTER);
     botonFlor.setOnAction(new HandlerBotonJugadasFlorBeta(this));
-    if (!this.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().getMano().hayFlorEnMano())
+    if (!this.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().getMano().hayFlorEnMano() ||
+    this.getJuego().manejadorDeTurnos.getManoActual() > 1 || this.getJuego().getEstadoDeJuego().puntosSiSeQuiere() == 20)
         botonFlor.setDisable(true);
 
     VBox contenedorDeJugadas = new VBox(textoJugadas,botonEnvido,botonTruco,botonFlor,botonAlMazo,textoEspacio,botonQuiero,botonNoQuiero);

@@ -85,6 +85,7 @@ public class Jugador {
     }
 
     public void flor() {
+        this.juego.seCantaFlor();
     }
 
     public Juego getJuego() {

@@ -76,7 +76,7 @@ public class EstadoSinEnvido implements EstadoDeJuego {
 
     @Override
     public int puntosSiSeQuiere() {
-        return 0;
+        return 20;
     }
 
     @Override

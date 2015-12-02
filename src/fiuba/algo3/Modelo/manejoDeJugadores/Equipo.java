@@ -53,4 +53,14 @@ public class Equipo {
         return jugadorMaximoEnvido;
     }
 
+    public Jugador jugadorConFlorMayorEnEquipo() {
+        Iterator<Jugador> iterador = jugadores.iterator();
+        Jugador jugadorMaximoFlor = iterador.next();
+        while ( iterador.hasNext()) {
+            Jugador jugador = iterador.next();
+            if ( jugadorMaximoFlor.getMano().calcularFlor() < jugador.getMano().calcularFlor())
+                jugadorMaximoFlor = jugador;
+        }
+        return jugadorMaximoFlor;
+    }
 }
