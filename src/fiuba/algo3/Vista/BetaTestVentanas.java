@@ -14,7 +14,6 @@ import javafx.collections.FXCollections;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -163,6 +162,8 @@ public class BetaTestVentanas extends Application {
         Menu menuDeSoporte = new Menu("Ayuda y Soporte");
         MenuItem valoresDeCartasItemMenu = new MenuItem("Valores de Cartas");
         MenuItem creditosItemMenu = new MenuItem("Creditos..");
+        valoresDeCartasItemMenu.setOnAction(new HandlerBotonValoresDeCartas(this));
+        creditosItemMenu.setOnAction(new HandlerBotonMostrarCreditos(this));
 
         menuDeSoporte.getItems().addAll(valoresDeCartasItemMenu, creditosItemMenu);
 
