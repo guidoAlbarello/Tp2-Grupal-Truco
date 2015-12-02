@@ -205,6 +205,7 @@ public class BetaTestVentanas extends Application {
 
         // imagenes de cartas en mano
         inicializarCartasEnMano(verticalMedio);
+        actualizarBotonesCartas();
 
         //imagenes de cartas en mesa
 
@@ -601,6 +602,7 @@ public VBox contenedorDeJugadas(){
 
         for (Jugador jugador : jugadores){
             jugador.setJuego(juego);
+            jugador.inicializarCerebroJugador();
             juego.agregarJugador(jugador);
         }
         juego.configurarManejadorDeTurnos();

@@ -119,7 +119,7 @@ public class Mano {
         for(int i = 0; i < 3;i++){
             if(!indicesDeCartasJugadas.contains(i)) {
                 if (indiceCartaMasBaja > cartasEnLaMano.get(i).getValorDePoder())
-                    indiceCartaMasBaja = cartasEnLaMano.get(i).getValorDePoder();
+                    indiceCartaMasBaja = i;
             }
         }
         return indiceCartaMasBaja;
@@ -130,7 +130,7 @@ public class Mano {
         for(int i = 0; i < 3;i++){
             if(!indicesDeCartasJugadas.contains(i)) {
                 if (indiceCartaMasAlta < cartasEnLaMano.get(i).getValorDePoder())
-                    indiceCartaMasAlta = cartasEnLaMano.get(i).getValorDePoder();
+                    indiceCartaMasAlta = i;
             }
         }
         return indiceCartaMasAlta;

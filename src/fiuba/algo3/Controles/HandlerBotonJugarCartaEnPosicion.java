@@ -1,9 +1,13 @@
 package fiuba.algo3.Controles;
 
+import fiuba.algo3.Modelo.Excepciones.NoEsUnJugadorArtificialError;
+import fiuba.algo3.Modelo.ModeladoDeCarta.Carta;
+import fiuba.algo3.Modelo.manejoDeJugadores.Jugador;
 import fiuba.algo3.Vista.BetaTestVentanas;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 
 /**
@@ -44,11 +48,35 @@ public class HandlerBotonJugarCartaEnPosicion implements EventHandler {
 
             aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
             aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
+
+            verificarJugadaDeIa();
         }
     }
 
+    private void verificarJugadaDeIa() {
+        try {
+            //int vecesQuePasoElTurno = this.aplicacion.getJuego().manejadorDeTurnos.vecesQueSePasoElTurno;
+            int cartasEnMesa = this.aplicacion.getJuego().getMesaDelJuego().listaDeCartasJugadas().size();
+            this.aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().hacerJugada();
+            int cartasEnMesaTrasHacerJugadaIA = this.aplicacion.getJuego().getMesaDelJuego().listaDeCartasJugadas().size();
+            if (cartasEnMesa!=cartasEnMesaTrasHacerJugadaIA){ //si tira IA juega una carta
+                int indiceDelIndiceDeLaUltimaCartaJugadaPorIA = this.aplicacion.getJuego().manejadorDeTurnos.getJugadorAnteriorAlTurnoActual().getMano().getIndicesDeCartasJugadas().size()-1;
+                int indiceUltimaCartaJugadaPorIA = this.aplicacion.getJuego().manejadorDeTurnos.getJugadorAnteriorAlTurnoActual().getMano().getIndicesDeCartasJugadas().get(indiceDelIndiceDeLaUltimaCartaJugadaPorIA);
+                Carta carta = this.aplicacion.getJuego().manejadorDeTurnos.getJugadorAnteriorAlTurnoActual().getMano().getCartasEnMano().get(indiceUltimaCartaJugadaPorIA);
+                String direccionCarta = "imagenes/"+carta.getValorDeCarta()+carta.getPaloDeCarta().getNombre()+".jpg";
+                Image imagenCarta = new Image(direccionCarta);
+                aplicacion.getCartaEnMesaDelJugadorEnPosicion(this.aplicacion.getJuego().manejadorDeTurnos.getNodoJugadorConTurnoActual().getAnterior().getPosicion()).setImage(imagenCarta);
+                aplicacion.actualizarCartasEnManoParaJugadorActual();
+                aplicacion.actualizarBotonesCartas();
+                aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
 
+            }else{
+                this.aplicacion.getBorderPane().setRight(this.aplicacion.contenedorDeJugadas());
+                aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
+            }
 
+        }catch (NoEsUnJugadorArtificialError e){}
+    }
 
 
     private void verificarLimpiarCartasDeLaMesa() {
