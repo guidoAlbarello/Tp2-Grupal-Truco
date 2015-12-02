@@ -49,6 +49,7 @@ public class BetaTestVentanas extends Application {
     private boolean conFlor;
     private boolean envidoJugado = false;
     public Stage elStage;
+    public boolean hayIA = false;
 
     public BetaTestVentanas(){
         //this.juego = this.inicializarJuego();

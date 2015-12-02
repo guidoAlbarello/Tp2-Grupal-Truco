@@ -55,24 +55,40 @@ public class HandlerBotonJugarCartaEnPosicion implements EventHandler {
 
     private void verificarJugadaDeIa() {
         try {
-            //int vecesQuePasoElTurno = this.aplicacion.getJuego().manejadorDeTurnos.vecesQueSePasoElTurno;
-            int cartasEnMesa = this.aplicacion.getJuego().getMesaDelJuego().listaDeCartasJugadas().size();
+            Jugador artificial = this.aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual();
+            if (aplicacion.getJuego().manejadorDeTurnos.vecesQueSePasoElTurno == 0 & artificial == aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual()){aplicacion.getCartaEnMesaDelJugadorEnPosicion(this.aplicacion.getJuego().manejadorDeTurnos.getNodoJugadorConTurnoActual().getAnterior().getPosicion()).setImage(new Image("imagenes/huskar.jpg"));}
+            else if (aplicacion.getJuego().manejadorDeTurnos.vecesQueSePasoElTurno==0 & aplicacion.hayIA){
+                aplicacion.getCartaEnMesaDelJugadorEnPosicion(0).setImage(new Image("imagenes/huskar.jpg"));
+                aplicacion.getCartaEnMesaDelJugadorEnPosicion(1).setImage(new Image("imagenes/huskar.jpg"));
+            }
+
+            int cantidadTiradas = artificial.getMano().getIndicesDeCartasJugadas().size();
             this.aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().hacerJugada();
-            int cartasEnMesaTrasHacerJugadaIA = this.aplicacion.getJuego().getMesaDelJuego().listaDeCartasJugadas().size();
-            if (cartasEnMesa!=cartasEnMesaTrasHacerJugadaIA){ //si tira IA juega una carta
-                int indiceDelIndiceDeLaUltimaCartaJugadaPorIA = this.aplicacion.getJuego().manejadorDeTurnos.getJugadorAnteriorAlTurnoActual().getMano().getIndicesDeCartasJugadas().size()-1;
-                int indiceUltimaCartaJugadaPorIA = this.aplicacion.getJuego().manejadorDeTurnos.getJugadorAnteriorAlTurnoActual().getMano().getIndicesDeCartasJugadas().get(indiceDelIndiceDeLaUltimaCartaJugadaPorIA);
-                Carta carta = this.aplicacion.getJuego().manejadorDeTurnos.getJugadorAnteriorAlTurnoActual().getMano().getCartasEnMano().get(indiceUltimaCartaJugadaPorIA);
-                String direccionCarta = "imagenes/"+carta.getValorDeCarta()+carta.getPaloDeCarta().getNombre()+".jpg";
-                Image imagenCarta = new Image(direccionCarta);
-                aplicacion.getCartaEnMesaDelJugadorEnPosicion(this.aplicacion.getJuego().manejadorDeTurnos.getNodoJugadorConTurnoActual().getAnterior().getPosicion()).setImage(imagenCarta);
-                aplicacion.actualizarCartasEnManoParaJugadorActual();
-                aplicacion.actualizarBotonesCartas();
-                aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
+            if (aplicacion.getJuego().manejadorDeTurnos.vecesQueSePasoElTurno==0){aplicacion.getCartaEnMesaDelJugadorEnPosicion(this.aplicacion.getJuego().manejadorDeTurnos.getNodoJugadorConTurnoActual().getAnterior().getPosicion()).setImage(new Image("imagenes/huskar.jpg"));}
+            int cantidadTiradasDespuesDeTirar = artificial.getMano().getIndicesDeCartasJugadas().size();
+            if (cantidadTiradas!=cantidadTiradasDespuesDeTirar){
+                if (this.aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual()!=artificial) {
+                    int indiceUltimaCartaJugadaPorIA = this.aplicacion.getJuego().manejadorDeTurnos.getJugadorAnteriorAlTurnoActual().getMano().getIndicesDeCartasJugadas().get(cantidadTiradasDespuesDeTirar-1);
+                    Carta carta = this.aplicacion.getJuego().manejadorDeTurnos.getJugadorAnteriorAlTurnoActual().getMano().getCartasEnMano().get(indiceUltimaCartaJugadaPorIA);
+                    String direccionCarta = "imagenes/" + carta.getValorDeCarta() + carta.getPaloDeCarta().getNombre() + ".jpg";
+                    Image imagenCarta = new Image(direccionCarta);
+                    aplicacion.getCartaEnMesaDelJugadorEnPosicion(this.aplicacion.getJuego().manejadorDeTurnos.getNodoJugadorConTurnoActual().getAnterior().getPosicion()).setImage(imagenCarta);
+                    aplicacion.actualizarCartasEnManoParaJugadorActual();
+                    aplicacion.actualizarBotonesCartas();
+                    aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
+                    //verificarLimpiarCartasDeLaMesa();
+                }else{
+                    aplicacion.getCartaEnMesaDelJugadorEnPosicion(this.aplicacion.getJuego().manejadorDeTurnos.getNodoJugadorConTurnoActual().getAnterior().getPosicion()).setImage(new Image("imagenes/huskar.jpg"));
+                    verificarJugadaDeIa();
+                }
 
             }else{
-                this.aplicacion.getBorderPane().setRight(this.aplicacion.contenedorDeJugadas());
+                //aplicacion.getCartaEnMesaDelJugadorEnPosicion(this.aplicacion.getJuego().manejadorDeTurnos.getNodoJugadorConTurnoActual().getAnterior().getPosicion()).setImage(new Image("imagenes/huskar.jpg"));
+                //esta linea de arriba significa limpiar las cartas de mesa, pero solo sirve para 2 jguadores
+                aplicacion.getBorderPane().setRight(this.aplicacion.contenedorDeJugadas());
                 aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
+                aplicacion.actualizarCartasEnManoParaJugadorActual();
+                aplicacion.actualizarBotonesCartas();
             }
 
         }catch (NoEsUnJugadorArtificialError e){}

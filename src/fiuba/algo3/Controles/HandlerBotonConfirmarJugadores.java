@@ -63,6 +63,7 @@ public class HandlerBotonConfirmarJugadores implements EventHandler<ActionEvent>
             } else{
                 JugadorArtificial nuevoJugador = new JugadorArtificial(nombre);
                 this.jugadores.addLast(nuevoJugador);
+                this.aplicacion.hayIA = true;
             }
             contador++;
         }
