@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5334ebf3-7293-44c8-b7c0-2cb6955c173e" name="Default" comment="modelado mvc">
+    <list default="true" id="5334ebf3-7293-44c8-b7c0-2cb6955c173e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Controles/HandlerBotonJugarCartaEnPosicion.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Controles/HandlerBotonJugarCartaEnPosicion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Controles/HandlerBotonMazoBeta.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Controles/HandlerBotonMazoBeta.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Controles/HandlerBotonQuieroBeta.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Controles/HandlerBotonQuieroBeta.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Modelo/Juego/Juego.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Modelo/Juego/Juego.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Modelo/manejoDeJugadores/ListaJugadores.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Modelo/manejoDeJugadores/ListaJugadores.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Modelo/manejoDeJugadores/ManejadorDeTurnos.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Modelo/manejoDeJugadores/ManejadorDeTurnos.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Vista/BetaTestVentanas.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Vista/BetaTestVentanas.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fiuba/algo3/Controles/HandlerBotonNoQuieroBeta.java" afterPath="$PROJECT_DIR$/src/fiuba/algo3/Controles/HandlerBotonNoQuieroBeta.java" />
     </list>
     <ignored path="Tp2-Grupal-Truco.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,14 +25,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BetaTestVentanas.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BetaTestVentanas.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Vista/BetaTestVentanas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7766831">
+            <state vertical-scroll-proportion="0.0">
               <caret line="645" column="85" selection-start-line="645" selection-start-column="85" selection-end-line="645" selection-end-column="85" />
               <folding>
                 <element signature="e#27528#27535#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HandlerBotonEnvidoBeta.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Controles/HandlerBotonEnvidoBeta.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HandlerBotonNoQuieroBeta.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Controles/HandlerBotonNoQuieroBeta.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8095238">
+              <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -154,6 +168,7 @@
         <option value="$PROJECT_DIR$/src/fiuba/algo3/Controles/HandlerBotonJugarCartaEnPosicion.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/Controles/HandlerBotonMazoBeta.java" />
         <option value="$PROJECT_DIR$/src/fiuba/algo3/Vista/BetaTestVentanas.java" />
+        <option value="$PROJECT_DIR$/src/fiuba/algo3/Controles/HandlerBotonNoQuieroBeta.java" />
       </list>
     </option>
   </component>
@@ -257,6 +272,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Vista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tp2-Grupal-Truco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tp2-Grupal-Truco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algo3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -697,7 +734,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449013100823</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Agregue la pantalla inicial para mostrar el ganador, ademas de un getter necesario en el modelo">
+      <created>1449018535193</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1449018535193</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -746,7 +789,8 @@
     <MESSAGE value="Actualice los handlers de la beta y la ventana de configuracion de juego." />
     <MESSAGE value="se arreglo el tema del truco con envido y tbm si par aun truco se canta&#10;un real envido y lo mismo con falta envido" />
     <MESSAGE value="modelado mvc" />
-    <option name="LAST_COMMIT_MESSAGE" value="modelado mvc" />
+    <MESSAGE value="Agregue la pantalla inicial para mostrar el ganador, ademas de un getter necesario en el modelo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregue la pantalla inicial para mostrar el ganador, ademas de un getter necesario en el modelo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -901,14 +945,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Controles/HandlerBotonNoQuieroBeta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Controles/HandlerBotonRetrucoBeta.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -963,14 +999,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Controles/HandlerBotonEnvidoBeta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Modelo/EstadosDeJuego/EstadoEnvidoEnvido.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -991,6 +1019,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="59" column="75" selection-start-line="56" selection-start-column="7" selection-end-line="59" selection-end-column="75" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -998,6 +1027,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="55" column="110" selection-start-line="55" selection-start-column="110" selection-end-line="55" selection-end-column="110" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1045,6 +1075,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
+            <element signature="e#720#721#0" expanded="true" />
+            <element signature="e#766#767#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#863#864#0" expanded="true" />
+            <element signature="e#907#908#0" expanded="true" />
+            <element signature="e#949#950#0" expanded="true" />
+            <element signature="e#993#994#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1145,14 +1186,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Controles/HandlerBotonQuieroBeta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="30" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Controles/HandlerBotonMazoBeta.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1163,11 +1196,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Vista/BetaTestVentanas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7766831">
+        <state vertical-scroll-proportion="0.0">
           <caret line="645" column="85" selection-start-line="645" selection-start-column="85" selection-end-line="645" selection-end-column="85" />
           <folding>
             <element signature="e#27528#27535#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Controles/HandlerBotonEnvidoBeta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Controles/HandlerBotonQuieroBeta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="30" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fiuba/algo3/Controles/HandlerBotonNoQuieroBeta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8095238">
+          <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
