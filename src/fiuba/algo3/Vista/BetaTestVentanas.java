@@ -49,6 +49,7 @@ public class BetaTestVentanas extends Application {
     private int cantidadJugadores;
     private boolean conFlor;
     private boolean envidoJugado = false;
+    public Stage elStage;
 
     public BetaTestVentanas(){
         //this.juego = this.inicializarJuego();
@@ -62,6 +63,7 @@ public class BetaTestVentanas extends Application {
 
     @Override
     public void start(Stage stage){
+        elStage=stage;
 
         stage.setTitle("Truco - Algoritmos y programacion 3");
         panel = new BorderPane();
@@ -153,6 +155,7 @@ public class BetaTestVentanas extends Application {
         nuevoJuegoItemMenu.setOnAction(new HandlerNuevaPartida(this));
         MenuItem opcionesItemMenu = new MenuItem("Opciones");
         MenuItem salirItemMenu = new MenuItem("Salir");
+        salirItemMenu.setOnAction(new HandlerBotonSalir(this));
 
 
         menuDeArchivo.getItems().addAll(nuevoJuegoItemMenu, opcionesItemMenu, new SeparatorMenuItem(), salirItemMenu);
