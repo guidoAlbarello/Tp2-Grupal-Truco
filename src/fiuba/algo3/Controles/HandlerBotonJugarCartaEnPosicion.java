@@ -49,7 +49,7 @@ public class HandlerBotonJugarCartaEnPosicion implements EventHandler {
             aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
             aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
 
-            verificarJugadaDeIa();
+            //verificarJugadaDeIa();
         }
     }
 

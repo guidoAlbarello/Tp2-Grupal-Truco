@@ -41,7 +41,7 @@ public class HandlerBotonQuieroBeta implements EventHandler<ActionEvent> {
             aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
             aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
 
-            verificarJugadaDeIa();
+            //verificarJugadaDeIa();
         }
     }
 
