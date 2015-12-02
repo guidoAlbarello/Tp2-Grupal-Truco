@@ -53,7 +53,7 @@ public class HandlerBotonJugarCartaEnPosicion implements EventHandler {
         }
     }
 
-    private void verificarJugadaDeIa() {
+  /*  private void verificarJugadaDeIa() {
         try {
             Jugador artificial = this.aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual();
             if (aplicacion.getJuego().manejadorDeTurnos.vecesQueSePasoElTurno == 0 & artificial == aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual()){aplicacion.getCartaEnMesaDelJugadorEnPosicion(this.aplicacion.getJuego().manejadorDeTurnos.getNodoJugadorConTurnoActual().getAnterior().getPosicion()).setImage(new Image("imagenes/huskar.jpg"));}
@@ -92,7 +92,7 @@ public class HandlerBotonJugarCartaEnPosicion implements EventHandler {
             }
 
         }catch (NoEsUnJugadorArtificialError e){}
-    }
+    }*/
 
 
     private void verificarLimpiarCartasDeLaMesa() {

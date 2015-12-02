@@ -1,5 +1,6 @@
 package fiuba.algo3.Modelo.InteligenciaArtificial;
 
+import fiuba.algo3.Modelo.Juego.Juego;
 import fiuba.algo3.Modelo.manejoDeJugadores.Jugador;
 
 /**
@@ -11,8 +12,13 @@ public class JugadorArtificial extends Jugador{
         super(nombre);
     }
 
-    public void inicializarCerebroJugador(){
+    public void setJuego(Juego juego){
+        this.juego = juego;
         cerebroJugador = new MotorDeIA(this, this.getJuego().getMesaDelJuego());
+    }
+
+    public boolean esUnJugadorIA(){
+        return true;
     }
 
     public void hacerJugada(){

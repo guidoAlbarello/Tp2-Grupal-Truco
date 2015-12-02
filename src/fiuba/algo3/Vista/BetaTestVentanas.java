@@ -5,6 +5,7 @@ import fiuba.algo3.Controles.HandlerBotonConfirmarConfiguracion;
 import fiuba.algo3.Controles.HandlerBotonConfirmarJugadores;
 import fiuba.algo3.Controles.HandlerNuevaPartida;
 import fiuba.algo3.Controles.*;
+import fiuba.algo3.Modelo.InteligenciaArtificial.JugadorArtificial;
 import fiuba.algo3.Modelo.Juego.Juego;
 import fiuba.algo3.Modelo.ModeladoDeCarta.Carta;
 import fiuba.algo3.Modelo.manejoDeJugadores.Equipo;
@@ -218,8 +219,24 @@ public class BetaTestVentanas extends Application {
         return verticalMedio;
     }
 
+/*
+    stulsksdf()
+    {
+        list = mesa.getcartasenronda
+                if(!list.isempty)
+                    for todas las actualizarBotonesCartas();graficar getcartasenronda
+    }*/
 
     public void actualizarCartasEnManoParaJugadorActual(){
+        while(juego.manejadorDeTurnos.getJugadorConTurnoActual().esUnJugadorIA()) {
+            ((JugadorArtificial) juego.manejadorDeTurnos.getJugadorConTurnoActual()).hacerJugada();
+            int cantidadTiradasDespuesDeTirar = juego.manejadorDeTurnos.getNodoJugadorConTurnoActual().getAnterior().getJugador().getMano().getIndicesDeCartasJugadas().size();
+            int indiceUltimaCartaJugadaPorIA = this.getJuego().manejadorDeTurnos.getJugadorAnteriorAlTurnoActual().getMano().getIndicesDeCartasJugadas().get(cantidadTiradasDespuesDeTirar-1);
+            Carta carta = this.getJuego().manejadorDeTurnos.getJugadorAnteriorAlTurnoActual().getMano().getCartasEnMano().get(indiceUltimaCartaJugadaPorIA);
+            String direccionCarta = "imagenes/" + carta.getValorDeCarta() + carta.getPaloDeCarta().getNombre() + ".jpg";
+
+            this.getCartaEnMesaDelJugadorEnPosicion(this.getJuego().manejadorDeTurnos.getPosicionDelJugadorConTurnoActual()).setImage(new Image(direccionCarta));
+        }
         List<Carta> cartasMano = juego.manejadorDeTurnos.getJugadorConTurnoActual().getMano().getCartasEnMano();
         Carta carta = cartasMano.get(0);
         String direccionCarta = "imagenes/"+carta.getValorDeCarta()+carta.getPaloDeCarta().getNombre()+".jpg";
@@ -501,7 +518,8 @@ public class BetaTestVentanas extends Application {
     }
 
 public VBox contenedorDeJugadas(){
-
+    while(juego.manejadorDeTurnos.getJugadorConTurnoActual().esUnJugadorIA())
+        ((JugadorArtificial) juego.manejadorDeTurnos.getJugadorConTurnoActual()).hacerJugada();
 
     Label textoJugadas = new Label("Jugadas\nposibles: ");
     textoJugadas.setFont(Font.font(null, FontWeight.BOLD, 15));
@@ -562,6 +580,8 @@ public VBox contenedorDeJugadas(){
 
 
     public VBox contenedorEstadoDeJuego(){
+        while(juego.manejadorDeTurnos.getJugadorConTurnoActual().esUnJugadorIA())
+            ((JugadorArtificial) juego.manejadorDeTurnos.getJugadorConTurnoActual()).hacerJugada();
         // label Jugador en turno
         Label jugadorEnTurno = new Label("Turno actual:\n"+"    "+juego.manejadorDeTurnos.getJugadorConTurnoActual().getNombre());
         jugadorEnTurno.setFont(Font.font("Comic",FontWeight.BOLD, 15));
@@ -603,7 +623,6 @@ public VBox contenedorDeJugadas(){
 
         for (Jugador jugador : jugadores){
             jugador.setJuego(juego);
-            jugador.inicializarCerebroJugador();
             juego.agregarJugador(jugador);
         }
         juego.configurarManejadorDeTurnos();
@@ -678,7 +697,7 @@ public VBox contenedorDeJugadas(){
         pantallaI.getChildren().add(new ImageView(new Image("imagenes/cartasMano.jpg")));
         pantallaI.getChildren().add(new ImageView(new Image("imagenes/cartasMano.jpg")));
         panel.setLeft(pantallaI);
-        pantallaGanador.getChildren().add(new ImageView(new Image("imagenes/yoho.jpg")));
+        pantallaGanador.getChildren().add(new ImageView(new Image("imagenes/doh2.jpg")));
 
         panel.setCenter(pantallaGanador);
 

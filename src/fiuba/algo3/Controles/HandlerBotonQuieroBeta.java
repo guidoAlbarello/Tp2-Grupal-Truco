@@ -45,7 +45,7 @@ public class HandlerBotonQuieroBeta implements EventHandler<ActionEvent> {
         }
     }
 
-
+/*
     private void verificarJugadaDeIa() {
         try {
             Jugador artificial = this.aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual();
@@ -74,7 +74,7 @@ public class HandlerBotonQuieroBeta implements EventHandler<ActionEvent> {
 
         }catch (NoEsUnJugadorArtificialError e){}
     }
-
+*/
 
     private void verificarLimpiarCartasDeLaMesa() {
         if (aplicacion.manoActual != this.aplicacion.getJuego().manejadorDeTurnos.getManoActual() & (aplicacion.getJuego().manejadorDeTurnos.vecesQueSePasoElTurno == 1 )){

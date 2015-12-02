@@ -61,9 +61,7 @@ public class ManejadorDeTurnos {
 
     public void pasarTurnoActual(){//c Anthony : cre este metodo por q no me  sirve de que pasa el turno pase el tunro y a la vez calcule cosas
         this.turnoActual = this.turnoActual.getSiguiente();
-        try{
-           this.getJugadorConTurnoActual().hacerJugada();
-        }catch(NoEsUnJugadorArtificialError e ) {   }                                                //Esto es lo medio feo q decia
+                                                 //Esto es lo medio feo q decia
     }
 
     public void reiniciarRonda(){

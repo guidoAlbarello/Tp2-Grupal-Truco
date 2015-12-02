@@ -14,7 +14,7 @@ public class Jugador {
     private String nombreJugador;
     private Mano manoDelJugador;
     private Equipo equipo;
-    private Juego juego;
+    protected Juego juego;
 
 
     public Jugador(String nombre) {
@@ -54,8 +54,8 @@ public class Jugador {
         this.juego.jugarCarta(new CartaJugada(this.manoDelJugador.jugarCarta(indiceDeLaCarta),this));
     }
 
-    public void hacerJugada(){
-        throw new NoEsUnJugadorArtificialError();
+    public boolean esUnJugadorIA(){
+        return false;
     }
 
     public void truco() {
@@ -90,10 +90,6 @@ public class Jugador {
 
     public Juego getJuego() {
         return juego;
-    }
-
-    public void inicializarCerebroJugador() {
-
     }
 }
 

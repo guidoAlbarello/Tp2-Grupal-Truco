@@ -6,6 +6,7 @@ import fiuba.algo3.Vista.BetaTestVentanas;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.image.Image;
+import javafx.scene.layout.VBox;
 
 import javax.swing.*;
 
@@ -29,6 +30,7 @@ public class HandlerBotonEnvidoBeta implements EventHandler {
 
 
 
+
         aplicacion.actualizarCartasEnManoParaJugadorActual();
         aplicacion.actualizarBotonesCartas();
         aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
@@ -36,11 +38,11 @@ public class HandlerBotonEnvidoBeta implements EventHandler {
         aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
 
 
-        verificarJugadaDeIa();
+       // verificarJugadaDeIa();
     }
 
 
-    private void verificarJugadaDeIa() {
+  /*  private void verificarJugadaDeIa() {
         try {
             this.aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().hacerJugada();
                 int indiceDelIndiceDeLaUltimaCartaJugadaPorIA = this.aplicacion.getJuego().manejadorDeTurnos.getJugadorAnteriorAlTurnoActual().getMano().getIndicesDeCartasJugadas().size()-1;
@@ -55,5 +57,5 @@ public class HandlerBotonEnvidoBeta implements EventHandler {
 
 
         }catch (NoEsUnJugadorArtificialError e){}
-    }
+    }*/
 }
