@@ -136,7 +136,10 @@ public class BetaTestVentanas extends Application {
 
         configurar.setAlignment(Pos.CENTER);
         configurar.setStyle("-fx-background-image: url('imagenes/texturaMadera2.jpg')");
+
+
         return configurar;
+
     }
 
 
@@ -636,14 +639,41 @@ public VBox contenedorDeJugadas(){
         List<Label> nombresGanadores = new ArrayList<Label>();
         List<Jugador> jugadoresGanadores = ganador.getJugadores();
         for (Jugador jugadorGanador : jugadoresGanadores){
-            nombresGanadores.add(new Label(jugadorGanador.getNombre()));
+            Label a = new Label();
+            a.setText(jugadorGanador.getNombre());
+            a.setFont(Font.font("Comic", FontWeight.BOLD, 25));
+            a.setStyle("-fx-text-fill: #FFFFFF");
+            nombresGanadores.add(a);
         }
-        pantallaGanador.setSpacing(40);
+
+        pantallaGanador.getChildren().clear();
+
+        pantallaGanador.setStyle("-fx-background-image: url('imagenes/texturamadera.jpg')");
+
+        pantallaGanador.setSpacing(20);
         pantallaGanador.setAlignment(Pos.CENTER);
-        pantallaGanador.getChildren().add(new Label("El "+ganador.getNombre()+" es el ganador!"));
-        pantallaGanador.getChildren().add(new Label("Sus integrantes son:"));
+        Label titulo = new Label("El " + ganador.getNombre() + " es el ganador!");
+        titulo.setFont(Font.font("Comic", FontWeight.BOLD, 25));
+        titulo.setStyle("-fx-text-fill: #FFFFFF");
+        pantallaGanador.getChildren().add(titulo);
+        Label integrantes = new Label("Sus integrantes son:");
+        integrantes.setFont(Font.font("Comic", FontWeight.BOLD, 25));
+        integrantes.setStyle("-fx-text-fill: #FFFFFF");
+        pantallaGanador.getChildren().add(integrantes);
         pantallaGanador.getChildren().addAll(nombresGanadores);
-        pantallaGanador.getChildren().add(new Label("Felicidades!  Gracias por jugar!"));
+        Label felicitaciones = new Label("Felicidades!  Gracias por jugar!");
+        felicitaciones.setFont(Font.font("Comic", FontWeight.BOLD, 25));
+        felicitaciones.setStyle("-fx-text-fill: #FFFFFF");
+        pantallaGanador.getChildren().add(felicitaciones);
+        VBox pantallaI = new VBox();
+        pantallaI.getChildren().add(new ImageView(new Image("imagenes/cartasMano.jpg")));
+        pantallaI.getChildren().add(new ImageView(new Image("imagenes/cartasMano.jpg")));
+        pantallaI.getChildren().add(new ImageView(new Image("imagenes/cartasMano.jpg")));
+        pantallaI.getChildren().add(new ImageView(new Image("imagenes/cartasMano.jpg")));
+        panel.setLeft(pantallaI);
+        pantallaGanador.getChildren().add(new ImageView(new Image("imagenes/yoho.jpg")));
+
         panel.setCenter(pantallaGanador);
+
     }
 }
