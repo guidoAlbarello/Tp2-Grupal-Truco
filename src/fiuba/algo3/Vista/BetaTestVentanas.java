@@ -7,12 +7,14 @@ import fiuba.algo3.Controles.HandlerNuevaPartida;
 import fiuba.algo3.Controles.*;
 import fiuba.algo3.Modelo.Juego.Juego;
 import fiuba.algo3.Modelo.ModeladoDeCarta.Carta;
+import fiuba.algo3.Modelo.manejoDeJugadores.Equipo;
 import fiuba.algo3.Modelo.manejoDeJugadores.Jugador;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -43,6 +45,7 @@ public class BetaTestVentanas extends Application {
     public Integer rondaActual=1;
     public GridPane verticalMedio;
     public VBox configurar,nombrar;
+    public VBox pantallaGanador = new VBox();
     private int cantidadJugadores;
     private boolean conFlor;
     private boolean envidoJugado = false;
@@ -629,4 +632,18 @@ public VBox contenedorDeJugadas(){
             botonJugarCarta3.setVisible(true);
     }
 
+    public void mostrarGanador(Equipo ganador) {
+        List<Label> nombresGanadores = new ArrayList<Label>();
+        List<Jugador> jugadoresGanadores = ganador.getJugadores();
+        for (Jugador jugadorGanador : jugadoresGanadores){
+            nombresGanadores.add(new Label(jugadorGanador.getNombre()));
+        }
+        pantallaGanador.setSpacing(40);
+        pantallaGanador.setAlignment(Pos.CENTER);
+        pantallaGanador.getChildren().add(new Label("El "+ganador.getNombre()+" es el ganador!"));
+        pantallaGanador.getChildren().add(new Label("Sus integrantes son:"));
+        pantallaGanador.getChildren().addAll(nombresGanadores);
+        pantallaGanador.getChildren().add(new Label("Felicidades!  Gracias por jugar!"));
+        panel.setCenter(pantallaGanador);
+    }
 }

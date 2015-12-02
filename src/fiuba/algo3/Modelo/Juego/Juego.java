@@ -2,6 +2,7 @@ package fiuba.algo3.Modelo.Juego;
 
 import fiuba.algo3.Modelo.EstadosDeJuego.*;
 import fiuba.algo3.Modelo.ModeladoDeCarta.CartaJugada;
+import fiuba.algo3.Modelo.manejoDeJugadores.Equipo;
 import fiuba.algo3.Modelo.manejoDeJugadores.Jugador;
 import fiuba.algo3.Modelo.manejoDeJugadores.ListaJugadores;
 import fiuba.algo3.Modelo.manejoDeJugadores.ManejadorDeTurnos;
@@ -18,6 +19,7 @@ public class Juego {
     private int puntosDeTruco;
     private int puntosDeEnvidoQuerido;
     private int puntosDeEnvidoNoQuerido;
+    public Equipo ganador;
 
     public Juego(){
 
@@ -155,4 +157,20 @@ public class Juego {
     public EstadoDeJuego getEstadoDeJuego() {
         return estadoDeJuego;
     }
+
+
+    public boolean hayGanador(){
+        boolean hayGanador = false;
+        Equipo equipo1 = this.manejadorDeTurnos.getJugadores().getPrimero().getJugador().getEquipo();
+        Equipo equipo2 = this.manejadorDeTurnos.getJugadores().getUltimo().getJugador().getEquipo();
+        if (equipo1.getPuntaje()==30) {
+            ganador = equipo1;
+            hayGanador = true;
+        }else if (equipo2.getPuntaje()==30){
+            ganador = equipo2;
+            hayGanador = true;
+        }
+        return hayGanador;
+    }
+
 }

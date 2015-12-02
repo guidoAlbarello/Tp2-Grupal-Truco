@@ -123,7 +123,7 @@ public class ListaJugadores {
     }
 
 
-    public Equipo getEquipoGanador() {
+    public Equipo getEquipoGanadorDeRonda() {
         return ganadorDeRonda;
     }
 

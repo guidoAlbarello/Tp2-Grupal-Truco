@@ -24,10 +24,16 @@ public class HandlerBotonQuieroBeta implements EventHandler<ActionEvent> {
             mensajeError.showMessageDialog(null, "no hay cantos en juego",
                     "JUGADA INVALIDA", JOptionPane.ERROR_MESSAGE);
         }
-        aplicacion.actualizarCartasEnManoParaJugadorActual();
-        aplicacion.actualizarBotonesCartas();
-        //aplicacion.getBorderPane().setCenter(aplicacion.cuadriculaDeJuego());
-        aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
-        aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
+        if (this.aplicacion.getJuego().hayGanador()) {
+            aplicacion.getBorderPane().setLeft(null);
+            aplicacion.getBorderPane().setRight(null);
+            aplicacion.mostrarGanador(aplicacion.getJuego().ganador);
+        }else {
+            aplicacion.actualizarCartasEnManoParaJugadorActual();
+            aplicacion.actualizarBotonesCartas();
+            //aplicacion.getBorderPane().setCenter(aplicacion.cuadriculaDeJuego());
+            aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
+            aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
+        }
     }
 }

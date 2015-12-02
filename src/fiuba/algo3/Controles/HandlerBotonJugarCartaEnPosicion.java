@@ -25,20 +25,26 @@ public class HandlerBotonJugarCartaEnPosicion implements EventHandler {
     public void handle(Event event) {
 
         aplicacion.getCartaEnMesaDelJugadorEnPosicion(this.aplicacion.getJuego().manejadorDeTurnos.getPosicionDelJugadorConTurnoActual()).setImage(this.imagen);
-
-        //pausa
-
         aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().jugarCartaEnPosicion(this.posicion);
-        verificarLimpiarCartasDeLaMesa();
 
 
-        aplicacion.actualizarCartasEnManoParaJugadorActual();
-        aplicacion.actualizarBotonesCartas();
+        if (this.aplicacion.getJuego().hayGanador()) {
+            aplicacion.getBorderPane().setLeft(null);
+            aplicacion.getBorderPane().setRight(null);
+            aplicacion.mostrarGanador(aplicacion.getJuego().ganador);
+        }else {
 
 
-        aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
-        aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
+            verificarLimpiarCartasDeLaMesa();
 
+
+            aplicacion.actualizarCartasEnManoParaJugadorActual();
+            aplicacion.actualizarBotonesCartas();
+
+
+            aplicacion.getBorderPane().setLeft(aplicacion.contenedorEstadoDeJuego());
+            aplicacion.getBorderPane().setRight(aplicacion.contenedorDeJugadas());
+        }
     }
 
 
