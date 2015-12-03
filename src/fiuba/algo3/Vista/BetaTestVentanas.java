@@ -276,8 +276,14 @@ public class BetaTestVentanas extends Application {
 
     public void actualizarCartasEnManoParaJugadorActual(){
         while(juego.manejadorDeTurnos.getJugadorConTurnoActual().esUnJugadorIA()) {
+            int cartasJugadasEnMesaAntesDeQueLaIAHagaJugada = juego.getMesaDelJuego().listaDeCartasJugadas().size();
             ((JugadorArtificial) juego.manejadorDeTurnos.getJugadorConTurnoActual()).hacerJugada();
-            actualizarCartasEnMesa();
+            if (cartasJugadasEnMesaAntesDeQueLaIAHagaJugada != juego.getMesaDelJuego().listaDeCartasJugadas().size()) { //SI LA IA TIRO UNA CARTA, ACTUALIZA LA MESA
+                actualizarCartasEnMesa();
+            }else {                                                                                                     //SI NO ACTUALIZA LA BOTONERA Y EL PANEL DE ESTADO
+                this.panel.setLeft(this.contenedorEstadoDeJuego());
+                this.panel.setRight(this.contenedorDeJugadas());
+            }
             /*
             int cantidadTiradasDespuesDeTirar = juego.manejadorDeTurnos.getNodoJugadorConTurnoActual().getAnterior().getJugador().getMano().getIndicesDeCartasJugadas().size();
             int indiceUltimaCartaJugadaPorIA = this.getJuego().manejadorDeTurnos.getJugadorAnteriorAlTurnoActual().getMano().getIndicesDeCartasJugadas().get(cantidadTiradasDespuesDeTirar-1);
