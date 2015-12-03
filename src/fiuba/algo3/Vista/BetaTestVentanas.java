@@ -8,6 +8,7 @@ import fiuba.algo3.Controles.*;
 import fiuba.algo3.Modelo.InteligenciaArtificial.JugadorArtificial;
 import fiuba.algo3.Modelo.Juego.Juego;
 import fiuba.algo3.Modelo.ModeladoDeCarta.Carta;
+import fiuba.algo3.Modelo.ModeladoDeCarta.CartaJugada;
 import fiuba.algo3.Modelo.manejoDeJugadores.Equipo;
 import fiuba.algo3.Modelo.manejoDeJugadores.Jugador;
 import javafx.application.Application;
@@ -219,6 +220,24 @@ public class BetaTestVentanas extends Application {
         return verticalMedio;
     }
 
+
+    public void actualizarCartasEnMesa(){
+        List<CartaJugada> cartasEnMesa = this.juego.getMesaDelJuego().listaDeCartasJugadas();
+        if (!cartasEnMesa.isEmpty()){
+            for (int i = 0 ; i < cartasEnMesa.size() ; i++ ){
+                Carta carta = cartasEnMesa.get(i).getCarta();
+                int posJugadorQueAcaboDeTirar = this.juego.manejadorDeTurnos.getNodoJugadorConTurnoActual().getAnterior().getPosicion();
+                String direccion = "imagenes/" + carta.getValorDeCarta() + carta.getPaloDeCarta().getNombre() + ".jpg";
+                getCartaEnMesaDelJugadorEnPosicion(posJugadorQueAcaboDeTirar).setImage(new Image(direccion));
+            }
+        }
+        else {
+            for (int i = 0 ; i < this.juego.getJugadores().getTamanio() ; i++ ){
+                getCartaEnMesaDelJugadorEnPosicion(i).setImage(new Image("imagenes/huskar.jpg"));
+            }
+        }
+    }
+
 /*
     stulsksdf()
     {
@@ -230,12 +249,15 @@ public class BetaTestVentanas extends Application {
     public void actualizarCartasEnManoParaJugadorActual(){
         while(juego.manejadorDeTurnos.getJugadorConTurnoActual().esUnJugadorIA()) {
             ((JugadorArtificial) juego.manejadorDeTurnos.getJugadorConTurnoActual()).hacerJugada();
+            actualizarCartasEnMesa();
+            /*
             int cantidadTiradasDespuesDeTirar = juego.manejadorDeTurnos.getNodoJugadorConTurnoActual().getAnterior().getJugador().getMano().getIndicesDeCartasJugadas().size();
             int indiceUltimaCartaJugadaPorIA = this.getJuego().manejadorDeTurnos.getJugadorAnteriorAlTurnoActual().getMano().getIndicesDeCartasJugadas().get(cantidadTiradasDespuesDeTirar-1);
             Carta carta = this.getJuego().manejadorDeTurnos.getJugadorAnteriorAlTurnoActual().getMano().getCartasEnMano().get(indiceUltimaCartaJugadaPorIA);
             String direccionCarta = "imagenes/" + carta.getValorDeCarta() + carta.getPaloDeCarta().getNombre() + ".jpg";
 
             this.getCartaEnMesaDelJugadorEnPosicion(this.getJuego().manejadorDeTurnos.getPosicionDelJugadorConTurnoActual()).setImage(new Image(direccionCarta));
+            */
         }
         List<Carta> cartasMano = juego.manejadorDeTurnos.getJugadorConTurnoActual().getMano().getCartasEnMano();
         Carta carta = cartasMano.get(0);

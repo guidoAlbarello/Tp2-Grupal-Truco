@@ -28,8 +28,9 @@ public class HandlerBotonJugarCartaEnPosicion implements EventHandler {
     @Override
     public void handle(Event event) {
 
-        aplicacion.getCartaEnMesaDelJugadorEnPosicion(this.aplicacion.getJuego().manejadorDeTurnos.getPosicionDelJugadorConTurnoActual()).setImage(this.imagen);
+        //aplicacion.getCartaEnMesaDelJugadorEnPosicion(this.aplicacion.getJuego().manejadorDeTurnos.getPosicionDelJugadorConTurnoActual()).setImage(this.imagen);
         aplicacion.getJuego().manejadorDeTurnos.getJugadorConTurnoActual().jugarCartaEnPosicion(this.posicion);
+        aplicacion.actualizarCartasEnMesa();
 
 
         if (this.aplicacion.getJuego().hayGanador()) {
@@ -39,7 +40,7 @@ public class HandlerBotonJugarCartaEnPosicion implements EventHandler {
         }else {
 
 
-            verificarLimpiarCartasDeLaMesa();
+            //verificarLimpiarCartasDeLaMesa();
 
 
             aplicacion.actualizarCartasEnManoParaJugadorActual();
