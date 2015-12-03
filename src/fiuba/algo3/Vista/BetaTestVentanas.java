@@ -568,9 +568,10 @@ public class BetaTestVentanas extends Application {
     }
 
 public VBox contenedorDeJugadas(){
-    while(juego.manejadorDeTurnos.getJugadorConTurnoActual().esUnJugadorIA())
+    while(juego.manejadorDeTurnos.getJugadorConTurnoActual().esUnJugadorIA()) {
         ((JugadorArtificial) juego.manejadorDeTurnos.getJugadorConTurnoActual()).hacerJugada();
-
+        actualizarCartasEnMesa();
+    }
     Label textoJugadas = new Label("Jugadas\nposibles: ");
     textoJugadas.setFont(Font.font(null, FontWeight.BOLD, 15));
     textoJugadas.setStyle("-fx-text-fill: #FFFFFF");
@@ -630,8 +631,10 @@ public VBox contenedorDeJugadas(){
 
 
     public VBox contenedorEstadoDeJuego(){
-        while(juego.manejadorDeTurnos.getJugadorConTurnoActual().esUnJugadorIA())
+        while(juego.manejadorDeTurnos.getJugadorConTurnoActual().esUnJugadorIA()) {
             ((JugadorArtificial) juego.manejadorDeTurnos.getJugadorConTurnoActual()).hacerJugada();
+            actualizarCartasEnMesa();
+        }
         // label Jugador en turno
         Label jugadorEnTurno = new Label("Turno actual:\n"+"    "+juego.manejadorDeTurnos.getJugadorConTurnoActual().getNombre());
         jugadorEnTurno.setFont(Font.font("Comic",FontWeight.BOLD, 15));

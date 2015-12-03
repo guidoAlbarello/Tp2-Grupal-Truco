@@ -154,9 +154,31 @@ public class DecisionSegunEstado {
                 unJugadorMaquina.elegirCarta(factorDeAzar);;
         }
 
-        public void elegirJugadaEstadoSinEnvido() {}
+        public void elegirJugadaEstadoSinEnvido() {
+                Random rand = new Random();
+                this.factorDeAzar = rand.nextInt((100) + 1);
+                if(elegirSiCantarTruco())
+                        unJugadorMaquina.truco();
+                else
+                        unJugadorMaquina.elegirCarta(factorDeAzar);;
+        }
 
-        public void elegirJugadaEstadoTrucoSinEnvido() {}
+        private boolean elegirSiCantarTruco() {
+                return ((unJugadorMaquina.getEquipo().getManosGanadas() >=1 && factorDeAzar2EstaEnElRangoDe(130, 200)) || factorDeAzarEstaEnElRangoDe(78, 100));
+        }
+
+        public void elegirJugadaEstadoTrucoSinEnvido() {
+                Random rand = new Random();
+                this.factorDeAzar = rand.nextInt((100) + 1);
+                if(elegirSiCantaRealEnvido())
+                        unJugadorMaquina.realEnvido();
+                else if(elegirSiCantaEnvidoEnvido())
+                        unJugadorMaquina.envido();
+                else if(elegirSiQuiereEnvido())
+                        unJugadorMaquina.quiero();
+                else
+                        unJugadorMaquina.noQuiero();
+        }
 
         private boolean elegirSiCantarReTruco() {
                 return ((unJugadorMaquina.getEquipo().getManosGanadas() >=1 && factorDeAzar2EstaEnElRangoDe(140, 200)) || factorDeAzarEstaEnElRangoDe(78, 100));
