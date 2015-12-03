@@ -11,6 +11,7 @@ import fiuba.algo3.Modelo.ModeladoDeCarta.Carta;
 import fiuba.algo3.Modelo.ModeladoDeCarta.CartaJugada;
 import fiuba.algo3.Modelo.manejoDeJugadores.Equipo;
 import fiuba.algo3.Modelo.manejoDeJugadores.Jugador;
+import fiuba.algo3.Modelo.manejoDeJugadores.NodoJugador;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.geometry.HPos;
@@ -222,12 +223,19 @@ public class BetaTestVentanas extends Application {
     }
 
 
-    private void limpiarTodasLasCartasDeLaMesaMenosLaQueEstaEnPos(int pos){
-        for (int i = 0 ; i < this.juego.getJugadores().getTamanio() ; i++ ){
-            if (i!=pos) {
-                getCartaEnMesaDelJugadorEnPosicion(pos).setImage(new Image("imagenes/huskar.jpg"));
-            }
+    private void limpiarTodasLasCartasDeLaMesaMenosLaQueEstaEnPos(NodoJugador turnoActual){
+        Image imagenAColocar = new Image("imagenes/huskar.jpg");
+        int cantJugadores = this.juego.getJugadores().getTamanio();
+        if (cantJugadores == 2) {
+                getCartaEnMesaDelJugadorEnPosicion(turnoActual.getPosicion()).setImage(imagenAColocar);
+        }else{
+            getCartaEnMesaDelJugadorEnPosicion(turnoActual.getPosicion()).setImage(imagenAColocar);
+            turnoActual = turnoActual.getSiguiente();
+            getCartaEnMesaDelJugadorEnPosicion(turnoActual.getPosicion()).setImage(imagenAColocar);
+            getCartaEnMesaDelJugadorEnPosicion(turnoActual.getSiguiente().getPosicion()).setImage(imagenAColocar);
+
         }
+
     }
 
 
@@ -242,8 +250,8 @@ public class BetaTestVentanas extends Application {
                 getCartaEnMesaDelJugadorEnPosicion(posJugadorQueAcaboDeTirar).setImage(new Image(direccion));
             }
             if (this.juego.manejadorDeTurnos.vecesQueSePasoElTurno==1 & (this.juego.manejadorDeTurnos.getManoActual()!=1 | this.juego.manejadorDeTurnos.getRondaActual()!=1)){
-                int posTurnoActual = this.juego.manejadorDeTurnos.getNodoJugadorConTurnoActual().getPosicion();
-                limpiarTodasLasCartasDeLaMesaMenosLaQueEstaEnPos(posTurnoActual);
+                //int posTurnoActual = this.juego.manejadorDeTurnos.getNodoJugadorConTurnoActual().getPosicion();
+                limpiarTodasLasCartasDeLaMesaMenosLaQueEstaEnPos(this.juego.manejadorDeTurnos.getNodoJugadorConTurnoActual());
             }
         }
         else {
