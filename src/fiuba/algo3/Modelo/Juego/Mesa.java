@@ -13,6 +13,7 @@ import java.util.LinkedList;
  */
 public class Mesa {
     private LinkedList<CartaJugada> listaDeCartasJugadas;
+    public LinkedList<CartaJugada> cartasEnMesaEnManoAnterior;
     private CartaJugada ganadora, segunda;
     private Jugador emparde;
 
@@ -75,6 +76,8 @@ public class Mesa {
 
 
     public void limpiarCartasEnMesa() {
+        this.cartasEnMesaEnManoAnterior = new LinkedList<CartaJugada>();
+        this.cartasEnMesaEnManoAnterior.addAll(this.listaDeCartasJugadas);
         this.listaDeCartasJugadas.clear();
         this.ganadora = new CartaJugada(new Carta(4, new PaloCopa()),null);
     }

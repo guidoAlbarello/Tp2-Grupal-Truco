@@ -112,11 +112,11 @@ public class DecisionSegunEstado {
                 Random rand = new Random();
                 this.factorDeAzar = rand.nextInt((100) + 1);
                 if(elegirSiCantaFlor())
-                        //unJugadorMaquina.flor();
-                        unJugadorMaquina.elegirCarta(factorDeAzar);
+                        unJugadorMaquina.flor();
+                        //unJugadorMaquina.elegirCarta(factorDeAzar);
                 else if(this.elegirSiCantaEnvido())
-                        //unJugadorMaquina.envido();
-                        unJugadorMaquina.elegirCarta(factorDeAzar);
+                        unJugadorMaquina.envido();
+                        //unJugadorMaquina.elegirCarta(factorDeAzar);
                 else
                         unJugadorMaquina.elegirCarta(factorDeAzar);
         }
