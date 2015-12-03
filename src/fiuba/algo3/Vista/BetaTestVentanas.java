@@ -29,6 +29,7 @@ import javafx.stage.Stage;
 
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 
@@ -222,19 +223,47 @@ public class BetaTestVentanas extends Application {
     }
 
 
-    public void actualizarCartasEnMesa(){
-        List<CartaJugada> cartasEnMesa = this.juego.getMesaDelJuego().listaDeCartasJugadas();
-        if (!cartasEnMesa.isEmpty()){
-            NodoJugador nodoJugador = this.juego.manejadorDeTurnos.getNodoJugadorConTurnoActual().getAnterior();
-            for (int i = cartasEnMesa.size()-1 ; i >= 0 ; i-- ){
-                Carta carta = cartasEnMesa.get(i).getCarta();
-                int posJugadorQueAcaboDeTirar = nodoJugador.getPosicion();
-                String direccion = "imagenes/" + carta.getValorDeCarta() + carta.getPaloDeCarta().getNombre() + ".jpg";
-                getCartaEnMesaDelJugadorEnPosicion(posJugadorQueAcaboDeTirar).setImage(new Image(direccion));
-                nodoJugador = nodoJugador.getAnterior();
-            }
+    private void limpiarTodasLasCartasDeLaMesaMenosLaQueEstaEnPos(NodoJugador turnoActual){
+        Image imagenAColocar = new Image("imagenes/huskar.jpg");
+        int cantJugadores = this.juego.getJugadores().getTamanio();
+        if (cantJugadores == 2) {
+                getCartaEnMesaDelJugadorEnPosicion(turnoActual.getPosicion()).setImage(imagenAColocar);
+        }else{
+            getCartaEnMesaDelJugadorEnPosicion(turnoActual.getPosicion()).setImage(imagenAColocar);
+            turnoActual = turnoActual.getSiguiente();
+            getCartaEnMesaDelJugadorEnPosicion(turnoActual.getPosicion()).setImage(imagenAColocar);
+            getCartaEnMesaDelJugadorEnPosicion(turnoActual.getSiguiente().getPosicion()).setImage(imagenAColocar);
+
         }
 
+    }
+
+
+    public void actualizarCartasEnMesa(){
+        List<CartaJugada> cartasEnMesa = this.juego.getMesaDelJuego().listaDeCartasJugadas();
+        int posJugadorQueAcaboDeTirar = 0;
+        if (!cartasEnMesa.isEmpty()){
+            for (int i = 0 ; i < cartasEnMesa.size() ; i++ ){
+                posJugadorQueAcaboDeTirar = this.juego.manejadorDeTurnos.getNodoJugadorConTurnoActual().getAnterior().getPosicion();
+                Carta carta = cartasEnMesa.get(i).getCarta();
+                String direccion = "imagenes/" + carta.getValorDeCarta() + carta.getPaloDeCarta().getNombre() + ".jpg";
+                getCartaEnMesaDelJugadorEnPosicion(posJugadorQueAcaboDeTirar).setImage(new Image(direccion));
+            }
+            if (this.juego.manejadorDeTurnos.vecesQueSePasoElTurno==1 & (this.juego.manejadorDeTurnos.getManoActual()!=1 | this.juego.manejadorDeTurnos.getRondaActual()!=1)){
+                //int posTurnoActual = this.juego.manejadorDeTurnos.getNodoJugadorConTurnoActual().getPosicion();
+                limpiarTodasLasCartasDeLaMesaMenosLaQueEstaEnPos(this.juego.manejadorDeTurnos.getNodoJugadorConTurnoActual());
+            }
+        }
+        else {
+            LinkedList<CartaJugada> cartasEnManoAnterior = this.juego.getMesaDelJuego().cartasEnMesaEnManoAnterior;
+            for (int i = 0 ; i < cartasEnManoAnterior.size() ; i++ ){
+                Carta carta = cartasEnManoAnterior.get(i).getCarta();
+                Jugador ultimoQueTiro = cartasEnManoAnterior.getLast().getJugador();
+                int posUltimoJugadorQueTiro = this.juego.getJugadores().buscarNodoJugadorPorJugador(ultimoQueTiro).getPosicion();
+                String direccion = "imagenes/" + carta.getValorDeCarta() + carta.getPaloDeCarta().getNombre() + ".jpg";
+                getCartaEnMesaDelJugadorEnPosicion(posUltimoJugadorQueTiro).setImage(new Image(direccion));
+            }
+        }
     }
 
 /*
